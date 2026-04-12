@@ -1,0 +1,52 @@
+# RAMS default configuration
+# Override any field via CLI args or by copying this file.
+
+monitor:
+  hz: 10.0                  # resource sampling frequency
+
+policy:
+  default: safety           # threshold | predictive | safety
+
+  threshold:
+    lo_thresh: 0.45         # R(t) below this → MEDIUM
+    hi_thresh: 0.72         # R(t) above this → NANO
+    hysteresis_window: 3    # consecutive samples before tier commits
+
+  predictive:
+    history_len: 20
+    alpha: 0.35             # EWMA smoothing
+    lo_thresh: 0.40
+    hi_thresh: 0.68
+    use_lstm: false
+
+  safety:
+    lo_thresh: 0.45
+    hi_thresh: 0.72
+    hysteresis_window: 3
+    proximity_window_s: 0.5  # VRU lock window (seconds)
+    min_conf: 0.40            # minimum detection confidence for VRU trigger
+
+models:
+  simulate: false            # set true to skip real model loading
+  tiers:
+    nano:
+      model_id: yolov8n.pt
+      latency_mean_ms: 18.0
+      latency_std_ms: 2.5
+    small:
+      model_id: yolov8s.pt
+      latency_mean_ms: 32.0
+      latency_std_ms: 4.0
+    medium:
+      model_id: yolov8m.pt
+      latency_mean_ms: 58.0
+      latency_std_ms: 6.5
+
+benchmark:
+  n_inferences: 100
+  load_profiles:
+    - idle
+    - light
+    - moderate
+    - heavy
+    - burst
