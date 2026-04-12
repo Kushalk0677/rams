@@ -286,7 +286,7 @@ RAMS is the model-selection layer. For the complementary task-scheduling
 layer (which task to run, in what order), see:
 
 > **PAES: Priority-Aware Adaptive Scheduling for Multi-Model Edge AI Systems**
-> Khemani, Maniar & Lokhande — IEEE Embedded Systems Letters
+> Khemani, Maniar & Lokhande 
 > https://github.com/Kushalk0677/Priority-Aware-Adaptive-Scheduling-for-Multi-Model-Edge-AI-Systems
 
 Together, PAES handles *scheduling order* and RAMS handles *which model tier
