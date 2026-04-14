@@ -123,7 +123,7 @@ with RAMSController(simulate=False, policy='safety') as ctrl:
 "
 ```
 
-### 5. Live demo
+### 5. Live demo ( SKIP )
 
 ```bash
 # Simulation mode — no GPU or weights needed
