@@ -29,6 +29,10 @@ logger = logging.getLogger(__name__)
 class BasePolicy:
     name: str = "base"
 
+    def observe(self, detections: Optional[list[dict]] = None):
+        """Optional post-inference hook for stateful policies."""
+        return None
+
     def select_tier(
         self,
         pressure: float,
@@ -238,8 +242,12 @@ class SafetyPolicy(BasePolicy):
             return False
         return (time.monotonic() - self._last_vru_time) <= self.proximity_window_s
 
+    def observe(self, detections: Optional[list[dict]] = None):
+        self._update_vru(detections)
+
     def select_tier(self, pressure, last_tier, recent_detections=None) -> Tier:
-        self._update_vru(recent_detections)
+        if recent_detections is not None:
+            self._update_vru(recent_detections)
         tier = self._base.select_tier(pressure, last_tier, recent_detections)
         if self._vru_active() and tier == Tier.NANO:
             logger.debug("[RAMS] SafetyPolicy: VRU override → SMALL.")
@@ -374,8 +382,12 @@ class SafetyTwoLevelPolicy(BasePolicy):
             return None
         return Tier.MEDIUM if self._last_vru_area >= self.near_area_thresh else Tier.SMALL
 
+    def observe(self, detections: Optional[list[dict]] = None):
+        self._update_vru(detections)
+
     def select_tier(self, pressure, last_tier, recent_detections=None) -> Tier:
-        self._update_vru(recent_detections)
+        if recent_detections is not None:
+            self._update_vru(recent_detections)
         base_tier = self._base.select_tier(pressure, last_tier, recent_detections)
         lock      = self._vru_lock_tier()
         if lock is not None and base_tier < lock:

@@ -1,11 +1,35 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+.pytest_cache/
+.venv/
 dist/
 build/
 .env
-results/*.csv
-results/*.json
+.vscode/
+
+# Local outputs
+results/*
 !results/.gitkeep
+!results/README.md
+runs/
+
+# Datasets and model assets
+data/
+datasets/
 *.pt
 *.onnx
+*.engine
+
+# Archives and temporary packaging
+*.zip
+tmp_*/
+
+# Paper build artifacts
+paper_ieee/*.aux
+paper_ieee/*.bbl
+paper_ieee/*.blg
+paper_ieee/*.log
+paper_ieee/*.out
+paper_ieee/*.pdf
+paper_ieee/*.toc

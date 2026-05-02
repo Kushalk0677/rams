@@ -112,6 +112,23 @@ POLICY_HATCHES = {
 }
 
 
+def load_frame_paths(frames_dir: str) -> list[Path]:
+    p = Path(frames_dir)
+    paths = sorted(list(p.glob("*.jpg")) + list(p.glob("*.png")) + list(p.glob("*.jpeg")))
+    if not paths:
+        raise ValueError(f"No images found in {frames_dir}")
+    return paths
+
+
+def read_frame(path: Path):
+    import cv2
+
+    frame = cv2.imread(str(path))
+    if frame is None:
+        raise IOError(f"Could not read: {path}")
+    return frame
+
+
 # ---------------------------------------------------------------------------
 # SWAS computation
 # ---------------------------------------------------------------------------
@@ -200,8 +217,10 @@ def run_swas_trial(
     n: int,
     intensity: float,
     simulate: bool = True,
+    frame_paths: list[Path] | None = None,
 ) -> list[TrialRecord]:
     records: list[TrialRecord] = []
+    frame_idx = 0
     with LoadInjector(intensity):
         with RAMSController(simulate=simulate, policy=policy_name) as ctrl:
             time.sleep(0.4)
@@ -209,7 +228,15 @@ def run_swas_trial(
 
             for _ in range(n):
                 ctrl.set_pressure_override(intensity_to_pressure(intensity))
-                res = ctrl.infer()
+                frame = None
+                if frame_paths:
+                    path = frame_paths[frame_idx % len(frame_paths)]
+                    frame_idx += 1
+                    try:
+                        frame = read_frame(path)
+                    except IOError:
+                        frame = None
+                res = ctrl.infer(frame=frame)
                 cur_tier = ctrl.current_tier
                 vru = any(
                     d.get("class", "").lower() in
@@ -236,6 +263,7 @@ def run_fixed_tier_trial(
     n: int,
     intensity: float,
     simulate: bool = True,
+    frame_paths: list[Path] | None = None,
 ) -> list[TrialRecord]:
     """Run N inferences locked to a single tier — fixed-model baseline."""
     tier_enum = {
@@ -245,6 +273,7 @@ def run_fixed_tier_trial(
     }[tier_name]
 
     records: list[TrialRecord] = []
+    frame_idx = 0
     with LoadInjector(intensity):
         with RAMSController(simulate=simulate, policy="threshold") as ctrl:
             ctrl.policy = ThresholdPolicy(
@@ -259,7 +288,15 @@ def run_fixed_tier_trial(
 
             for _ in range(n):
                 ctrl.set_pressure_override(intensity_to_pressure(intensity))
-                res = ctrl.infer()
+                frame = None
+                if frame_paths:
+                    path = frame_paths[frame_idx % len(frame_paths)]
+                    frame_idx += 1
+                    try:
+                        frame = read_frame(path)
+                    except IOError:
+                        frame = None
+                res = ctrl.infer(frame=frame)
                 vru = any(
                     d.get("class", "").lower() in
                     {"person", "pedestrian", "cyclist", "bicycle"}
@@ -338,7 +375,8 @@ def beta_sweep_plot(records_by_policy: dict[str, list[TrialRecord]], out: Path):
     print(f"  Chart saved -> {out.name}")
 
 
-def swas_vs_vru_rate_plot(policy_names, n, intensity, simulate, out):
+def swas_vs_vru_rate_plot(policy_names, n, intensity, simulate, out,
+                          frame_paths: list[Path] | None = None):
     plt = _get_mpl()
     vru_rates = []
     swas_by_pol: dict[str, list[float]] = {p: [] for p in policy_names}
@@ -347,8 +385,9 @@ def swas_vs_vru_rate_plot(policy_names, n, intensity, simulate, out):
     for _rep in range(5):
         run_vru_rates = []
         for pol in policy_names:
-            recs = run_swas_trial(pol, n // 5, intensity, simulate)
-            vr   = sum(r.vru_detected for r in recs) / len(recs)
+            sub_n = max(1, n // 5)
+            recs = run_swas_trial(pol, sub_n, intensity, simulate, frame_paths=frame_paths)
+            vr   = (sum(r.vru_detected for r in recs) / len(recs)) if recs else 0.0
             swas = compute_swas(recs)
             swas_by_pol[pol].append(swas)
             run_vru_rates.append(vr)
@@ -375,7 +414,8 @@ def swas_vs_vru_rate_plot(policy_names, n, intensity, simulate, out):
 # Exp 7d — Fixed-tier SWAS baseline comparison
 # ---------------------------------------------------------------------------
 
-def run_exp7d(n: int, simulate: bool) -> dict[str, dict[str, float]]:
+def run_exp7d(n: int, simulate: bool,
+              frame_paths: list[Path] | None = None) -> dict[str, dict[str, float]]:
     """
     Computes SWAS for all RAMS policies AND fixed-tier baselines under
     moderate and heavy load.
@@ -391,9 +431,9 @@ def run_exp7d(n: int, simulate: bool) -> dict[str, dict[str, float]]:
         for scen, intensity in scenarios.items():
             print(f"    {label:14s}  {scen} ...", flush=True)
             if label in FIXED_BASELINES:
-                recs = run_fixed_tier_trial(label, n, intensity, simulate)
+                recs = run_fixed_tier_trial(label, n, intensity, simulate, frame_paths=frame_paths)
             else:
-                recs = run_swas_trial(label, n, intensity, simulate)
+                recs = run_swas_trial(label, n, intensity, simulate, frame_paths=frame_paths)
             swas_table[label][scen] = compute_swas(recs)
             print(f"      SWAS = {swas_table[label][scen]:.4f}")
 
@@ -488,7 +528,8 @@ def baseline_latex(swas_table: dict[str, dict[str, float]], n: int) -> str:
 # ---------------------------------------------------------------------------
 
 def run_exp7e(n: int, simulate: bool,
-              intensity: float = 0.75) -> dict[str, dict]:
+              intensity: float = 0.75,
+              frame_paths: list[Path] | None = None) -> dict[str, dict]:
     """
     For each RAMS policy under heavy load, decomposes SWAS into:
       - acc on VRU-present frames (should be HIGH for safety policies)
@@ -505,7 +546,7 @@ def run_exp7e(n: int, simulate: bool,
     results: dict[str, dict] = {}
     for pol in ALL_POLICIES:
         print(f"    {pol} ...", flush=True)
-        recs = run_swas_trial(pol, n, intensity, simulate)
+        recs = run_swas_trial(pol, n, intensity, simulate, frame_paths=frame_paths)
         results[pol] = compute_swas_decomposed(recs)
         d = results[pol]
         print(f"      SWAS={d['swas']:.4f}  delta_vru={d['delta_vru']:+.4f}"
@@ -582,7 +623,8 @@ class FrontierPoint:
     vru_rate: float
 
 
-def run_exp7f(n: int, simulate: bool) -> list[FrontierPoint]:
+def run_exp7f(n: int, simulate: bool,
+              frame_paths: list[Path] | None = None) -> list[FrontierPoint]:
     """
     Collects (SWAS, mean_latency) for every policy + fixed baseline under
     moderate and heavy load, to plot the joint safety-efficiency frontier.
@@ -596,9 +638,9 @@ def run_exp7f(n: int, simulate: bool) -> list[FrontierPoint]:
         for scen, intensity in scenarios.items():
             print(f"    {label:14s}  {scen} ...", flush=True)
             if label in FIXED_BASELINES:
-                recs = run_fixed_tier_trial(label, n, intensity, simulate)
+                recs = run_fixed_tier_trial(label, n, intensity, simulate, frame_paths=frame_paths)
             else:
-                recs = run_swas_trial(label, n, intensity, simulate)
+                recs = run_swas_trial(label, n, intensity, simulate, frame_paths=frame_paths)
 
             swas  = compute_swas(recs)
             lat   = statistics.mean(r.latency_ms for r in recs)
@@ -732,12 +774,15 @@ def swas_to_latex(results: list[SWASResult], beta: float, n: int) -> str:
 # Main
 # ---------------------------------------------------------------------------
 
-def run(n: int = 100, simulate: bool = True):
+def run(n: int = 100, simulate: bool = True, frames: str | None = None):
     print("\n" + "=" * 62)
     print("  Experiment 7 — Safety-Weighted Accuracy Score (SWAS)")
     print(f"  N={n}  beta={BETA_DEFAULT}  simulate={simulate}")
+    if frames:
+        print(f"  frames={frames}")
     print("=" * 62)
 
+    frame_paths = load_frame_paths(frames) if frames else None
     all_records: list[TrialRecord] = []
     results:     list[SWASResult]  = []
     moderate_recs: dict[str, list[TrialRecord]] = {}
@@ -748,7 +793,13 @@ def run(n: int = 100, simulate: bool = True):
 
         for policy_name in ALL_POLICIES:
             print(f"    policy={policy_name} ...", flush=True)
-            recs = run_swas_trial(policy_name, n, intensity, simulate)
+            recs = run_swas_trial(
+                policy_name,
+                n,
+                intensity,
+                simulate,
+                frame_paths=frame_paths,
+            )
             for r in recs:
                 r.group = scenario
             all_records.extend(recs)
@@ -799,23 +850,27 @@ def run(n: int = 100, simulate: bool = True):
 
     # 7c: VRU rate sweep
     swas_vs_vru_rate_plot(
-        ALL_POLICIES, n, LOAD_SCENARIOS["moderate"], simulate,
-        RESULTS / "exp7_swas_vru_rate.png",
+        ALL_POLICIES,
+        n,
+        LOAD_SCENARIOS["moderate"],
+        simulate,
+        out=RESULTS / "exp7_swas_vru_rate.png",
+        frame_paths=frame_paths,
     )
 
     # -- 7d: Fixed-tier SWAS baseline comparison ------------------------------
-    swas_baselines = run_exp7d(n, simulate)
+    swas_baselines = run_exp7d(n, simulate, frame_paths=frame_paths)
     baseline_comparison_plot(swas_baselines, RESULTS / "exp7_swas_baselines.png")
     tex_7d = baseline_latex(swas_baselines, n)
     (RESULTS / "exp7_baselines_latex.tex").write_text(tex_7d)
     print("  LaTeX (7d) -> results/exp7_baselines_latex.tex")
 
     # -- 7e: SWAS efficiency decomposition ------------------------------------
-    decomp = run_exp7e(n, simulate, intensity=0.75)
+    decomp = run_exp7e(n, simulate, intensity=0.75, frame_paths=frame_paths)
     efficiency_plot(decomp, RESULTS / "exp7_swas_efficiency.png")
 
     # -- 7f: SWAS vs latency scatter ------------------------------------------
-    frontier_pts = run_exp7f(n, simulate)
+    frontier_pts = run_exp7f(n, simulate, frame_paths=frame_paths)
     frontier_scatter_plot(frontier_pts, RESULTS / "exp7_swas_latency_scatter.png")
 
     # -- Persist --------------------------------------------------------------
@@ -835,7 +890,8 @@ def run(n: int = 100, simulate: bool = True):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--n",           type=int,  default=100)
+    parser.add_argument("--frames",      type=str,  default=None)
     parser.add_argument("--simulate",    action="store_true", default=True)
     parser.add_argument("--no-simulate", dest="simulate", action="store_false")
     args = parser.parse_args()
-    run(n=args.n, simulate=args.simulate)
+    run(n=args.n, simulate=args.simulate, frames=args.frames)

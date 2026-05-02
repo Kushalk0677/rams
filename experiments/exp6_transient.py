@@ -64,6 +64,22 @@ BASELINE_INT   = 0.15   # light background load
 SPIKE_INT      = 0.95   # burst intensity
 
 
+def build_spike_schedule(total_n: int) -> list[tuple[int, int]]:
+    """Build a 3-spike schedule scaled to the requested trial length."""
+    if total_n < 30:
+        width = max(3, total_n // 10)
+    else:
+        width = max(10, total_n // 6)
+    gap = max(5, (total_n - 3 * width) // 4)
+    starts = [gap, gap * 2 + width, gap * 3 + width * 2]
+    schedule = []
+    for s in starts:
+        e = min(total_n, s + width)
+        if s < total_n and e > s:
+            schedule.append((s, e))
+    return schedule
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Dynamic load injector with on-the-fly intensity control
 # ─────────────────────────────────────────────────────────────────────────────
@@ -158,20 +174,23 @@ def analyse_spike(
 def run_policy_spike_trial(
     policy_name: str,
     simulate: bool = True,
+    total_n: int = TOTAL_N,
+    spike_schedule: list[tuple[int, int]] | None = None,
 ) -> tuple[list[TrialRecord], list[SpikeResponse]]:
 
     records:   list[TrialRecord]   = []
     responses: list[SpikeResponse] = []
     injector = DynamicLoadInjector(initial_intensity=BASELINE_INT)
+    active_schedule = spike_schedule or SPIKE_SCHEDULE
 
     with injector:
         with RAMSController(simulate=simulate, policy=policy_name) as ctrl:
             time.sleep(0.4)
             prev_tier = ctrl.current_tier
 
-            for idx in range(TOTAL_N):
+            for idx in range(total_n):
                 # Update load intensity based on spike schedule
-                in_spike = any(s <= idx < e for s, e in SPIKE_SCHEDULE)
+                in_spike = any(s <= idx < e for s, e in active_schedule)
                 injector.intensity = SPIKE_INT if in_spike else BASELINE_INT
 
                 ctrl.set_pressure_override(SPIKE_INT * 0.93 if in_spike else BASELINE_INT * 0.28)
@@ -198,7 +217,7 @@ def run_policy_spike_trial(
     tiers     = [r.tier       for r in records]
     latencies = [r.latency_ms for r in records]
 
-    for sid, (s_start, s_end) in enumerate(SPIKE_SCHEDULE):
+    for sid, (s_start, s_end) in enumerate(active_schedule):
         resp = analyse_spike(tiers, latencies, s_start, s_end, sid + 1)
         responses.append(resp)
 
@@ -213,7 +232,7 @@ TIER_Y = {"MEDIUM": 3, "SMALL": 2, "NANO": 1}
 TIER_COLORS_PLT = {"NANO": "#e74c3c", "SMALL": "#f39c12", "MEDIUM": "#2ecc71"}
 
 
-def trace_plot(records: list[TrialRecord], policy_name: str, out: Path):
+def trace_plot(records: list[TrialRecord], policy_name: str, out: Path, spike_schedule: list[tuple[int, int]] | None = None):
     plt = _get_mpl()
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 5), sharex=True)
 
@@ -221,8 +240,10 @@ def trace_plot(records: list[TrialRecord], policy_name: str, out: Path):
     latencies = [r.latency_ms for r in records]
     tier_ys   = [TIER_Y.get(r.tier, 2) for r in records]
 
+    active_schedule = spike_schedule or SPIKE_SCHEDULE
+
     # Shade spike windows
-    for s, e in SPIKE_SCHEDULE:
+    for s, e in active_schedule:
         ax1.axvspan(s, e, alpha=0.10, color="#e74c3c")
         ax2.axvspan(s, e, alpha=0.10, color="#e74c3c")
 
@@ -306,11 +327,12 @@ def summary_bar(
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run(simulate: bool = True):
+def run(simulate: bool = True, total_n: int = TOTAL_N):
     print("\n" + "═" * 62)
     print("  Experiment 6 — Transient Spike Response")
-    print(f"  N={TOTAL_N} per policy  simulate={simulate}")
-    print(f"  Spike schedule: {SPIKE_SCHEDULE}")
+    spike_schedule = build_spike_schedule(total_n)
+    print(f"  N={total_n} per policy  simulate={simulate}")
+    print(f"  Spike schedule: {spike_schedule}")
     print("═" * 62)
 
     all_records:   list[TrialRecord]                   = []
@@ -318,7 +340,7 @@ def run(simulate: bool = True):
 
     for policy_name in ALL_POLICIES:
         print(f"\n  policy={policy_name} ...", flush=True)
-        records, responses = run_policy_spike_trial(policy_name, simulate)
+        records, responses = run_policy_spike_trial(policy_name, simulate, total_n=total_n, spike_schedule=spike_schedule)
         all_records.extend(records)
         all_responses[policy_name] = responses
 
@@ -331,7 +353,7 @@ def run(simulate: bool = True):
             )
 
         trace_plot(records, policy_name,
-                   RESULTS / f"exp6_trace_{policy_name}.png")
+                   RESULTS / f"exp6_trace_{policy_name}.png", spike_schedule=spike_schedule)
 
     summary_bar(ALL_POLICIES, all_responses,
                 RESULTS / "exp6_response_summary.png")
@@ -375,5 +397,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--simulate",    action="store_true", default=True)
     parser.add_argument("--no-simulate", dest="simulate", action="store_false")
+    parser.add_argument("--total-n", type=int, default=TOTAL_N)
     args = parser.parse_args()
-    run(simulate=args.simulate)
+    run(simulate=args.simulate, total_n=args.total_n)

@@ -8,23 +8,31 @@ policy:
   default: safety           # threshold | predictive | safety
 
   threshold:
-    lo_thresh: 0.45         # R(t) below this → MEDIUM
-    hi_thresh: 0.72         # R(t) above this → NANO
+    lo_thresh: 0.513         # R(t) below this → MEDIUM, Uncalibrated 0.45, Calibrated 0.30
+    hi_thresh: 0.763         # R(t) above this → NANO, Uncalibrated 0.72. Calibrated 0.55
     hysteresis_window: 3    # consecutive samples before tier commits
 
   predictive:
     history_len: 20
     alpha: 0.35             # EWMA smoothing
-    lo_thresh: 0.40
-    hi_thresh: 0.68
+    lo_thresh: 0.463
+    hi_thresh: 0.713
     use_lstm: false
 
   safety:
-    lo_thresh: 0.45
-    hi_thresh: 0.72
+    lo_thresh: 0.513
+    hi_thresh: 0.763
     hysteresis_window: 3
     proximity_window_s: 0.5  # VRU lock window (seconds)
     min_conf: 0.40            # minimum detection confidence for VRU trigger
+
+  safety2:
+    lo_thresh: 0.513
+    hi_thresh: 0.763
+    hysteresis_window: 3
+    proximity_window_s: 0.5
+    min_conf: 0.40
+    near_area_thresh: 8000.0
 
 models:
   simulate: false            # set true to skip real model loading

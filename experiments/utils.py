@@ -78,16 +78,22 @@ class TrialRecord:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def run_trial(
-    label:       str,
-    group:       str,
-    policy:      str | BasePolicy,
-    n:           int,
-    intensity:   float,
-    simulate:    bool = True,
+    label: str,
+    group: str,
+    policy: str | BasePolicy,
+    n: int,
+    intensity: float,
+    simulate: bool = True,
     policy_kwargs: dict | None = None,
-    warmup:      int  = 5,
+    warmup: int = 5,
+    inject_pressure: bool = True,
 ) -> list[TrialRecord]:
-    """Run one experimental cell and return per-inference records."""
+    """Run one experimental cell and return per-inference records.
+
+    For simulation-style experiments we inject a synthetic pressure override so
+    load profiles are reproducible across machines. Real-image experiments in
+    other modules use their own frame-aware runners.
+    """
     records: list[TrialRecord] = []
 
     with LoadInjector(intensity) as _inj:
@@ -96,28 +102,30 @@ def run_trial(
             policy=policy if isinstance(policy, str) else policy,
             policy_kwargs=policy_kwargs or {},
         ) as ctrl:
-            time.sleep(0.4)   # monitor warm-up
+            time.sleep(0.4)
 
             prev_tier = ctrl.current_tier
-            # warm-up passes (excluded from results)
             for _ in range(warmup):
+                if inject_pressure:
+                    ctrl.set_pressure_override(intensity_to_pressure(intensity))
                 ctrl.infer()
 
             for _ in range(n):
+                if inject_pressure:
+                    ctrl.set_pressure_override(intensity_to_pressure(intensity))
                 res = ctrl.infer()
                 cur_tier = ctrl.current_tier
 
                 vru = any(
-                    d.get("class", "").lower() in
-                    {"person", "pedestrian", "cyclist", "bicycle"}
+                    d.get("class", "").lower() in {"person", "pedestrian", "cyclist", "bicycle", "motorbike", "motorcycle", "rider"}
                     for d in res.get("detections", [])
                 )
 
                 records.append(TrialRecord(
                     label=label,
                     group=group,
-                    latency_ms=res["latency_ms"],
-                    pressure=res.get("pressure", 0.0),
+                    latency_ms=float(res["latency_ms"]),
+                    pressure=float(res.get("pressure", 0.0)),
                     tier=res["tier"],
                     n_detections=len(res.get("detections", [])),
                     vru_detected=vru,
@@ -125,6 +133,9 @@ def run_trial(
                     accuracy_proxy=float(res.get("accuracy_proxy", 0.0)),
                 ))
                 prev_tier = cur_tier
+
+            if inject_pressure:
+                ctrl.set_pressure_override(None)
 
     return records
 
@@ -445,57 +456,3 @@ def intensity_to_pressure(intensity: float, noise: float = 0.03) -> float:
     return max(0.0, min(1.0, base + random.gauss(0, noise)))
 
 
-def run_trial(
-    label:       str,
-    group:       str,
-    policy:      str | BasePolicy,
-    n:           int,
-    intensity:   float,
-    simulate:    bool = True,
-    policy_kwargs: dict | None = None,
-    warmup:      int  = 5,
-    inject_pressure: bool = True,   # use synthetic R(t) override
-) -> list[TrialRecord]:
-    """Run one experimental cell and return per-inference records."""
-    records: list[TrialRecord] = []
-
-    with LoadInjector(intensity) as _inj:
-        with RAMSController(
-            simulate=simulate,
-            policy=policy if isinstance(policy, str) else policy,
-            policy_kwargs=policy_kwargs or {},
-        ) as ctrl:
-            time.sleep(0.4)   # monitor warm-up
-
-            prev_tier = ctrl.current_tier
-            for _ in range(warmup):
-                if inject_pressure:
-                    ctrl.set_pressure_override(intensity_to_pressure(intensity))
-                ctrl.infer()
-
-            for _ in range(n):
-                if inject_pressure:
-                    ctrl.set_pressure_override(intensity_to_pressure(intensity))
-                res = ctrl.infer()
-                cur_tier = ctrl.current_tier
-
-                vru = any(
-                    d.get("class", "").lower() in
-                    {"person", "pedestrian", "cyclist", "bicycle"}
-                    for d in res.get("detections", [])
-                )
-
-                records.append(TrialRecord(
-                    label=label,
-                    group=group,
-                    latency_ms=res["latency_ms"],
-                    pressure=res.get("pressure", 0.0),
-                    tier=res["tier"],
-                    n_detections=len(res.get("detections", [])),
-                    vru_detected=vru,
-                    switch_occurred=(cur_tier != prev_tier),
-                    accuracy_proxy=float(res.get("accuracy_proxy", 0.0)),
-                ))
-                prev_tier = cur_tier
-
-    return records

@@ -3,9 +3,10 @@ Model Tier Library
 Defines the three YOLOv8 tiers and their warm-loaded inference wrappers.
 
 Inference backend priority (per tier):
-  1. ONNX Runtime  — fastest on CPU, used if .onnx file exists
-  2. Ultralytics   — fallback if only .pt file is available
-  3. Simulation    — calibrated Gaussian, used if no real model found
+  1. TensorRT      — used on Jetson/GPU if .engine file exists
+  2. ONNX Runtime  — fastest on CPU, used if .onnx file exists
+  3. Ultralytics   — fallback if only .pt file is available
+  4. Simulation    — calibrated Gaussian, used if no real model found
 
 Per-tier resolution (mixed-resolution strategy):
   NANO   → imgsz=320  (speed priority)
@@ -103,9 +104,44 @@ def _parse_onnx_output(outputs, conf_thresh: float = 0.25) -> list[dict]:
     return detections
 
 
+def _letterbox_image(frame, size: int):
+    import cv2
+    import numpy as np
+
+    h, w = frame.shape[:2]
+    scale = min(size / w, size / h)
+    new_w, new_h = int(round(w * scale)), int(round(h * scale))
+    resized = cv2.resize(frame, (new_w, new_h), interpolation=cv2.INTER_LINEAR)
+    canvas = np.full((size, size, 3), 114, dtype=frame.dtype)
+    pad_x = (size - new_w) // 2
+    pad_y = (size - new_h) // 2
+    canvas[pad_y:pad_y + new_h, pad_x:pad_x + new_w] = resized
+    return canvas, scale, pad_x, pad_y, w, h
+
+
+def _scale_letterbox_boxes(detections: list[dict], scale: float,
+                           pad_x: int, pad_y: int,
+                           orig_w: int, orig_h: int) -> list[dict]:
+    scaled = []
+    for det in detections:
+        x1, y1, x2, y2 = det["xyxy"]
+        box = [
+            max(0.0, min(orig_w, (x1 - pad_x) / scale)),
+            max(0.0, min(orig_h, (y1 - pad_y) / scale)),
+            max(0.0, min(orig_w, (x2 - pad_x) / scale)),
+            max(0.0, min(orig_h, (y2 - pad_y) / scale)),
+        ]
+        if box[2] <= box[0] or box[3] <= box[1]:
+            continue
+        det = dict(det)
+        det["xyxy"] = box
+        scaled.append(det)
+    return scaled
+
+
 class ModelWrapper:
     """
-    Wraps a YOLOv8 model. Backend priority: ONNX > Ultralytics > Simulation.
+    Wraps a YOLOv8 model. Backend priority: TensorRT > ONNX > Ultralytics > Simulation.
     Each tier runs at its own resolution (320 / 416 / 640).
     """
 
@@ -128,7 +164,29 @@ class ModelWrapper:
                         self.tier.name, self.imgsz)
             return
 
-        # 1. ONNX Runtime
+        # 1. TensorRT engine via Ultralytics. Engines are device-specific, so
+        # prefer them only when explicitly present in the working directory.
+        engine_candidates = [
+            Path(self.profile.model_id).with_suffix(".engine"),
+            Path(f"{Path(self.profile.model_id).stem}_imgsz{self.imgsz}.engine"),
+        ]
+        engine_path = next((p for p in engine_candidates if p.exists()), None)
+        if engine_path is not None:
+            try:
+                from ultralytics import YOLO
+                self._model = YOLO(str(engine_path))
+                self._backend = "tensorrt"
+                import numpy as np
+                dummy = np.zeros((self.imgsz, self.imgsz, 3), dtype="uint8")
+                self._model(dummy, verbose=False, imgsz=self.imgsz)
+                logger.info("[RAMS] %s ready — TensorRT %s (imgsz=%d).",
+                            self.profile.label, engine_path, self.imgsz)
+                self._loaded = True
+                return
+            except Exception as e:
+                logger.warning("[RAMS] TensorRT load failed (%s), trying ONNX.", e)
+
+        # 2. ONNX Runtime
         onnx_path = Path(self.profile.onnx_id)
         if onnx_path.exists():
             try:
@@ -151,7 +209,7 @@ class ModelWrapper:
             except Exception as e:
                 logger.warning("[RAMS] ONNX load failed (%s), trying ultralytics.", e)
 
-        # 2. Ultralytics / PyTorch
+        # 3. Ultralytics / PyTorch
         try:
             from ultralytics import YOLO
             pt = Path(self.profile.model_id)
@@ -226,17 +284,23 @@ class ModelWrapper:
             import numpy as np
             if frame is None:
                 img = np.zeros((self.imgsz, self.imgsz, 3), dtype="uint8")
+                letterbox_meta = None
             else:
-                import cv2
-                img = cv2.resize(frame, (self.imgsz, self.imgsz))
+                img, scale, pad_x, pad_y, orig_w, orig_h = _letterbox_image(frame, self.imgsz)
+                letterbox_meta = (scale, pad_x, pad_y, orig_w, orig_h)
             inp  = (img.astype("float32") / 255.0).transpose(2, 0, 1)[None]
             name = self._model.get_inputs()[0].name
             out  = self._model.run(None, {name: inp})
             latency_ms = (time.perf_counter() - t0) * 1000.0
+            detections = _parse_onnx_output(out)
+            coords = "model"
+            if letterbox_meta is not None:
+                detections = _scale_letterbox_boxes(detections, *letterbox_meta)
+                coords = "original"
             return {
                 "tier": self.tier.name, "simulated": False, "backend": "onnx",
-                "latency_ms": latency_ms,
-                "detections": _parse_onnx_output(out),
+                "latency_ms": latency_ms, "coords": coords,
+                "detections": detections,
                 "accuracy_proxy": self.profile.map50,
             }
 
@@ -252,7 +316,7 @@ class ModelWrapper:
             for r in res for b in r.boxes
         ]
         return {
-            "tier": self.tier.name, "simulated": False, "backend": "ultralytics",
+            "tier": self.tier.name, "simulated": False, "backend": self._backend,
             "latency_ms": latency_ms, "detections": dets,
             "accuracy_proxy": self.profile.map50,
         }

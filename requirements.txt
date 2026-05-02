@@ -1,11 +1,4 @@
-# Core
 psutil>=5.9
-
-# Real inference (optional — system falls back to simulation if absent)
-ultralytics>=8.0
-torch>=2.0
-torchvision>=0.15
+PyYAML>=6.0
 numpy>=1.24
-
-# Benchmark / config
-pyyaml>=6.0
+matplotlib>=3.8

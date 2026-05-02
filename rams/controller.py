@@ -12,7 +12,8 @@ from typing import Optional
 
 from rams.monitor import ResourceMonitor
 from rams.models  import ModelLibrary, Tier
-from rams.policy  import BasePolicy, SafetyPolicy, make_policy
+from rams.config import get_default_policy_name, get_default_simulate, get_monitor_hz, get_policy_kwargs
+from rams.policy  import BasePolicy, make_policy
 
 logger = logging.getLogger(__name__)
 
@@ -37,19 +38,25 @@ class RAMSController:
 
     def __init__(
         self,
-        simulate: bool = False,
-        policy: str | BasePolicy = "safety",
-        monitor_hz: float = 10.0,
+        simulate: bool | None = None,
+        policy: str | BasePolicy | None = None,
+        monitor_hz: float | None = None,
         policy_kwargs: Optional[dict] = None,
     ):
-        self.simulate = simulate
-        self.monitor  = ResourceMonitor(hz=monitor_hz)
-        self.library  = ModelLibrary(simulate=simulate)
+        resolved_simulate = get_default_simulate(False) if simulate is None else simulate
+        resolved_monitor_hz = get_monitor_hz(10.0) if monitor_hz is None else monitor_hz
+        resolved_policy = get_default_policy_name("safety") if policy is None else policy
 
-        if isinstance(policy, str):
-            self.policy = make_policy(policy, **(policy_kwargs or {}))
+        self.simulate = resolved_simulate
+        self.monitor  = ResourceMonitor(hz=resolved_monitor_hz)
+        self.library  = ModelLibrary(simulate=resolved_simulate)
+
+        if isinstance(resolved_policy, str):
+            merged_kwargs = get_policy_kwargs(resolved_policy)
+            merged_kwargs.update(policy_kwargs or {})
+            self.policy = make_policy(resolved_policy, **merged_kwargs)
         else:
-            self.policy = policy
+            self.policy = resolved_policy
 
         self._current_tier: Tier = Tier.SMALL
         self._switch_log: list[dict] = []
@@ -114,13 +121,10 @@ class RAMSController:
 
         result = self.library.infer(self._current_tier, frame)
 
-        # Feed detections back to safety policy
-        if isinstance(self.policy, SafetyPolicy):
-            self.policy.select_tier(
-                pressure=pressure,
-                last_tier=self._current_tier,
-                recent_detections=result.get("detections", []),
-            )
+        # Feed detections back to any stateful policy without perturbing pressure state
+        observe = getattr(self.policy, "observe", None)
+        if callable(observe):
+            observe(result.get("detections", []))
 
         result["pressure"] = round(pressure, 4)
         if snap:

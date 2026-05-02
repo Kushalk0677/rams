@@ -73,22 +73,14 @@ def run_fixed_tier(
     records: list[TrialRecord] = []
     with LoadInjector(intensity):
         with RAMSController(simulate=simulate, policy="threshold") as ctrl:
-            # Override: hard-code the tier by patching the policy thresholds
-            # so it always selects the target tier regardless of pressure.
-            ctrl.policy = ThresholdPolicy(
-                lo_thresh=0.0 if tier_enum == Tier.MEDIUM else (
-                    1.0 if tier_enum == Tier.NANO else 0.5),
-                hi_thresh=0.0 if tier_enum == Tier.NANO else (
-                    1.0 if tier_enum == Tier.MEDIUM else 0.5),
-                hysteresis_window=1,
-            )
             ctrl._current_tier = tier_enum
             time.sleep(0.4)
 
             from experiments.utils import intensity_to_pressure
             for _ in range(n):
-                ctrl.set_pressure_override(intensity_to_pressure(intensity))
-                res = ctrl.infer()
+                pressure = intensity_to_pressure(intensity)
+                ctrl.set_pressure_override(pressure)
+                res = ctrl.library.infer(tier_enum)
                 vru = any(
                     d.get("class", "").lower() in
                     {"person", "pedestrian", "cyclist", "bicycle"}
@@ -98,7 +90,7 @@ def run_fixed_tier(
                     label=tier_name,
                     group="fixed",
                     latency_ms=res["latency_ms"],
-                    pressure=res.get("pressure", 0.0),
+                    pressure=pressure,
                     tier=res["tier"],
                     n_detections=len(res.get("detections", [])),
                     vru_detected=vru,
