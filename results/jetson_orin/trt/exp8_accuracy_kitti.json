@@ -1,0 +1,59 @@
+{
+  "dataset": "kitti",
+  "tiers": [
+    {
+      "tier": "NANO",
+      "imgsz": 320,
+      "n_images": 1500,
+      "map50": 0.372,
+      "map5095": 0.253,
+      "map_source": "cached_profile",
+      "vru_tp": 294,
+      "vru_fp": 181,
+      "vru_fn": 922,
+      "vru_recall": 0.2418,
+      "vru_precision": 0.6189,
+      "vru_f1": 0.3477,
+      "vru_fn_rate": 0.7582,
+      "frame_miss_rate": 0.5528,
+      "frames_with_vru": 483,
+      "frames_vru_missed": 267
+    },
+    {
+      "tier": "SMALL",
+      "imgsz": 416,
+      "n_images": 1500,
+      "map50": 0.448,
+      "map5095": 0.3046,
+      "map_source": "cached_profile",
+      "vru_tp": 501,
+      "vru_fp": 458,
+      "vru_fn": 715,
+      "vru_recall": 0.412,
+      "vru_precision": 0.5224,
+      "vru_f1": 0.4607,
+      "vru_fn_rate": 0.588,
+      "frame_miss_rate": 0.3747,
+      "frames_with_vru": 483,
+      "frames_vru_missed": 181
+    },
+    {
+      "tier": "MEDIUM",
+      "imgsz": 640,
+      "n_images": 1500,
+      "map50": 0.503,
+      "map5095": 0.342,
+      "map_source": "cached_profile",
+      "vru_tp": 717,
+      "vru_fp": 1411,
+      "vru_fn": 499,
+      "vru_recall": 0.5896,
+      "vru_precision": 0.3369,
+      "vru_f1": 0.4288,
+      "vru_fn_rate": 0.4104,
+      "frame_miss_rate": 0.1698,
+      "frames_with_vru": 483,
+      "frames_vru_missed": 82
+    }
+  ]
+}

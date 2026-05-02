@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\caption{Safety override analysis: SafetyPolicy vs ThresholdPolicy under heavy load with varying VRU injection rates. Lock rate = fraction of inferences where tier was not downgraded to NANO.}
+\label{tab:exp4_safety}
+\begin{tabular}{llrrrrrl}
+\toprule
+Label & Group & $N$ & Mean (ms) & $\pm$Std & P95 (ms) & Sw/inf & Tier dist \\
+\midrule
+  vru=0.0 & safety & 100 & 157.0 & 129.1 & 139.0 & 0.040 & MEDIUM:5%, SMALL:95% \\
+  vru=0.0 & threshold & 100 & 192.9 & 186.0 & 717.9 & 0.080 & MEDIUM:11%, SMALL:89% \\
+  vru=0.1 & safety & 100 & 180.6 & 169.6 & 711.9 & 0.080 & MEDIUM:9%, SMALL:91% \\
+  vru=0.1 & threshold & 100 & 180.2 & 168.4 & 710.3 & 0.080 & MEDIUM:9%, SMALL:91% \\
+  vru=0.2 & safety & 100 & 192.9 & 184.5 & 713.5 & 0.080 & MEDIUM:11%, SMALL:89% \\
+  vru=0.2 & threshold & 100 & 140.1 & 83.2 & 129.9 & 0.020 & MEDIUM:2%, SMALL:98% \\
+  vru=0.4 & safety & 100 & 163.5 & 140.9 & 712.5 & 0.060 & MEDIUM:6%, SMALL:94% \\
+  vru=0.4 & threshold & 100 & 169.4 & 151.2 & 713.6 & 0.040 & MEDIUM:7%, SMALL:93% \\
+  vru=0.6 & safety & 100 & 174.9 & 161.0 & 715.4 & 0.060 & MEDIUM:8%, SMALL:92% \\
+  vru=0.6 & threshold & 100 & 163.8 & 140.0 & 710.5 & 0.060 & MEDIUM:6%, SMALL:94% \\
+  vru=0.8 & safety & 100 & 151.5 & 115.5 & 133.5 & 0.040 & MEDIUM:4%, SMALL:96% \\
+  vru=0.8 & threshold & 100 & 140.6 & 84.4 & 131.8 & 0.020 & MEDIUM:2%, SMALL:98% \\
+  vru=1.0 & safety & 100 & \textbf{139.5} & 83.4 & 131.5 & 0.020 & MEDIUM:2%, SMALL:98% \\
+  vru=1.0 & threshold & 100 & 152.0 & 115.7 & 133.7 & 0.040 & MEDIUM:4%, SMALL:96% \\
+\bottomrule
+\end{tabular}
+\end{table}

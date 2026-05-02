@@ -1,12 +1,14 @@
 cff-version: 1.2.0
 title: "RAMS: Resource-Adaptive Model Switching for Edge AI"
-message: "If you use this repository, please cite the project and the accompanying paper draft."
+message: "If you use this repository, please cite the project."
 type: software
 authors:
   - family-names: Khemani
     given-names: Kushal
-  - family-names: Lokhande
-    given-names: Ajinkyaa
+  - family-names: Leri
+    given-names: Evan
+  - family-names: Xu
+    given-names: George
 version: 0.1.0
 license: "NOASSERTION"
 repository-code: "https://github.com/Kushalk0677/rams"

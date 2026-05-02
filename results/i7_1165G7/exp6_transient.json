@@ -1,0 +1,117 @@
+{
+  "threshold": [
+    {
+      "spike_id": 1,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 443.04,
+      "baseline_lat_ms": 445.72
+    },
+    {
+      "spike_id": 2,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 445.09,
+      "baseline_lat_ms": 453.89
+    },
+    {
+      "spike_id": 3,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 443.08,
+      "baseline_lat_ms": 452.68
+    }
+  ],
+  "predictive": [
+    {
+      "spike_id": 1,
+      "downgrade_delay": 1,
+      "recovery_delay": 1,
+      "max_latency_ms": 443.57,
+      "baseline_lat_ms": 445.67
+    },
+    {
+      "spike_id": 2,
+      "downgrade_delay": 1,
+      "recovery_delay": 1,
+      "max_latency_ms": 427.03,
+      "baseline_lat_ms": 446.79
+    },
+    {
+      "spike_id": 3,
+      "downgrade_delay": 1,
+      "recovery_delay": 1,
+      "max_latency_ms": 424.05,
+      "baseline_lat_ms": 446.26
+    }
+  ],
+  "safety": [
+    {
+      "spike_id": 1,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 472.78,
+      "baseline_lat_ms": 451.49
+    },
+    {
+      "spike_id": 2,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 449.8,
+      "baseline_lat_ms": 453.8
+    },
+    {
+      "spike_id": 3,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 436.78,
+      "baseline_lat_ms": 456.26
+    }
+  ],
+  "adaptive": [
+    {
+      "spike_id": 1,
+      "downgrade_delay": 0,
+      "recovery_delay": 1,
+      "max_latency_ms": 83.72,
+      "baseline_lat_ms": 449.78
+    },
+    {
+      "spike_id": 2,
+      "downgrade_delay": 0,
+      "recovery_delay": 1,
+      "max_latency_ms": 75.79,
+      "baseline_lat_ms": 452.78
+    },
+    {
+      "spike_id": 3,
+      "downgrade_delay": 0,
+      "recovery_delay": 1,
+      "max_latency_ms": 132.28,
+      "baseline_lat_ms": 447.6
+    }
+  ],
+  "safety2": [
+    {
+      "spike_id": 1,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 448.4,
+      "baseline_lat_ms": 448.55
+    },
+    {
+      "spike_id": 2,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 445.64,
+      "baseline_lat_ms": 448.03
+    },
+    {
+      "spike_id": 3,
+      "downgrade_delay": 2,
+      "recovery_delay": 2,
+      "max_latency_ms": 444.21,
+      "baseline_lat_ms": 448.99
+    }
+  ]
+}

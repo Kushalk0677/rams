@@ -1,0 +1,22 @@
+{
+  "host": "pi5-rams-node",
+  "platform": "Linux-6.6.31-rpi-aarch64",
+  "baseline": {
+    "n": 300,
+    "mean": 0.6728,
+    "std": 0.14654,
+    "p50": 0.64555,
+    "p75": 0.80808,
+    "p90": 0.8749,
+    "p95": 0.87508,
+    "max": 0.97665,
+    "cpu_mean": 13.198,
+    "mem_mean": 31.349
+  },
+  "thresholds": {
+    "lo_thresh": 0.513,
+    "hi_thresh": 0.763,
+    "gap": 0.25
+  },
+  "timestamp": "2026-04-24T02:09:41"
+}

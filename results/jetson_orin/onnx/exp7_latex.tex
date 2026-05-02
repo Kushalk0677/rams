@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Safety-Weighted Accuracy Score (SWAS, $\beta=2.0$) per policy and load profile. $N=20$ inferences per cell. Bold = best SWAS per load column.}}
+\label{tab:exp7_swas}
+\begin{tabular}{lrrrr}
+\toprule
+Policy & Idle & Moderate & Heavy & Burst \\
+\midrule
+  threshold & 0.217 & \textbf{0.213} & 0.166 & 0.141 \\
+  predictive & \textbf{0.304} & 0.208 & 0.149 & 0.161 \\
+  safety & 0.267 & 0.178 & 0.163 & \textbf{0.225} \\
+  adaptive & 0.235 & 0.203 & 0.137 & 0.134 \\
+  safety2 & 0.287 & 0.176 & \textbf{0.253} & 0.215 \\
+\bottomrule
+\end{tabular}
+\end{table}

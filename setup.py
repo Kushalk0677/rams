@@ -4,7 +4,7 @@ setup(
     name="rams",
     version="0.1.0",
     description="Resource-Adaptive Model Switching for Edge AI",
-    author="Kushal Khemani, Ajinkyaa Lokhande",
+    author="Kushal Khemani, Evan Leri, George Xu",
     packages=find_packages(),
     python_requires=">=3.9",
     install_requires=[

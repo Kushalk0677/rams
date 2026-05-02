@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Safety-latency operating points under moderate load — COCO. VRU recall is weighted by tier distribution.}
+\label{tab:pareto_coco}
+\begin{tabular}{lccc}
+\toprule
+Policy / Tier & Mean latency (ms) & Weighted VRU recall & Tier dist. (N/S/M\%) \\
+\midrule
+Fixed-NANO & 18.0 & 0.000 & 100/0/0 \\
+Fixed-SMALL & 32.0 & 0.000 & 100/0/0 \\
+Fixed-MEDIUM & 58.0 & 0.000 & 100/0/0 \\
+\midrule
+threshold & 77.0 & 0.000 & 0/78/22 \\
+predictive & 34.8 & 0.000 & 0/100/0 \\
+adaptive & 207.8 & 0.000 & 0/0/100 \\
+safety & 80.9 & 0.000 & 0/73/27 \\
+safety2 & 130.6 & 0.000 & 0/50/50 \\
+\bottomrule
+\end{tabular}
+\end{table}

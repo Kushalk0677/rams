@@ -1,0 +1,424 @@
+{
+  "host": "Kushals-Spectre-x360-AW2002TU",
+  "platform": "Windows-11-10.0.26220-SP0",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "groups": [
+    {
+      "policy": "adaptive",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 58.93,
+      "latency_std": 46.59,
+      "latency_p50": 45.29,
+      "latency_p95": 110.68,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 46.51,
+      "latency_std": 24.44,
+      "latency_p50": 38.93,
+      "latency_p95": 102.22,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 40.07,
+      "latency_std": 25.56,
+      "latency_p50": 32.99,
+      "latency_p95": 82.69,
+      "tier_counts": {
+        "NANO": 98,
+        "SMALL": 2
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 47.23,
+      "latency_std": 27.53,
+      "latency_p50": 41.27,
+      "latency_p95": 106.48,
+      "tier_counts": {
+        "NANO": 98,
+        "SMALL": 2
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 38.6,
+      "latency_std": 16.77,
+      "latency_p50": 34.48,
+      "latency_p95": 71.44,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 43.22,
+      "latency_std": 27.87,
+      "latency_p50": 32.81,
+      "latency_p95": 127.97,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 47.99,
+      "latency_std": 29.81,
+      "latency_p50": 37.23,
+      "latency_p95": 111.72,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 37.04,
+      "latency_std": 16.63,
+      "latency_p50": 31.31,
+      "latency_p95": 76.69,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 37.59,
+      "latency_std": 16.24,
+      "latency_p50": 31.97,
+      "latency_p95": 69.32,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 41.57,
+      "latency_std": 19.28,
+      "latency_p50": 35.49,
+      "latency_p95": 84.42,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "vru_rate": 0.13,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 64.71,
+      "latency_std": 57.04,
+      "latency_p50": 41.3,
+      "latency_p95": 204.88,
+      "tier_counts": {
+        "NANO": 83,
+        "SMALL": 17
+      },
+      "vru_rate": 0.16,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 75.33,
+      "latency_std": 65.1,
+      "latency_p50": 48.87,
+      "latency_p95": 245.92,
+      "tier_counts": {
+        "NANO": 83,
+        "SMALL": 17
+      },
+      "vru_rate": 0.16,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 61.1,
+      "latency_std": 64.87,
+      "latency_p50": 33.89,
+      "latency_p95": 251.84,
+      "tier_counts": {
+        "NANO": 83,
+        "SMALL": 17
+      },
+      "vru_rate": 0.16,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 66.02,
+      "latency_std": 61.43,
+      "latency_p50": 34.66,
+      "latency_p95": 177.67,
+      "tier_counts": {
+        "NANO": 74,
+        "SMALL": 26
+      },
+      "vru_rate": 0.15,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 72.31,
+      "latency_std": 72.81,
+      "latency_p50": 40.48,
+      "latency_p95": 247.43,
+      "tier_counts": {
+        "NANO": 80,
+        "SMALL": 20
+      },
+      "vru_rate": 0.15,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 64.43,
+      "latency_std": 46.96,
+      "latency_p50": 40.25,
+      "latency_p95": 182.47,
+      "tier_counts": {
+        "NANO": 81,
+        "SMALL": 19
+      },
+      "vru_rate": 0.15,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 62.66,
+      "latency_std": 51.61,
+      "latency_p50": 42.15,
+      "latency_p95": 208.25,
+      "tier_counts": {
+        "NANO": 80,
+        "SMALL": 20
+      },
+      "vru_rate": 0.15,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 54.81,
+      "latency_std": 53.16,
+      "latency_p50": 33.51,
+      "latency_p95": 150.29,
+      "tier_counts": {
+        "NANO": 82,
+        "SMALL": 18
+      },
+      "vru_rate": 0.15,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 59.63,
+      "latency_std": 49.38,
+      "latency_p50": 36.34,
+      "latency_p95": 169.91,
+      "tier_counts": {
+        "NANO": 82,
+        "SMALL": 18
+      },
+      "vru_rate": 0.15,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 53.96,
+      "latency_std": 39.94,
+      "latency_p50": 36.7,
+      "latency_p95": 141.41,
+      "tier_counts": {
+        "NANO": 76,
+        "SMALL": 24
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 47.63,
+      "latency_std": 29.76,
+      "latency_p50": 40.98,
+      "latency_p95": 107.45,
+      "tier_counts": {
+        "NANO": 98,
+        "SMALL": 2
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 41.15,
+      "latency_std": 20.87,
+      "latency_p50": 31.57,
+      "latency_p95": 95.77,
+      "tier_counts": {
+        "NANO": 98,
+        "SMALL": 2
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 35.85,
+      "latency_std": 21.39,
+      "latency_p50": 25.91,
+      "latency_p95": 85.1,
+      "tier_counts": {
+        "NANO": 98,
+        "SMALL": 2
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 43.25,
+      "latency_std": 31.42,
+      "latency_p50": 33.45,
+      "latency_p95": 102.51,
+      "tier_counts": {
+        "NANO": 97,
+        "SMALL": 3
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 39.64,
+      "latency_std": 34.33,
+      "latency_p50": 28.6,
+      "latency_p95": 116.74,
+      "tier_counts": {
+        "NANO": 97,
+        "SMALL": 3
+      },
+      "vru_rate": 0.14,
+      "backends": [
+        "onnx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "host": "soren-edge",
+  "platform": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+  "python": "3.10.12 (main, Jan 26 2026, 14:55:28) [GCC 11.4.0]",
+  "groups": [
+    {
+      "policy": "adaptive",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 17.64,
+      "latency_std": 2.81,
+      "latency_p50": 17.27,
+      "latency_p95": 22.04,
+      "tier_counts": {
+        "MEDIUM": 100
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 14.32,
+      "latency_std": 5.15,
+      "latency_p50": 14.27,
+      "latency_p95": 18.76,
+      "tier_counts": {
+        "MEDIUM": 89,
+        "NANO": 7,
+        "SMALL": 4
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 15.96,
+      "latency_std": 11.56,
+      "latency_p50": 13.68,
+      "latency_p95": 19.21,
+      "tier_counts": {
+        "MEDIUM": 100
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 13.42,
+      "latency_std": 0.17,
+      "latency_p50": 13.42,
+      "latency_p95": 13.56,
+      "tier_counts": {
+        "MEDIUM": 100
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 14.98,
+      "latency_std": 4.65,
+      "latency_p50": 13.71,
+      "latency_p95": 23.64,
+      "tier_counts": {
+        "MEDIUM": 100
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 7.22,
+      "latency_std": 2.62,
+      "latency_p50": 5.72,
+      "latency_p95": 11.78,
+      "tier_counts": {
+        "MEDIUM": 27,
+        "SMALL": 73
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 10.38,
+      "latency_std": 1.74,
+      "latency_p50": 10.88,
+      "latency_p95": 11.54,
+      "tier_counts": {
+        "MEDIUM": 89,
+        "SMALL": 11
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 8.25,
+      "latency_std": 3.82,
+      "latency_p50": 5.17,
+      "latency_p95": 18.18,
+      "tier_counts": {
+        "MEDIUM": 49,
+        "SMALL": 51
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 9.84,
+      "latency_std": 1.51,
+      "latency_p50": 10.26,
+      "latency_p95": 10.72,
+      "tier_counts": {
+        "MEDIUM": 91,
+        "SMALL": 9
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 7.52,
+      "latency_std": 2.7,
+      "latency_p50": 5.35,
+      "latency_p95": 11.07,
+      "tier_counts": {
+        "MEDIUM": 42,
+        "SMALL": 58
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 6.81,
+      "latency_std": 3.51,
+      "latency_p50": 5.65,
+      "latency_p95": 18.16,
+      "tier_counts": {
+        "SMALL": 91,
+        "MEDIUM": 9
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 6.82,
+      "latency_std": 2.95,
+      "latency_p50": 5.83,
+      "latency_p95": 17.44,
+      "tier_counts": {
+        "SMALL": 94,
+        "MEDIUM": 6
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 10.2,
+      "latency_std": 0.74,
+      "latency_p50": 10.27,
+      "latency_p95": 10.67,
+      "tier_counts": {
+        "SMALL": 2,
+        "MEDIUM": 98
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 12.81,
+      "latency_std": 11.89,
+      "latency_p50": 13.61,
+      "latency_p95": 18.61,
+      "tier_counts": {
+        "SMALL": 42,
+        "MEDIUM": 58
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 10.22,
+      "latency_std": 22.24,
+      "latency_p50": 5.35,
+      "latency_p95": 18.78,
+      "tier_counts": {
+        "SMALL": 79,
+        "MEDIUM": 21
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 12.15,
+      "latency_std": 3.0,
+      "latency_p50": 13.31,
+      "latency_p95": 14.36,
+      "tier_counts": {
+        "SMALL": 18,
+        "MEDIUM": 82
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 8.88,
+      "latency_std": 4.46,
+      "latency_p50": 6.02,
+      "latency_p95": 14.31,
+      "tier_counts": {
+        "SMALL": 64,
+        "MEDIUM": 36
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 16.21,
+      "latency_std": 5.07,
+      "latency_p50": 16.43,
+      "latency_p95": 17.96,
+      "tier_counts": {
+        "SMALL": 7,
+        "MEDIUM": 93
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 8.9,
+      "latency_std": 5.98,
+      "latency_p50": 5.27,
+      "latency_p95": 20.84,
+      "tier_counts": {
+        "SMALL": 69,
+        "MEDIUM": 31
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 9.65,
+      "latency_std": 3.87,
+      "latency_p50": 12.74,
+      "latency_p95": 13.74,
+      "tier_counts": {
+        "SMALL": 45,
+        "MEDIUM": 55
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 9.56,
+      "latency_std": 2.6,
+      "latency_p50": 10.99,
+      "latency_p95": 11.92,
+      "tier_counts": {
+        "SMALL": 31,
+        "MEDIUM": 69
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 5.77,
+      "latency_std": 1.37,
+      "latency_p50": 5.43,
+      "latency_p95": 11.2,
+      "tier_counts": {
+        "SMALL": 95,
+        "MEDIUM": 5
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 7.13,
+      "latency_std": 3.28,
+      "latency_p50": 5.16,
+      "latency_p95": 10.83,
+      "tier_counts": {
+        "SMALL": 68,
+        "MEDIUM": 32
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 6.48,
+      "latency_std": 2.3,
+      "latency_p50": 5.19,
+      "latency_p95": 10.62,
+      "tier_counts": {
+        "SMALL": 76,
+        "MEDIUM": 24
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 5.79,
+      "latency_std": 1.49,
+      "latency_p50": 5.36,
+      "latency_p95": 10.79,
+      "tier_counts": {
+        "SMALL": 94,
+        "MEDIUM": 6
+      },
+      "vru_rate": 0.0,
+      "backends": [
+        "tensorrt-direct"
+      ]
+    }
+  ]
+}

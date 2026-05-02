@@ -1,0 +1,401 @@
+{
+  "device": "windows-host",
+  "backend": "onnx",
+  "host": "Kushals-Spectre-x360-AW2002TU",
+  "platform": "Windows-11-10.0.26220-SP0",
+  "timestamp": "2026-04-22T13:10:49.236061",
+  "groups": [
+    {
+      "policy": "adaptive",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 47.73,
+      "latency_std": 48.26,
+      "latency_p50": 30.13,
+      "latency_p95": 187.1,
+      "tier_counts": {
+        "SMALL": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.14,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 43.66,
+      "latency_std": 21.81,
+      "latency_p50": 36.41,
+      "latency_p95": 103.08,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 48.6,
+      "latency_std": 79.87,
+      "latency_p50": 29.41,
+      "latency_p95": 101.98,
+      "tier_counts": {
+        "MEDIUM": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 41.07,
+      "latency_std": 22.41,
+      "latency_p50": 32.54,
+      "latency_p95": 97.47,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "adaptive",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 45.23,
+      "latency_std": 25.34,
+      "latency_p50": 40.15,
+      "latency_p95": 107.24,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 51.42,
+      "latency_std": 32.69,
+      "latency_p50": 41.86,
+      "latency_p95": 126.22,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 39.22,
+      "latency_std": 20.63,
+      "latency_p50": 32.2,
+      "latency_p95": 82.64,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 38.7,
+      "latency_std": 23.97,
+      "latency_p50": 32.08,
+      "latency_p95": 94.38,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 37.68,
+      "latency_std": 23.61,
+      "latency_p50": 28.88,
+      "latency_p95": 102.48,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 37.14,
+      "latency_std": 28.39,
+      "latency_p50": 29.34,
+      "latency_p95": 88.29,
+      "tier_counts": {
+        "NANO": 100
+      },
+      "tier_switches": 0,
+      "vru_rate": 0.13,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 71.4,
+      "latency_std": 49.53,
+      "latency_p50": 50.4,
+      "latency_p95": 187.34,
+      "tier_counts": {
+        "SMALL": 17,
+        "NANO": 83
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.16,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 77.45,
+      "latency_std": 73.6,
+      "latency_p50": 44.26,
+      "latency_p95": 248.09,
+      "tier_counts": {
+        "SMALL": 20,
+        "NANO": 80
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.15,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 52.89,
+      "latency_std": 46.52,
+      "latency_p50": 30.12,
+      "latency_p95": 144.95,
+      "tier_counts": {
+        "SMALL": 20,
+        "NANO": 80
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.16,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 56.51,
+      "latency_std": 49.49,
+      "latency_p50": 34.92,
+      "latency_p95": 199.5,
+      "tier_counts": {
+        "SMALL": 17,
+        "NANO": 83
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.16,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 60.1,
+      "latency_std": 48.27,
+      "latency_p50": 42.84,
+      "latency_p95": 174.54,
+      "tier_counts": {
+        "SMALL": 23,
+        "NANO": 77
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.15,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 68.05,
+      "latency_std": 55.86,
+      "latency_p50": 48.23,
+      "latency_p95": 194.06,
+      "tier_counts": {
+        "SMALL": 23,
+        "NANO": 77
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.15,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 63.93,
+      "latency_std": 48.24,
+      "latency_p50": 44.73,
+      "latency_p95": 163.19,
+      "tier_counts": {
+        "SMALL": 23,
+        "NANO": 77
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.15,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 52.04,
+      "latency_std": 41.01,
+      "latency_p50": 34.17,
+      "latency_p95": 137.72,
+      "tier_counts": {
+        "SMALL": 19,
+        "NANO": 81
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.15,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 54.14,
+      "latency_std": 59.71,
+      "latency_p50": 29.0,
+      "latency_p95": 157.11,
+      "tier_counts": {
+        "SMALL": 21,
+        "NANO": 79
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.15,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 82.14,
+      "latency_std": 83.67,
+      "latency_p50": 38.28,
+      "latency_p95": 274.35,
+      "tier_counts": {
+        "SMALL": 17,
+        "NANO": 83
+      },
+      "tier_switches": 5,
+      "vru_rate": 0.16,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "burst",
+      "n": 100,
+      "latency_mean": 46.89,
+      "latency_std": 32.84,
+      "latency_p50": 38.59,
+      "latency_p95": 96.53,
+      "tier_counts": {
+        "SMALL": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.14,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "heavy",
+      "n": 100,
+      "latency_mean": 41.79,
+      "latency_std": 19.1,
+      "latency_p50": 35.67,
+      "latency_p95": 78.81,
+      "tier_counts": {
+        "SMALL": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.14,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "idle",
+      "n": 100,
+      "latency_mean": 50.67,
+      "latency_std": 56.28,
+      "latency_p50": 32.58,
+      "latency_p95": 121.85,
+      "tier_counts": {
+        "SMALL": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.14,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "light",
+      "n": 100,
+      "latency_mean": 39.02,
+      "latency_std": 27.66,
+      "latency_p50": 30.4,
+      "latency_p95": 88.45,
+      "tier_counts": {
+        "SMALL": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.14,
+      "gpu_util_mean": null
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "moderate",
+      "n": 100,
+      "latency_mean": 63.37,
+      "latency_std": 59.29,
+      "latency_p50": 44.04,
+      "latency_p95": 164.05,
+      "tier_counts": {
+        "SMALL": 2,
+        "NANO": 98
+      },
+      "tier_switches": 1,
+      "vru_rate": 0.14,
+      "gpu_util_mean": null
+    }
+  ]
+}

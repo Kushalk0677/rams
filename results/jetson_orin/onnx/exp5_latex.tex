@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Accuracy–latency operating points for all RAMS policies and fixed-tier baselines under moderate and heavy synthetic load. Adaptive and safety-tier policies achieve higher accuracy than FIXED\_NANO/SMALL at comparable or lower latency. N=100 inferences per condition.}
+\label{tab:exp5_pareto}
+\begin{tabular}{llrrrrrl}
+\toprule
+Label & Group & $N$ & Mean (ms) & $\pm$Std & P95 (ms) & Sw/inf & Tier dist \\
+\midrule
+  threshold & moderate & 100 & 3.6 & 0.2 & 3.8 & 0.000 & SMALL:100% \\
+  predictive & moderate & 100 & 3.6 & 0.2 & 3.9 & 0.000 & SMALL:100% \\
+  safety & moderate & 100 & 3.6 & 0.2 & 3.9 & 0.000 & SMALL:100% \\
+  adaptive & moderate & 100 & 3.6 & 0.2 & 4.0 & 0.000 & SMALL:100% \\
+  safety2 & moderate & 100 & 7.3 & 2.6 & 9.4 & 0.010 & MEDIUM:67%, SMALL:33% \\
+  FIXED_NANO & moderate & 100 & \textbf{2.3} & 0.1 & 2.4 & 0.000 & NANO:100% \\
+  FIXED_SMALL & moderate & 100 & 3.6 & 0.2 & 3.9 & 0.000 & SMALL:100% \\
+  FIXED_MEDIUM & moderate & 100 & 9.2 & 0.1 & 9.4 & 0.000 & MEDIUM:100% \\
+  threshold & heavy & 100 & \textbf{2.5} & 0.2 & 2.9 & 0.010 & NANO:98%, SMALL:2% \\
+  predictive & heavy & 100 & \textbf{2.5} & 0.1 & 2.7 & 0.010 & NANO:100% \\
+  safety & heavy & 100 & 3.8 & 0.2 & 4.2 & 0.000 & SMALL:100% \\
+  adaptive & heavy & 100 & \textbf{2.6} & 0.3 & 3.1 & 0.010 & NANO:100% \\
+  safety2 & heavy & 100 & 8.5 & 2.1 & 9.9 & 0.010 & MEDIUM:84%, SMALL:16% \\
+  FIXED_NANO & heavy & 100 & \textbf{2.5} & 0.3 & 2.9 & 0.000 & NANO:100% \\
+  FIXED_SMALL & heavy & 100 & 3.9 & 0.2 & 4.3 & 0.000 & SMALL:100% \\
+  FIXED_MEDIUM & heavy & 100 & 9.4 & 0.3 & 9.9 & 0.000 & MEDIUM:100% \\
+\bottomrule
+\end{tabular}
+\end{table}

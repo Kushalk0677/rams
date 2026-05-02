@@ -1,0 +1,246 @@
+[
+  {
+    "label": "threshold",
+    "group": "moderate",
+    "n": 100,
+    "mean": 135.3861859976314,
+    "std": 129.02842579650357,
+    "p50": 78.02814999013208,
+    "p95": 450.2477000351064,
+    "tier_dist": {
+      "MEDIUM": 0.14,
+      "SMALL": 0.86
+    },
+    "switch_rate": 0.06,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.516477
+  },
+  {
+    "label": "predictive",
+    "group": "moderate",
+    "n": 100,
+    "mean": 88.8342100015143,
+    "std": 11.899846829946624,
+    "p50": 87.8513999923598,
+    "p95": 106.17980000097305,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.519168
+  },
+  {
+    "label": "safety",
+    "group": "moderate",
+    "n": 100,
+    "mean": 191.93985299905762,
+    "std": 176.1394391500878,
+    "p50": 82.22990002832375,
+    "p95": 481.013200012967,
+    "tier_dist": {
+      "MEDIUM": 0.29,
+      "SMALL": 0.71
+    },
+    "switch_rate": 0.1,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.522468
+  },
+  {
+    "label": "adaptive",
+    "group": "moderate",
+    "n": 100,
+    "mean": 96.07216900156345,
+    "std": 34.47920802729341,
+    "p50": 86.89889998640865,
+    "p95": 149.06850003171712,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.521774
+  },
+  {
+    "label": "safety2",
+    "group": "moderate",
+    "n": 100,
+    "mean": 131.53725499636494,
+    "std": 130.2566481988354,
+    "p50": 83.72639998560771,
+    "p95": 469.15909997187555,
+    "tier_dist": {
+      "MEDIUM": 0.13,
+      "SMALL": 0.87
+    },
+    "switch_rate": 0.04,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.52113
+  },
+  {
+    "label": "FIXED_NANO",
+    "group": "moderate",
+    "n": 100,
+    "mean": 20.452918999362737,
+    "std": 2.8595105691254346,
+    "p50": 20.45940002426505,
+    "p95": 25.39929997874424,
+    "tier_dist": {
+      "NANO": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.5207641729241832
+  },
+  {
+    "label": "FIXED_SMALL",
+    "group": "moderate",
+    "n": 100,
+    "mean": 82.41271200415213,
+    "std": 10.167022044938248,
+    "p50": 81.72705001197755,
+    "p95": 101.44719999516383,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.518122936720755
+  },
+  {
+    "label": "FIXED_MEDIUM",
+    "group": "moderate",
+    "n": 100,
+    "mean": 484.6853809989989,
+    "std": 68.95442700882502,
+    "p50": 475.9865499800071,
+    "p95": 546.8395000207238,
+    "tier_dist": {
+      "MEDIUM": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.5173410510367435
+  },
+  {
+    "label": "threshold",
+    "group": "heavy",
+    "n": 100,
+    "mean": 92.39597100182436,
+    "std": 14.689500094403959,
+    "p50": 89.6146500017494,
+    "p95": 116.75890005426481,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.722317
+  },
+  {
+    "label": "predictive",
+    "group": "heavy",
+    "n": 100,
+    "mean": 48.35373399662785,
+    "std": 29.729367594977504,
+    "p50": 24.885249993531033,
+    "p95": 85.0250999792479,
+    "tier_dist": {
+      "NANO": 0.54,
+      "SMALL": 0.46
+    },
+    "switch_rate": 0.24,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.71606
+  },
+  {
+    "label": "safety",
+    "group": "heavy",
+    "n": 100,
+    "mean": 78.50471299840137,
+    "std": 4.211684450418383,
+    "p50": 79.44550001411699,
+    "p95": 82.6418999931775,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.715344
+  },
+  {
+    "label": "adaptive",
+    "group": "heavy",
+    "n": 100,
+    "mean": 19.56322099955287,
+    "std": 1.12393309484852,
+    "p50": 19.770999992033467,
+    "p95": 21.222999959718436,
+    "tier_dist": {
+      "NANO": 1.0
+    },
+    "switch_rate": 0.01,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.722903
+  },
+  {
+    "label": "safety2",
+    "group": "heavy",
+    "n": 100,
+    "mean": 78.75361799728125,
+    "std": 4.322303193564967,
+    "p50": 79.71005002036691,
+    "p95": 83.7648999877274,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.714588
+  },
+  {
+    "label": "FIXED_NANO",
+    "group": "heavy",
+    "n": 100,
+    "mean": 19.723758998443373,
+    "std": 1.781865387856408,
+    "p50": 19.956599979195744,
+    "p95": 22.26559998234734,
+    "tier_dist": {
+      "NANO": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.7171914742298355
+  },
+  {
+    "label": "FIXED_SMALL",
+    "group": "heavy",
+    "n": 100,
+    "mean": 78.72735899698455,
+    "std": 5.114777064598117,
+    "p50": 79.2564999719616,
+    "p95": 83.97639996837825,
+    "tier_dist": {
+      "SMALL": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.7124125536302156
+  },
+  {
+    "label": "FIXED_MEDIUM",
+    "group": "heavy",
+    "n": 100,
+    "mean": 498.7720920011634,
+    "std": 113.81953665033564,
+    "p50": 471.6568500152789,
+    "p95": 652.6856999844313,
+    "tier_dist": {
+      "MEDIUM": 1.0
+    },
+    "switch_rate": 0.0,
+    "vru_rate": 0.0,
+    "pressure_mean": 0.7220559940453918
+  }
+]

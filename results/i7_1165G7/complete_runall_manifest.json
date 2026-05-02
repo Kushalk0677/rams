@@ -1,0 +1,198 @@
+[
+  {
+    "label": "exp1",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp1_policy_comparison.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 725.92,
+    "ok": true
+  },
+  {
+    "label": "exp2",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp2_load_sweep.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 449.94,
+    "ok": true
+  },
+  {
+    "label": "exp3",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp3_hysteresis.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 212.38,
+    "ok": true
+  },
+  {
+    "label": "exp4",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp4_safety_override.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 283.72,
+    "ok": true
+  },
+  {
+    "label": "exp5",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp5_pareto.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 246.38,
+    "ok": true
+  },
+  {
+    "label": "exp6",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp6_transient.py",
+      "--total-n",
+      "180",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 226.89,
+    "ok": true
+  },
+  {
+    "label": "exp7",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp7_swas.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1338.28,
+    "ok": true
+  },
+  {
+    "label": "benchmark",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--n",
+      "100",
+      "--policy",
+      "all",
+      "--profile",
+      "all",
+      "--no-simulate",
+      "--frames",
+      "C:\\rams\\data\\kitti\\images\\val"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1764.81,
+    "ok": true
+  },
+  {
+    "label": "exp8",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp8_accuracy_per_tier.py",
+      "--dataset",
+      "kitti",
+      "--images",
+      "C:\\rams\\data\\kitti\\images\\val",
+      "--labels",
+      "C:\\rams\\data\\kitti\\labels\\val",
+      "--max-images",
+      "300",
+      "--also-coco",
+      "--coco-images",
+      "C:\\rams\\data\\coco\\images\\val2017",
+      "--coco-labels",
+      "C:\\rams\\data\\coco\\labels\\val2017"
+    ],
+    "returncode": 0,
+    "elapsed_s": 491.17,
+    "ok": true
+  },
+  {
+    "label": "exp9_device",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp9_multidevice.py",
+      "--device",
+      "spectre-i7-1165g7",
+      "--backend",
+      "onnx",
+      "--frames",
+      "C:\\rams\\data\\kitti\\images\\val",
+      "--n",
+      "100"
+    ],
+    "returncode": 120,
+    "elapsed_s": 1965.97,
+    "ok": false
+  },
+  {
+    "label": "exp9_aggregate",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp9_aggregate.py",
+      "--results-dir",
+      "results/multidevice"
+    ],
+    "returncode": 120,
+    "elapsed_s": 2.03,
+    "ok": false
+  },
+  {
+    "label": "exp10_kitti",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp10_safety_pareto.py",
+      "--exp8-json",
+      "C:\\rams\\rams_full\\results\\exp8_accuracy_kitti.json",
+      "--benchmark-json",
+      "C:\\rams\\rams_full\\results\\rams_20260423_182550_Kushals-Spectre-x360-AW2002TU.json",
+      "--dataset",
+      "kitti"
+    ],
+    "returncode": 120,
+    "elapsed_s": 1.12,
+    "ok": false
+  },
+  {
+    "label": "exp10_coco",
+    "cmd": [
+      "C:\\rams\\rams_full\\.venv\\Scripts\\python.exe",
+      "experiments/exp10_safety_pareto.py",
+      "--exp8-json",
+      "C:\\rams\\rams_full\\results\\exp8_accuracy_coco.json",
+      "--benchmark-json",
+      "C:\\rams\\rams_full\\results\\rams_20260423_182550_Kushals-Spectre-x360-AW2002TU.json",
+      "--dataset",
+      "coco"
+    ],
+    "returncode": 120,
+    "elapsed_s": 1.12,
+    "ok": false
+  }
+]

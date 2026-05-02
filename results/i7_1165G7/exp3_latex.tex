@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\caption{Hysteresis window sensitivity for the threshold policy. Lower switch rate indicates more stable tier selection; higher switch rate indicates faster adaptation.}
+\label{tab:exp3_hysteresis}
+\begin{tabular}{llrrrrrl}
+\toprule
+Label & Group & $N$ & Mean (ms) & $\pm$Std & P95 (ms) & Sw/inf & Tier dist \\
+\midrule
+  w=1 & moderate & 100 & \textbf{236.7} & 181.2 & 458.0 & 0.390 & MEDIUM:44%, SMALL:56% \\
+  w=1 & heavy & 100 & \textbf{73.9} & 17.1 & 85.7 & 0.180 & NANO:10%, SMALL:90% \\
+  w=2 & moderate & 100 & \textbf{236.5} & 185.1 & 460.4 & 0.140 & MEDIUM:43%, SMALL:57% \\
+  w=2 & heavy & 100 & \textbf{79.5} & 3.9 & 84.9 & 0.000 & SMALL:100% \\
+  w=3 & moderate & 100 & \textbf{153.2} & 150.1 & 453.9 & 0.070 & MEDIUM:21%, SMALL:79% \\
+  w=3 & heavy & 100 & \textbf{78.7} & 4.3 & 83.5 & 0.000 & SMALL:100% \\
+  w=4 & moderate & 100 & \textbf{266.2} & 213.5 & 553.9 & 0.040 & MEDIUM:45%, SMALL:55% \\
+  w=4 & heavy & 100 & \textbf{82.3} & 16.3 & 89.6 & 0.000 & SMALL:100% \\
+  w=5 & moderate & 100 & \textbf{150.2} & 148.7 & 451.9 & 0.020 & MEDIUM:20%, SMALL:80% \\
+  w=5 & heavy & 100 & \textbf{78.8} & 4.5 & 84.4 & 0.000 & SMALL:100% \\
+  w=7 & moderate & 100 & \textbf{77.1} & 4.3 & 83.2 & 0.000 & SMALL:100% \\
+  w=7 & heavy & 100 & \textbf{78.0} & 4.1 & 82.6 & 0.000 & SMALL:100% \\
+  w=10 & moderate & 100 & \textbf{95.0} & 47.0 & 138.4 & 0.000 & SMALL:100% \\
+  w=10 & heavy & 100 & \textbf{94.9} & 11.4 & 112.9 & 0.000 & SMALL:100% \\
+\bottomrule
+\end{tabular}
+\end{table}

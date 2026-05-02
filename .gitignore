@@ -8,10 +8,7 @@ build/
 .env
 .vscode/
 
-# Local outputs
-results/*
-!results/.gitkeep
-!results/README.md
+# Local outputs not curated in the repository snapshot
 runs/
 
 # Datasets and model assets

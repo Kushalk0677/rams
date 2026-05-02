@@ -1,0 +1,82 @@
+[
+  {
+    "label": "threshold",
+    "group": "transient",
+    "n": 100,
+    "mean": 117.3749125682119,
+    "std": 37.77851432908779,
+    "p50": 130.40143841365452,
+    "p95": 172.92730457405693,
+    "tier_dist": {
+      "SMALL": 0.44,
+      "MEDIUM": 0.56
+    },
+    "switch_rate": 0.02,
+    "vru_rate": 0.24,
+    "pressure_mean": 0.350383
+  },
+  {
+    "label": "predictive",
+    "group": "transient",
+    "n": 100,
+    "mean": 120.16603843074635,
+    "std": 34.08593223033583,
+    "p50": 129.59822282420035,
+    "p95": 171.6413004393982,
+    "tier_dist": {
+      "MEDIUM": 0.6,
+      "SMALL": 0.4
+    },
+    "switch_rate": 0.02,
+    "vru_rate": 0.23,
+    "pressure_mean": 0.354405
+  },
+  {
+    "label": "safety",
+    "group": "transient",
+    "n": 100,
+    "mean": 113.94253684021506,
+    "std": 37.64370125950231,
+    "p50": 123.70039175545321,
+    "p95": 170.27699711681356,
+    "tier_dist": {
+      "SMALL": 0.44,
+      "MEDIUM": 0.56
+    },
+    "switch_rate": 0.02,
+    "vru_rate": 0.2,
+    "pressure_mean": 0.347142
+  },
+  {
+    "label": "safety2",
+    "group": "transient",
+    "n": 100,
+    "mean": 115.69553928217304,
+    "std": 37.85365165646837,
+    "p50": 129.70669423125048,
+    "p95": 170.8673687485737,
+    "tier_dist": {
+      "SMALL": 0.44,
+      "MEDIUM": 0.56
+    },
+    "switch_rate": 0.02,
+    "vru_rate": 0.19,
+    "pressure_mean": 0.355219
+  },
+  {
+    "label": "adaptive",
+    "group": "transient",
+    "n": 100,
+    "mean": 119.23385350080719,
+    "std": 38.08761422508892,
+    "p50": 131.4296049685272,
+    "p95": 178.23592326810225,
+    "tier_dist": {
+      "MEDIUM": 0.6,
+      "SMALL": 0.4
+    },
+    "switch_rate": 0.02,
+    "vru_rate": 0.13,
+    "pressure_mean": 0.354153
+  }
+]

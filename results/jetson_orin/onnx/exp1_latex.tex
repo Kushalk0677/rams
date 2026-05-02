@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\caption{Policy comparison: mean latency (ms) ± std across load profiles. Bold = best mean per row. N=100 inferences per cell.}
+\label{tab:exp1_policy}
+\begin{tabular}{llrrrrrl}
+\toprule
+Label & Group & $N$ & Mean (ms) & $\pm$Std & P95 (ms) & Sw/inf & Tier dist \\
+\midrule
+  threshold & idle & 100 & 9.1 & 0.1 & 9.3 & 0.010 & MEDIUM:100% \\
+  threshold & light & 100 & 9.2 & 0.1 & 9.3 & 0.010 & MEDIUM:100% \\
+  threshold & moderate & 100 & 3.6 & 0.2 & 3.9 & 0.000 & SMALL:100% \\
+  threshold & heavy & 100 & \textbf{2.6} & 0.2 & 2.9 & 0.010 & NANO:100% \\
+  threshold & burst & 100 & \textbf{2.5} & 0.2 & 2.8 & 0.010 & NANO:100% \\
+  predictive & idle & 100 & 9.1 & 0.1 & 9.3 & 0.010 & MEDIUM:100% \\
+  predictive & light & 100 & 9.2 & 0.1 & 9.3 & 0.010 & MEDIUM:100% \\
+  predictive & moderate & 100 & 3.6 & 0.2 & 3.8 & 0.000 & SMALL:100% \\
+  predictive & heavy & 100 & \textbf{2.6} & 0.2 & 3.1 & 0.010 & NANO:100% \\
+  predictive & burst & 100 & \textbf{2.5} & 0.1 & 2.8 & 0.010 & NANO:100% \\
+  safety & idle & 100 & 9.1 & 0.1 & 9.3 & 0.010 & MEDIUM:100% \\
+  safety & light & 100 & 9.1 & 0.1 & 9.3 & 0.010 & MEDIUM:100% \\
+  safety & moderate & 100 & 3.6 & 0.2 & 3.9 & 0.000 & SMALL:100% \\
+  safety & heavy & 100 & 3.7 & 0.3 & 4.1 & 0.020 & NANO:6%, SMALL:94% \\
+  safety & burst & 100 & 3.8 & 0.3 & 4.2 & 0.020 & NANO:1%, SMALL:99% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,241 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "checks": {
+      "platform": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+      "machine": "aarch64",
+      "frames": {
+        "path": "/home/soren/rams/data/kitti/images/val",
+        "count": 1500
+      },
+      "kitti_images": {
+        "path": "/home/soren/rams/data/kitti/images/val",
+        "count": 1500
+      },
+      "kitti_labels": {
+        "path": "/home/soren/rams/data/kitti/labels/val",
+        "count": 1500
+      },
+      "coco_images": {
+        "path": null,
+        "count": 0
+      },
+      "coco_labels": {
+        "path": null,
+        "count": 0
+      },
+      "onnx_models_present": {
+        "NANO": true,
+        "SMALL": true,
+        "MEDIUM": true
+      },
+      "tensorrt_engines_present": {
+        "NANO": false,
+        "SMALL": false,
+        "MEDIUM": false
+      }
+    }
+  },
+  {
+    "label": "calibration",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "scripts/calibrate.py",
+      "--seconds",
+      "30",
+      "--apply"
+    ],
+    "returncode": 0,
+    "elapsed_s": 33.77,
+    "ok": true,
+    "required": true
+  },
+  {
+    "label": "exp1",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp1_policy_comparison.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 120,
+    "elapsed_s": 0.19,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp2",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp2_load_sweep.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 120,
+    "elapsed_s": 0.2,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp3",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp3_hysteresis.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 120,
+    "elapsed_s": 0.19,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp4",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp4_safety_override.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 492.32,
+    "ok": true,
+    "required": true
+  },
+  {
+    "label": "exp5",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp5_pareto.py",
+      "--n",
+      "100",
+      "--no-simulate"
+    ],
+    "returncode": 120,
+    "elapsed_s": 0.19,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp6",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp6_transient.py",
+      "--total-n",
+      "180",
+      "--no-simulate"
+    ],
+    "returncode": 120,
+    "elapsed_s": 0.19,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp7",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp7_swas.py",
+      "--n",
+      "100",
+      "--no-simulate",
+      "--frames",
+      "/home/soren/rams/data/kitti/images/val"
+    ],
+    "returncode": 120,
+    "elapsed_s": 0.21,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "benchmark_for_exp10",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "-m",
+      "benchmark.run",
+      "--n",
+      "100",
+      "--policy",
+      "all",
+      "--profile",
+      "all",
+      "--frames",
+      "/home/soren/rams/data/kitti/images/val",
+      "--no-simulate"
+    ],
+    "returncode": 120,
+    "elapsed_s": 506.17,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp8",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp8_accuracy_per_tier.py",
+      "--dataset",
+      "kitti",
+      "--images",
+      "/home/soren/rams/data/kitti/images/val",
+      "--labels",
+      "/home/soren/rams/data/kitti/labels/val"
+    ],
+    "returncode": 120,
+    "elapsed_s": 1371.98,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp9_device",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp9_multidevice.py",
+      "--device",
+      "jetson-orin",
+      "--backend",
+      "onnx",
+      "--frames",
+      "/home/soren/rams/data/kitti/images/val",
+      "--n",
+      "100"
+    ],
+    "returncode": 120,
+    "elapsed_s": 21854.2,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp9_aggregate",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp9_aggregate.py",
+      "--results-dir",
+      "results/multidevice"
+    ],
+    "returncode": 120,
+    "elapsed_s": 1.55,
+    "ok": false,
+    "required": true
+  },
+  {
+    "label": "exp10_kitti",
+    "cmd": [
+      "/home/soren/rams_full/.venv/bin/python3",
+      "experiments/exp10_safety_pareto.py",
+      "--exp8-json",
+      "/home/soren/rams_full/results/exp8_accuracy_kitti.json",
+      "--benchmark-json",
+      "/home/soren/rams_full/results/rams_20260426_013933_soren-edge.json",
+      "--dataset",
+      "kitti"
+    ],
+    "returncode": 120,
+    "elapsed_s": 1.56,
+    "ok": false,
+    "required": true
+  }
+]

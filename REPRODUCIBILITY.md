@@ -1,7 +1,11 @@
 # Reproducibility Guide
 
 This document explains how to reproduce RAMS experiments in a way that is
-consistent with the project artifacts and the paper draft.
+consistent with the project artifacts used for evaluation.
+
+The repository already includes a curated `results/` snapshot for the main
+devices, so reproduction can be checked against those stored artifacts rather
+than starting from an empty output tree.
 
 ## 1. Scope
 
@@ -52,6 +56,20 @@ The following assets are expected locally but are not versioned:
 - optional COCO validation images/labels
 - Jetson TensorRT `.engine` files for the TRT backend
 
+## 3.1 Included Curated Results
+
+The repository includes final curated outputs for:
+
+- `results/i7_1165G7/`
+- `results/i7_13700F/`
+- `results/raspberry_pi5/`
+- `results/jetson_orin/onnx/`
+- `results/jetson_orin/trt/`
+
+These folders are intended as reference artifacts for comparison and paper
+traceability. Fresh runs may produce additional local files, but the included
+snapshot should remain stable.
+
 ## 4. Minimum Smoke Check
 
 Run this first on any machine:
@@ -80,7 +98,7 @@ used by the policy layer.
 
 ### 6.1 Jetson TensorRT headline result
 
-This is the main latency/accuracy tradeoff reported in the paper draft.
+This is the main Jetson latency/accuracy tradeoff artifact.
 
 Run:
 

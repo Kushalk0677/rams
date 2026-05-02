@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{SWAS ($\beta=2.0$) for RAMS adaptive policies vs fixed-tier baselines under moderate and heavy load. $N=100$. Bold = best per column. Fixed baselines lock to a single tier regardless of system pressure.}
+\label{tab:exp7d_baselines}
+\begin{tabular}{lrr}
+\toprule
+Method & Moderate & Heavy \\
+\midrule
+  threshold & \textbf{0.237} & 0.223 \\
+  predictive & 0.224 & 0.189 \\
+  safety & 0.235 & 0.224 \\
+  adaptive & 0.224 & 0.169 \\
+  safety2 & 0.236 & \textbf{0.235} \\
+\midrule
+  FIXED_NANO & 0.169 & 0.169 \\
+  FIXED_SMALL & 0.196 & 0.169 \\
+  FIXED_MEDIUM & 0.224 & 0.224 \\
+\bottomrule
+\end{tabular}
+\end{table}

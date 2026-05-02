@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Safety-latency operating points under moderate load — KITTI. VRU recall is weighted by tier distribution.}
+\label{tab:pareto_kitti}
+\begin{tabular}{lccc}
+\toprule
+Policy / Tier & Mean latency (ms) & Weighted VRU recall & Tier dist. (N/S/M\%) \\
+\midrule
+Fixed-NANO & 2.2 & 0.242 & 100/0/0 \\
+Fixed-SMALL & 3.5 & 0.412 & 100/0/0 \\
+Fixed-MEDIUM & 9.1 & 0.590 & 100/0/0 \\
+\midrule
+threshold & 8.7 & 0.453 & 0/77/23 \\
+predictive & 8.0 & 0.456 & 0/75/25 \\
+adaptive & 17.4 & 0.590 & 0/0/100 \\
+safety & 15.3 & 0.538 & 0/29/71 \\
+safety2 & 13.7 & 0.586 & 0/2/98 \\
+\bottomrule
+\end{tabular}
+\end{table}

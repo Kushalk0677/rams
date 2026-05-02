@@ -1,0 +1,444 @@
+[
+  {
+    "policy": "adaptive",
+    "load_profile": "burst",
+    "n": 100,
+    "latency_mean": 11804.44,
+    "latency_std": 4583.82,
+    "latency_p50": 11969.63,
+    "latency_p95": 20778.52,
+    "tier_counts": {
+      "MEDIUM": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.3,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "adaptive",
+    "load_profile": "heavy",
+    "n": 100,
+    "latency_mean": 138.57,
+    "latency_std": 84.39,
+    "latency_p50": 126.43,
+    "latency_p95": 128.51,
+    "tier_counts": {
+      "MEDIUM": 2,
+      "SMALL": 98
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "adaptive",
+    "load_profile": "idle",
+    "n": 100,
+    "latency_mean": 138.09,
+    "latency_std": 83.57,
+    "latency_p50": 125.86,
+    "latency_p95": 128.56,
+    "tier_counts": {
+      "MEDIUM": 2,
+      "SMALL": 98
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "adaptive",
+    "load_profile": "light",
+    "n": 100,
+    "latency_mean": 144.58,
+    "latency_std": 101.61,
+    "latency_p50": 126.69,
+    "latency_p95": 129.78,
+    "tier_counts": {
+      "MEDIUM": 3,
+      "SMALL": 97
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "adaptive",
+    "load_profile": "moderate",
+    "n": 100,
+    "latency_mean": 144.38,
+    "latency_std": 100.99,
+    "latency_p50": 126.3,
+    "latency_p95": 130.65,
+    "tier_counts": {
+      "MEDIUM": 3,
+      "SMALL": 97
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "predictive",
+    "load_profile": "burst",
+    "n": 100,
+    "latency_mean": 10600.08,
+    "latency_std": 4904.98,
+    "latency_p50": 9557.61,
+    "latency_p95": 20552.08,
+    "tier_counts": {
+      "MEDIUM": 88,
+      "SMALL": 12
+    },
+    "tier_switches": 2,
+    "vru_rate": 0.29,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "predictive",
+    "load_profile": "heavy",
+    "n": 100,
+    "latency_mean": 139.13,
+    "latency_std": 82.8,
+    "latency_p50": 126.88,
+    "latency_p95": 133.99,
+    "tier_counts": {
+      "MEDIUM": 2,
+      "SMALL": 98
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "predictive",
+    "load_profile": "idle",
+    "n": 100,
+    "latency_mean": 139.94,
+    "latency_std": 84.22,
+    "latency_p50": 127.44,
+    "latency_p95": 133.13,
+    "tier_counts": {
+      "MEDIUM": 2,
+      "SMALL": 98
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "predictive",
+    "load_profile": "light",
+    "n": 100,
+    "latency_mean": 139.0,
+    "latency_std": 83.34,
+    "latency_p50": 127.1,
+    "latency_p95": 130.75,
+    "tier_counts": {
+      "MEDIUM": 2,
+      "SMALL": 98
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "predictive",
+    "load_profile": "moderate",
+    "n": 100,
+    "latency_mean": 131.1,
+    "latency_std": 88.14,
+    "latency_p50": 126.38,
+    "latency_p95": 130.45,
+    "tier_counts": {
+      "MEDIUM": 2,
+      "NANO": 8,
+      "SMALL": 90
+    },
+    "tier_switches": 5,
+    "vru_rate": 0.24,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety",
+    "load_profile": "burst",
+    "n": 100,
+    "latency_mean": 10802.75,
+    "latency_std": 5677.38,
+    "latency_p50": 9805.44,
+    "latency_p95": 20007.8,
+    "tier_counts": {
+      "MEDIUM": 88,
+      "SMALL": 12
+    },
+    "tier_switches": 5,
+    "vru_rate": 0.29,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety",
+    "load_profile": "heavy",
+    "n": 100,
+    "latency_mean": 127.52,
+    "latency_std": 2.4,
+    "latency_p50": 127.15,
+    "latency_p95": 132.85,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety",
+    "load_profile": "idle",
+    "n": 100,
+    "latency_mean": 127.34,
+    "latency_std": 1.1,
+    "latency_p50": 127.24,
+    "latency_p95": 129.45,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety",
+    "load_profile": "light",
+    "n": 100,
+    "latency_mean": 126.3,
+    "latency_std": 1.05,
+    "latency_p50": 126.04,
+    "latency_p95": 128.68,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety",
+    "load_profile": "moderate",
+    "n": 100,
+    "latency_mean": 127.5,
+    "latency_std": 4.1,
+    "latency_p50": 126.81,
+    "latency_p95": 129.65,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety2",
+    "load_profile": "burst",
+    "n": 100,
+    "latency_mean": 10407.88,
+    "latency_std": 5499.31,
+    "latency_p50": 9718.28,
+    "latency_p95": 20281.28,
+    "tier_counts": {
+      "MEDIUM": 98,
+      "SMALL": 2
+    },
+    "tier_switches": 1,
+    "vru_rate": 0.3,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety2",
+    "load_profile": "heavy",
+    "n": 100,
+    "latency_mean": 305.05,
+    "latency_std": 272.23,
+    "latency_p50": 128.03,
+    "latency_p95": 723.62,
+    "tier_counts": {
+      "MEDIUM": 30,
+      "SMALL": 70
+    },
+    "tier_switches": 18,
+    "vru_rate": 0.25,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety2",
+    "load_profile": "idle",
+    "n": 100,
+    "latency_mean": 285.99,
+    "latency_std": 263.36,
+    "latency_p50": 126.98,
+    "latency_p95": 721.57,
+    "tier_counts": {
+      "MEDIUM": 27,
+      "SMALL": 73
+    },
+    "tier_switches": 18,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety2",
+    "load_profile": "light",
+    "n": 100,
+    "latency_mean": 286.65,
+    "latency_std": 263.99,
+    "latency_p50": 127.09,
+    "latency_p95": 723.46,
+    "tier_counts": {
+      "MEDIUM": 27,
+      "SMALL": 73
+    },
+    "tier_switches": 18,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "safety2",
+    "load_profile": "moderate",
+    "n": 100,
+    "latency_mean": 287.03,
+    "latency_std": 264.36,
+    "latency_p50": 127.65,
+    "latency_p95": 726.23,
+    "tier_counts": {
+      "MEDIUM": 27,
+      "SMALL": 73
+    },
+    "tier_switches": 18,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "threshold",
+    "load_profile": "burst",
+    "n": 100,
+    "latency_mean": 10560.32,
+    "latency_std": 4423.05,
+    "latency_p50": 10241.73,
+    "latency_p95": 19021.85,
+    "tier_counts": {
+      "MEDIUM": 92,
+      "SMALL": 8
+    },
+    "tier_switches": 3,
+    "vru_rate": 0.3,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "threshold",
+    "load_profile": "heavy",
+    "n": 100,
+    "latency_mean": 127.98,
+    "latency_std": 5.13,
+    "latency_p50": 127.24,
+    "latency_p95": 129.8,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "threshold",
+    "load_profile": "idle",
+    "n": 100,
+    "latency_mean": 127.04,
+    "latency_std": 5.05,
+    "latency_p50": 126.15,
+    "latency_p95": 127.92,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "threshold",
+    "load_profile": "light",
+    "n": 100,
+    "latency_mean": 126.97,
+    "latency_std": 0.91,
+    "latency_p50": 126.99,
+    "latency_p95": 128.29,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  },
+  {
+    "policy": "threshold",
+    "load_profile": "moderate",
+    "n": 100,
+    "latency_mean": 127.5,
+    "latency_std": 3.24,
+    "latency_p50": 127.0,
+    "latency_p95": 130.04,
+    "tier_counts": {
+      "SMALL": 100
+    },
+    "tier_switches": 0,
+    "vru_rate": 0.26,
+    "gpu_util_mean": null,
+    "device": "jetson-orin",
+    "backend": "onnx"
+  }
+]

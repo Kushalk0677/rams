@@ -10,8 +10,8 @@ This repository is structured for **reproducibility first**:
 - benchmark harness in `benchmark/`
 - full experiment suite in `experiments/`
 - calibration and utility scripts in `scripts/`
-- paper source in `paper_ieee/`
-- device runbooks in `docs/`
+- device runbooks and reproducibility notes in `docs/`
+- curated experimental artifacts in `results/`
 
 The project supports three practical execution modes:
 
@@ -25,11 +25,10 @@ The project supports three practical execution modes:
 repo/
 |- benchmark/             # end-to-end benchmark harness
 |- configs/               # default runtime configuration
-|- docs/                  # runbooks and paper-facing notes
+|- docs/                  # runbooks and reproducibility notes
 |- experiments/           # exp1 ... exp10 and run-all scripts
-|- paper_ieee/            # IEEEtran paper source
 |- rams/                  # controller, monitor, models, policies
-|- results/               # local output directory (not versioned)
+|- results/               # curated device result artifacts
 |- scripts/               # calibration, aggregation, live demo
 |- .github/workflows/     # reproducibility smoke CI
 |- REPRODUCIBILITY.md     # exact reproduction guidance
@@ -71,6 +70,21 @@ python -m benchmark.run --n 5 --policy threshold --profile heavy --simulate
 
 This should create a small JSON/CSV pair under `results/`.
 
+## Included Result Artifacts
+
+This repository snapshot includes curated result folders for the main evaluated
+deployment settings:
+
+- `results/i7_1165G7/`
+- `results/i7_13700F/`
+- `results/raspberry_pi5/`
+- `results/jetson_orin/onnx/`
+- `results/jetson_orin/trt/`
+
+These are included on purpose as part of the research artifact, so the repo is
+not just source-only: it also carries the final summarized outputs used for
+device comparison and paper drafting.
+
 ## Full Inference Setup
 
 For real-image experiments, install the inference extras:
@@ -100,32 +114,20 @@ Notes:
 The exact commands used to regenerate paper-facing outputs are documented in
 [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
-## Paper Source
+## Windows and Jetson Users
 
-The current IEEEtran paper draft is in:
-
-- `paper_ieee/main.tex`
-- `paper_ieee/references.bib`
-- `paper_ieee/IEEEtran.cls`
-
-Compile with:
-
-```bash
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
-```
-
-from inside `paper_ieee/`.
+If you want to use RAMS directly on Windows or Jetson, please check the
+`packages/` folder for the packaged platform-specific materials and setup
+guidance.
 
 ## What Is Not Included
 
 To keep the repository GitHub-friendly and reproducible:
 
+- paper source is excluded from this public repository snapshot
 - datasets are excluded
 - model weights and exported ONNX/engine files are excluded
-- local result folders are excluded
+- transient local outputs outside the curated `results/` artifact set are excluded
 - temporary packaging artifacts are excluded
 
 Use the runbooks and reproducibility guide to restore those dependencies on the
