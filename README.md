@@ -1,57 +1,52 @@
 # RAMS: Resource-Adaptive Model Switching for Edge AI
 
-RAMS is a runtime controller for edge perception systems that continuously
-monitors resource pressure and switches among warm YOLOv8 detector tiers
-(`NANO`, `SMALL`, `MEDIUM`) to balance latency and safety-sensitive accuracy.
+RAMS is a Python runtime controller for edge perception pipelines. It monitors system resource pressure in real time and dynamically switches among three warm-loaded YOLOv8 detector tiers — `NANO`, `SMALL`, and `MEDIUM` — to keep inference latency and object-detection accuracy in balance. A safety override locks the system to a higher-accuracy tier whenever vulnerable road users (VRUs) are detected nearby.
 
-This repository is structured for **reproducibility first**:
+> **Authors:** Kushal Khemani, Evan Leri, George Xu
 
-- core runtime code in `rams/`
-- benchmark harness in `benchmark/`
-- full experiment suite in `experiments/`
-- calibration and utility scripts in `scripts/`
-- device runbooks and reproducibility notes in `docs/`
-- curated experimental artifacts in `results/`
+---
 
-The project supports three practical execution modes:
+## How It Works
 
-1. `simulate`: smoke tests and logic validation without models
-2. `onnx`: reproducible CPU/ONNX experiments on Windows/Linux hosts
-3. `tensorrt`: Jetson-focused accelerated deployment
+RAMS combines three cooperating components:
+
+- **ResourceMonitor** — samples CPU/memory pressure at a configurable frequency (default 10 Hz) and produces a scalar resource signal *R(t)*.
+- **Switching Policy** — maps *R(t)* to a target tier. Three policies are provided:
+  - `threshold` — fixed *R(t)* thresholds with hysteresis to prevent rapid tier flapping.
+  - `predictive` — EWMA short-horizon load forecasting that anticipates pressure spikes.
+  - `safety` *(default)* — threshold policy plus a VRU proximity override that locks to `SMALL` or higher when pedestrians/cyclists are detected within a configurable time window.
+- **ModelLibrary** — holds warm-loaded models at mixed resolutions (NANO @ 320 px, SMALL @ 416 px, MEDIUM @ 640 px) and dispatches inference requests to the best available backend (TensorRT → ONNX Runtime → Ultralytics PyTorch → calibrated simulation).
+
+---
 
 ## Repository Layout
 
-```text
-repo/
-|- benchmark/             # end-to-end benchmark harness
-|- configs/               # default runtime configuration
-|- docs/                  # runbooks and reproducibility notes
-|- experiments/           # exp1 ... exp10 and run-all scripts
-|- rams/                  # controller, monitor, models, policies
-|- results/               # curated device result artifacts
-|- scripts/               # calibration, aggregation, live demo
-|- .github/workflows/     # reproducibility smoke CI
-|- REPRODUCIBILITY.md     # exact reproduction guidance
-|- requirements.txt       # minimal/base dependencies
-|- requirements-inference.txt
-|- setup.py
-`- CITATION.cff
 ```
+rams/                   # Core runtime: controller, monitor, models, policies
+benchmark/              # End-to-end benchmark harness (benchmark.run)
+experiments/            # exp1 – exp10 and complete run-all scripts
+configs/                # default.yaml — all tunable parameters
+scripts/                # Device calibration, aggregation, live demo
+docs/                   # Runbooks for Windows, Jetson ONNX, and Jetson TRT
+results/                # Curated output artifacts for five device settings
+packages/               # Pre-built packages for Windows and Jetson Orin
+REPRODUCIBILITY.md      # Exact commands for paper-facing reproduction
+requirements.txt        # Minimal base dependencies
+requirements-inference.txt
+setup.py
+CITATION.cff
+```
+
+---
 
 ## Quick Start
 
-### 1. Create an environment
+### 1. Create and activate a virtual environment
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
-```
-
-On Windows PowerShell:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+source .venv/bin/activate          # Linux / macOS
+# .\\.venv\\Scripts\\Activate.ps1  # Windows PowerShell
 ```
 
 ### 2. Install base dependencies
@@ -62,73 +57,115 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### 3. Run a simulation smoke test
+### 3. Verify with a simulation smoke test (no models required)
 
 ```bash
 python -m benchmark.run --n 5 --policy threshold --profile heavy --simulate
 ```
 
-This should create a small JSON/CSV pair under `results/`.
+Expected output: a timestamped JSON/CSV pair in `results/`.
 
-## Included Result Artifacts
-
-This repository snapshot includes curated result folders for the main evaluated
-deployment settings:
-
-- `results/i7_1165G7/`
-- `results/i7_13700F/`
-- `results/raspberry_pi5/`
-- `results/jetson_orin/onnx/`
-- `results/jetson_orin/trt/`
-
-These are included on purpose as part of the research artifact, so the repo is
-not just source-only: it also carries the final summarized outputs used for
-device comparison and paper drafting.
+---
 
 ## Full Inference Setup
 
-For real-image experiments, install the inference extras:
+Real-image experiments require additional packages:
 
 ```bash
 pip install -r requirements-inference.txt
 ```
 
-Notes:
+This installs `ultralytics`, `onnxruntime`, `opencv-python`, PyTorch, and TorchVision. Model weights and datasets are **not** included in the repository — see [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for external asset setup.
 
-- `ultralytics`, `opencv-python`, and `onnxruntime` are needed for ONNX/PyTorch
-  experiment paths.
-- Jetson TensorRT reproduction should use the Jetson runbook in `docs/` because
-  TensorRT and CUDA bindings are platform-specific.
-- model weights/exports and datasets are **not** tracked in this repository
+For Jetson TensorRT deployment, follow `docs/RAMS_Jetson_Runbook.md` instead; TensorRT and CUDA bindings require platform-specific handling.
 
-## Main Reproducibility Entry Points
+---
 
-- benchmark harness: `python -m benchmark.run`
-- device calibration: `python scripts/calibrate.py --seconds 30 --apply`
-- policy comparison: `python experiments/exp7_swas.py`
-- tier accuracy: `python experiments/exp8_accuracy_per_tier.py`
-- cross-device ONNX profiling: `python experiments/exp9_multidevice.py`
-- Windows full suite: `python experiments/complete_runall.py`
-- Jetson full suite: `python experiments/complete_runall_jetson.py`
+## Using the Controller
 
-The exact commands used to regenerate paper-facing outputs are documented in
-[REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+```python
+from rams import RAMSController
 
-## Windows and Jetson Users
+# Simulation mode — no model files needed
+with RAMSController(simulate=True, policy="safety") as ctrl:
+    result = ctrl.infer(frame=my_frame)
+    print(result["tier"], result["latency_ms"])
+```
 
-If you want to use RAMS directly on Windows or Jetson, please check the
-`packages/` folder for the packaged platform-specific materials and setup
-guidance.
+Available policies: `"threshold"`, `"predictive"`, `"safety"`. All parameters are tunable via `configs/default.yaml` or passed directly as `policy_kwargs`.
+
+---
+
+## Calibration
+
+Before any real-device run, calibrate the resource thresholds to your hardware:
+
+```bash
+python scripts/calibrate.py --seconds 30 --apply
+```
+
+This writes a calibration JSON to `results/` and updates the threshold values used by the policy layer.
+
+---
+
+## Experiments
+
+| Script | Description |
+|---|---|
+| `exp1_policy_comparison.py` | Latency and tier distribution across all three policies |
+| `exp2_load_sweep.py` | Latency and switching rate vs. synthetic load |
+| `exp3_hysteresis.py` | Hysteresis band sensitivity |
+| `exp4_safety_override.py` | Safety override trigger analysis |
+| `exp5_pareto.py` | Latency/accuracy Pareto curves |
+| `exp6_transient.py` | Transient load spike response |
+| `exp7_swas.py` | Safety-aware policy comparison on KITTI frames |
+| `exp8_accuracy_per_tier.py` | Live VRU recall per tier on KITTI/COCO |
+| `exp9_multidevice.py` | Cross-device ONNX runtime profiling |
+| `exp10_safety_pareto.py` | Combined safety + Pareto frontier |
+| `complete_runall.py` | Full suite for Windows/Linux ONNX hosts |
+| `complete_runall_jetson.py` | Full suite for Jetson Orin |
+
+---
+
+## Included Result Artifacts
+
+The repository ships curated result snapshots for five evaluated deployment settings so that reproduction can be validated against reference outputs:
+
+| Device | Path |
+|---|---|
+| Intel Core i7-1165G7 | `results/i7_1165G7/` |
+| Intel Core i7-13700F | `results/i7_13700F/` |
+| Raspberry Pi 5 | `results/raspberry_pi5/` |
+| Jetson Orin (ONNX) | `results/jetson_orin/onnx/` |
+| Jetson Orin (TensorRT) | `results/jetson_orin/trt/` |
+
+---
+
+## Pre-built Packages
+
+For out-of-the-box deployment without cloning the full repository:
+
+- `packages/windows_package.zip` — Windows ONNX runtime bundle
+- `packages/jetson_package.zip` — Jetson Orin bundle
+
+Setup instructions are in the respective `docs/` runbooks.
+
+---
 
 ## What Is Not Included
 
-To keep the repository GitHub-friendly and reproducible:
+To keep the repository lightweight and GitHub-friendly:
 
-- paper source is excluded from this public repository snapshot
-- datasets are excluded
-- model weights and exported ONNX/engine files are excluded
-- transient local outputs outside the curated `results/` artifact set are excluded
-- temporary packaging artifacts are excluded
+- Paper source / LaTeX
+- Datasets (KITTI, COCO)
+- Model weights and ONNX/TensorRT engine files
+- Transient local outputs outside the curated `results/` snapshot
+- Temporary packaging artifacts
 
-Use the runbooks and reproducibility guide to restore those dependencies on the
-target machine.
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for instructions on restoring all excluded dependencies on any target machine.
+
+---
+
+## Citation
+
+If you use RAMS in your research, please cite using the metadata in [`CITATION.cff`](CITATION.cff).
