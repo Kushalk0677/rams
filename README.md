@@ -2,7 +2,7 @@
 
 RAMS is a Python runtime controller for edge perception pipelines. It monitors system resource pressure in real time and dynamically switches among three warm-loaded YOLOv8 detector tiers — `NANO`, `SMALL`, and `MEDIUM` — to keep inference latency and object-detection accuracy in balance. A safety override locks the system to a higher-accuracy tier whenever vulnerable road users (VRUs) are detected nearby.
 
-> **Authors:** Kushal Khemani, Evan Leri, George Xu
+> **Authors:** Kushal Khemani, Evan Leri, George Xu, Amit Hod
 
 ---
 
