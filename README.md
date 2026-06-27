@@ -1,5 +1,9 @@
 # RAMS: Resource-Adaptive Model Switching for Edge AI
 
+[![arXiv](https://img.shields.io/badge/arXiv-2606.14716-b31b1b.svg)](https://arxiv.org/abs/2606.14716)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 RAMS is a Python runtime controller for edge perception pipelines. It monitors system resource pressure in real time and dynamically switches among three warm-loaded YOLOv8 detector tiers — `NANO`, `SMALL`, and `MEDIUM` — to keep inference latency and object-detection accuracy in balance. A safety override locks the system to a higher-accuracy tier whenever vulnerable road users (VRUs) are detected nearby.
 
 > **Authors:** Kushal Khemani, Evan Leri, George Xu, Amit Hod
@@ -168,4 +172,24 @@ See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for instructions on restoring all e
 
 ## Citation
 
-If you use RAMS in your research, please cite using the metadata in [`CITATION.cff`](CITATION.cff).
+If you use RAMS in your research, please cite the arxiv paper:
+
+```bibtex
+@misc{khemani2025rams,
+  title={RAMS: Resource-Adaptive Model Switching for Edge AI},
+  author={Kushal Khemani and Evan Leri and George Xu and Amit Hod},
+  year={2025},
+  eprint={2606.14716},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2606.14716},
+}
+```
+
+See also [`CITATION.cff`](CITATION.cff) for repository-level citation metadata.
+
+---
+
+## License
+
+MIT License. See [`LICENSE`](LICENSE) for details.
