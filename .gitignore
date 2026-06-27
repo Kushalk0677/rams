@@ -30,3 +30,8 @@ paper_ieee/*.log
 paper_ieee/*.out
 paper_ieee/*.pdf
 paper_ieee/*.toc
+
+# Stratum agent workspace (auto-generated project maps, plans, notes, tool caches)
+.stratum/
+plan.md
+codebase.md

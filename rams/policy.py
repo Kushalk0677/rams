@@ -78,6 +78,7 @@ class ThresholdPolicy(BasePolicy):
         self._candidate_count: int = 0
 
     def _raw_tier(self, pressure: float) -> Tier:
+        """Map pressure to a tier without hysteresis."""
         if pressure >= self.hi:
             return Tier.NANO
         elif pressure >= self.lo:
@@ -139,6 +140,10 @@ class PredictivePolicy(BasePolicy):
             self._try_load_lstm()
 
     def _try_load_lstm(self):
+        """Attempt to initialise the optional PyTorch LSTM forecast model.
+
+        Silently falls back to EWMA if PyTorch is not installed.
+        """
         try:
             import torch
             import torch.nn as nn
@@ -160,6 +165,11 @@ class PredictivePolicy(BasePolicy):
             self.use_lstm = False
 
     def _forecast(self, current: float) -> float:
+        """Update EWMA forecast with the latest pressure reading.
+
+        Returns the smoothed forecast value. Uses a simple EWMA when
+        use_lstm=False, or a PyTorch LSTM forecast when available.
+        """
         self._history.append(current)
         if self._ewma is None:
             self._ewma = current
@@ -289,6 +299,12 @@ class AdaptivePredictivePolicy(BasePolicy):
         self._ewma: Optional[float] = None
 
     def _adaptive_alpha(self) -> float:
+        """Compute EWMA alpha from rolling pressure variance.
+
+        High variance (volatile load) produces a higher alpha for
+        faster response. Low variance produces a lower alpha for
+        smoother forecasts.
+        """
         if len(self._history) < 3:
             return self.alpha_min
         import statistics as _st
@@ -297,6 +313,10 @@ class AdaptivePredictivePolicy(BasePolicy):
         return self.alpha_min + (self.alpha_max - self.alpha_min) * sigma_norm
 
     def _forecast(self, current: float) -> float:
+        """Update adaptive EWMA forecast.
+
+        Alpha is recomputed each step based on recent pressure variance.
+        """
         self._history.append(current)
         alpha = self._adaptive_alpha()
         if self._ewma is None:
@@ -324,6 +344,11 @@ class AdaptivePredictivePolicy(BasePolicy):
 # ---------------------------------------------------------------------------
 
 def _bbox_area(det: dict) -> float:
+    """Compute bounding-box area from an xyxy detection dict.
+
+    Used by SafetyTwoLevelPolicy to distinguish near vs distant VRUs.
+    Returns 0.0 when the dict has no valid xyxy field.
+    """
     xyxy = det.get("xyxy")
     if not xyxy or len(xyxy) < 4:
         return 0.0
@@ -362,6 +387,12 @@ class SafetyTwoLevelPolicy(BasePolicy):
         self._last_vru_area: float           = 0.0
 
     def _update_vru(self, detections: Optional[list[dict]]):
+        """Update VRU presence state from a detection list.
+
+        Only updates if a VRU class is detected above min_conf.
+        In a tie (multiple VRUs), prefers the largest bounding box
+        (closest VRU) for safety-critical tier locking.
+        """
         if not detections:
             return
         for det in detections:
@@ -376,6 +407,13 @@ class SafetyTwoLevelPolicy(BasePolicy):
                     self._last_vru_area = area
 
     def _vru_lock_tier(self) -> Optional[Tier]:
+        """Return the tier lock based on current VRU state.
+
+        Returns:
+            Tier.MEDIUM if a near VRU (area >= near_area_thresh) is active,
+            Tier.SMALL if a distant VRU is active,
+            None if no VRU is within the proximity window.
+        """
         if self._last_vru_time is None:
             return None
         if (time.monotonic() - self._last_vru_time) > self.proximity_window_s:

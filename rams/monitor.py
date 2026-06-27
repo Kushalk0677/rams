@@ -4,11 +4,15 @@ Samples CPU, memory, thermal, and battery state at configurable Hz.
 Produces a scalar resource pressure index R(t) in [0, 1].
 """
 
+import logging
 import time
 import threading
 import psutil
 from dataclasses import dataclass, field
 from typing import Optional
+
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -106,6 +110,8 @@ class ResourceMonitor:
     """
 
     def __init__(self, hz: float = 10.0):
+        if hz <= 0:
+            raise ValueError(f"ResourceMonitor hz must be positive, got {hz}")
         self.hz = hz
         self._interval = 1.0 / hz
         self._snapshot: Optional[ResourceSnapshot] = None
@@ -114,6 +120,9 @@ class ResourceMonitor:
         self._thread: Optional[threading.Thread] = None
 
     def start(self):
+        if self._running:
+            logger.warning("[RAMS] ResourceMonitor already running.")
+            return
         self._running = True
         self._thread = threading.Thread(target=self._loop, daemon=True)
         self._thread.start()

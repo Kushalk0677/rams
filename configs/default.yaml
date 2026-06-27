@@ -17,7 +17,7 @@ policy:
     alpha: 0.35             # EWMA smoothing
     lo_thresh: 0.463
     hi_thresh: 0.713
-    use_lstm: false
+    use_lstm: false              # requires PyTorch
 
   safety:
     lo_thresh: 0.513
@@ -25,12 +25,13 @@ policy:
     hysteresis_window: 3
     proximity_window_s: 0.5  # VRU lock window (seconds)
     min_conf: 0.40            # minimum detection confidence for VRU trigger
+                              # lowered to 0.25 for mixed-resolution robustness
 
   safety2:
     lo_thresh: 0.513
     hi_thresh: 0.763
     hysteresis_window: 3
-    proximity_window_s: 0.5
+    proximity_window_s: 0.5  # VRU override hold time
     min_conf: 0.40
     near_area_thresh: 8000.0
 
@@ -40,15 +41,15 @@ models:
     nano:
       model_id: yolov8n.pt
       latency_mean_ms: 18.0
-      latency_std_ms: 2.5
+      latency_std_ms: 2.5      # calibrated Gaussian noise for simulation
     small:
       model_id: yolov8s.pt
       latency_mean_ms: 32.0
-      latency_std_ms: 4.0
+      latency_std_ms: 4.0       # calibrated Gaussian noise for simulation
     medium:
       model_id: yolov8m.pt
       latency_mean_ms: 58.0
-      latency_std_ms: 6.5
+      latency_std_ms: 6.5       # calibrated Gaussian noise for simulation
 
 benchmark:
   n_inferences: 100

@@ -87,6 +87,18 @@ COCO_NAMES = [
 
 
 def _parse_onnx_output(outputs, conf_thresh: float = 0.25) -> list[dict]:
+    """Parse a YOLOv8 ONNX Runtime output array into detection dicts.
+
+    Expects output shape (1, 84, 8400) from a YOLOv8 ONNX export.
+    Each detection dict has keys: class, conf, xyxy (list of 4 floats).
+
+    Args:
+        outputs: Raw ONNX model output (list of numpy arrays).
+        conf_thresh: Minimum confidence threshold.
+
+    Returns:
+        List of detection dicts, may be empty.
+    """
     import numpy as np
     preds      = np.squeeze(outputs[0], axis=0).T   # (8400, 84)
     boxes      = preds[:, :4]
@@ -105,6 +117,11 @@ def _parse_onnx_output(outputs, conf_thresh: float = 0.25) -> list[dict]:
 
 
 def _letterbox_image(frame, size: int):
+    """Resize and pad a frame to a square canvas for YOLOv8 inference.
+
+    Maintains aspect ratio, fills unused areas with gray (114).
+    Returns the canvas, scale factor, padding offsets, and original dims.
+    """
     import cv2
     import numpy as np
 
@@ -122,6 +139,11 @@ def _letterbox_image(frame, size: int):
 def _scale_letterbox_boxes(detections: list[dict], scale: float,
                            pad_x: int, pad_y: int,
                            orig_w: int, orig_h: int) -> list[dict]:
+    """Map detection boxes from letterbox canvas coords back to original frame.
+
+    Clips boxes to the original frame dimensions and discards any that
+    become invalid (zero-area) after scaling.
+    """
     scaled = []
     for det in detections:
         x1, y1, x2, y2 = det["xyxy"]

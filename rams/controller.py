@@ -66,11 +66,15 @@ class RAMSController:
     # ------------------------------------------------------------------
 
     def start(self):
+        if getattr(self, '_started', False):
+            logger.warning("[RAMS] Controller already started.")
+            return
         logger.info("[RAMS] Starting resource monitor ...")
         self.monitor.start()
         logger.info("[RAMS] Loading model tiers ...")
         self.library.load_all()
         logger.info("[RAMS] Controller ready. Policy: %s", self.policy.name)
+        self._started = True
 
     def stop(self):
         self.monitor.stop()
