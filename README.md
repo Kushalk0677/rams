@@ -6,10 +6,6 @@
 
 **Kushal Khemani, Evan Leri, Amit Hod, George Xu**
 
-## Contributors
-
-- Amit Hod
-
 RAMS is a runtime controller that selects among warm-loaded YOLOv8 NANO,
 SMALL, and MEDIUM detectors according to measured resource pressure and recent
 detections. It is intended for reproducible runtime-perception experiments on
