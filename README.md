@@ -59,16 +59,55 @@ fair controller-path comparisons.
 ## Repository layout
 
 ```text
-rams/              Runtime controller, monitor, models, policies, and energy model
-benchmark/         Replay harness, load protocol, summaries, and confidence intervals
-experiments/       Tier accuracy, Pareto, policy accuracy, and retention experiments
-scripts/           Calibration, paper-suite, package, and platform-preflight commands
-configs/           Controller defaults and per-device energy-profile templates
-packaging/          Sources for the Windows, macOS, and Jetson operator packages
-packages/           Ready-to-send Windows, macOS, and Jetson archives
-results/            Curated current and historical evidence
-tests/              Runtime contracts and regression tests
+rams/                         The runtime library used by every controller and replay run.
+  controller.py               Coordinates monitoring, policy selection, inference, and records.
+  monitor.py                  Samples CPU, memory, thermal, clock, and optional GPU telemetry.
+  models.py                   Defines backend-independent detection and coordinate contracts.
+  policy.py                   Implements fixed-tier, threshold, EWMA, and VRU-retention policies.
+  energy.py                   Applies the documented TDP-profile energy-estimation model.
+  config.py                   Loads and validates controller and device configuration.
+
+benchmark/                    The common frame-aware evaluation harness.
+  run.py                      Replays ordered frames, times all controller stages, and writes records.
+  load_injector.py            Provides the documented steady and burst host-load protocols.
+                              Every fixed-tier and adaptive comparison uses this same path.
+
+experiments/                  Named analyses used to build paper tables and figures.
+  exp1...exp12                Policy comparison, load sweep, hysteresis, Pareto, accuracy,
+                              retention, and related focused experiments.
+  complete_runall*.py         Legacy-compatible entry points for complete Windows and Jetson runs.
+
+scripts/                      Operator-facing commands for a reproducible device run.
+  calibrate.py                Measures idle and injected-load behavior before runtime phases.
+  run_paper_suite.py          Runs the phased paper suite, including manifests and raw records.
+  prepare_kitti_validation.py Creates or verifies the fixed KITTI replay subset and manifest.
+  aggregate.py                Converts raw records into summaries, confidence intervals, and figures.
+  build_platform_packages.py  Builds the distributable Windows, macOS, and Jetson ZIP packages.
+  verify_*.py                 Checks process-load behavior and Jetson TensorRT prerequisites.
+
+configs/                      Versioned runtime defaults and device-specific TDP energy profiles.
+  default.yaml                Tier, confidence, pressure, hysteresis, and policy defaults.
+  energy_profile*.json        Transparent power-cap and component assumptions for energy estimates.
+
+packaging/                    Editable source trees for the three self-contained operator packages.
+  windows/, macos/, jetson/   Platform setup guides, requirements, scripts, and package assets.
+
+packages/                     Ready-to-send ZIP archives built from `packaging/`.
+  RAMS_*_validation.zip       Beginner-facing instructions from download through evidence collection.
+
+results/                      Curated evidence organized by device and execution route.
+  <device>/                   Calibration, manifests, records, figures, and provenance for one route.
+  old/                        Historical evidence retained for traceability, not pooled with new runs.
+  README.md                   Evidence index, device boundaries, and interpretation rules.
+
+tests/                        Regression and integration coverage for runtime and protocol contracts.
+  test_*.py                   Policy, monitor, model, controller, benchmark, and load-protocol checks.
 ```
+
+For a new device evaluation, begin with the matching archive in `packages/`.
+For source development, read `rams/`, then `benchmark/`, and use
+`scripts/run_paper_suite.py` rather than invoking individual experiments unless
+you are deliberately reproducing a single analysis.
 
 ## Quick start
 
