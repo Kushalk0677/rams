@@ -12,7 +12,7 @@ authors:
   - family-names: Xu
     given-names: George
 version: 0.1.0
-license: "NOASSERTION"
+license: "MIT"
 repository-code: "https://github.com/Kushalk0677/rams"
 abstract: >
   RAMS is a runtime controller for edge perception systems that adaptively

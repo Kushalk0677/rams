@@ -2,6 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2606.14716-b31b1b.svg)](https://arxiv.org/abs/2606.14716)
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Kushal Khemani, Evan Leri, Amit Hod, George Xu**
 
@@ -242,3 +243,7 @@ arXiv record:
   primaryClass={cs.DC}
 }
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
