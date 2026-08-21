@@ -1,0 +1,9 @@
+{
+  "tier": "NANO",
+  "backend": "onnx_cuda",
+  "metric": "COCOeval_bbox",
+  "map50": 0.07241686093282533,
+  "map5095": 0.058112118937554046,
+  "ground_truth": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_coco_ground_truth_nano_20260821_025958.json",
+  "detections": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_coco_detections_nano_20260821_025958.json"
+}

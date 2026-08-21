@@ -1,0 +1,190 @@
+{
+  "groups": [
+    {
+      "policy": "adaptive",
+      "policy_label": "Variance-adaptive EWMA",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 359,
+        "fp": 2628,
+        "fn": 808,
+        "precision": 0.1202,
+        "recall": 0.3076,
+        "f1": 0.1728,
+        "false_negative_rate": 0.6924,
+        "recall_ci95": [
+          0.2818,
+          0.3347
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2581,
+        "fp": 15410,
+        "fn": 4021,
+        "precision": 0.1435,
+        "recall": 0.3909,
+        "f1": 0.2099,
+        "false_negative_rate": 0.6091,
+        "recall_ci95": [
+          0.3792,
+          0.4028
+        ]
+      },
+      "tier_counts": {
+        "NANO": 977,
+        "SMALL": 523,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "predictive",
+      "policy_label": "EWMA-smoothed",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 351,
+        "fp": 2796,
+        "fn": 816,
+        "precision": 0.1115,
+        "recall": 0.3008,
+        "f1": 0.1627,
+        "false_negative_rate": 0.6992,
+        "recall_ci95": [
+          0.2751,
+          0.3277
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2530,
+        "fp": 14944,
+        "fn": 4072,
+        "precision": 0.1448,
+        "recall": 0.3832,
+        "f1": 0.2102,
+        "false_negative_rate": 0.6168,
+        "recall_ci95": [
+          0.3716,
+          0.395
+        ]
+      },
+      "tier_counts": {
+        "NANO": 988,
+        "SMALL": 512,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 524,
+        "fp": 4547,
+        "fn": 643,
+        "precision": 0.1033,
+        "recall": 0.449,
+        "f1": 0.168,
+        "false_negative_rate": 0.551,
+        "recall_ci95": [
+          0.4207,
+          0.4777
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3637,
+        "fp": 22974,
+        "fn": 2965,
+        "precision": 0.1367,
+        "recall": 0.5509,
+        "f1": 0.219,
+        "false_negative_rate": 0.4491,
+        "recall_ci95": [
+          0.5389,
+          0.5629
+        ]
+      },
+      "tier_counts": {
+        "NANO": 3,
+        "SMALL": 1497,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 645,
+        "fp": 9972,
+        "fn": 522,
+        "precision": 0.0608,
+        "recall": 0.5527,
+        "f1": 0.1095,
+        "false_negative_rate": 0.4473,
+        "recall_ci95": [
+          0.524,
+          0.581
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 4608,
+        "fp": 34711,
+        "fn": 1994,
+        "precision": 0.1172,
+        "recall": 0.698,
+        "f1": 0.2007,
+        "false_negative_rate": 0.302,
+        "recall_ci95": [
+          0.6868,
+          0.7089
+        ]
+      },
+      "tier_counts": {
+        "NANO": 166,
+        "SMALL": 309,
+        "MEDIUM": 1025
+      }
+    },
+    {
+      "policy": "threshold",
+      "policy_label": "Threshold",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 384,
+        "fp": 2884,
+        "fn": 783,
+        "precision": 0.1175,
+        "recall": 0.329,
+        "f1": 0.1732,
+        "false_negative_rate": 0.671,
+        "recall_ci95": [
+          0.3027,
+          0.3565
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2593,
+        "fp": 15449,
+        "fn": 4009,
+        "precision": 0.1437,
+        "recall": 0.3928,
+        "f1": 0.2104,
+        "false_negative_rate": 0.6072,
+        "recall_ci95": [
+          0.381,
+          0.4046
+        ]
+      },
+      "tier_counts": {
+        "NANO": 956,
+        "SMALL": 544,
+        "MEDIUM": 0
+      }
+    }
+  ],
+  "simulated": false
+}

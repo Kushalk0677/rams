@@ -1,0 +1,188 @@
+{
+  "host": "LAPTOP-JRU852LF",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "groups": [
+    {
+      "policy": "adaptive",
+      "load_profile": "idle",
+      "n": 2000,
+      "latency_mean": 10.81,
+      "latency_std": 5.56,
+      "latency_p50": 9.63,
+      "latency_p95": 12.29,
+      "latency_ci95": [
+        10.47,
+        11.23
+      ],
+      "ci_unit": "block_mean",
+      "n_blocks": 10,
+      "tier_counts": {
+        "MEDIUM": 71,
+        "SMALL": 1929
+      },
+      "vru_rate": 0.251,
+      "vru_rate_ci95": [
+        0.2325,
+        0.2705
+      ],
+      "backends": [
+        "onnx_cuda"
+      ],
+      "load_injector": "process_steady_v3",
+      "load_target_intensity_mean": 0.0,
+      "cpu_pct_mean": 19.4,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": 0.350278
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "idle",
+      "n": 2000,
+      "latency_mean": 11.31,
+      "latency_std": 6.37,
+      "latency_p50": 9.59,
+      "latency_p95": 26.62,
+      "latency_ci95": [
+        10.93,
+        11.69
+      ],
+      "ci_unit": "block_mean",
+      "n_blocks": 10,
+      "tier_counts": {
+        "MEDIUM": 159,
+        "SMALL": 1837,
+        "NANO": 4
+      },
+      "vru_rate": 0.2545,
+      "vru_rate_ci95": [
+        0.2359,
+        0.274
+      ],
+      "backends": [
+        "onnx_cuda"
+      ],
+      "load_injector": "process_steady_v3",
+      "load_target_intensity_mean": 0.0,
+      "cpu_pct_mean": 18.56,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": 0.360767
+    },
+    {
+      "policy": "safety",
+      "load_profile": "idle",
+      "n": 2000,
+      "latency_mean": 11.83,
+      "latency_std": 6.82,
+      "latency_p50": 10.25,
+      "latency_p95": 26.8,
+      "latency_ci95": [
+        11.58,
+        12.09
+      ],
+      "ci_unit": "block_mean",
+      "n_blocks": 10,
+      "tier_counts": {
+        "MEDIUM": 167,
+        "SMALL": 1833
+      },
+      "vru_rate": 0.253,
+      "vru_rate_ci95": [
+        0.2344,
+        0.2725
+      ],
+      "backends": [
+        "onnx_cuda"
+      ],
+      "load_injector": "process_steady_v3",
+      "load_target_intensity_mean": 0.0,
+      "cpu_pct_mean": 20.12,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": 0.387141
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "idle",
+      "n": 2000,
+      "latency_mean": 23.34,
+      "latency_std": 9.03,
+      "latency_p50": 26.78,
+      "latency_p95": 30.65,
+      "latency_ci95": [
+        22.55,
+        24.32
+      ],
+      "ci_unit": "block_mean",
+      "n_blocks": 10,
+      "tier_counts": {
+        "MEDIUM": 1479,
+        "SMALL": 521
+      },
+      "vru_rate": 0.3045,
+      "vru_rate_ci95": [
+        0.2847,
+        0.325
+      ],
+      "backends": [
+        "onnx_cuda"
+      ],
+      "load_injector": "process_steady_v3",
+      "load_target_intensity_mean": 0.0,
+      "cpu_pct_mean": 19.55,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": 1.007023
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "idle",
+      "n": 2000,
+      "latency_mean": 11.59,
+      "latency_std": 6.42,
+      "latency_p50": 10.19,
+      "latency_p95": 26.51,
+      "latency_ci95": [
+        11.41,
+        11.78
+      ],
+      "ci_unit": "block_mean",
+      "n_blocks": 10,
+      "tier_counts": {
+        "MEDIUM": 132,
+        "SMALL": 1868
+      },
+      "vru_rate": 0.2555,
+      "vru_rate_ci95": [
+        0.2369,
+        0.2751
+      ],
+      "backends": [
+        "onnx_cuda"
+      ],
+      "load_injector": "process_steady_v3",
+      "load_target_intensity_mean": 0.0,
+      "cpu_pct_mean": 19.52,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": 0.376942
+    }
+  ]
+}

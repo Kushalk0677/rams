@@ -1,0 +1,9 @@
+{
+  "tier": "MEDIUM",
+  "backend": "onnx_cuda",
+  "metric": "COCOeval_bbox",
+  "map50": 0.11104675553161462,
+  "map5095": 0.0914709566329714,
+  "ground_truth": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_coco_ground_truth_medium_20260821_025958.json",
+  "detections": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_coco_detections_medium_20260821_025958.json"
+}
