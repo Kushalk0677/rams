@@ -89,10 +89,11 @@ configs/                      Versioned runtime defaults and device-specific TDP
   default.yaml                Tier, confidence, pressure, hysteresis, and policy defaults.
   energy_profile*.json        Transparent power-cap and component assumptions for energy estimates.
 
-packaging/                    Editable source trees for the three self-contained operator packages.
-  windows/, macos/, jetson/   Platform setup guides, requirements, scripts, and package assets.
+docs/                         Reproducibility references and platform operator runbooks.
+  RAMS_*_Runbook.md           Windows, macOS, and Jetson package guides copied into each ZIP.
+  COMPLETE_RUNALL_*.md        Focused reference for the phased Windows full-evaluation sequence.
 
-packages/                     Ready-to-send ZIP archives built from `packaging/`.
+packages/                     Ready-to-send ZIP archives built from repository source and `docs/` guides.
   RAMS_*_validation.zip       Beginner-facing instructions from download through evidence collection.
 
 results/                      Curated evidence organized by device and execution route.
@@ -218,8 +219,8 @@ and result records.
 | Archive | Target route | Operator guide |
 |---|---|---|
 | [`RAMS_Windows_validation.zip`](packages/RAMS_Windows_validation.zip) | Windows CPU ONNX | README inside the archive and [Windows runbook](docs/RAMS_Windows_Runbook.md) |
-| [`RAMS_macOS_validation.zip`](packages/RAMS_macOS_validation.zip) | Apple Silicon CPU ONNX | [macOS package guide](packaging/macos/README.md) |
-| [`RAMS_Jetson_validation.zip`](packages/RAMS_Jetson_validation.zip) | Jetson TensorRT | [Jetson package guide](packaging/jetson/README.md) |
+| [`RAMS_macOS_validation.zip`](packages/RAMS_macOS_validation.zip) | Apple Silicon CPU ONNX | [macOS runbook](docs/RAMS_macOS_Runbook.md) |
+| [`RAMS_Jetson_validation.zip`](packages/RAMS_Jetson_validation.zip) | Jetson TensorRT | [Jetson runbook](docs/RAMS_Jetson_Runbook.md) |
 
 Download exactly one archive for the target computer, save it in that
 computer's Downloads folder, extract it, then start with the `README.md` at

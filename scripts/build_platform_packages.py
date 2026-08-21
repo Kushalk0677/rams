@@ -15,24 +15,24 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGING = ROOT / "packaging"
+DOCUMENTATION = ROOT / "docs"
 
 PLATFORMS = {
     "windows": {
         "archive": "RAMS_Windows_validation.zip",
-        "guide": "windows/README.md",
+        "guide": "RAMS_Windows_Runbook.md",
         "title": "RAMS Windows validation package",
         "scope": "Windows CPU ONNX Runtime validation. NVIDIA hardware is telemetry-only.",
     },
     "macos": {
         "archive": "RAMS_macOS_validation.zip",
-        "guide": "macos/README.md",
+        "guide": "RAMS_macOS_Runbook.md",
         "title": "RAMS macOS Apple Silicon validation package",
         "scope": "CPU ONNX Runtime validation on Apple Silicon macOS.",
     },
     "jetson": {
         "archive": "RAMS_Jetson_validation.zip",
-        "guide": "jetson/README.md",
+        "guide": "RAMS_Jetson_Runbook.md",
         "title": "RAMS Jetson validation package",
         "scope": "Jetson TensorRT validation with device-built engines.",
     },
@@ -88,7 +88,7 @@ def copy_source(destination: Path) -> None:
 
 
 def write_metadata(destination: Path, spec: dict[str, str]) -> None:
-    guide = PACKAGING / spec["guide"]
+    guide = DOCUMENTATION / spec["guide"]
     shutil.copy2(guide, destination / "README.md")
     (destination / "AI_OPERATOR_INSTRUCTIONS.md").write_text(
         "# RAMS operator instructions\n\n"

@@ -18,9 +18,9 @@ it, and follow its root `README.md` from top to bottom before returning here.
 
 | Target computer | Archive | Setup and run guide |
 |---|---|---|
-| Windows desktop or laptop | [`RAMS_Windows_validation.zip`](packages/RAMS_Windows_validation.zip) | [Windows guide](packaging/windows/README.md) |
-| Apple Silicon Mac | [`RAMS_macOS_validation.zip`](packages/RAMS_macOS_validation.zip) | [macOS guide](packaging/macos/README.md) |
-| NVIDIA Jetson | [`RAMS_Jetson_validation.zip`](packages/RAMS_Jetson_validation.zip) | [Jetson guide](packaging/jetson/README.md) |
+| Windows desktop or laptop | [`RAMS_Windows_validation.zip`](packages/RAMS_Windows_validation.zip) | [Windows guide](docs/RAMS_Windows_Runbook.md) |
+| Apple Silicon Mac | [`RAMS_macOS_validation.zip`](packages/RAMS_macOS_validation.zip) | [macOS guide](docs/RAMS_macOS_Runbook.md) |
+| NVIDIA Jetson | [`RAMS_Jetson_validation.zip`](packages/RAMS_Jetson_validation.zip) | [Jetson guide](docs/RAMS_Jetson_Runbook.md) |
 
 The package guides install software, export or build the correct models,
 download datasets, create the fixed KITTI replay without overwriting data, run
