@@ -55,7 +55,24 @@ ls -lh yolov8n.engine yolov8s.engine yolov8m.engine
 If an engine cannot be built, stop and resolve that Jetson-specific issue. Do
 not silently fall back to another backend for a TensorRT run.
 
-## 3. Prepare datasets
+## 3. Required TensorRT preflight
+
+Before sending the package or starting any paper phase, execute one real
+TensorRT inference through every tier on this Jetson. This fails if TensorRT,
+`tegrastats`, an engine, an image, or an individual tier is unavailable. It
+writes a retained JSON report under `results/`.
+
+```bash
+FRAME=$(find ~/rams/data/kitti/images/val -maxdepth 1 -name '*.png' | sort | head -n 1)
+test -n "$FRAME"
+python3 scripts/verify_jetson_tensorrt.py --frame "$FRAME"
+```
+
+Continue only if the report says `"status": "passed"` and every tier lists
+`"backend": "tensorrt"`. This is an on-device gate. WSL2 and GitHub-hosted
+Linux cannot replace it because they do not run the Jetson's TensorRT engines.
+
+## 4. Prepare datasets
 
 Download KITTI 2D Object Detection images and labels after registering at
 <https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d>.
@@ -72,7 +89,7 @@ Download COCO `val2017.zip` and Ultralytics `coco2017labels.zip`, then place
 them at `~/rams/data/coco/images/val2017/` and
 `~/rams/data/coco/labels/val2017/`.
 
-## 4. Calibrate and run
+## 5. Calibrate and run
 
 Create and document a device-specific TDP profile. It produces an estimate,
 not a physical energy measurement.

@@ -81,10 +81,11 @@ The public packages are:
 | `packages/RAMS_Jetson_validation.zip` | Jetson TensorRT with engines built on the exact target device. |
 
 The macOS package is checked on GitHub's ARM64 macOS runner. The Jetson package
-is checked for Linux and WSL2-compatible source setup in GitHub Actions; its
-TensorRT, JetPack, GPU telemetry, and hardware performance steps still require
-the target Jetson. Do not reuse a TensorRT engine across different Jetson
-device models.
+is checked for Linux and WSL2-compatible source setup in GitHub Actions, and
+it includes a required on-device TensorRT preflight. That preflight verifies
+all three device-built engines, `tegrastats`, TensorRT bindings, and one real
+inference per tier before a paper run. Do not reuse a TensorRT engine across
+different Jetson device models.
 
 ## Curated result artifacts
 

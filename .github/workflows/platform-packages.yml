@@ -66,6 +66,7 @@ jobs:
           pip install -e .
           python -m py_compile benchmark/run.py scripts/run_paper_suite.py rams/models.py
           python scripts/run_paper_suite.py --help
+          python scripts/verify_jetson_tensorrt.py --help
           mkdir -p frames
           touch frames/000000.png
           python scripts/run_paper_suite.py --platform jetson --backend onnx --phase runtime1 --simulate --n 2 --blocks 1 --frames "$PWD/frames"
