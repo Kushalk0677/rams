@@ -117,16 +117,19 @@ The ordering holds across all five load profiles.
 
 ---
 
-## Reproduction
+## Historical execution context and new runs
 
-```bash
-python preflight_check.py --backend onnx \
-  --energy-profile configs/energy_profile_macos.json --estimate
-```
+This document preserves the provenance of the M4 evidence collected on
+2026-08-03. It is not an executable runbook. The local helper names recorded
+above, including `build_kitti_yolo.py`, `patch_exp8_kitti.py`,
+`preflight_check.py`, and `RAMS_macOS_Runbook.md`, belonged to the original
+collection environment and are not part of this public repository. They must
+not be treated as current source dependencies or used to reproduce a new run.
 
-Preflight must pass before any phase. It fails loudly if the controller falls back to
-simulation — the failure mode this package does not otherwise surface, since an unset
-`RAMS_BACKEND` silently yields synthetic Gaussian latencies instead of raising.
-
-Phase commands are in `RAMS_macOS_Runbook.md` §7. For the KITTI accuracy phase, export
-`RAMS_KITTI_YAML` to the generated local YAML first.
+For a fresh Apple Silicon run, use the current
+[`RAMS_macOS_validation.zip`](../../../packages/RAMS_macOS_validation.zip) and
+follow its root README. The package supplies the current setup, guarded KITTI
+replay preparation, smoke, calibration, phased execution, and result-handoff
+procedure. Compare a new result with this evidence only when its manifest,
+backend, replay split, calibration, and load protocol meet the shared
+requirements in [`REPRODUCIBILITY.md`](../../../REPRODUCIBILITY.md).

@@ -2,7 +2,6 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2606.14716-b31b1b.svg)](https://arxiv.org/abs/2606.14716)
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-NOASSERTION-lightgrey.svg)](LICENSE)
 
 **Kushal Khemani, Evan Leri, Amit Hod, George Xu**
 
@@ -243,7 +242,3 @@ arXiv record:
   primaryClass={cs.DC}
 }
 ```
-
-## License
-
-See [LICENSE](LICENSE).

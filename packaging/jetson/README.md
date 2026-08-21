@@ -39,7 +39,7 @@ Open a Terminal on the Jetson or connect using SSH. Save the archive under
 
 ```bash
 sudo apt update
-sudo apt install -y python3-venv python3-pip python3-opencv
+sudo apt install -y python3-venv python3-pip python3-opencv curl unzip
 unzip RAMS_Jetson_validation.zip -d ~/rams
 cd ~/rams/rams_validation
 python3 -m venv --system-site-packages .venv

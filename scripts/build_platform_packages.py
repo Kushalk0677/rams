@@ -48,7 +48,6 @@ INCLUDED = (
     "requirements.txt",
     "requirements-inference.txt",
     "setup.py",
-    "LICENSE",
 )
 EXCLUDED = {
     "scripts/build_platform_packages.py",
