@@ -7,8 +7,8 @@ results.
 
 `m4/` contains the browsable Apple M4 MacBook Air CPU-ONNX evidence
 received on 3 August 2026: manifests, calibration, raw records, figures,
-configuration, provenance, and supporting scripts. It is a real KITTI replay
-evaluation. Its energy fields are TDP-based estimates, not physical power
+configuration and provenance. It is a real KITTI replay evaluation. Its energy
+fields are TDP-based estimates, not physical power
 measurements.
 
 `i7_1165G7/` contains the completed Intel Core i7-1165G7 Windows CPU-ONNX
@@ -19,6 +19,11 @@ runtime results, measured COCO validation, KITTI policy metrics, and retention
 analysis, raw records, manifests, and figures. Its energy fields are
 telemetry-conditioned estimates, not physical power measurements. Do not
 combine it with archived `thread_steady_v1` Windows results.
+
+The top level of each current device directory contains only calibration,
+manifests, raw records, tables, and figures. Device configuration and
+provenance are under `metadata/`. The `m4/excluded/` directory holds the
+explicitly excluded smoke and invalid-map artifacts and is not paper evidence.
 
 New runs created by the current workflow should be stored in a separate
 device- and protocol-labelled folder. Keep the manifest, raw records,
