@@ -23,11 +23,13 @@ combine it with archived `thread_steady_v1` Windows results.
 
 `i7_11800H_rtx3050ti_cuda_onnx/` contains the separate RTX 3050 Ti Laptop GPU
 CUDA-ONNX evidence received on 21 August 2026. It preserves the complete
-supplied archive in normalized form: calibration, manifests, records, figures,
-and device inventory. It is a distinct backend route from `i7_11800H/`; do not
-pool their latency, confidence intervals, or energy estimates. The CUDA result
-provenance records its COCO evaluation, cached KITTI tier references, smoke
-exclusion, and missing energy-profile input.
+supplied archives in normalized form: calibration, manifests, records, figures,
+device inventory, mapped KITTI COCOeval protocol records, and a TDP energy
+profile. The 1,500-frame mapped KITTI evaluation reports fresh mAP@0.50 / mAP@
+0.50:0.95 of 0.0470 / 0.0256 for NANO, 0.0700 / 0.0370 for SMALL, and 0.0736 /
+0.0400 for MEDIUM. It is a distinct backend route from `i7_11800H/`; do not
+pool their latency, confidence intervals, or energy estimates. The supplied
+energy profile supports TDP-model estimates only, not physical energy claims.
 
 The top level of each current device directory contains only calibration,
 manifests, raw records, tables, and figures. Device configuration and
