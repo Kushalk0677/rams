@@ -1,0 +1,34 @@
+{
+  "tier": "SMALL",
+  "backend": "onnx_cuda",
+  "metric": "COCOeval_bbox",
+  "map50": 0.06999132207822577,
+  "map5095": 0.03702137582205972,
+  "protocol": {
+    "ground_truth_mapping": {
+      "car": "car",
+      "van": "car",
+      "truck": "car",
+      "tram": "car",
+      "pedestrian": "person",
+      "person_sitting": "person",
+      "cyclist": "bicycle"
+    },
+    "prediction_mapping": {
+      "car": "car",
+      "truck": "car",
+      "bus": "car",
+      "train": "car",
+      "person": "person",
+      "bicycle": "bicycle"
+    },
+    "categories": [
+      "car",
+      "person",
+      "bicycle"
+    ],
+    "iou_thresholds": "0.50:0.05:0.95"
+  },
+  "ground_truth": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_kitti_ground_truth_small_20260821_041624.json",
+  "detections": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_kitti_detections_small_20260821_041624.json"
+}

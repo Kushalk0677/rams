@@ -33,18 +33,31 @@ setup traceability but is not paper evidence. Use the individual non-smoke
 phase manifests instead.
 
 COCO was evaluated on all 5,000 validation images. Its result files report
-`map_source: onnx_cuda_cocoeval`. The KITTI `map50` and `map5095` fields report
-`map_source: cached_profile`; they are cached tier references, not newly
-measured KITTI mAP. Policy-level KITTI recall, precision, F1, and false-negative
-rate are recorded from the real replay.
+`map_source: onnx_cuda_cocoeval`. A subsequent supplied KITTI accuracy run
+evaluated 1,500 real replay images through the same CUDA ONNX route. It reports
+`map_source: kitti_native_mapped_cocoeval` using mapped `car`, `person`, and
+`bicycle` categories with COCOeval bounding-box IoU thresholds from 0.50 to
+0.95 in 0.05 increments. Its results are retained in `records/`:
+
+| Tier | mAP@0.50 | mAP@0.50:0.95 |
+|---|---:|---:|
+| NANO | 0.0470 | 0.0256 |
+| SMALL | 0.0700 | 0.0370 |
+| MEDIUM | 0.0736 | 0.0400 |
+
+The protocol JSON records the class mappings and metric configuration. The
+supplied follow-up archive does not include the raw detection and ground-truth
+JSON files referenced by those protocol records, so preserve the source archive
+with this repository evidence. Policy-level KITTI recall, precision, F1, and
+false-negative rate are also recorded from the real replay.
 
 ## Evidence limits
 
-The archive does not contain the referenced
-`configs/energy_profile_windows_rtx3050.json`. Its stored energy values remain
-telemetry-conditioned estimates, not physical energy measurements. Do not make
-an energy claim from this directory until that input profile is recovered and
-retained with the evidence.
+`metadata/energy_profile_windows_rtx3050.json` records the supplied TDP energy
+model: a 67 W NVIDIA GPU cap, a 20 W dynamic CPU assumption, a 2 W dynamic
+memory assumption, and a 6 W idle baseline. The stored energy values are
+telemetry-conditioned estimates from this model, not physical energy
+measurements from an external meter.
 
 The current public Windows validation package documents CPU ONNX Runtime only.
 This CUDA ONNX result was produced by a separate supplied Windows CUDA path.

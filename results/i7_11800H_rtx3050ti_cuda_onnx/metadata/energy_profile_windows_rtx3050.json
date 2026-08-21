@@ -1,0 +1,9 @@
+{
+  "name": "Windows RTX 3050 Ti Laptop GPU — High performance, plugged in",
+  "source": "NVIDIA nvidia-smi 67 W GPU cap; previous approved Intel CPU telemetry assumptions; High performance, plugged in; approved 2026-08-21",
+  "idle_w": 6.0,
+  "cpu_dynamic_w": 20.0,
+  "memory_dynamic_w": 2.0,
+  "gpu_dynamic_w": 61.0,
+  "max_power_w": 67.0
+}
