@@ -9,7 +9,8 @@ results.
 received on 3 August 2026: manifests, calibration, raw records, figures,
 configuration and provenance. It is a real KITTI replay evaluation. Its energy
 fields are TDP-based estimates, not physical power
-measurements.
+measurements. Its provenance records the historical execution context for that
+evidence; it is not a setup guide. Use the current macOS package for a new run.
 
 `i7_11800H/` contains the completed Intel Core i7-11800H Windows CPU-ONNX
 evidence received on 20 August 2026. It uses the revised
