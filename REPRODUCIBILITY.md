@@ -5,8 +5,10 @@ telemetry, tier-accuracy, policy-accuracy, and VRU-retention artifacts from
 real replay frames. Simulation is useful for setup checks only and must not be
 used as paper evidence.
 
-The verified package archive in `packages/` is for the Windows CPU-ONNX
-workflow. Use this guide directly for source-based Jetson and macOS runs.
+Platform packages are available for Windows CPU ONNX, Apple Silicon macOS CPU
+ONNX, and Jetson TensorRT. The Jetson archive includes target-device steps for
+JetPack and TensorRT; those hardware steps cannot be reproduced by GitHub-hosted
+CI or WSL2.
 
 ## 1. Scope and required assets
 

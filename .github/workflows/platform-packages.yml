@@ -1,0 +1,69 @@
+name: platform-package-smoke
+
+on:
+  push:
+    branches:
+      - package_macos_jetson_20260821
+  pull_request:
+    paths:
+      - ".github/workflows/platform-packages.yml"
+      - "packaging/**"
+      - "scripts/build_platform_packages.py"
+      - "benchmark/**"
+      - "configs/**"
+      - "experiments/**"
+      - "rams/**"
+      - "requirements*.txt"
+      - "setup.py"
+  workflow_dispatch:
+
+jobs:
+  macos-apple-silicon-package:
+    name: macOS Apple Silicon CPU-ONNX package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Confirm ARM64 hosted runner
+        run: test "$(uname -m)" = "arm64"
+      - name: Build macOS package
+        run: python scripts/build_platform_packages.py --platform macos
+      - name: Extract and smoke-test macOS package
+        run: |
+          temp_dir="$(mktemp -d)"
+          unzip -q packages/RAMS_macOS_validation.zip -d "$temp_dir"
+          cd "$temp_dir/rams_validation"
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest
+          pip install -e .
+          python -m py_compile benchmark/run.py scripts/run_paper_suite.py rams/models.py
+          python scripts/run_paper_suite.py --help
+          python -m benchmark.run --n 3 --policy threshold --profile heavy --simulate
+
+  jetson-linux-wsl2-compatibility:
+    name: Jetson package Linux and WSL2 compatibility
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build Jetson package
+        run: python scripts/build_platform_packages.py --platform jetson
+      - name: Extract and smoke-test Linux-compatible package path
+        run: |
+          temp_dir="$(mktemp -d)"
+          unzip -q packages/RAMS_Jetson_validation.zip -d "$temp_dir"
+          cd "$temp_dir/rams_validation"
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest
+          pip install -e .
+          python -m py_compile benchmark/run.py scripts/run_paper_suite.py rams/models.py
+          python scripts/run_paper_suite.py --help
+          python scripts/run_paper_suite.py --platform jetson --backend onnx --phase runtime1 --simulate --n 2 --blocks 1

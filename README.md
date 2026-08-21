@@ -72,15 +72,19 @@ process.
 
 ## Platform packages
 
-The verified public package is:
+The public packages are:
 
-- `packages/RAMS_Windows_validation.zip`
+| Package | Validation path |
+|---|---|
+| `packages/RAMS_Windows_validation.zip` | Windows CPU ONNX. NVIDIA hardware is telemetry-only. |
+| `packages/RAMS_macOS_validation.zip` | Apple Silicon macOS CPU ONNX. |
+| `packages/RAMS_Jetson_validation.zip` | Jetson TensorRT with engines built on the exact target device. |
 
-It runs the Windows CPU-ONNX process-v3 workflow. Its presence of NVIDIA
-hardware may enable telemetry only; the package does not run inference on a
-Windows GPU. Jetson and macOS users should currently reproduce from the source
-workflow in [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md). Do not reuse a
-TensorRT engine across different Jetson device models.
+The macOS package is checked on GitHub's ARM64 macOS runner. The Jetson package
+is checked for Linux and WSL2-compatible source setup in GitHub Actions; its
+TensorRT, JetPack, GPU telemetry, and hardware performance steps still require
+the target Jetson. Do not reuse a TensorRT engine across different Jetson
+device models.
 
 ## Curated result artifacts
 
