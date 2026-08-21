@@ -215,7 +215,9 @@ class TestModelWrapperInfer:
     """``ModelWrapper.infer()`` in simulation mode."""
 
     RESULT_KEYS = {"tier", "simulated", "backend", "latency_ms",
-                   "detections", "accuracy_proxy"}
+                   "detections", "accuracy_proxy", "inference_ms",
+                   "preprocess_ms", "postprocess_ms", "coords",
+                   "image_width", "image_height"}
 
     @pytest.fixture(autouse=True)
     def _loaded_wrapper(self) -> Any:
@@ -362,7 +364,9 @@ class TestModelLibrary:
     """``ModelLibrary`` with ``simulate=True``."""
 
     RESULT_KEYS = {"tier", "simulated", "backend", "latency_ms",
-                   "detections", "accuracy_proxy"}
+                   "detections", "accuracy_proxy", "inference_ms",
+                   "preprocess_ms", "postprocess_ms", "coords",
+                   "image_width", "image_height"}
 
     def test_init_creates_three_wrappers(self) -> None:
         from rams.models import ModelLibrary
