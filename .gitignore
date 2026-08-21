@@ -25,7 +25,7 @@ datasets/
 !packages/*_new.zip
 !packages/RAMS_Windows_validation_process_v3_20260820.zip
 !results/
-!results/m4/
+!results/m4_air/
 !results/i7_11800H/
 tmp_*/
 
