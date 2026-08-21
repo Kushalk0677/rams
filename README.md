@@ -64,13 +64,18 @@ benchmark/         Replay harness, load protocol, summaries, and confidence inte
 experiments/       Tier accuracy, Pareto, policy accuracy, and retention experiments
 scripts/           Calibration, paper-suite, package, and platform-preflight commands
 configs/           Controller defaults and per-device energy-profile templates
-packaging/          Sources for the macOS and Jetson operator packages
+packaging/          Sources for the Windows, macOS, and Jetson operator packages
 packages/           Ready-to-send Windows, macOS, and Jetson archives
 results/            Curated current and historical evidence
 tests/              Runtime contracts and regression tests
 ```
 
 ## Quick start
+
+If you received one of the platform archives, do not use this generic source
+checkout quick start. Go directly to [Platform packages](#platform-packages)
+and follow the README inside the archive. The package README is the
+authoritative setup and execution guide for that computer.
 
 The base installation supports a simulated smoke check. It verifies the
 controller and harness only. It is not paper evidence.
@@ -99,6 +104,10 @@ Expected input sizes are NANO 320, SMALL 416, and MEDIUM 640. The repository
 does not include checkpoints, ONNX exports, datasets, or TensorRT engines.
 
 ## Full evaluation setup
+
+This section describes the shared asset contract for repository users. A person
+running an archive should use its package README instead: it contains the exact
+operating-system commands, checks, and stop conditions.
 
 A paper-facing run requires real KITTI replay frames, COCO validation images
 and labels, the three models, and a completed device energy-profile JSON. The
@@ -129,6 +138,9 @@ The complete data preparation, calibration, phase sequence, retained outputs,
 and interpretation constraints are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Run the paper suite
+
+These are generic source-checkout examples. Use the exact Windows, macOS, or
+Jetson commands in the relevant package guide for a paper-facing run.
 
 Run a smoke check first. It uses a small real replay when the datasets are
 present, validates the requested backend and paths, and must not be reported.
@@ -175,6 +187,14 @@ computer's Downloads folder, extract it, then start with the `README.md` at
 the root of the extracted `rams_validation` folder. Each package explains the
 required software, model creation, dataset download, safe KITTI split creation,
 smoke check, calibration, phased run, full run, and result handoff.
+
+The documentation is deliberately split by responsibility:
+
+| Need | Read this |
+|---|---|
+| Download, installation, data preparation, and commands on a target computer | The `README.md` inside that platform archive. |
+| Shared experimental protocol, evidence required for a result, and interpretation limits | [REPRODUCIBILITY.md](REPRODUCIBILITY.md). |
+| Project concepts, API orientation, result locations, and citation | This README. |
 
 The Jetson package has a mandatory target-device TensorRT preflight. It must
 load every device-built engine and run one real inference per tier before a

@@ -5,12 +5,29 @@ telemetry, tier-accuracy, policy-accuracy, and VRU-retention artifacts from
 real replay frames. Simulation is only a setup check and must not be used as
 paper evidence.
 
-The [README](README.md) gives a project overview. The platform packages under
-[`packages/`](packages) are the complete download-to-results instructions for
-coauthors. This guide records the common protocol that makes results
-comparable within one device and backend.
+The [README](README.md) gives the project overview. This document is the
+canonical shared protocol: what may be compared, what must be retained, and
+what may be claimed. It is not the preferred machine-setup guide. The package
+README is the authoritative download-to-results guide for an operator on a
+specific computer.
 
-## 1. Scope and required assets
+## Start with the correct package
+
+Choose exactly one package for the target device. Download the archive, extract
+it, and follow its root `README.md` from top to bottom before returning here.
+
+| Target computer | Archive | Setup and run guide |
+|---|---|---|
+| Windows desktop or laptop | [`RAMS_Windows_validation.zip`](packages/RAMS_Windows_validation.zip) | [Windows guide](packaging/windows/README.md) |
+| Apple Silicon Mac | [`RAMS_macOS_validation.zip`](packages/RAMS_macOS_validation.zip) | [macOS guide](packaging/macos/README.md) |
+| NVIDIA Jetson | [`RAMS_Jetson_validation.zip`](packages/RAMS_Jetson_validation.zip) | [Jetson guide](packaging/jetson/README.md) |
+
+The package guides install software, export or build the correct models,
+download datasets, create the fixed KITTI replay without overwriting data, run
+all gates, and provide the exact smoke, calibration, phase, and full-run
+commands. This document defines how to interpret and retain those outputs.
+
+## 1. Shared asset contract
 
 The repository does not include datasets, checkpoints, ONNX exports, or
 TensorRT engines. A full run needs:
@@ -31,13 +48,19 @@ Use this data layout:
 <data-root>/coco/labels/val2017/
 ```
 
-Create the KITTI replay from sorted training-frame indices 5981 through 7480,
-inclusive. Use exactly this split on every device. Download KITTI after
-registering at the [KITTI 2D object benchmark](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d).
+Each package invokes `scripts/prepare_kitti_validation.py` to create the KITTI
+replay from sorted training-frame indices 5981 through 7480 inclusive. Use
+exactly this split on every device. The helper refuses to overwrite an existing
+validation split. Download KITTI after registering at the
+[KITTI 2D object benchmark](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d).
 Download COCO `val2017` from [COCO](https://cocodataset.org/#download) and the
 corresponding Ultralytics YOLO-format label archive.
 
-## 2. Environment and models
+## 2. Source-checkout environment and models
+
+This section is for researchers working directly from a repository clone. If
+you are operating a downloaded package, use its README instead of these generic
+commands.
 
 Use Python 3.12 where supported by the platform. From the repository root:
 
@@ -109,19 +132,12 @@ Calibration stores the configuration both before and after application under
 backend, device power mode, clock condition, cooling condition, and calibration
 configuration through all following phases.
 
-## 5. Smoke check
+## 5. Smoke preflight
 
-Set the dataset root and perform a smoke run. It uses one block of five frames
-and a small labelled subset. It proves installation only and must not be
-reported as a measurement.
-
-```bash
-# macOS/Linux
-export RAMS_DATA_ROOT="$HOME/rams/data"
-# Windows PowerShell: $env:RAMS_DATA_ROOT = 'D:\data'
-
-python scripts/run_paper_suite.py --platform <platform> --backend <backend> --smoke --device <device-label>
-```
+Run the exact smoke command in the selected package README. It uses one block
+of five frames and a small labelled subset. It proves installation only and
+must not be reported as a measurement. A successful smoke manifest reports
+`smoke: true`, `simulated: false`, and no failed command.
 
 The script rejects paper-mode phases that lack real KITTI or COCO directories.
 It also rejects a full runtime phase without `--energy-profile`.
@@ -133,14 +149,9 @@ in each block receive the same ordered replay trace; the manifest records its
 hashes and random seed. GPU work is synchronized before timing where the
 backend supports synchronization.
 
-```bash
-python scripts/run_paper_suite.py --phase runtime1 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
-python scripts/run_paper_suite.py --phase runtime2 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
-python scripts/run_paper_suite.py --phase runtime3 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
-python scripts/run_paper_suite.py --phase runtime4 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
-python scripts/run_paper_suite.py --phase accuracy --platform <platform> --backend <backend> --device <device-label>
-python scripts/run_paper_suite.py --phase retention --platform <platform> --backend <backend> --device <device-label>
-```
+Run the exact phase commands from the selected package guide. Do not mix
+Windows CPU ONNX, macOS CPU ONNX, and Jetson TensorRT commands or substitute a
+backend partway through the sequence.
 
 | Phase | Work |
 |---|---|
@@ -151,11 +162,11 @@ python scripts/run_paper_suite.py --phase retention --platform <platform> --back
 | `accuracy` | KITTI tier and policy accuracy plus required measured COCO tier validation. |
 | `retention` | KITTI VRU-retention sensitivity analysis. |
 
-`python scripts/run_paper_suite.py --phase all ...` runs phases `runtime1`
-through `retention` in order after its calibration stage. It is the one-command
-full evaluation path. The script uses the `process_steady_v3` load protocol for
-steady profiles and `process_isolated_burst_v2` for burst. Do not combine its
-results with older thread-based Windows protocol results.
+Each package also provides a one-command `--phase all` full evaluation after
+its setup and smoke gates pass. It runs phases `runtime1` through `retention`
+in order after calibration. The script uses the `process_steady_v3` load
+protocol for steady profiles and `process_isolated_burst_v2` for burst. Do not
+combine its results with older thread-based Windows protocol results.
 
 ## 7. Required retained artifacts
 
