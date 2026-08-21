@@ -108,6 +108,18 @@ class ThresholdPolicy(BasePolicy):
         self._candidate_count = 0
 
 
+class FixedTierPolicy(BasePolicy):
+    """Controller-compatible fixed-tier baseline for paired experiments."""
+
+    name = "fixed"
+
+    def __init__(self, tier: Tier):
+        self.tier = Tier(tier)
+
+    def select_tier(self, pressure, last_tier, recent_detections=None) -> Tier:
+        return self.tier
+
+
 # ---------------------------------------------------------------------------
 # 2. Predictive Policy
 # ---------------------------------------------------------------------------
@@ -356,6 +368,15 @@ def _bbox_area(det: dict) -> float:
     return max(0.0, (x2 - x1) * (y2 - y1))
 
 
+def _bbox_area_fraction(det: dict) -> Optional[float]:
+    """Return bbox area normalized by source image size when available."""
+    width = det.get("image_width")
+    height = det.get("image_height")
+    if not width or not height:
+        return None
+    return _bbox_area(det) / (float(width) * float(height))
+
+
 class SafetyTwoLevelPolicy(BasePolicy):
     """
     Two-level safety override using bounding-box area as proximity proxy.
@@ -377,14 +398,19 @@ class SafetyTwoLevelPolicy(BasePolicy):
         hysteresis_window: int    = 3,
         proximity_window_s: float = 0.5,
         min_conf: float           = 0.25,   # lowered for mixed-resolution robustness
-        near_area_thresh: float   = 8_000.0,
+        near_area_fraction: float = 0.02,
+        near_area_thresh: Optional[float] = 8_000.0,
     ):
         self._base              = ThresholdPolicy(lo_thresh, hi_thresh, hysteresis_window)
         self.proximity_window_s = proximity_window_s
         self.min_conf           = min_conf
+        self.near_area_fraction = near_area_fraction
+        # Raw pixels only preserve compatibility for detections without the
+        # source-image metadata required by the revised coordinate contract.
         self.near_area_thresh   = near_area_thresh
         self._last_vru_time: Optional[float] = None
         self._last_vru_area: float           = 0.0
+        self._last_vru_area_is_normalized = False
 
     def _update_vru(self, detections: Optional[list[dict]]):
         """Update VRU presence state from a detection list.
@@ -399,12 +425,14 @@ class SafetyTwoLevelPolicy(BasePolicy):
             cls  = str(det.get("class", "")).lower()
             conf = float(det.get("conf", 0.0))
             if cls in VULNERABLE_CLASSES and conf >= self.min_conf:
-                area = _bbox_area(det)
+                normalized = _bbox_area_fraction(det)
+                area = normalized if normalized is not None else _bbox_area(det)
                 if (self._last_vru_time is None
                         or area >= self._last_vru_area
                         or (time.monotonic() - self._last_vru_time) > self.proximity_window_s):
                     self._last_vru_time = time.monotonic()
                     self._last_vru_area = area
+                    self._last_vru_area_is_normalized = normalized is not None
 
     def _vru_lock_tier(self) -> Optional[Tier]:
         """Return the tier lock based on current VRU state.
@@ -418,7 +446,11 @@ class SafetyTwoLevelPolicy(BasePolicy):
             return None
         if (time.monotonic() - self._last_vru_time) > self.proximity_window_s:
             return None
-        return Tier.MEDIUM if self._last_vru_area >= self.near_area_thresh else Tier.SMALL
+        threshold = (self.near_area_fraction if self._last_vru_area_is_normalized
+                     else self.near_area_thresh)
+        if threshold is None:
+            return Tier.SMALL
+        return Tier.MEDIUM if self._last_vru_area >= threshold else Tier.SMALL
 
     def observe(self, detections: Optional[list[dict]] = None):
         self._update_vru(detections)
@@ -438,11 +470,22 @@ class SafetyTwoLevelPolicy(BasePolicy):
         self._base.reset()
         self._last_vru_time = None
         self._last_vru_area = 0.0
+        self._last_vru_area_is_normalized = False
 
 
 # ---------------------------------------------------------------------------
 # Factory
 # ---------------------------------------------------------------------------
+
+PAPER_POLICY_LABELS = {
+    "threshold": "Threshold",
+    "predictive": "EWMA-smoothed",
+    "adaptive": "Variance-adaptive EWMA",
+    "safety": "VRU-retention",
+    "safety2": "Two-level VRU-retention",
+}
+
+CANONICAL_POLICY_NAMES = ("threshold", "predictive", "safety", "adaptive", "safety2")
 
 POLICIES = {
     "threshold":  ThresholdPolicy,
@@ -450,7 +493,16 @@ POLICIES = {
     "safety":     SafetyPolicy,
     "adaptive":   AdaptivePredictivePolicy,
     "safety2":    SafetyTwoLevelPolicy,
+    "ewma_smoothed": PredictivePolicy,
+    "variance_adaptive_ewma": AdaptivePredictivePolicy,
+    "vru_retention": SafetyPolicy,
+    "vru_retention2": SafetyTwoLevelPolicy,
 }
+
+EWMASmoothedPolicy = PredictivePolicy
+VarianceAdaptiveEWMAPolicy = AdaptivePredictivePolicy
+VRURetentionPolicy = SafetyPolicy
+TwoLevelVRURetentionPolicy = SafetyTwoLevelPolicy
 
 
 def make_policy(name: str, **kwargs) -> BasePolicy:

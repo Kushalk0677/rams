@@ -12,6 +12,13 @@ from typing import Any
 import pytest
 
 from rams.models import Tier
+
+
+# Controller unit tests must not inherit device calibration from
+# configs/default.yaml.  These fixed thresholds make the injected pressure
+# cases below deterministic while production runs still use calibration.
+THRESHOLD_TEST_KWARGS = {"lo_thresh": 0.30, "hi_thresh": 0.70, "hysteresis_window": 1}
+THRESHOLD_TEST_HYST3_KWARGS = {"lo_thresh": 0.30, "hi_thresh": 0.70, "hysteresis_window": 3}
 from rams.policy import ThresholdPolicy
 
 
@@ -189,7 +196,7 @@ class TestInferBasic:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         with ctrl:
             time.sleep(0.3)  # wait for monitor snapshot
             result = ctrl.infer()
@@ -202,7 +209,7 @@ class TestInferBasic:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         # No start — monitor not running, snapshot is None
         # ModelWrapper.infer() auto-loads so this should still work
         result = ctrl.infer()
@@ -300,7 +307,7 @@ class TestPressureOverride:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.90)
         result = ctrl.infer()
         assert result["tier"] == "NANO"
@@ -310,7 +317,7 @@ class TestPressureOverride:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.10)
         result = ctrl.infer()
         assert result["tier"] == "MEDIUM"
@@ -319,7 +326,7 @@ class TestPressureOverride:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.52)
         result = ctrl.infer()
         assert result["tier"] == "SMALL"
@@ -361,7 +368,7 @@ class TestTierSelection:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 3})
+                              policy_kwargs=THRESHOLD_TEST_HYST3_KWARGS)
         ctrl.set_pressure_override(0.90)  # would be NANO
 
         # First call: starts building candidate, stays SMALL
@@ -381,7 +388,7 @@ class TestTierSelection:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
 
         # Start with idle pressure → MEDIUM
         ctrl.set_pressure_override(0.08)
@@ -403,7 +410,7 @@ class TestTierSelection:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         assert ctrl.current_tier == Tier.SMALL
 
         ctrl.set_pressure_override(0.08)
@@ -459,7 +466,7 @@ class TestStatus:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.52)
         ctrl.infer()
         s = ctrl.status()
@@ -473,7 +480,7 @@ class TestStatus:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.08)  # MEDIUM
         ctrl.infer()
         s = ctrl.status()
@@ -506,7 +513,7 @@ class TestSwitchLog:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.08)
         ctrl.infer()  # SMALL → MEDIUM
         log = ctrl.switch_log
@@ -524,7 +531,7 @@ class TestSwitchLog:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.08)
         ctrl.infer()  # SMALL → MEDIUM
         ctrl.set_pressure_override(0.93)
@@ -538,7 +545,7 @@ class TestSwitchLog:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.08)
         ctrl.infer()
         log1 = ctrl.switch_log
@@ -550,7 +557,7 @@ class TestSwitchLog:
         from rams.controller import RAMSController
 
         ctrl = RAMSController(simulate=True, policy="threshold",
-                              policy_kwargs={"hysteresis_window": 1})
+                              policy_kwargs=THRESHOLD_TEST_KWARGS)
         ctrl.set_pressure_override(0.08)
         ctrl.infer()
         log = ctrl.switch_log

@@ -27,6 +27,7 @@ from __future__ import annotations
 import time
 import random
 import logging
+import os
 from dataclasses import dataclass
 from enum import IntEnum
 from pathlib import Path
@@ -161,6 +162,52 @@ def _scale_letterbox_boxes(detections: list[dict], scale: float,
     return scaled
 
 
+def _attach_coordinate_metadata(detections: list[dict], width: int, height: int,
+                                coords: str) -> list[dict]:
+    """Attach one explicit coordinate contract to every detection.
+
+    Policies consume source-image dimensions when they are available, so a
+    proximity threshold cannot silently depend on the selected model tier.
+    """
+    annotated = []
+    for detection in detections:
+        item = dict(detection)
+        item["image_width"] = int(width)
+        item["image_height"] = int(height)
+        item["coords"] = coords
+        annotated.append(item)
+    return annotated
+
+
+def _synchronize_accelerator() -> None:
+    """Synchronize CUDA when available so timed work is not queued work."""
+    try:
+        import torch
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
+    except Exception:
+        pass
+
+
+def _onnx_provider_plan(backend: str) -> tuple[list[object], dict[str, str]]:
+    """Return the explicit ONNX Runtime provider order for one backend.
+
+    Core ML is listed before CPU. Unsupported graph partitions may still run
+    on CPU, so this backend does not imply exclusive GPU or Neural Engine use.
+    """
+    if backend == "onnx":
+        return ["CPUExecutionProvider"], {}
+    if backend == "coreml":
+        options = {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": "1",
+            "EnableOnSubgraphs": "0",
+        }
+        return [("CoreMLExecutionProvider", options), "CPUExecutionProvider"], options
+    raise ValueError(f"ONNX provider plan is unavailable for backend {backend!r}")
+
+
 class ModelWrapper:
     """
     Wraps a YOLOv8 model. Backend priority: TensorRT > ONNX > Ultralytics > Simulation.
@@ -175,6 +222,14 @@ class ModelWrapper:
         self._model:   Optional[Any] = None
         self._backend: str           = "simulation"
         self._loaded:  bool          = False
+        self._provider_chain: list[str] = []
+        self._coreml_options: dict[str, str] = {}
+        self.requested_backend = os.environ.get("RAMS_BACKEND", "auto").strip().lower()
+        if self.requested_backend not in {"auto", "onnx", "coreml", "tensorrt", "pytorch"}:
+            raise ValueError(
+                "RAMS_BACKEND must be one of auto, onnx, coreml, tensorrt, pytorch; "
+                f"got {self.requested_backend!r}"
+            )
 
     def load(self):
         if self._loaded:
@@ -193,7 +248,7 @@ class ModelWrapper:
             Path(f"{Path(self.profile.model_id).stem}_imgsz{self.imgsz}.engine"),
         ]
         engine_path = next((p for p in engine_candidates if p.exists()), None)
-        if engine_path is not None:
+        if self.requested_backend in {"auto", "tensorrt"} and engine_path is not None:
             try:
                 from ultralytics import YOLO
                 self._model = YOLO(str(engine_path))
@@ -206,19 +261,37 @@ class ModelWrapper:
                 self._loaded = True
                 return
             except Exception as e:
+                if self.requested_backend == "tensorrt":
+                    raise RuntimeError(
+                        f"Requested TensorRT backend failed for {self.profile.label}: {e}"
+                    ) from e
                 logger.warning("[RAMS] TensorRT load failed (%s), trying ONNX.", e)
+        elif self.requested_backend == "tensorrt":
+            raise FileNotFoundError(
+                f"Requested TensorRT backend but no engine was found for {self.profile.label}. "
+                f"Expected one of: {', '.join(str(path) for path in engine_candidates)}"
+            )
 
         # 2. ONNX Runtime
         onnx_path = Path(self.profile.onnx_id)
-        if onnx_path.exists():
+        if self.requested_backend in {"auto", "onnx", "coreml"} and onnx_path.exists():
             try:
                 import onnxruntime as ort
+                selected_backend = "coreml" if self.requested_backend == "coreml" else "onnx"
+                providers, coreml_options = _onnx_provider_plan(selected_backend)
+                if (selected_backend == "coreml"
+                        and "CoreMLExecutionProvider" not in set(ort.get_available_providers())):
+                    raise RuntimeError(
+                        "CoreMLExecutionProvider is unavailable. Install an ONNX Runtime macOS build "
+                        "compiled with --use_coreml and verify its providers before running RAMS."
+                    )
                 opts = ort.SessionOptions()
                 opts.intra_op_num_threads = 4
                 opts.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
-                self._model   = ort.InferenceSession(
-                    str(onnx_path), opts, providers=["CPUExecutionProvider"])
-                self._backend = "onnx"
+                self._model = ort.InferenceSession(str(onnx_path), opts, providers=providers)
+                self._backend = selected_backend
+                self._provider_chain = list(self._model.get_providers())
+                self._coreml_options = dict(coreml_options)
                 import numpy as np
                 dummy = np.zeros((1, 3, self.imgsz, self.imgsz), dtype="float32")
                 self._model.run(None, {self._model.get_inputs()[0].name: dummy})
@@ -227,11 +300,27 @@ class ModelWrapper:
                 self._loaded = True
                 return
             except ImportError:
+                if self.requested_backend in {"onnx", "coreml"}:
+                    raise RuntimeError(
+                        f"Requested {self.requested_backend} backend but onnxruntime is not installed for "
+                        f"{self.profile.label}"
+                    )
                 logger.warning("[RAMS] onnxruntime not installed, trying ultralytics.")
             except Exception as e:
+                if self.requested_backend in {"onnx", "coreml"}:
+                    raise RuntimeError(
+                        f"Requested {self.requested_backend} backend failed for {self.profile.label}: {e}"
+                    ) from e
                 logger.warning("[RAMS] ONNX load failed (%s), trying ultralytics.", e)
+        elif self.requested_backend in {"onnx", "coreml"}:
+            raise FileNotFoundError(
+                f"Requested {self.requested_backend} backend but model is missing for "
+                f"{self.profile.label}: {onnx_path}"
+            )
 
         # 3. Ultralytics / PyTorch
+        if self.requested_backend not in {"auto", "pytorch"}:
+            raise RuntimeError(f"No usable {self.requested_backend} backend for {self.profile.label}")
         try:
             from ultralytics import YOLO
             pt = Path(self.profile.model_id)
@@ -243,6 +332,10 @@ class ModelWrapper:
             logger.info("[RAMS] %s ready — Ultralytics (imgsz=%d).",
                         self.profile.label, self.imgsz)
         except Exception as e:
+            if self.requested_backend == "pytorch":
+                raise RuntimeError(
+                    f"Requested PyTorch backend failed for {self.profile.label}: {e}"
+                ) from e
             logger.warning("[RAMS] Load failed (%s) — simulation fallback.", e)
             self.simulate = True
             self._backend = "simulation"
@@ -253,6 +346,8 @@ class ModelWrapper:
         if not self._loaded:
             self.load()
 
+        had_frame = frame is not None
+        _synchronize_accelerator()
         t0 = time.perf_counter()
 
         # ── Simulation ────────────────────────────────────────────────────────
@@ -294,16 +389,21 @@ class ModelWrapper:
                                   min(y1+random.uniform(sz[2],sz[3]), 480)],
                     "proximity": prox,
                 })
+            detections = _attach_coordinate_metadata(dets, self.imgsz, self.imgsz, "model")
             return {
                 "tier": self.tier.name, "simulated": True, "backend": "simulation",
-                "latency_ms": latency_ms, "detections": dets,
+                "latency_ms": latency_ms, "inference_ms": latency_ms,
+                "preprocess_ms": 0.0, "postprocess_ms": 0.0,
+                "coords": "model", "image_width": self.imgsz, "image_height": self.imgsz,
+                "detections": detections,
                 "accuracy_proxy": float(min(1.0, max(0.0,
                     random.gauss(self.profile.map50, 0.02)))),
             }
 
         # ── ONNX Runtime ──────────────────────────────────────────────────────
-        if self._backend == "onnx":
+        if self._backend in {"onnx", "coreml"}:
             import numpy as np
+            preprocess_started = time.perf_counter()
             if frame is None:
                 img = np.zeros((self.imgsz, self.imgsz, 3), dtype="uint8")
                 letterbox_meta = None
@@ -311,18 +411,31 @@ class ModelWrapper:
                 img, scale, pad_x, pad_y, orig_w, orig_h = _letterbox_image(frame, self.imgsz)
                 letterbox_meta = (scale, pad_x, pad_y, orig_w, orig_h)
             inp  = (img.astype("float32") / 255.0).transpose(2, 0, 1)[None]
+            preprocess_ms = (time.perf_counter() - preprocess_started) * 1000.0
             name = self._model.get_inputs()[0].name
+            inference_started = time.perf_counter()
             out  = self._model.run(None, {name: inp})
-            latency_ms = (time.perf_counter() - t0) * 1000.0
+            _synchronize_accelerator()
+            inference_ms = (time.perf_counter() - inference_started) * 1000.0
+            postprocess_started = time.perf_counter()
             detections = _parse_onnx_output(out)
             coords = "model"
+            width = height = self.imgsz
             if letterbox_meta is not None:
                 detections = _scale_letterbox_boxes(detections, *letterbox_meta)
                 coords = "original"
+                width, height = letterbox_meta[-2:]
+            detections = _attach_coordinate_metadata(detections, width, height, coords)
+            postprocess_ms = (time.perf_counter() - postprocess_started) * 1000.0
+            latency_ms = (time.perf_counter() - t0) * 1000.0
             return {
-                "tier": self.tier.name, "simulated": False, "backend": "onnx",
-                "latency_ms": latency_ms, "coords": coords,
+                "tier": self.tier.name, "simulated": False, "backend": self._backend,
+                "latency_ms": latency_ms, "inference_ms": inference_ms,
+                "preprocess_ms": preprocess_ms, "postprocess_ms": postprocess_ms,
+                "coords": coords, "image_width": width, "image_height": height,
                 "detections": detections,
+                "execution_providers": list(self._provider_chain),
+                "coreml_provider_options": dict(self._coreml_options),
                 "accuracy_proxy": self.profile.map50,
             }
 
@@ -330,22 +443,35 @@ class ModelWrapper:
         if frame is None:
             import numpy as np
             frame = np.zeros((self.imgsz, self.imgsz, 3), dtype="uint8")
+        width, height = frame.shape[1], frame.shape[0]
+        inference_started = time.perf_counter()
         res        = self._model(frame, verbose=False, imgsz=self.imgsz)
-        latency_ms = (time.perf_counter() - t0) * 1000.0
+        _synchronize_accelerator()
+        inference_ms = (time.perf_counter() - inference_started) * 1000.0
+        postprocess_started = time.perf_counter()
         dets = [
             {"class": r.names[int(b.cls)], "conf": float(b.conf),
              "xyxy":  b.xyxy.tolist()}
             for r in res for b in r.boxes
         ]
+        coords = "original" if had_frame else "model"
+        detections = _attach_coordinate_metadata(dets, width, height, coords)
+        postprocess_ms = (time.perf_counter() - postprocess_started) * 1000.0
+        latency_ms = (time.perf_counter() - t0) * 1000.0
         return {
             "tier": self.tier.name, "simulated": False, "backend": self._backend,
-            "latency_ms": latency_ms, "detections": dets,
+            "latency_ms": latency_ms, "inference_ms": inference_ms,
+            "preprocess_ms": 0.0, "postprocess_ms": postprocess_ms,
+            "coords": coords,
+            "image_width": width, "image_height": height, "detections": detections,
             "accuracy_proxy": self.profile.map50,
         }
 
     def unload(self):
         self._model  = None
         self._loaded = False
+        self._provider_chain = []
+        self._coreml_options = {}
 
 
 class ModelLibrary:

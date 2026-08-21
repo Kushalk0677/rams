@@ -94,55 +94,52 @@ class TestVruClasses:
 
 
 class TestLoadInjector:
-    """``LoadInjector`` thread management."""
+    """``LoadInjector`` process management."""
 
-    def test_intensity_zero_creates_no_threads(self, benchmark_module: Any) -> None:
+    def test_intensity_zero_creates_no_workers(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=0.0)
         assert inj.intensity == 0.0
-        assert len(inj._threads) == 0
+        assert inj.worker_count == 0
+        assert len(inj._processes) == 0
 
     def test_intensity_zero_start_stops_cleanly(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=0.0)
         inj.start()
-        assert len(inj._threads) == 0
+        assert len(inj._processes) == 0
         inj.stop()  # should not raise
 
-    def test_intensity_half_creates_threads(self, benchmark_module: Any) -> None:
+    def test_intensity_half_creates_cross_core_workers(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=0.5)
         inj.start()
-        # int(0.5 * 4) = 2 threads
-        assert len(inj._threads) == 2
-        for t in inj._threads:
-            assert t.daemon is True
-            assert t.is_alive()
+        assert len(inj._processes) == inj.logical_cpus - inj.reserve_logical_cpus
+        processes = list(inj._processes)
+        for process in processes:
+            assert process.daemon is True
+            assert process.is_alive()
         inj.stop()
-        for t in inj._threads:
-            assert not t.is_alive()
+        for process in processes:
+            assert not process.is_alive()
 
-    def test_intensity_one_creates_four_threads(self, benchmark_module: Any) -> None:
+    def test_intensity_one_is_clamped_to_full_duty(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=1.0)
-        inj.start()
-        assert len(inj._threads) == 4
-        inj.stop()
+        assert inj.worker_count == inj.logical_cpus - inj.reserve_logical_cpus
+        assert inj._duty.value == 1.0
 
-    def test_intensity_max_four_threads(self, benchmark_module: Any) -> None:
+    def test_intensity_above_one_is_clamped(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=2.0)
-        inj.start()
-        # int(2.0 * 4) = 8 threads — clamp? No, the code uses n = max(0, int(...))
-        # Let's check: max(0, int(2.0 * 4)) = max(0, 8) = 8
-        assert len(inj._threads) == 8
-        inj.stop()
+        assert inj.intensity == 1.0
+        assert inj._duty.value == 1.0
 
     def test_stop_without_start(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=0.5)
         # stop() before start() — should not raise
         inj.stop()
 
-    def test_threads_are_daemon(self, benchmark_module: Any) -> None:
+    def test_workers_are_daemon(self, benchmark_module: Any) -> None:
         inj = benchmark_module.LoadInjector(intensity=0.75)
         inj.start()
-        for t in inj._threads:
-            assert t.daemon is True
+        for process in inj._processes:
+            assert process.daemon is True
         inj.stop()
 
 
@@ -152,11 +149,18 @@ class TestLoadInjector:
 
 
 RECORD_KEYS = {
-    "run_idx", "policy", "load_profile", "load_intensity",
+    "run_idx", "block", "policy", "load_profile", "load_intensity",
     "tier", "latency_ms", "pressure", "cpu_pct", "mem_pct",
-    "cpu_temp",
+    "cpu_temp", "gpu_util_pct", "gpu_mem_frac", "gpu_temp",
+    "gpu_clock_mhz", "accelerator_source", "policy_ms", "inference_ms",
+    "preprocess_ms", "postprocess_ms", "end_to_end_ms",
+    "tdp_energy_estimate_j", "tdp_watts", "tdp_label",
+    "energy_profile_estimate_low_j", "energy_profile_estimate_j",
+    "energy_profile_estimate_high_j", "energy_profile_power_w",
+    "energy_profile_name", "energy_profile_source", "energy_profile_is_measured",
     "backend", "simulated", "n_detections", "vru_detected",
-    "frame",
+    "frame", "load_injector", "load_worker_processes", "burst_cycle_frame",
+    "execution_providers", "coreml_provider_options",
 }
 
 

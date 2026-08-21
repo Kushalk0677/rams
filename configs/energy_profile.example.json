@@ -1,0 +1,9 @@
+{
+  "name": "replace-with-device-and-power-mode",
+  "source": "replace-with-datasheet, documented power mode, and date",
+  "idle_w": 4.0,
+  "cpu_dynamic_w": 20.0,
+  "memory_dynamic_w": 2.0,
+  "gpu_dynamic_w": 0.0,
+  "max_power_w": 28.0
+}

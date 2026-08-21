@@ -12,7 +12,8 @@ from typing import Optional
 
 from rams.monitor import ResourceMonitor
 from rams.models  import ModelLibrary, Tier
-from rams.config import get_default_policy_name, get_default_simulate, get_monitor_hz, get_policy_kwargs
+from rams.config import (get_default_policy_name, get_default_simulate,
+                         get_monitor_hz, get_monitor_kwargs, get_policy_kwargs)
 from rams.policy  import BasePolicy, make_policy
 
 logger = logging.getLogger(__name__)
@@ -48,7 +49,7 @@ class RAMSController:
         resolved_policy = get_default_policy_name("safety") if policy is None else policy
 
         self.simulate = resolved_simulate
-        self.monitor  = ResourceMonitor(hz=resolved_monitor_hz)
+        self.monitor  = ResourceMonitor(hz=resolved_monitor_hz, **get_monitor_kwargs())
         self.library  = ModelLibrary(simulate=resolved_simulate)
 
         if isinstance(resolved_policy, str):
@@ -104,6 +105,7 @@ class RAMSController:
         pressure = float(_override) if _override is not None else (snap.pressure_index if snap else 0.0)
 
         # Most recent detections for safety override
+        select_started = time.perf_counter()
         new_tier = self.policy.select_tier(
             pressure=pressure,
             last_tier=self._current_tier,
@@ -123,7 +125,10 @@ class RAMSController:
             })
             self._current_tier = new_tier
 
+        policy_ms = (time.perf_counter() - select_started) * 1000.0
+        inference_started = time.perf_counter()
         result = self.library.infer(self._current_tier, frame)
+        end_to_end_ms = (time.perf_counter() - select_started) * 1000.0
 
         # Feed detections back to any stateful policy without perturbing pressure state
         observe = getattr(self.policy, "observe", None)
@@ -131,11 +136,18 @@ class RAMSController:
             observe(result.get("detections", []))
 
         result["pressure"] = round(pressure, 4)
+        result["policy_ms"] = policy_ms
+        result["end_to_end_ms"] = end_to_end_ms
         if snap:
             result["cpu_pct"]  = snap.cpu_percent
             result["mem_pct"]  = snap.memory_percent
             result["cpu_temp"] = snap.cpu_temp
             result["battery"]  = snap.battery_percent
+            result["gpu_util_pct"] = snap.gpu_utilization_percent
+            result["gpu_mem_frac"] = snap.gpu_memory_fraction
+            result["gpu_temp"] = snap.gpu_temp
+            result["gpu_clock_mhz"] = snap.gpu_clock_mhz
+            result["accelerator_source"] = snap.accelerator_source
 
         return result
 
