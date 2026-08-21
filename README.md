@@ -170,6 +170,12 @@ and result records.
 | [`RAMS_macOS_validation.zip`](packages/RAMS_macOS_validation.zip) | Apple Silicon CPU ONNX | [macOS package guide](packaging/macos/README.md) |
 | [`RAMS_Jetson_validation.zip`](packages/RAMS_Jetson_validation.zip) | Jetson TensorRT | [Jetson package guide](packaging/jetson/README.md) |
 
+Download exactly one archive for the target computer, save it in that
+computer's Downloads folder, extract it, then start with the `README.md` at
+the root of the extracted `rams_validation` folder. Each package explains the
+required software, model creation, dataset download, safe KITTI split creation,
+smoke check, calibration, phased run, full run, and result handoff.
+
 The Jetson package has a mandatory target-device TensorRT preflight. It must
 load every device-built engine and run one real inference per tier before a
 paper phase begins. GitHub-hosted Linux and WSL2 check package compatibility;
