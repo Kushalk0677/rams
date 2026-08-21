@@ -25,8 +25,8 @@ datasets/
 !packages/*_new.zip
 !packages/RAMS_Windows_validation_process_v3_20260820.zip
 !results/
-!results/macos_cpu_onnx/
-!results/windows_rtx3050ti_cpu_onnx_process_v3/
+!results/m4/
+!results/i7_1165G7/
 tmp_*/
 
 # Paper build artifacts
