@@ -254,7 +254,7 @@ Current revised-protocol evidence is organized by processor family:
 |---|---|---|
 | [`results/m4_air`](results/m4_air) | Apple M4 MacBook Air, CPU ONNX | Real KITTI replay, calibration, raw records, figures, and provenance. |
 | [`results/i7_11800H`](results/i7_11800H) | Intel Core i7-11800H, Windows CPU ONNX | Completed phased runtime evaluation, COCO validation, KITTI policy metrics, retention analysis, and manifests. The RTX 3050 Ti was not used for inference. |
-| [`results/i7_11800H_rtx3050ti_cuda_onnx`](results/i7_11800H_rtx3050ti_cuda_onnx) | Intel Core i7-11800H with RTX 3050 Ti, Windows CUDA ONNX | Separate supplied CUDA-ONNX evidence. It includes a fresh 1,500-frame mapped KITTI COCOeval run: NANO 0.0470/0.0256, SMALL 0.0700/0.0370, MEDIUM 0.0736/0.0400 for mAP@0.50/mAP@0.50:0.95. |
+| [`results/i7_11800H_rtx3050ti_cuda_onnx`](results/i7_11800H_rtx3050ti_cuda_onnx) | Intel Core i7-11800H with RTX 3050 Ti, Windows CUDA ONNX | CUDA ONNX evidence with a fresh 1,500-frame mapped KITTI COCOeval run. The device result README reports the per-tier mAP values, protocol, and evidence limits. Do not pool this route with the CPU ONNX evidence. |
 | [`results/old`](results/old) | Historical devices and protocols | Retained for traceability only. Do not pool with revised-protocol results. |
 
 TDP-profile energy fields are telemetry-conditioned estimates, not external
