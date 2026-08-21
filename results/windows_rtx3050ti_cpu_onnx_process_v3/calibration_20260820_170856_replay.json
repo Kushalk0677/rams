@@ -1,0 +1,166 @@
+{
+  "host": "LAPTOP-JRU852LF",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "backend": "onnx",
+  "frames": "C:\\data\\kitti\\images\\val",
+  "n_per_profile": 200,
+  "warmup_frames": 20,
+  "steady_settle_s": 1.0,
+  "load_injector": "process_steady_v3",
+  "profiles": {
+    "idle": {
+      "profile": "idle",
+      "target_intensity": 0.0,
+      "pressure": {
+        "n": 200,
+        "mean": 0.4097,
+        "std": 0.0298,
+        "p10": 0.3805,
+        "p25": 0.3874,
+        "p50": 0.4058,
+        "p75": 0.4234,
+        "p90": 0.4456
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 40.1695,
+        "std": 4.9554,
+        "p10": 35.37,
+        "p25": 36.5,
+        "p50": 39.5,
+        "p75": 42.45,
+        "p90": 46.21
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 35.3284,
+        "std": 3.4264,
+        "p10": 32.7649,
+        "p25": 33.1695,
+        "p50": 34.0818,
+        "p75": 36.0346,
+        "p90": 39.1966
+      }
+    },
+    "light": {
+      "profile": "light",
+      "target_intensity": 0.25,
+      "pressure": {
+        "n": 200,
+        "mean": 0.5055,
+        "std": 0.051,
+        "p10": 0.4045,
+        "p25": 0.4989,
+        "p50": 0.5236,
+        "p75": 0.5357,
+        "p90": 0.5493
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 55.6745,
+        "std": 8.5089,
+        "p10": 38.87,
+        "p25": 54.6,
+        "p50": 58.7,
+        "p75": 60.7,
+        "p90": 63.0
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 39.5059,
+        "std": 6.2327,
+        "p10": 33.6615,
+        "p25": 34.5668,
+        "p50": 36.9221,
+        "p75": 42.8578,
+        "p90": 49.0914
+      }
+    },
+    "moderate": {
+      "profile": "moderate",
+      "target_intensity": 0.5,
+      "pressure": {
+        "n": 200,
+        "mean": 0.6523,
+        "std": 0.0567,
+        "p10": 0.5524,
+        "p25": 0.6443,
+        "p50": 0.6682,
+        "p75": 0.686,
+        "p90": 0.6984
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 80.073,
+        "std": 9.4444,
+        "p10": 63.4,
+        "p25": 78.8,
+        "p50": 82.75,
+        "p75": 85.7,
+        "p90": 87.72
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 47.1715,
+        "std": 7.4989,
+        "p10": 37.5907,
+        "p25": 40.9108,
+        "p50": 46.4493,
+        "p75": 52.3205,
+        "p90": 57.6811
+      }
+    },
+    "heavy": {
+      "profile": "heavy",
+      "target_intensity": 0.75,
+      "pressure": {
+        "n": 200,
+        "mean": 0.7227,
+        "std": 0.0298,
+        "p10": 0.6758,
+        "p25": 0.699,
+        "p50": 0.7299,
+        "p75": 0.7478,
+        "p90": 0.7561
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 91.732,
+        "std": 4.9621,
+        "p10": 83.9,
+        "p25": 87.775,
+        "p50": 92.9,
+        "p75": 95.9,
+        "p90": 97.3
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 51.7096,
+        "std": 7.9339,
+        "p10": 40.9108,
+        "p25": 44.5098,
+        "p50": 51.7858,
+        "p75": 59.6058,
+        "p90": 61.4074
+      }
+    }
+  },
+  "proposal": {
+    "valid": true,
+    "lo_thresh": 0.37,
+    "hi_thresh": 0.627,
+    "normal_p10": 0.381,
+    "light_p50": 0.524,
+    "heavy_p50": 0.73,
+    "light_p75": 0.536,
+    "heavy_p10": 0.676,
+    "separation": 0.206,
+    "tail_overlap": -0.14,
+    "target_behavior": "idle/light SMALL; heavy may enter NANO; VRU policies may retain a stronger tier after detection"
+  },
+  "applied": true,
+  "timestamp_utc": "2026-08-20T17:08:57.015513+00:00",
+  "config_path": "C:\\rams\\rams_windows_revision_process_v3\\configs\\default.yaml",
+  "config_snapshot_before": "C:\\rams\\rams_windows_revision_process_v3\\results\\calibration_snapshots\\default_before_replay_calibration_20260820_170856.yaml"
+}

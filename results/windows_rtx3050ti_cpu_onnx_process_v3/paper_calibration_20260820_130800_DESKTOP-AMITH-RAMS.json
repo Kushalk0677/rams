@@ -1,0 +1,69 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "platform_target": "windows",
+    "device": "DESKTOP-AMITH-RAMS",
+    "backend": "onnx",
+    "data_root": "D:\\data",
+    "frames": "C:\\data\\kitti\\images\\val",
+    "kitti_images": "C:\\data\\kitti\\images\\val",
+    "kitti_labels": "C:\\data\\kitti\\labels\\val",
+    "coco_images": "D:\\data\\coco\\images\\val2017",
+    "coco_labels": "D:\\data\\coco\\labels\\val2017",
+    "n_per_block": 200,
+    "blocks": 10,
+    "smoke": false,
+    "simulated": false,
+    "phase": "calibration",
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "os": "Windows-11-10.0.26100-SP0",
+    "machine": "AMD64",
+    "energy_profile": null,
+    "requested_backend_env": "onnx",
+    "load_protocol": {
+      "steady_profiles": {
+        "injector": "process_steady_v3",
+        "reserved_logical_cpus": 1
+      },
+      "burst_profile": {
+        "injector": "process_isolated_burst_v2",
+        "reserved_logical_cpus": 1,
+        "burst_peak_intensity": 0.85,
+        "burst_on_frames": 20,
+        "burst_off_frames": 80,
+        "burst_settle_s": 0.2
+      }
+    }
+  },
+  {
+    "label": "calibration_config_before",
+    "path": "C:\\rams\\rams_windows_revision_process_v3\\results\\calibration_snapshots\\default_before_calibration_20260820_130800.yaml",
+    "ok": true
+  },
+  {
+    "label": "calibration",
+    "command": [
+      "C:\\rams\\rams_windows_revision_process_v3\\.venv\\Scripts\\python.exe",
+      "scripts/calibrate.py",
+      "--frames",
+      "C:\\data\\kitti\\images\\val",
+      "--n",
+      "200",
+      "--warmup",
+      "20",
+      "--apply"
+    ],
+    "returncode": 0,
+    "elapsed_s": 56.89,
+    "ok": true
+  },
+  {
+    "label": "calibration_config_after",
+    "path": "C:\\rams\\rams_windows_revision_process_v3\\results\\calibration_snapshots\\default_after_calibration_20260820_130800.yaml",
+    "calibration_records": [
+      "C:\\rams\\rams_windows_revision_process_v3\\results\\calibration_20260820_170856_replay.json"
+    ],
+    "ok": true
+  }
+]

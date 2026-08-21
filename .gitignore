@@ -20,15 +20,13 @@ datasets/
 
 # Archives and temporary packaging
 *.zip
-# Curated platform packages and validated result archives are intentional
-# repository artifacts, not temporary archives.
+# Curated platform packages are intentional repository artifacts, not
+# temporary archives. Curated results are stored as browsable directories.
 !packages/*_new.zip
 !packages/RAMS_Windows_validation_process_v3_20260820.zip
 !results/
 !results/macos_cpu_onnx/
-!results/macos_cpu_onnx/rams_results_macos_20260803.zip
 !results/windows_rtx3050ti_cpu_onnx_process_v3/
-!results/windows_rtx3050ti_cpu_onnx_process_v3/RAMS_process_v3_full_results_20260820.zip
 tmp_*/
 
 # Paper build artifacts

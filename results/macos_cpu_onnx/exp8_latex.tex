@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Per-tier accuracy and VRU recall. VRU classes: person, pedestrian, cyclist, bicycle, motorbike.}
+\label{tab:accuracy_per_tier}
+\begin{tabular}{llccccc}
+\toprule
+Dataset & Tier & imgsz & mAP50 & mAP50-95 & VRU Recall & VRU FN Rate \\
+\midrule
+\multirow{3}{*}{KITTI} & NANO & 320 & 0.017 & 0.007 & 0.246 & 0.754 \\
+ & SMALL & 416 & 0.019 & 0.008 & 0.419 & 0.581 \\
+ & MEDIUM & 640 & 0.035 & 0.018 & 0.596 & 0.404 \\
+\midrule
+\multirow{3}{*}{COCO} & NANO & 320 & 0.319 & 0.231 & 0.496 & 0.504 \\
+ & SMALL & 416 & 0.470 & 0.349 & 0.645 & 0.355 \\
+ & MEDIUM & 640 & 0.580 & 0.443 & 0.766 & 0.234 \\
+\bottomrule
+\end{tabular}
+\end{table}

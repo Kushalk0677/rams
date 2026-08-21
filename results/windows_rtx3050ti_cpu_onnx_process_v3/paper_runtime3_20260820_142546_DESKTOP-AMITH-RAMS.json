@@ -1,0 +1,87 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "platform_target": "windows",
+    "device": "DESKTOP-AMITH-RAMS",
+    "backend": "onnx",
+    "data_root": "D:\\data",
+    "frames": "C:\\data\\kitti\\images\\val",
+    "kitti_images": "C:\\data\\kitti\\images\\val",
+    "kitti_labels": "C:\\data\\kitti\\labels\\val",
+    "coco_images": "C:\\data\\coco\\images\\val2017",
+    "coco_labels": "C:\\data\\coco\\labels\\val2017",
+    "n_per_block": 200,
+    "blocks": 10,
+    "smoke": false,
+    "simulated": false,
+    "phase": "runtime3",
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "os": "Windows-11-10.0.26100-SP0",
+    "machine": "AMD64",
+    "energy_profile": "configs\\energy_profile_windows.json",
+    "requested_backend_env": "onnx",
+    "load_protocol": {
+      "steady_profiles": {
+        "injector": "process_steady_v3",
+        "reserved_logical_cpus": 1
+      },
+      "burst_profile": {
+        "injector": "process_isolated_burst_v2",
+        "reserved_logical_cpus": 1,
+        "burst_peak_intensity": 0.85,
+        "burst_on_frames": 20,
+        "burst_off_frames": 80,
+        "burst_settle_s": 0.2
+      }
+    }
+  },
+  {
+    "label": "paired_runtime_runtime3_heavy",
+    "command": [
+      "C:\\rams\\rams_windows_revision_process_v3\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "C:\\data\\kitti\\images\\val",
+      "--policy",
+      "all",
+      "--profile",
+      "heavy",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs\\energy_profile_windows.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 620.92,
+    "ok": true
+  },
+  {
+    "label": "pareto_runtime3",
+    "command": [
+      "C:\\rams\\rams_windows_revision_process_v3\\.venv\\Scripts\\python.exe",
+      "experiments/exp5_pareto.py",
+      "--no-simulate",
+      "--frames",
+      "C:\\data\\kitti\\images\\val",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--scenarios",
+      "heavy"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1617.81,
+    "ok": true
+  }
+]

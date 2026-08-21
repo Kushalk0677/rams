@@ -1,0 +1,185 @@
+{
+  "host": "Georges-MacBook-Air.local",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "groups": [
+    {
+      "policy": "adaptive",
+      "load_profile": "light",
+      "n": 5,
+      "latency_mean": 18.68,
+      "latency_std": 14.2,
+      "latency_p50": 19.7,
+      "latency_p95": 40.02,
+      "latency_ci95": [
+        8.7,
+        29.71
+      ],
+      "ci_unit": "frame",
+      "n_blocks": 1,
+      "tier_counts": {
+        "SMALL": 3,
+        "NANO": 2
+      },
+      "vru_rate": 0.4,
+      "vru_rate_ci95": [
+        0.1176,
+        0.7693
+      ],
+      "backends": [
+        "onnx"
+      ],
+      "load_injector": "thread_steady_v1",
+      "load_target_intensity_mean": 0.25,
+      "cpu_pct_mean": 73.92,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": null
+    },
+    {
+      "policy": "predictive",
+      "load_profile": "light",
+      "n": 5,
+      "latency_mean": 114.95,
+      "latency_std": 13.0,
+      "latency_p50": 109.44,
+      "latency_p95": 136.38,
+      "latency_ci95": [
+        106.42,
+        125.61
+      ],
+      "ci_unit": "frame",
+      "n_blocks": 1,
+      "tier_counts": {
+        "MEDIUM": 5
+      },
+      "vru_rate": 0.4,
+      "vru_rate_ci95": [
+        0.1176,
+        0.7693
+      ],
+      "backends": [
+        "onnx"
+      ],
+      "load_injector": "thread_steady_v1",
+      "load_target_intensity_mean": 0.25,
+      "cpu_pct_mean": 0.0,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": null
+    },
+    {
+      "policy": "safety",
+      "load_profile": "light",
+      "n": 5,
+      "latency_mean": 79.06,
+      "latency_std": 40.93,
+      "latency_p50": 103.05,
+      "latency_p95": 116.29,
+      "latency_ci95": [
+        46.93,
+        109.08
+      ],
+      "ci_unit": "frame",
+      "n_blocks": 1,
+      "tier_counts": {
+        "SMALL": 2,
+        "MEDIUM": 3
+      },
+      "vru_rate": 0.4,
+      "vru_rate_ci95": [
+        0.1176,
+        0.7693
+      ],
+      "backends": [
+        "onnx"
+      ],
+      "load_injector": "thread_steady_v1",
+      "load_target_intensity_mean": 0.25,
+      "cpu_pct_mean": 34.4,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": null
+    },
+    {
+      "policy": "safety2",
+      "load_profile": "light",
+      "n": 5,
+      "latency_mean": 92.26,
+      "latency_std": 28.51,
+      "latency_p50": 102.26,
+      "latency_p95": 112.83,
+      "latency_ci95": [
+        66.2,
+        108.41
+      ],
+      "ci_unit": "frame",
+      "n_blocks": 1,
+      "tier_counts": {
+        "SMALL": 1,
+        "MEDIUM": 4
+      },
+      "vru_rate": 0.4,
+      "vru_rate_ci95": [
+        0.1176,
+        0.7693
+      ],
+      "backends": [
+        "onnx"
+      ],
+      "load_injector": "thread_steady_v1",
+      "load_target_intensity_mean": 0.25,
+      "cpu_pct_mean": 51.9,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": null
+    },
+    {
+      "policy": "threshold",
+      "load_profile": "light",
+      "n": 5,
+      "latency_mean": 22.07,
+      "latency_std": 2.88,
+      "latency_p50": 21.15,
+      "latency_p95": 25.76,
+      "latency_ci95": [
+        19.83,
+        24.3
+      ],
+      "ci_unit": "frame",
+      "n_blocks": 1,
+      "tier_counts": {
+        "SMALL": 5
+      },
+      "vru_rate": 0.4,
+      "vru_rate_ci95": [
+        0.1176,
+        0.7693
+      ],
+      "backends": [
+        "onnx"
+      ],
+      "load_injector": "thread_steady_v1",
+      "load_target_intensity_mean": 0.25,
+      "cpu_pct_mean": 32.1,
+      "burst_on_frames": 0,
+      "burst_off_frames": 0,
+      "burst_on_latency_mean": null,
+      "burst_off_latency_mean": null,
+      "tdp_energy_estimate_mean_j": null,
+      "energy_profile_estimate_mean_j": null
+    }
+  ]
+}

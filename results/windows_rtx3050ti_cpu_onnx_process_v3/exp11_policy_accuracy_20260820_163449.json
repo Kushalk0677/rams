@@ -1,0 +1,190 @@
+{
+  "groups": [
+    {
+      "policy": "adaptive",
+      "policy_label": "Variance-adaptive EWMA",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 329,
+        "fp": 2330,
+        "fn": 838,
+        "precision": 0.1237,
+        "recall": 0.2819,
+        "f1": 0.172,
+        "false_negative_rate": 0.7181,
+        "recall_ci95": [
+          0.2569,
+          0.3084
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2305,
+        "fp": 13625,
+        "fn": 4297,
+        "precision": 0.1447,
+        "recall": 0.3491,
+        "f1": 0.2046,
+        "false_negative_rate": 0.6509,
+        "recall_ci95": [
+          0.3377,
+          0.3607
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1212,
+        "SMALL": 288,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "predictive",
+      "policy_label": "EWMA-smoothed",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 328,
+        "fp": 2369,
+        "fn": 839,
+        "precision": 0.1216,
+        "recall": 0.2811,
+        "f1": 0.1698,
+        "false_negative_rate": 0.7189,
+        "recall_ci95": [
+          0.256,
+          0.3075
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2223,
+        "fp": 13054,
+        "fn": 4379,
+        "precision": 0.1455,
+        "recall": 0.3367,
+        "f1": 0.2032,
+        "false_negative_rate": 0.6633,
+        "recall_ci95": [
+          0.3254,
+          0.3482
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1273,
+        "SMALL": 226,
+        "MEDIUM": 1
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 502,
+        "fp": 4343,
+        "fn": 665,
+        "precision": 0.1036,
+        "recall": 0.4302,
+        "f1": 0.167,
+        "false_negative_rate": 0.5698,
+        "recall_ci95": [
+          0.402,
+          0.4588
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3517,
+        "fp": 22083,
+        "fn": 3085,
+        "precision": 0.1374,
+        "recall": 0.5327,
+        "f1": 0.2184,
+        "false_negative_rate": 0.4673,
+        "recall_ci95": [
+          0.5207,
+          0.5447
+        ]
+      },
+      "tier_counts": {
+        "NANO": 113,
+        "SMALL": 1387,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 535,
+        "fp": 6579,
+        "fn": 632,
+        "precision": 0.0752,
+        "recall": 0.4584,
+        "f1": 0.1292,
+        "false_negative_rate": 0.5416,
+        "recall_ci95": [
+          0.43,
+          0.4871
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3851,
+        "fp": 27183,
+        "fn": 2751,
+        "precision": 0.1241,
+        "recall": 0.5833,
+        "f1": 0.2046,
+        "false_negative_rate": 0.4167,
+        "recall_ci95": [
+          0.5714,
+          0.5951
+        ]
+      },
+      "tier_counts": {
+        "NANO": 331,
+        "SMALL": 639,
+        "MEDIUM": 530
+      }
+    },
+    {
+      "policy": "threshold",
+      "policy_label": "Threshold",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 325,
+        "fp": 2361,
+        "fn": 842,
+        "precision": 0.121,
+        "recall": 0.2785,
+        "f1": 0.1687,
+        "false_negative_rate": 0.7215,
+        "recall_ci95": [
+          0.2535,
+          0.3049
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2291,
+        "fp": 13553,
+        "fn": 4311,
+        "precision": 0.1446,
+        "recall": 0.347,
+        "f1": 0.2041,
+        "false_negative_rate": 0.653,
+        "recall_ci95": [
+          0.3356,
+          0.3586
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1222,
+        "SMALL": 278,
+        "MEDIUM": 0
+      }
+    }
+  ],
+  "simulated": false
+}

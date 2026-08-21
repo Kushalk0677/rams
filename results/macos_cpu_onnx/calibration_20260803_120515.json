@@ -1,0 +1,22 @@
+{
+  "host": "Georges-MacBook-Air.local",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "baseline": {
+    "n": 290,
+    "mean": 0.27133362068965516,
+    "std": 0.09692743396842494,
+    "p50": 0.251,
+    "p75": 0.3175,
+    "p90": 0.3805,
+    "p95": 0.4315,
+    "max": 0.9355,
+    "cpu_mean": 9.822758620689655,
+    "mem_mean": 79.0651724137931
+  },
+  "thresholds": {
+    "lo_thresh": 0.43,
+    "hi_thresh": 0.68,
+    "gap": 0.25
+  },
+  "timestamp": "2026-08-03T12:05:15"
+}

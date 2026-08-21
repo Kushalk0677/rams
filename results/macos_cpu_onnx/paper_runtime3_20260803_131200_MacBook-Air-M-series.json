@@ -1,0 +1,85 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "platform_target": "macos",
+    "device": "MacBook-Air-M-series",
+    "backend": "onnx",
+    "frames": "/Users/georgexu/rams/data/kitti/images/val",
+    "kitti_images": "/Users/georgexu/rams/data/kitti/images/val",
+    "kitti_labels": "/Users/georgexu/rams/data/kitti/labels/val",
+    "coco_images": "/Users/georgexu/rams/data/coco/images/val2017",
+    "coco_labels": "/Users/georgexu/rams/data/coco/labels/val2017",
+    "n_per_block": 200,
+    "blocks": 10,
+    "smoke": false,
+    "simulated": false,
+    "phase": "runtime3",
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "os": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "energy_profile": "configs/energy_profile_macos.json",
+    "requested_backend_env": "onnx",
+    "load_protocol": {
+      "steady_profiles": {
+        "injector": "thread_steady_v1"
+      },
+      "burst_profile": {
+        "injector": "process_isolated_burst_v2",
+        "reserved_logical_cpus": 1,
+        "burst_peak_intensity": 0.85,
+        "burst_on_frames": 20,
+        "burst_off_frames": 80,
+        "burst_settle_s": 0.2
+      }
+    }
+  },
+  {
+    "label": "paired_runtime_runtime3_heavy",
+    "command": [
+      "/Users/georgexu/Downloads/macos_silicon_package_new/.venv/bin/python",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "/Users/georgexu/rams/data/kitti/images/val",
+      "--policy",
+      "all",
+      "--profile",
+      "heavy",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs/energy_profile_macos.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 809.85,
+    "ok": true
+  },
+  {
+    "label": "pareto_runtime3",
+    "command": [
+      "/Users/georgexu/Downloads/macos_silicon_package_new/.venv/bin/python",
+      "experiments/exp5_pareto.py",
+      "--no-simulate",
+      "--frames",
+      "/Users/georgexu/rams/data/kitti/images/val",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--scenarios",
+      "heavy"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1452.24,
+    "ok": true
+  }
+]
