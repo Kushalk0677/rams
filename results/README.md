@@ -11,7 +11,7 @@ configuration and provenance. It is a real KITTI replay evaluation. Its energy
 fields are TDP-based estimates, not physical power
 measurements.
 
-`i7_1165G7/` contains the completed Intel Core i7-1165G7 Windows CPU-ONNX
+`i7_11800H/` contains the completed Intel Core i7-11800H Windows CPU-ONNX
 evidence received on 20 August 2026. It uses the revised
 `process_steady_v3` load protocol on a 16-logical-core laptop with an RTX 3050
 Ti present but not used for inference. It includes calibration, all phased
