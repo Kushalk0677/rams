@@ -1,0 +1,190 @@
+{
+  "groups": [
+    {
+      "policy": "adaptive",
+      "policy_label": "Variance-adaptive EWMA",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 6,
+        "fp": 35,
+        "fn": 23,
+        "precision": 0.1463,
+        "recall": 0.2069,
+        "f1": 0.1714,
+        "false_negative_rate": 0.7931,
+        "recall_ci95": [
+          0.0985,
+          0.3839
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 31,
+        "fp": 214,
+        "fn": 64,
+        "precision": 0.1265,
+        "recall": 0.3263,
+        "f1": 0.1824,
+        "false_negative_rate": 0.6737,
+        "recall_ci95": [
+          0.2404,
+          0.4257
+        ]
+      },
+      "tier_counts": {
+        "NANO": 16,
+        "SMALL": 4,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "predictive",
+      "policy_label": "EWMA-smoothed",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 7,
+        "fp": 47,
+        "fn": 22,
+        "precision": 0.1296,
+        "recall": 0.2414,
+        "f1": 0.1687,
+        "false_negative_rate": 0.7586,
+        "recall_ci95": [
+          0.1222,
+          0.4211
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 33,
+        "fp": 201,
+        "fn": 62,
+        "precision": 0.141,
+        "recall": 0.3474,
+        "f1": 0.2006,
+        "false_negative_rate": 0.6526,
+        "recall_ci95": [
+          0.2592,
+          0.4474
+        ]
+      },
+      "tier_counts": {
+        "NANO": 16,
+        "SMALL": 4,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 10,
+        "fp": 57,
+        "fn": 19,
+        "precision": 0.1493,
+        "recall": 0.3448,
+        "f1": 0.2083,
+        "false_negative_rate": 0.6552,
+        "recall_ci95": [
+          0.1994,
+          0.5266
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 51,
+        "fp": 327,
+        "fn": 44,
+        "precision": 0.1349,
+        "recall": 0.5368,
+        "f1": 0.2156,
+        "false_negative_rate": 0.4632,
+        "recall_ci95": [
+          0.4371,
+          0.6337
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 20,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 8,
+        "fp": 56,
+        "fn": 21,
+        "precision": 0.125,
+        "recall": 0.2759,
+        "f1": 0.172,
+        "false_negative_rate": 0.7241,
+        "recall_ci95": [
+          0.147,
+          0.4572
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 55,
+        "fp": 436,
+        "fn": 40,
+        "precision": 0.112,
+        "recall": 0.5789,
+        "f1": 0.1877,
+        "false_negative_rate": 0.4211,
+        "recall_ci95": [
+          0.4785,
+          0.6733
+        ]
+      },
+      "tier_counts": {
+        "NANO": 4,
+        "SMALL": 2,
+        "MEDIUM": 14
+      }
+    },
+    {
+      "policy": "threshold",
+      "policy_label": "Threshold",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 7,
+        "fp": 47,
+        "fn": 22,
+        "precision": 0.1296,
+        "recall": 0.2414,
+        "f1": 0.1687,
+        "false_negative_rate": 0.7586,
+        "recall_ci95": [
+          0.1222,
+          0.4211
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 39,
+        "fp": 225,
+        "fn": 56,
+        "precision": 0.1477,
+        "recall": 0.4105,
+        "f1": 0.2173,
+        "false_negative_rate": 0.5895,
+        "recall_ci95": [
+          0.317,
+          0.511
+        ]
+      },
+      "tier_counts": {
+        "NANO": 11,
+        "SMALL": 9,
+        "MEDIUM": 0
+      }
+    }
+  ],
+  "simulated": false
+}

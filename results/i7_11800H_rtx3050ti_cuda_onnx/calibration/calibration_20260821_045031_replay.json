@@ -1,0 +1,166 @@
+{
+  "host": "LAPTOP-JRU852LF",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "backend": "onnx_cuda",
+  "frames": "C:\\data\\kitti\\images\\val",
+  "n_per_profile": 200,
+  "warmup_frames": 20,
+  "steady_settle_s": 1.0,
+  "load_injector": "process_steady_v3",
+  "profiles": {
+    "idle": {
+      "profile": "idle",
+      "target_intensity": 0.0,
+      "pressure": {
+        "n": 200,
+        "mean": 0.3747,
+        "std": 0.0256,
+        "p10": 0.3479,
+        "p25": 0.3566,
+        "p50": 0.3732,
+        "p75": 0.3825,
+        "p90": 0.395
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 20.1635,
+        "std": 4.2766,
+        "p10": 15.49,
+        "p25": 17.3,
+        "p50": 20.0,
+        "p75": 21.3,
+        "p90": 23.1
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 11.1243,
+        "std": 0.7619,
+        "p10": 10.2167,
+        "p25": 10.603,
+        "p50": 11.0385,
+        "p75": 11.4468,
+        "p90": 12.2566
+      }
+    },
+    "light": {
+      "profile": "light",
+      "target_intensity": 0.25,
+      "pressure": {
+        "n": 200,
+        "mean": 0.5193,
+        "std": 0.028,
+        "p10": 0.4804,
+        "p25": 0.5083,
+        "p50": 0.5246,
+        "p75": 0.5329,
+        "p90": 0.5529
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 41.331,
+        "std": 4.7143,
+        "p10": 35.7,
+        "p25": 38.2,
+        "p50": 41.8,
+        "p75": 44.3,
+        "p90": 46.7
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 12.8105,
+        "std": 1.0576,
+        "p10": 11.7767,
+        "p25": 12.1094,
+        "p50": 12.5515,
+        "p75": 13.4159,
+        "p90": 14.2146
+      }
+    },
+    "moderate": {
+      "profile": "moderate",
+      "target_intensity": 0.5,
+      "pressure": {
+        "n": 200,
+        "mean": 0.634,
+        "std": 0.0716,
+        "p10": 0.5141,
+        "p25": 0.5836,
+        "p50": 0.6537,
+        "p75": 0.6899,
+        "p90": 0.7103
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 61.0985,
+        "std": 11.9023,
+        "p10": 41.6,
+        "p25": 53.1,
+        "p50": 64.7,
+        "p75": 69.7,
+        "p90": 73.55
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 13.1062,
+        "std": 0.9287,
+        "p10": 11.9327,
+        "p25": 12.3999,
+        "p50": 13.0826,
+        "p75": 13.7722,
+        "p90": 14.3058
+      }
+    },
+    "heavy": {
+      "profile": "heavy",
+      "target_intensity": 0.75,
+      "pressure": {
+        "n": 200,
+        "mean": 0.6949,
+        "std": 0.0645,
+        "p10": 0.6299,
+        "p25": 0.6403,
+        "p50": 0.6669,
+        "p75": 0.7615,
+        "p90": 0.7846
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 71.4995,
+        "std": 10.6655,
+        "p10": 60.0,
+        "p25": 62.1,
+        "p50": 66.7,
+        "p75": 82.8,
+        "p90": 86.0
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 12.6696,
+        "std": 1.7837,
+        "p10": 11.3899,
+        "p25": 11.6445,
+        "p50": 12.3855,
+        "p75": 13.3141,
+        "p90": 13.919
+      }
+    }
+  },
+  "proposal": {
+    "valid": true,
+    "lo_thresh": 0.338,
+    "hi_thresh": 0.596,
+    "normal_p10": 0.348,
+    "light_p50": 0.525,
+    "heavy_p50": 0.667,
+    "light_p75": 0.533,
+    "heavy_p10": 0.63,
+    "separation": 0.142,
+    "tail_overlap": -0.097,
+    "target_behavior": "idle/light SMALL; heavy may enter NANO; VRU policies may retain a stronger tier after detection"
+  },
+  "applied": true,
+  "timestamp_utc": "2026-08-21T04:50:31.339846+00:00",
+  "config_path": "C:\\rams\\rams_windows_rtx3050\\configs\\default.yaml",
+  "config_snapshot_before": "C:\\rams\\rams_windows_rtx3050\\results\\calibration_snapshots\\default_before_replay_calibration_20260821_045031.yaml"
+}

@@ -21,6 +21,14 @@ analysis, raw records, manifests, and figures. Its energy fields are
 telemetry-conditioned estimates, not physical power measurements. Do not
 combine it with archived `thread_steady_v1` Windows results.
 
+`i7_11800H_rtx3050ti_cuda_onnx/` contains the separate RTX 3050 Ti Laptop GPU
+CUDA-ONNX evidence received on 21 August 2026. It preserves the complete
+supplied archive in normalized form: calibration, manifests, records, figures,
+and device inventory. It is a distinct backend route from `i7_11800H/`; do not
+pool their latency, confidence intervals, or energy estimates. The CUDA result
+provenance records its COCO evaluation, cached KITTI tier references, smoke
+exclusion, and missing energy-profile input.
+
 The top level of each current device directory contains only calibration,
 manifests, raw records, tables, and figures. Device configuration and
 provenance are under `metadata/`. The `m4_air/excluded/` directory holds the

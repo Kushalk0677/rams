@@ -1,0 +1,59 @@
+{
+  "dataset": "coco",
+  "tiers": [
+    {
+      "tier": "NANO",
+      "imgsz": 320,
+      "n_images": 5000,
+      "map50": 0.0724,
+      "map5095": 0.0581,
+      "map_source": "onnx_cuda_cocoeval",
+      "vru_tp": 5243,
+      "vru_fp": 39916,
+      "vru_fn": 6215,
+      "vru_recall": 0.4576,
+      "vru_precision": 0.1161,
+      "vru_f1": 0.1852,
+      "vru_fn_rate": 0.5424,
+      "frame_miss_rate": 0.1546,
+      "frames_with_vru": 2749,
+      "frames_vru_missed": 425
+    },
+    {
+      "tier": "SMALL",
+      "imgsz": 416,
+      "n_images": 5000,
+      "map50": 0.098,
+      "map5095": 0.0793,
+      "map_source": "onnx_cuda_cocoeval",
+      "vru_tp": 7020,
+      "vru_fp": 58896,
+      "vru_fn": 4438,
+      "vru_recall": 0.6127,
+      "vru_precision": 0.1065,
+      "vru_f1": 0.1815,
+      "vru_fn_rate": 0.3873,
+      "frame_miss_rate": 0.0826,
+      "frames_with_vru": 2749,
+      "frames_vru_missed": 227
+    },
+    {
+      "tier": "MEDIUM",
+      "imgsz": 640,
+      "n_images": 5000,
+      "map50": 0.111,
+      "map5095": 0.0915,
+      "map_source": "onnx_cuda_cocoeval",
+      "vru_tp": 8464,
+      "vru_fp": 80177,
+      "vru_fn": 2994,
+      "vru_recall": 0.7387,
+      "vru_precision": 0.0955,
+      "vru_f1": 0.1691,
+      "vru_fn_rate": 0.2613,
+      "frame_miss_rate": 0.0477,
+      "frames_with_vru": 2749,
+      "frames_vru_missed": 131
+    }
+  ]
+}

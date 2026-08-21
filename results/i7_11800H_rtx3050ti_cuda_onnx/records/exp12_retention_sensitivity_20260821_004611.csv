@@ -1,0 +1,81 @@
+image,frame_sha256,policy,policy_label,min_conf,load_profile,gt_vru,detected_vru,gt_vru_streak,lock_before,lock_after,tier,latency_ms,pressure,load_injector,load_worker_processes,backend
+005981.png,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d,safety,VRU-retention,0.25,moderate,False,False,0,False,False,SMALL,10.972,0.4946,process_steady_v3,15,onnx_cuda
+005982.png,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250,safety,VRU-retention,0.25,moderate,True,False,1,False,False,SMALL,10.667,0.5667,process_steady_v3,15,onnx_cuda
+005983.png,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c,safety,VRU-retention,0.25,moderate,False,False,0,False,False,SMALL,10.16,0.5667,process_steady_v3,15,onnx_cuda
+005984.png,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52,safety,VRU-retention,0.25,moderate,True,False,1,False,False,SMALL,9.904,0.5667,process_steady_v3,15,onnx_cuda
+005985.png,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522,safety,VRU-retention,0.25,moderate,True,True,2,False,True,SMALL,10.768,0.5667,process_steady_v3,15,onnx_cuda
+005986.png,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,11.56,0.5657,process_steady_v3,15,onnx_cuda
+005987.png,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.958,0.5657,process_steady_v3,15,onnx_cuda
+005988.png,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41,safety,VRU-retention,0.25,moderate,True,True,1,True,True,SMALL,9.937,0.5657,process_steady_v3,15,onnx_cuda
+005989.png,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,10.654,0.5657,process_steady_v3,15,onnx_cuda
+005990.png,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.516,0.5657,process_steady_v3,15,onnx_cuda
+005991.png,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59,safety,VRU-retention,0.25,moderate,True,False,1,True,True,SMALL,9.576,0.6199,process_steady_v3,15,onnx_cuda
+005992.png,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,10.874,0.6199,process_steady_v3,15,onnx_cuda
+005993.png,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,10.825,0.6199,process_steady_v3,15,onnx_cuda
+005994.png,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b,safety,VRU-retention,0.25,moderate,True,True,1,True,True,SMALL,10.785,0.6199,process_steady_v3,15,onnx_cuda
+005995.png,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.664,0.6199,process_steady_v3,15,onnx_cuda
+005996.png,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.853,0.6175,process_steady_v3,15,onnx_cuda
+005997.png,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4,safety,VRU-retention,0.25,moderate,True,False,1,True,True,SMALL,11.121,0.6175,process_steady_v3,15,onnx_cuda
+005998.png,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.703,0.6175,process_steady_v3,15,onnx_cuda
+005999.png,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,10.456,0.6175,process_steady_v3,15,onnx_cuda
+006000.png,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015,safety,VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.788,0.6337,process_steady_v3,15,onnx_cuda
+005981.png,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d,safety,VRU-retention,0.4,moderate,False,False,0,False,False,SMALL,10.015,0.521,process_steady_v3,15,onnx_cuda
+005982.png,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250,safety,VRU-retention,0.4,moderate,True,False,1,False,False,SMALL,9.902,0.521,process_steady_v3,15,onnx_cuda
+005983.png,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c,safety,VRU-retention,0.4,moderate,False,False,0,False,False,SMALL,9.956,0.521,process_steady_v3,15,onnx_cuda
+005984.png,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52,safety,VRU-retention,0.4,moderate,True,False,1,False,False,SMALL,10.413,0.5504,process_steady_v3,15,onnx_cuda
+005985.png,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522,safety,VRU-retention,0.4,moderate,True,True,2,False,True,SMALL,10.826,0.5504,process_steady_v3,15,onnx_cuda
+005986.png,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.868,0.5504,process_steady_v3,15,onnx_cuda
+005987.png,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.812,0.5504,process_steady_v3,15,onnx_cuda
+005988.png,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41,safety,VRU-retention,0.4,moderate,True,True,1,True,True,SMALL,9.79,0.5504,process_steady_v3,15,onnx_cuda
+005989.png,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.653,0.5576,process_steady_v3,15,onnx_cuda
+005990.png,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.587,0.5576,process_steady_v3,15,onnx_cuda
+005991.png,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59,safety,VRU-retention,0.4,moderate,True,False,1,True,True,SMALL,10.032,0.5576,process_steady_v3,15,onnx_cuda
+005992.png,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.795,0.5576,process_steady_v3,15,onnx_cuda
+005993.png,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.604,0.5576,process_steady_v3,15,onnx_cuda
+005994.png,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b,safety,VRU-retention,0.4,moderate,True,True,1,True,True,SMALL,10.106,0.5592,process_steady_v3,15,onnx_cuda
+005995.png,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.679,0.5592,process_steady_v3,15,onnx_cuda
+005996.png,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.906,0.5592,process_steady_v3,15,onnx_cuda
+005997.png,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4,safety,VRU-retention,0.4,moderate,True,False,1,True,True,SMALL,9.54,0.5592,process_steady_v3,15,onnx_cuda
+005998.png,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,9.838,0.5592,process_steady_v3,15,onnx_cuda
+005999.png,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,10.116,0.5592,process_steady_v3,15,onnx_cuda
+006000.png,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015,safety,VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,10.615,0.6348,process_steady_v3,15,onnx_cuda
+005981.png,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,False,False,SMALL,30.537,0.4348,process_steady_v3,15,onnx_cuda
+005982.png,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250,safety2,Two-level VRU-retention,0.25,moderate,True,False,1,False,False,SMALL,31.608,0.415,process_steady_v3,15,onnx_cuda
+005983.png,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,False,False,MEDIUM,122.084,0.415,process_steady_v3,15,onnx_cuda
+005984.png,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52,safety2,Two-level VRU-retention,0.25,moderate,True,True,1,False,True,MEDIUM,31.743,0.4917,process_steady_v3,15,onnx_cuda
+005985.png,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522,safety2,Two-level VRU-retention,0.25,moderate,True,True,2,True,True,MEDIUM,33.105,0.6337,process_steady_v3,15,onnx_cuda
+005986.png,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.988,0.6337,process_steady_v3,15,onnx_cuda
+005987.png,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,SMALL,9.76,0.6337,process_steady_v3,15,onnx_cuda
+005988.png,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41,safety2,Two-level VRU-retention,0.25,moderate,True,True,1,True,True,SMALL,9.806,0.6337,process_steady_v3,15,onnx_cuda
+005989.png,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,32.7,0.7585,process_steady_v3,15,onnx_cuda
+005990.png,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,28.578,0.7585,process_steady_v3,15,onnx_cuda
+005991.png,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59,safety2,Two-level VRU-retention,0.25,moderate,True,False,1,True,True,MEDIUM,29.274,0.7585,process_steady_v3,15,onnx_cuda
+005992.png,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,29.028,0.6938,process_steady_v3,15,onnx_cuda
+005993.png,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,29.263,0.6938,process_steady_v3,15,onnx_cuda
+005994.png,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b,safety2,Two-level VRU-retention,0.25,moderate,True,True,1,True,True,MEDIUM,30.314,0.6908,process_steady_v3,15,onnx_cuda
+005995.png,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,31.778,0.6908,process_steady_v3,15,onnx_cuda
+005996.png,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,31.621,0.674,process_steady_v3,15,onnx_cuda
+005997.png,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4,safety2,Two-level VRU-retention,0.25,moderate,True,False,1,True,True,MEDIUM,31.467,0.674,process_steady_v3,15,onnx_cuda
+005998.png,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,31.897,0.674,process_steady_v3,15,onnx_cuda
+005999.png,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,31.534,0.6764,process_steady_v3,15,onnx_cuda
+006000.png,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015,safety2,Two-level VRU-retention,0.25,moderate,False,False,0,True,True,MEDIUM,30.538,0.6764,process_steady_v3,15,onnx_cuda
+005981.png,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,False,False,SMALL,17.538,0.5516,process_steady_v3,15,onnx_cuda
+005982.png,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250,safety2,Two-level VRU-retention,0.4,moderate,True,False,1,False,False,SMALL,15.53,0.524,process_steady_v3,15,onnx_cuda
+005983.png,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,False,False,SMALL,17.019,0.524,process_steady_v3,15,onnx_cuda
+005984.png,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52,safety2,Two-level VRU-retention,0.4,moderate,True,False,1,False,False,SMALL,16.184,0.524,process_steady_v3,15,onnx_cuda
+005985.png,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522,safety2,Two-level VRU-retention,0.4,moderate,True,True,2,False,True,SMALL,16.553,0.524,process_steady_v3,15,onnx_cuda
+005986.png,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,16.662,0.5736,process_steady_v3,15,onnx_cuda
+005987.png,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,SMALL,17.364,0.5736,process_steady_v3,15,onnx_cuda
+005988.png,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41,safety2,Two-level VRU-retention,0.4,moderate,True,True,1,True,True,SMALL,17.651,0.5736,process_steady_v3,15,onnx_cuda
+005989.png,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,57.841,0.5532,process_steady_v3,15,onnx_cuda
+005990.png,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,55.995,0.5532,process_steady_v3,15,onnx_cuda
+005991.png,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59,safety2,Two-level VRU-retention,0.4,moderate,True,False,1,True,True,MEDIUM,57.206,0.6774,process_steady_v3,15,onnx_cuda
+005992.png,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,40.183,0.6282,process_steady_v3,15,onnx_cuda
+005993.png,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,40.419,0.6282,process_steady_v3,15,onnx_cuda
+005994.png,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b,safety2,Two-level VRU-retention,0.4,moderate,True,True,1,True,True,MEDIUM,38.726,0.7093,process_steady_v3,15,onnx_cuda
+005995.png,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,39.64,0.7111,process_steady_v3,15,onnx_cuda
+005996.png,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,35.055,0.7111,process_steady_v3,15,onnx_cuda
+005997.png,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4,safety2,Two-level VRU-retention,0.4,moderate,True,False,1,True,True,MEDIUM,36.356,0.7111,process_steady_v3,15,onnx_cuda
+005998.png,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,33.4,0.6601,process_steady_v3,15,onnx_cuda
+005999.png,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,35.786,0.6601,process_steady_v3,15,onnx_cuda
+006000.png,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015,safety2,Two-level VRU-retention,0.4,moderate,False,False,0,True,True,MEDIUM,31.356,0.6982,process_steady_v3,15,onnx_cuda

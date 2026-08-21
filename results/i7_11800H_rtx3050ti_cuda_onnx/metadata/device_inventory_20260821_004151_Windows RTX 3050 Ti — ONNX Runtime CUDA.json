@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "collected_at_utc": "2026-08-21T04:41:51.477475+00:00",
+  "device_label": "Windows RTX 3050 Ti \u2014 ONNX Runtime CUDA",
+  "hostname": "LAPTOP-JRU852LF",
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel"
+  },
+  "python": {
+    "version": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "C:\\rams\\rams_windows_rtx3050\\.venv\\Scripts\\python.exe"
+  },
+  "cpu": {
+    "physical_cores": 8,
+    "logical_cores": 16
+  },
+  "memory": {
+    "total": 16841486336,
+    "available": 6392377344,
+    "percent": 62.0,
+    "used": 10449108992,
+    "free": 6392377344
+  },
+  "package_versions": {
+    "ultralytics": "8.4.92",
+    "torch": "2.13.0",
+    "torchvision": "0.28.0",
+    "onnxruntime": null,
+    "opencv-python": "5.0.0.93",
+    "numpy": "2.5.2",
+    "psutil": "7.2.2",
+    "PyYAML": "6.0.3"
+  },
+  "onnxruntime": {
+    "available": true,
+    "version": "1.26.0",
+    "providers": [
+      "TensorrtExecutionProvider",
+      "CUDAExecutionProvider",
+      "CPUExecutionProvider"
+    ]
+  },
+  "windows_video_controllers": {
+    "available": true,
+    "returncode": 0,
+    "stderr": "",
+    "controllers": [
+      {
+        "Name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+        "DriverVersion": "32.0.15.5597",
+        "AdapterRAM": 4293918720,
+        "VideoProcessor": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+        "PNPDeviceID": "PCI\\VEN_10DE&DEV_25A0&SUBSYS_134C1043&REV_A1\\4&1200BD89&0&0008"
+      },
+      {
+        "Name": "Intel(R) UHD Graphics",
+        "DriverVersion": "31.0.101.5333",
+        "AdapterRAM": 134217728,
+        "VideoProcessor": "Intel(R) UHD Graphics Family",
+        "PNPDeviceID": "PCI\\VEN_8086&DEV_9A60&SUBSYS_134C1043&REV_01\\3&11583659&0&10"
+      }
+    ]
+  },
+  "nvidia_smi": {
+    "available": true,
+    "returncode": 0,
+    "stderr": "",
+    "executable": "C:\\Windows\\system32\\nvidia-smi.EXE",
+    "gpus": [
+      "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 555.97, P8, 4096, 51, 210"
+    ]
+  },
+  "active_power_scheme": {
+    "available": true,
+    "returncode": 0,
+    "stdout": "Power Scheme GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)",
+    "stderr": ""
+  },
+  "paths": {
+    "package": {
+      "path": "C:\\rams\\rams_windows_rtx3050",
+      "exists": true,
+      "disk": {
+        "total_bytes": 486902403072,
+        "used_bytes": 324656992256,
+        "free_bytes": 162245410816
+      }
+    },
+    "data_root": {
+      "path": "C:\\data",
+      "exists": true,
+      "disk": {
+        "total_bytes": 486902403072,
+        "used_bytes": 324656992256,
+        "free_bytes": 162245410816
+      }
+    }
+  },
+  "config_sha256": "f6b10c55733edfc74ce12ad7b2ae994708d48112b1e31253e6faa790f208f97f"
+}

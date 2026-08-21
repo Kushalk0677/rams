@@ -1,0 +1,9 @@
+{
+  "tier": "SMALL",
+  "backend": "onnx_cuda",
+  "metric": "COCOeval_bbox",
+  "map50": 0.09800552331093448,
+  "map5095": 0.07933561370872592,
+  "ground_truth": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_coco_ground_truth_small_20260821_025958.json",
+  "detections": "C:\\rams\\rams_windows_rtx3050\\results\\exp8_coco_detections_small_20260821_025958.json"
+}
