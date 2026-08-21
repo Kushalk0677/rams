@@ -1,4 +1,4 @@
-"""Build the distributable macOS and Jetson validation packages.
+"""Build the distributable Windows, macOS, and Jetson validation packages.
 
 The archives deliberately exclude datasets, model files, TensorRT engines,
 virtual environments, and result records.  Each archive contains the same
@@ -18,6 +18,12 @@ ROOT = Path(__file__).resolve().parents[1]
 PACKAGING = ROOT / "packaging"
 
 PLATFORMS = {
+    "windows": {
+        "archive": "RAMS_Windows_validation.zip",
+        "guide": "windows/README.md",
+        "title": "RAMS Windows validation package",
+        "scope": "Windows CPU ONNX Runtime validation. NVIDIA hardware is telemetry-only.",
+    },
     "macos": {
         "archive": "RAMS_macOS_validation.zip",
         "guide": "macos/README.md",
@@ -85,10 +91,21 @@ def write_metadata(destination: Path, spec: dict[str, str]) -> None:
     guide = PACKAGING / spec["guide"]
     shutil.copy2(guide, destination / "README.md")
     (destination / "AI_OPERATOR_INSTRUCTIONS.md").write_text(
-        "# Operator instructions\n\n"
-        "Read `README.md` completely before making changes or running commands. "
-        "Use real KITTI and COCO paths for a paper run, retain every manifest "
-        "and raw record, and do not describe simulation smoke output as evidence.\n",
+        "# RAMS operator instructions\n\n"
+        "You are operating a reproducible evaluation package. Read `README.md` "
+        "completely and execute its numbered sections in order. Work only inside "
+        "the extracted package directory and never alter its source code, default "
+        "configuration, models, or datasets unless the README explicitly directs it.\n\n"
+        "Before calibration, confirm Python, the requested inference backend, all "
+        "three model tiers, the fixed KITTI replay, and COCO image and label paths. "
+        "Run the documented smoke command and stop on any failure. A smoke run is "
+        "not evidence.\n\n"
+        "For a full evaluation, create the device energy-profile input, run "
+        "calibration once, preserve the resulting configuration, then run the "
+        "phases in order. Retain the complete `results/` directory, including raw "
+        "records, manifests, calibration snapshots, device state, and the energy "
+        "profile. Do not report simulated results, proxy mAP, or estimated energy "
+        "as measured physical energy.\n",
         encoding="utf-8",
     )
     (destination / "PACKAGE_MANIFEST.md").write_text(
@@ -122,8 +139,8 @@ def build(platform_name: str, output_dir: Path) -> Path:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build RAMS macOS and Jetson packages")
-    parser.add_argument("--platform", choices=["macos", "jetson", "all"], default="all")
+    parser = argparse.ArgumentParser(description="Build RAMS Windows, macOS, and Jetson packages")
+    parser.add_argument("--platform", choices=["windows", "macos", "jetson", "all"], default="all")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "packages")
     args = parser.parse_args()
     selected = PLATFORMS if args.platform == "all" else {args.platform: PLATFORMS[args.platform]}

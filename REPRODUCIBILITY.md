@@ -1,27 +1,28 @@
 # RAMS Reproducibility Guide
 
-This guide covers the current RAMS evaluation workflow. It produces runtime,
+This guide defines the current RAMS evaluation workflow. It produces runtime,
 telemetry, tier-accuracy, policy-accuracy, and VRU-retention artifacts from
-real replay frames. Simulation is useful for setup checks only and must not be
-used as paper evidence.
+real replay frames. Simulation is only a setup check and must not be used as
+paper evidence.
 
-Platform packages are available for Windows CPU ONNX, Apple Silicon macOS CPU
-ONNX, and Jetson TensorRT. The Jetson archive includes target-device steps for
-JetPack and TensorRT; those hardware steps cannot be reproduced by GitHub-hosted
-CI or WSL2.
+The [README](README.md) gives a project overview. The platform packages under
+[`packages/`](packages) are the complete download-to-results instructions for
+coauthors. This guide records the common protocol that makes results
+comparable within one device and backend.
 
 ## 1. Scope and required assets
 
-The repository does not include datasets, model checkpoints, ONNX exports, or
-TensorRT engines. A full run requires:
+The repository does not include datasets, checkpoints, ONNX exports, or
+TensorRT engines. A full run needs:
 
-- YOLOv8 NANO, SMALL, and MEDIUM checkpoints and ONNX exports.
+- YOLOv8 NANO, SMALL, and MEDIUM checkpoints and their ONNX exports.
 - KITTI 2D object-detection training images and labels, arranged as a fixed
   1,500-frame validation replay.
 - COCO `val2017` images and matching Ultralytics YOLO-format labels.
-- A completed device energy-profile JSON for runtime phases.
+- A completed device energy-profile JSON that documents the TDP basis and
+  operating mode used for the estimate.
 
-The minimum layouts are:
+Use this data layout:
 
 ```text
 <data-root>/kitti/images/val/
@@ -31,12 +32,18 @@ The minimum layouts are:
 ```
 
 Create the KITTI replay from sorted training-frame indices 5981 through 7480,
-inclusive. Use exactly the same split across devices.
+inclusive. Use exactly this split on every device. Download KITTI after
+registering at the [KITTI 2D object benchmark](https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d).
+Download COCO `val2017` from [COCO](https://cocodataset.org/#download) and the
+corresponding Ultralytics YOLO-format label archive.
 
-## 2. Set up the environment
+## 2. Environment and models
+
+Use Python 3.12 where supported by the platform. From the repository root:
 
 ```bash
 python -m venv .venv
+# macOS/Linux
 source .venv/bin/activate
 # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -46,116 +53,134 @@ pip install -e .
 python -c "from rams import RAMSController; print('RAMS import OK')"
 ```
 
-On NVIDIA systems, also install `nvidia-ml-py` when NVML telemetry is
-available. On Apple Silicon, CPU ONNX is the reference path. The optional
-Core ML backend requires an ONNX Runtime build containing
-`CoreMLExecutionProvider`; see the macOS package README.
-
-## 3. Download and export models
-
-Run from the repository root:
+Download and export the three model tiers:
 
 ```bash
 python -c "from ultralytics import YOLO; [YOLO(name) for name in ('yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt')]"
 python -c "from ultralytics import YOLO; YOLO('yolov8n.pt').export(format='onnx', imgsz=320, opset=12); YOLO('yolov8s.pt').export(format='onnx', imgsz=416, opset=12); YOLO('yolov8m.pt').export(format='onnx', imgsz=640, opset=12)"
 ```
 
-The expected input sizes are NANO 320, SMALL 416, and MEDIUM 640.
+The expected tier inputs are NANO 320, SMALL 416, and MEDIUM 640. Use the
+platform package for platform-specific setup. In particular, do not replace
+JetPack's PyTorch or TensorRT installation with generic CUDA wheels.
 
-## 4. Create the energy profile
+## 3. Backend matrix
 
-Copy the template and document the actual device, operating mode, and power
-basis:
+| Backend | Intended platform | Evidence conditions |
+|---|---|---|
+| `onnx` | Windows, Linux, macOS | CPU ONNX Runtime reference path. |
+| `tensorrt` | Jetson | Engines built on that exact Jetson, JetPack, TensorRT version, and build settings. |
+| `coreml` | Apple Silicon macOS | Optional only when the ONNX Runtime CoreML provider is installed and recorded. |
+| `pytorch` | Development fallback | Use only when the installed Ultralytics and PyTorch combination is confirmed compatible. |
+
+For the current Windows protocol, use `--backend onnx`. NVIDIA hardware may
+provide telemetry on Windows, but it is not an approved GPU-inference path for
+the Windows CPU-ONNX evidence. Before a Jetson run, execute:
+
+```bash
+python3 scripts/verify_jetson_tensorrt.py --frame <one-real-kitti-frame>
+```
+
+It must report `"status": "passed"` with `"backend": "tensorrt"` for all
+three tiers. Do not accept a fallback backend. WSL2 and hosted CI cannot
+replace this target-Jetson preflight.
+
+## 4. Energy profile and calibration
+
+Copy the profile template, document the actual device and operating state, and
+keep it beside the retained results:
 
 ```bash
 cp configs/energy_profile.example.json configs/energy_profile_<device>.json
 ```
 
-Energy fields are estimates based on the documented profile and recorded
-telemetry. They are not physical power measurements. For CPU-only paths where
-there is no GPU-utilization telemetry source, keep `gpu_dynamic_w` at zero.
+The energy model combines documented power assumptions with recorded runtime
+telemetry. It estimates energy; it is not a physical power-meter measurement.
+For a CPU-only route with no GPU-utilization source, use zero GPU dynamic power.
+
+Run calibration once before the runtime phases:
+
+```bash
+python scripts/run_paper_suite.py --phase calibration --platform <platform> --device <device-label>
+```
+
+Calibration stores the configuration both before and after application under
+`results/calibration_snapshots/`. Preserve the model files, energy profile,
+backend, device power mode, clock condition, cooling condition, and calibration
+configuration through all following phases.
 
 ## 5. Smoke check
 
-Use real KITTI and COCO paths. The smoke mode confirms installation only.
+Set the dataset root and perform a smoke run. It uses one block of five frames
+and a small labelled subset. It proves installation only and must not be
+reported as a measurement.
 
 ```bash
-python scripts/run_paper_suite.py --platform windows --backend onnx --smoke \
-  --device <device-label> \
-  --frames <data-root>/kitti/images/val \
-  --kitti-labels <data-root>/kitti/labels/val \
-  --coco-images <data-root>/coco/images/val2017 \
-  --coco-labels <data-root>/coco/labels/val2017
+# macOS/Linux
+export RAMS_DATA_ROOT="$HOME/rams/data"
+# Windows PowerShell: $env:RAMS_DATA_ROOT = 'D:\data'
+
+python scripts/run_paper_suite.py --platform <platform> --backend <backend> --smoke --device <device-label>
 ```
 
-Do not include smoke outputs in paper tables.
+The script rejects paper-mode phases that lack real KITTI or COCO directories.
+It also rejects a full runtime phase without `--energy-profile`.
 
 ## 6. Full phased workflow
 
-Set a platform and an explicit backend. Use `onnx` for the CPU reference path,
-`tensorrt` only with engines built on the exact target NVIDIA device, and
-`coreml` only after its provider check succeeds.
+All full runs use 10 independent blocks of 200 frames by default. The methods
+in each block receive the same ordered replay trace; the manifest records its
+hashes and random seed. GPU work is synchronized before timing where the
+backend supports synchronization.
 
 ```bash
-python scripts/run_paper_suite.py --phase calibration --platform <platform> \
-  --device <device-label>
-
-python scripts/run_paper_suite.py --phase runtime1 --platform <platform> --backend <backend> \
-  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
-  --coco-images <coco-images> --coco-labels <coco-labels> \
-  --energy-profile configs/energy_profile_<device>.json
-
-python scripts/run_paper_suite.py --phase runtime2 --platform <platform> --backend <backend> \
-  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
-  --coco-images <coco-images> --coco-labels <coco-labels> \
-  --energy-profile configs/energy_profile_<device>.json
-
-python scripts/run_paper_suite.py --phase runtime3 --platform <platform> --backend <backend> \
-  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
-  --coco-images <coco-images> --coco-labels <coco-labels> \
-  --energy-profile configs/energy_profile_<device>.json
-
-python scripts/run_paper_suite.py --phase runtime4 --platform <platform> --backend <backend> \
-  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
-  --coco-images <coco-images> --coco-labels <coco-labels> \
-  --energy-profile configs/energy_profile_<device>.json
-
-python scripts/run_paper_suite.py --phase accuracy --platform <platform> --backend <backend> \
-  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
-  --coco-images <coco-images> --coco-labels <coco-labels>
-
-python scripts/run_paper_suite.py --phase retention --platform <platform> --backend <backend> \
-  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
-  --coco-images <coco-images> --coco-labels <coco-labels>
+python scripts/run_paper_suite.py --phase runtime1 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
+python scripts/run_paper_suite.py --phase runtime2 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
+python scripts/run_paper_suite.py --phase runtime3 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
+python scripts/run_paper_suite.py --phase runtime4 --platform <platform> --backend <backend> --device <device-label> --energy-profile configs/energy_profile_<device>.json
+python scripts/run_paper_suite.py --phase accuracy --platform <platform> --backend <backend> --device <device-label>
+python scripts/run_paper_suite.py --phase retention --platform <platform> --backend <backend> --device <device-label>
 ```
 
-The suite runs 10 independent blocks of 200 frames for each reported runtime
-policy and load setting. `runtime4` is the process-isolated burst protocol.
-`scripts/run_phase2d_then_phase3.py` runs `runtime4` and `accuracy` back to
-back when the same configuration should be preserved.
+| Phase | Work |
+|---|---|
+| `runtime1` | Paired controller replay at idle and light load. |
+| `runtime2` | Moderate replay and matched moderate Pareto evaluation. |
+| `runtime3` | Heavy replay and matched heavy Pareto evaluation. |
+| `runtime4` | Process-isolated burst replay. |
+| `accuracy` | KITTI tier and policy accuracy plus required measured COCO tier validation. |
+| `retention` | KITTI VRU-retention sensitivity analysis. |
+
+`python scripts/run_paper_suite.py --phase all ...` runs phases `runtime1`
+through `retention` in order after its calibration stage. It is the one-command
+full evaluation path. The script uses the `process_steady_v3` load protocol for
+steady profiles and `process_isolated_burst_v2` for burst. Do not combine its
+results with older thread-based Windows protocol results.
 
 ## 7. Required retained artifacts
 
-Keep the entire `results/` directory. A complete runtime run includes:
+Keep the complete device result directory. A reportable full run includes:
 
 - Raw CSV records with timing components and telemetry.
 - JSON summaries with block-bootstrap latency intervals.
-- Replay manifests containing ordered frame hashes and the random seed.
-- Calibration snapshots and the completed energy profile.
-- `exp5_pareto_*`, `exp8_accuracy_*`, `exp11_policy_accuracy_*`, and
-  `exp12_retention_sensitivity_*` outputs.
+- Replay manifests with ordered frame hashes, seed, backend, versions, and
+  device state.
+- Calibration snapshots, calibration records, and the energy-profile input.
+- Tier accuracy, policy accuracy, VRU retention, and Pareto outputs.
 
-For COCO mAP, each tier must state `map_source: ultralytics_val`. This is
-supplementary tier context. Policy-level KITTI recall is the runtime-policy
-accuracy evidence.
+For COCO mAP, report values only where the result records state
+`map_source: ultralytics_val`. Such mAP is tier-level supplementary context.
+Policy-level KITTI recall, precision, F1, false-negative rate, and non-VRU
+performance are the primary accuracy evidence.
 
 ## 8. Interpretation limits
 
 - VRU retention is reactive. It does not establish vehicle safety or repair an
-  initial detector miss.
-- TDP-profile energy is an estimate, not a power measurement.
-- Never pool results from different devices or backends into one confidence
-  interval.
-- Do not reuse TensorRT engines across different Jetson device models.
-- Label any zero-shot cross-dataset KITTI result and state its mapping and
-  evaluation limitations.
+  initially missed detector target.
+- TDP-profile energy is an estimate, not a physical power measurement.
+- Do not pool results from different devices, backends, calibrations, or load
+  protocols into one confidence interval.
+- Do not reuse TensorRT engines across Jetson devices or software stacks.
+- Tier-level COCO mAP does not by itself establish policy-level accuracy.
+- State the dataset mapping and limitations for any zero-shot cross-dataset
+  result.
