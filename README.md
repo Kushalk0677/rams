@@ -74,7 +74,7 @@ process.
 
 The verified public package is:
 
-- `packages/RAMS_Windows_validation_process_v3_20260820.zip`
+- `packages/RAMS_Windows_validation.zip`
 
 It runs the Windows CPU-ONNX process-v3 workflow. Its presence of NVIDIA
 hardware may enable telemetry only; the package does not run inference on a
