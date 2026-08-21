@@ -1,0 +1,101 @@
+image,policy,policy_label,load_profile,tier,latency_ms,pressure,load_injector,load_worker_processes,backend,execution_providers,coreml_provider_options,vru_tp,vru_fp,vru_fn,obstacle_tp,obstacle_fp,obstacle_fn,frame_sha256
+005984.png,threshold,Threshold,moderate,SMALL,56.304,0.344,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,0,0,8,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52
+005999.png,threshold,Threshold,moderate,SMALL,48.46,0.7241,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,3,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808
+005988.png,threshold,Threshold,moderate,SMALL,37.795,0.7241,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},5,31,11,1,9,0,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41
+005981.png,threshold,Threshold,moderate,SMALL,47.981,0.7001,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,27,5,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d
+006000.png,threshold,Threshold,moderate,SMALL,49.529,0.7001,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,10,1,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015
+005992.png,threshold,Threshold,moderate,SMALL,46.541,0.6911,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,1,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129
+005995.png,threshold,Threshold,moderate,SMALL,42.421,0.6911,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,0,0,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992
+005997.png,threshold,Threshold,moderate,SMALL,45.791,0.7412,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,0,0,3,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4
+005989.png,threshold,Threshold,moderate,SMALL,42.394,0.6938,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,0,0,1,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394
+005996.png,threshold,Threshold,moderate,SMALL,39.235,0.6938,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,57,4,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf
+005986.png,threshold,Threshold,moderate,SMALL,44.192,0.6813,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,30,2,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c
+005991.png,threshold,Threshold,moderate,SMALL,46.296,0.6813,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,1,1,3,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59
+005982.png,threshold,Threshold,moderate,SMALL,61.408,0.7049,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,6,35,2,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250
+005983.png,threshold,Threshold,moderate,SMALL,54.997,0.7049,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,51,9,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c
+005994.png,threshold,Threshold,moderate,SMALL,47.623,0.5933,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},3,16,0,1,3,0,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b
+005987.png,threshold,Threshold,moderate,SMALL,55.011,0.5387,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,25,1,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832
+005993.png,threshold,Threshold,moderate,SMALL,40.334,0.5387,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,1,0,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a
+005990.png,threshold,Threshold,moderate,SMALL,40.783,0.5495,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,9,0,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0
+005998.png,threshold,Threshold,moderate,SMALL,40.529,0.5495,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,17,1,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8
+005985.png,threshold,Threshold,moderate,SMALL,38.202,0.5195,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},2,10,2,0,0,0,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522
+005984.png,predictive,EWMA-smoothed,moderate,SMALL,37.909,0.5375,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,0,0,8,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52
+005999.png,predictive,EWMA-smoothed,moderate,SMALL,38.965,0.5375,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,3,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808
+005988.png,predictive,EWMA-smoothed,moderate,SMALL,50.445,0.5968,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},5,31,11,1,9,0,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41
+005981.png,predictive,EWMA-smoothed,moderate,SMALL,54.56,0.6466,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,27,5,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d
+006000.png,predictive,EWMA-smoothed,moderate,SMALL,51.851,0.6466,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,10,1,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015
+005992.png,predictive,EWMA-smoothed,moderate,SMALL,53.61,0.6562,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,1,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129
+005995.png,predictive,EWMA-smoothed,moderate,SMALL,53.999,0.6348,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,0,0,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992
+005997.png,predictive,EWMA-smoothed,moderate,SMALL,44.29,0.6348,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,0,0,3,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4
+005989.png,predictive,EWMA-smoothed,moderate,SMALL,38.603,0.6768,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,0,0,1,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394
+005996.png,predictive,EWMA-smoothed,moderate,SMALL,50.494,0.6768,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,57,4,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf
+005986.png,predictive,EWMA-smoothed,moderate,SMALL,51.061,0.549,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,30,2,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c
+005991.png,predictive,EWMA-smoothed,moderate,SMALL,43.041,0.549,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,1,1,3,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59
+005982.png,predictive,EWMA-smoothed,moderate,SMALL,47.255,0.549,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,6,35,2,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250
+005983.png,predictive,EWMA-smoothed,moderate,SMALL,42.192,0.5434,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,51,9,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c
+005994.png,predictive,EWMA-smoothed,moderate,SMALL,46.073,0.505,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},3,16,0,1,3,0,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b
+005987.png,predictive,EWMA-smoothed,moderate,SMALL,59.354,0.505,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,25,1,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832
+005993.png,predictive,EWMA-smoothed,moderate,SMALL,45.628,0.5722,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,1,0,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a
+005990.png,predictive,EWMA-smoothed,moderate,SMALL,50.054,0.5722,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,9,0,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0
+005998.png,predictive,EWMA-smoothed,moderate,SMALL,41.547,0.4954,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,17,1,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8
+005985.png,predictive,EWMA-smoothed,moderate,SMALL,41.294,0.598,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},2,10,2,0,0,0,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522
+005984.png,safety,VRU-retention,moderate,SMALL,39.496,0.4895,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,0,0,8,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52
+005999.png,safety,VRU-retention,moderate,SMALL,38.949,0.4895,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,3,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808
+005988.png,safety,VRU-retention,moderate,SMALL,50.567,0.5926,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},5,31,11,1,9,0,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41
+005981.png,safety,VRU-retention,moderate,SMALL,37.152,0.6718,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,27,5,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d
+006000.png,safety,VRU-retention,moderate,SMALL,46.798,0.6718,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,10,1,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015
+005992.png,safety,VRU-retention,moderate,SMALL,47.943,0.6508,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,1,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129
+005995.png,safety,VRU-retention,moderate,SMALL,42.289,0.6508,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,0,0,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992
+005997.png,safety,VRU-retention,moderate,SMALL,40.935,0.6766,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,0,0,3,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4
+005989.png,safety,VRU-retention,moderate,SMALL,56.893,0.6766,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,0,0,1,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394
+005996.png,safety,VRU-retention,moderate,SMALL,47.039,0.538,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,57,4,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf
+005986.png,safety,VRU-retention,moderate,SMALL,58.235,0.5428,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,30,2,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c
+005991.png,safety,VRU-retention,moderate,SMALL,46.538,0.5428,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,1,1,3,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59
+005982.png,safety,VRU-retention,moderate,SMALL,57.082,0.5434,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,6,35,2,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250
+005983.png,safety,VRU-retention,moderate,SMALL,45.247,0.5362,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,51,9,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c
+005994.png,safety,VRU-retention,moderate,SMALL,49.071,0.5362,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},3,16,0,1,3,0,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b
+005987.png,safety,VRU-retention,moderate,SMALL,47.199,0.543,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,25,1,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832
+005993.png,safety,VRU-retention,moderate,SMALL,50.479,0.5166,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,1,0,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a
+005990.png,safety,VRU-retention,moderate,SMALL,57.68,0.5166,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,9,0,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0
+005998.png,safety,VRU-retention,moderate,SMALL,47.664,0.543,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,17,1,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8
+005985.png,safety,VRU-retention,moderate,SMALL,42.802,0.543,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},2,10,2,0,0,0,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522
+005984.png,adaptive,Variance-adaptive EWMA,moderate,MEDIUM,278.234,0.385,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},1,1,0,2,14,6,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52
+005999.png,adaptive,Variance-adaptive EWMA,moderate,MEDIUM,304.385,0.5338,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,41,1,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808
+005988.png,adaptive,Variance-adaptive EWMA,moderate,MEDIUM,280.995,0.5314,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},11,107,5,1,9,0,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41
+005981.png,adaptive,Variance-adaptive EWMA,moderate,MEDIUM,304.723,0.5644,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,46,3,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d
+006000.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,39.779,0.658,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,10,1,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015
+005992.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,52.754,0.658,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,1,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129
+005995.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,58.58,0.7129,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,0,0,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992
+005997.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,40.436,0.6733,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,0,0,3,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4
+005989.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,50.707,0.6733,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,0,0,1,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394
+005996.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,48.039,0.6649,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,57,4,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf
+005986.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,37.293,0.6649,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,30,2,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c
+005991.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,74.94,0.6781,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,1,1,3,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59
+005982.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,65.297,0.6955,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,6,35,2,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250
+005983.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,41.433,0.6955,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,51,9,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c
+005994.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,51.689,0.6951,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},3,16,0,1,3,0,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b
+005987.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,43.97,0.6951,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,25,1,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832
+005993.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,34.799,0.6879,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,1,0,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a
+005990.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,36.701,0.6735,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,2,9,0,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0
+005998.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,45.723,0.6735,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,17,1,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8
+005985.png,adaptive,Variance-adaptive EWMA,moderate,SMALL,39.37,0.6417,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},2,10,2,0,0,0,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522
+005984.png,safety2,Two-level VRU-retention,moderate,SMALL,67.965,0.5658,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,0,0,8,70fc1ed55ecd31c123b6b8d01a4387180e2cd2d40a31b78b9c9b1dde5ee89f52
+005999.png,safety2,Two-level VRU-retention,moderate,SMALL,47.305,0.6135,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,26,3,2d244e80497fb3038cec99ed74625cbda2ecee4062a493dda127190fe54d5808
+005988.png,safety2,Two-level VRU-retention,moderate,SMALL,53.516,0.6813,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},5,31,11,1,9,0,69f98a14640ff48fa041db547c67ed978bcde78bbc2211f3a2d779c7c1c65b41
+005981.png,safety2,Two-level VRU-retention,moderate,MEDIUM,291.583,0.6813,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,46,3,2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d
+006000.png,safety2,Two-level VRU-retention,moderate,MEDIUM,297.215,0.6768,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,5,30,0,a0a2c50c3c18e40dec00427e7f91d07f7d829d395cee95485d5ef6ca274ec015
+005992.png,safety2,Two-level VRU-retention,moderate,MEDIUM,286.611,0.6003,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,36,1,128de214a46505f42329059a2f25b773f393f6ca4d2185eac45288801cd3b129
+005995.png,safety2,Two-level VRU-retention,moderate,MEDIUM,272.383,0.4986,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,9,0,2e599e1595309f71964b097546eeb8fc5ce9b9313d06dde52f5ea6ef3e459992
+005997.png,safety2,Two-level VRU-retention,moderate,MEDIUM,270.085,0.6954,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,2,10,1,ea2dc0668b5265bee50dd5a89796c56777b7e96af26e74ca89f313b45ada4fd4
+005989.png,safety2,Two-level VRU-retention,moderate,MEDIUM,319.246,0.6624,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,0,0,1,bc5445c21144f55573ebe54f333dc9fd1e8234f680be07c0f09db3697e59b394
+005996.png,safety2,Two-level VRU-retention,moderate,SMALL,60.642,0.7388,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,57,4,c9c683da9a3a7fc03b4e63e853b04084169d815573cd420308209d50599c54cf
+005986.png,safety2,Two-level VRU-retention,moderate,SMALL,43.212,0.7706,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,30,2,f219508643e518a3fd57b22bba2e5e652f686e1006e09185991674990c004f0c
+005991.png,safety2,Two-level VRU-retention,moderate,SMALL,49.235,0.7706,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,1,1,1,3,1245170b0edfc2c5996a4d7fc365d1808947c04896ef5ace88e1c403234f7b59
+005982.png,safety2,Two-level VRU-retention,moderate,SMALL,53.739,0.7577,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,2,6,35,2,bffd3519cfa47a49606bc16235a51305c9af949d532ca0f3cdb87f6953a69250
+005983.png,safety2,Two-level VRU-retention,moderate,SMALL,45.943,0.6911,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,6,51,9,4993cf33d6025663e60a00d6db403163d7e6af78fde9c2082d80a02a40455c7c
+005994.png,safety2,Two-level VRU-retention,moderate,SMALL,45.952,0.6911,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},3,16,0,1,3,0,9e3f9d42223d03597fc187e9307f33f9efc998a33577ea61ed504ea1e80ee27b
+005987.png,safety2,Two-level VRU-retention,moderate,MEDIUM,317.266,0.6635,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,45,1,415b27bbb104f5f19a42bf53c029534bc7f28195caf6736a19db55cb0da2d832
+005993.png,safety2,Two-level VRU-retention,moderate,MEDIUM,303.201,0.5953,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,4,0,76826eb34180fb628b100a5b61c9fb747415a7bda98bee614937c5be179c8e6a
+005990.png,safety2,Two-level VRU-retention,moderate,MEDIUM,286.128,0.7075,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,1,11,1,c511c28547302598ad2a8804b1e7ecc83e9dbfd7937fe67018939e9c0b0e3ef0
+005998.png,safety2,Two-level VRU-retention,moderate,SMALL,50.148,0.6919,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},0,0,0,4,17,1,b05268b65f1d40206a8296e23ac80e75f470640c4bd272dd72d4dee579d3d2e8
+005985.png,safety2,Two-level VRU-retention,moderate,SMALL,43.668,0.7013,process_steady_v3,15,onnx,['CPUExecutionProvider'],{},2,10,2,0,0,0,7c50282776aa35f6cb38c8ab0dd3437a8ee9c7c6a422b151da5d145c55433522

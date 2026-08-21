@@ -58,6 +58,17 @@ def get_monitor_hz(default: float = 10.0) -> float:
     return float(cfg.get('monitor', {}).get('hz', default))
 
 
+def get_monitor_kwargs() -> dict[str, Any]:
+    """Return monitor keyword arguments other than its sampling frequency."""
+    monitor_cfg = cfg = load_config().get('monitor', {})
+    if not isinstance(monitor_cfg, dict):
+        return {}
+    return {
+        'gpu_util_weight': float(monitor_cfg.get('gpu_util_weight', 0.20)),
+        'gpu_memory_weight': float(monitor_cfg.get('gpu_memory_weight', 0.10)),
+    }
+
+
 def get_default_simulate(default: bool = False) -> bool:
     """Return whether to run in simulation-only mode from config.
 

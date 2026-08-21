@@ -222,6 +222,7 @@ def evaluate_tier(
     dataset: str,
     max_images: int | None = None,
     simulate: bool = False,
+    require_coco_ultralytics_map: bool = False,
 ) -> tuple[dict, list[dict]]:
     """
     Run per-tier inference and compute VRU metrics. Falls back cleanly to the
@@ -239,9 +240,13 @@ def evaluate_tier(
             from ultralytics import YOLO
             model = YOLO(cfg["model"])
         except Exception as e:
+            if dataset == "coco" and require_coco_ultralytics_map:
+                raise RuntimeError(f"Actual COCO Ultralytics validation failed for {tier_name}") from e
             logger.warning("[%s] ultralytics unavailable (%s) - using RAMS wrapper", tier_name, e)
 
     if model is None:
+        if dataset == "coco" and require_coco_ultralytics_map:
+            raise RuntimeError("Actual COCO mAP requires an available Ultralytics installation")
         wrapper = ModelWrapper(tier_enum, simulate=simulate)
         wrapper.load()
 
@@ -334,19 +339,24 @@ def evaluate_tier(
     map5095 = round(map50 * 0.68, 4) if map50 else 0.0
     map_source = "cached_profile"
 
-    if model is not None:
+    # KITTI labels supplied to RAMS use the native 2D-object-detection format,
+    # whereas Ultralytics' ``kitti.yaml`` refers to a separate converted
+    # download.  VRU metrics above are therefore computed directly from the
+    # supplied local labels.  Only COCO uses ``model.val()`` for measured mAP.
+    if model is not None and dataset == "coco":
         try:
-            if dataset == "coco":
-                if max_images:
-                    raise RuntimeError("skipping full local COCO val() for capped smoke run")
-                data_arg = str(write_coco_dataset_yaml(str(Path(image_paths[0]).parent)))
-            else:
-                data_arg = "kitti.yaml"
+            if max_images:
+                raise RuntimeError("skipping full local COCO val() for capped smoke run")
+            data_arg = str(write_coco_dataset_yaml(str(Path(image_paths[0]).parent)))
             val_results = model.val(data=data_arg, imgsz=imgsz, conf=0.25, iou=0.5, verbose=False, plots=False)
             map50 = float(val_results.box.map50)
             map5095 = float(val_results.box.map)
             map_source = "ultralytics_val"
         except Exception as e:
+            if dataset == "coco" and require_coco_ultralytics_map:
+                raise RuntimeError(
+                    f"Actual COCO Ultralytics validation failed for {tier_name}"
+                ) from e
             logger.warning("[%s] ultralytics val() unavailable (%s) — using cached profile mAP", tier_name, e)
 
     metrics = {
@@ -487,7 +497,8 @@ def write_latex(all_results: dict[str, list[dict]]):
 # ---------------------------------------------------------------------------
 
 def run_dataset(dataset: str, images_dir: str, labels_dir: str,
-                max_images: int | None, simulate: bool = False) -> list[dict]:
+                max_images: int | None, simulate: bool = False,
+                require_coco_ultralytics_map: bool = False) -> list[dict]:
     image_dir = Path(images_dir)
     label_dir = Path(labels_dir)
 
@@ -510,7 +521,8 @@ def run_dataset(dataset: str, images_dir: str, labels_dir: str,
 
     for tier_name in ["NANO", "SMALL", "MEDIUM"]:
         metrics, per_image = evaluate_tier(
-            tier_name, image_paths, label_paths, dataset, max_images, simulate
+            tier_name, image_paths, label_paths, dataset, max_images, simulate,
+            require_coco_ultralytics_map
         )
         all_metrics.append(metrics)
         all_per_image.extend(per_image)
@@ -555,16 +567,20 @@ def main():
                         help="Also run COCO evaluation (requires --coco-images and --coco-labels)")
     parser.add_argument("--coco-images", type=str, default=None)
     parser.add_argument("--coco-labels", type=str, default=None)
+    parser.add_argument("--require-coco-ultralytics-map", action="store_true",
+                        help="Fail instead of accepting cached COCO mAP proxies")
     args = parser.parse_args()
 
     all_results = {}
     all_results[args.dataset] = run_dataset(
-        args.dataset, args.images, args.labels, args.max_images, args.simulate
+        args.dataset, args.images, args.labels, args.max_images, args.simulate,
+        args.require_coco_ultralytics_map
     )
 
     if args.also_coco and args.coco_images and args.coco_labels:
         all_results["coco"] = run_dataset(
-            "coco", args.coco_images, args.coco_labels, args.max_images, args.simulate
+            "coco", args.coco_images, args.coco_labels, args.max_images, args.simulate,
+            args.require_coco_ultralytics_map
         )
 
     write_latex(all_results)

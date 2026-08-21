@@ -1,0 +1,1 @@
+workers=15 logical_cpus=16 target=75.0% median_cpu=79.2% samples=79.1,82.3,80.1,79.0,69.5,80.7,79.3,70.8

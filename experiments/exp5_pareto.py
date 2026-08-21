@@ -28,6 +28,7 @@ Outputs
 from __future__ import annotations
 
 import argparse
+import random
 import statistics
 import sys
 import time
@@ -41,7 +42,7 @@ from experiments.utils import (
 )
 from rams.controller import RAMSController
 from rams.models import Tier
-from rams.policy import make_policy, ThresholdPolicy
+from rams.policy import FixedTierPolicy, PAPER_POLICY_LABELS
 
 RESULTS = Path(__file__).resolve().parents[1] / "results"
 RESULTS.mkdir(exist_ok=True)
@@ -59,63 +60,42 @@ LOAD_SCENARIOS = {
 # Fixed-tier runner (forces a single tier, ignores policy logic)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run_fixed_tier(
-    tier_name: str,
+def _read_frame(path: Path):
+    import cv2
+    frame = cv2.imread(str(path))
+    if frame is None:
+        raise IOError(f"Could not read frame: {path}")
+    return frame
+
+
+def run_controller_trial(
+    label: str,
+    policy: str | FixedTierPolicy,
+    frame_paths: list[Path] | None,
     n: int,
     intensity: float,
     simulate: bool = True,
+    block: int = 0,
 ) -> list[TrialRecord]:
-    """Run N inferences locked to a single tier (baseline comparison)."""
-    tier_enum = {"FIXED_NANO": Tier.NANO,
-                 "FIXED_SMALL": Tier.SMALL,
-                 "FIXED_MEDIUM": Tier.MEDIUM}[tier_name]
-
+    """Run every method through the same controller and replay path."""
     records: list[TrialRecord] = []
     with LoadInjector(intensity):
-        with RAMSController(simulate=simulate, policy="threshold") as ctrl:
-            ctrl._current_tier = tier_enum
-            time.sleep(0.4)
-
-            from experiments.utils import intensity_to_pressure
-            for _ in range(n):
-                pressure = intensity_to_pressure(intensity)
-                ctrl.set_pressure_override(pressure)
-                res = ctrl.library.infer(tier_enum)
-                vru = any(
-                    d.get("class", "").lower() in
-                    {"person", "pedestrian", "cyclist", "bicycle"}
-                    for d in res.get("detections", [])
-                )
-                records.append(TrialRecord(
-                    label=tier_name,
-                    group="fixed",
-                    latency_ms=res["latency_ms"],
-                    pressure=pressure,
-                    tier=res["tier"],
-                    n_detections=len(res.get("detections", [])),
-                    vru_detected=vru,
-                    switch_occurred=False,
-                    accuracy_proxy=float(res.get("accuracy_proxy", 0.0)),
-                ))
-    return records
-
-
-def run_policy_trial(
-    policy_name: str,
-    n: int,
-    intensity: float,
-    simulate: bool = True,
-) -> list[TrialRecord]:
-    """Run N inferences with a named policy."""
-    records: list[TrialRecord] = []
-    with LoadInjector(intensity):
-        with RAMSController(simulate=simulate, policy=policy_name) as ctrl:
-            time.sleep(0.4)
+        with RAMSController(simulate=simulate, policy=policy) as ctrl:
+            # Let process-based steady load settle before the replay begins.
+            time.sleep(1.0)
             prev_tier = ctrl.current_tier
-            from experiments.utils import intensity_to_pressure
-            for _ in range(n):
-                ctrl.set_pressure_override(intensity_to_pressure(intensity))
-                res = ctrl.infer()
+            for index in range(n):
+                path = frame_paths[index % len(frame_paths)] if frame_paths else None
+                frame = _read_frame(path) if path else None
+                # Publication runs must use the controller's measured pressure.
+                # The previous unconditional synthetic override used a fixed
+                # pre-calibration pressure mapping, which could disagree with
+                # device-specific calibrated thresholds.  Keep that mechanism
+                # only for simulated runs, where no real telemetry exists.
+                if simulate:
+                    from experiments.utils import intensity_to_pressure
+                    ctrl.set_pressure_override(intensity_to_pressure(intensity))
+                res = ctrl.infer(frame=frame)
                 cur_tier = ctrl.current_tier
                 vru = any(
                     d.get("class", "").lower() in
@@ -123,15 +103,17 @@ def run_policy_trial(
                     for d in res.get("detections", [])
                 )
                 records.append(TrialRecord(
-                    label=policy_name,
-                    group="policy",
-                    latency_ms=res["latency_ms"],
+                    label=label,
+                    group="paired",
+                    latency_ms=res["end_to_end_ms"],
                     pressure=res.get("pressure", 0.0),
                     tier=res["tier"],
                     n_detections=len(res.get("detections", [])),
                     vru_detected=vru,
                     switch_occurred=(cur_tier != prev_tier),
                     accuracy_proxy=float(res.get("accuracy_proxy", 0.0)),
+                    frame_name=path.name if path else "",
+                    block=block,
                 ))
                 prev_tier = cur_tier
     return records
@@ -212,44 +194,73 @@ def pareto_plot(
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run(n: int = 80, simulate: bool = True):
+def run(n: int = 80, simulate: bool = True, frames: str | None = None,
+        blocks: int = 1, seed: int = 20260710, scenarios: list[str] | None = None):
+    """Run paired, frame-aware Pareto cells.
+
+    Each block randomizes method order while every method sees the same frame
+    slice. Paper-facing runs must pass ``frames`` and ``simulate=False``.
+    """
     print("\n" + "═" * 62)
     print("  Experiment 5 — Accuracy–Latency Pareto Frontier")
     print(f"  N={n}  simulate={simulate}")
     print("═" * 62)
 
+    frame_paths = None
+    if frames:
+        directory = Path(frames)
+        frame_paths = sorted(list(directory.glob("*.png")) + list(directory.glob("*.jpg")) +
+                             list(directory.glob("*.jpeg")))
+        if not frame_paths:
+            raise ValueError(f"No replay frames found in {frames}")
+        random.Random(seed).shuffle(frame_paths)
+    elif not simulate:
+        raise ValueError("Real Experiment 5 runs require --frames for paired replay")
+
     all_records: list[TrialRecord] = []
     all_stats = []
+    selected_scenarios = scenarios or list(LOAD_SCENARIOS)
+    unknown_scenarios = set(selected_scenarios) - set(LOAD_SCENARIOS)
+    if unknown_scenarios:
+        raise ValueError(f"Unknown load scenarios: {', '.join(sorted(unknown_scenarios))}")
 
-    for scenario, intensity in LOAD_SCENARIOS.items():
+    for scenario in selected_scenarios:
+        intensity = LOAD_SCENARIOS[scenario]
         print(f"\n  ── Load scenario: {scenario} (intensity={intensity}) ──")
         scenario_points: dict[str, tuple[float, float]] = {}
 
-        # Adaptive policies
-        for policy_name in ALL_POLICIES:
-            print(f"    policy={policy_name} ...", flush=True)
-            recs = run_policy_trial(policy_name, n, intensity, simulate)
-            for r in recs:
-                r.group = scenario
-            all_records.extend(recs)
-            s = compute_stats(recs, label=policy_name, group=scenario)
-            all_stats.append(s)
-            acc_mean = statistics.mean(r.accuracy_proxy for r in recs)
-            scenario_points[policy_name] = (s.mean, acc_mean)
-            print(f"      latency={s.mean:.1f} ms  acc={acc_mean:.3f}")
+        methods: list[tuple[str, str | FixedTierPolicy]] = [(name, name) for name in ALL_POLICIES]
+        methods.extend([
+            ("FIXED_NANO", FixedTierPolicy(Tier.NANO)),
+            ("FIXED_SMALL", FixedTierPolicy(Tier.SMALL)),
+            ("FIXED_MEDIUM", FixedTierPolicy(Tier.MEDIUM)),
+        ])
+        # `n` is deliberately per block, matching the paper replay protocol.
+        # This keeps a 10-block x 200-frame run at the intended sample size.
+        per_block = n
+        grouped: dict[str, list[TrialRecord]] = {label: [] for label, _ in methods}
+        for block in range(blocks):
+            order = methods[:]
+            random.Random(seed + block).shuffle(order)
+            start = block * per_block
+            block_frames = frame_paths[start:start + per_block] if frame_paths else None
+            if frame_paths and not block_frames:
+                block_frames = frame_paths[:per_block]
+            for label, policy in order:
+                print(f"    block={block + 1}/{blocks} method={label} ...", flush=True)
+                recs = run_controller_trial(label, policy, block_frames, per_block,
+                                            intensity, simulate, block)
+                for record in recs:
+                    record.group = scenario
+                grouped[label].extend(recs)
+                all_records.extend(recs)
 
-        # Fixed baselines
-        for tier_name in FIXED_TIERS:
-            print(f"    baseline={tier_name} ...", flush=True)
-            recs = run_fixed_tier(tier_name, n, intensity, simulate)
-            for r in recs:
-                r.group = scenario
-            all_records.extend(recs)
-            s = compute_stats(recs, label=tier_name, group=scenario)
-            all_stats.append(s)
-            acc_mean = statistics.mean(r.accuracy_proxy for r in recs)
-            scenario_points[tier_name] = (s.mean, acc_mean)
-            print(f"      latency={s.mean:.1f} ms  acc={acc_mean:.3f}")
+        for label, recs in grouped.items():
+            stats = compute_stats(recs, label=label, group=scenario)
+            all_stats.append(stats)
+            acc_mean = statistics.mean(record.accuracy_proxy for record in recs)
+            scenario_points[label] = (stats.mean, acc_mean)
+            print(f"      {label}: latency={stats.mean:.1f} ms  acc_proxy={acc_mean:.3f}")
 
         pareto_plot(
             scenario_points,
@@ -265,23 +276,24 @@ def run(n: int = 80, simulate: bool = True):
     )
 
     # ── Save ─────────────────────────────────────────────────────────────────
-    save_records_csv(all_records, RESULTS / "exp5_pareto.csv")
-    save_stats_json(all_stats,   RESULTS / "exp5_pareto.json")
+    scenario_tag = "_".join(selected_scenarios)
+    save_records_csv(all_records, RESULTS / f"exp5_pareto_{scenario_tag}.csv")
+    save_stats_json(all_stats,   RESULTS / f"exp5_pareto_{scenario_tag}.json")
 
     # ── LaTeX ────────────────────────────────────────────────────────────────
     latex = to_latex(
         all_stats,
         caption=(
             "Accuracy–latency operating points for all RAMS policies and "
-            "fixed-tier baselines under moderate and heavy synthetic load. "
-            "Adaptive and safety-tier policies achieve higher accuracy than "
-            "FIXED\\_NANO/SMALL at comparable or lower latency. "
+            "fixed-tier baselines under paired moderate and heavy replay load. "
+            "Accuracy is a tier-level proxy and must be interpreted alongside "
+            "policy-level detection metrics. "
             f"N={n} inferences per condition."
         ),
         label="tab:exp5_pareto",
         highlight_best="mean",
     )
-    tex_path = RESULTS / "exp5_latex.tex"
+    tex_path = RESULTS / f"exp5_latex_{scenario_tag}.tex"
     tex_path.write_text(latex)
     print(f"  LaTeX table → {tex_path}\n")
 
@@ -289,9 +301,21 @@ def run(n: int = 80, simulate: bool = True):
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n",           type=int,  default=80)
+    parser.add_argument("--n",           type=int,  default=80,
+                        help="frames per randomized paired block")
+    parser.add_argument("--frames",      type=str, default=None,
+                        help="KITTI replay directory; required for --no-simulate")
+    parser.add_argument("--blocks",      type=int, default=1,
+                        help="randomized paired blocks per scenario")
+    parser.add_argument("--seed",        type=int, default=20260710)
+    parser.add_argument("--scenarios",   default="moderate,heavy",
+                        help="comma-separated subset of moderate,heavy")
     parser.add_argument("--simulate",    action="store_true", default=True)
     parser.add_argument("--no-simulate", dest="simulate", action="store_false")
     args = parser.parse_args()
-    run(n=args.n, simulate=args.simulate)
+    scenarios = [item.strip() for item in args.scenarios.split(",") if item.strip()]
+    run(n=args.n, simulate=args.simulate, frames=args.frames,
+        blocks=args.blocks, seed=args.seed, scenarios=scenarios)

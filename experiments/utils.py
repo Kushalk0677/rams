@@ -11,7 +11,6 @@ import json
 import math
 import statistics
 import sys
-import threading
 import time
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -21,44 +20,10 @@ from typing import Optional
 # ── repo root on path ────────────────────────────────────────────────────────
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from benchmark.run import LoadInjector
 from rams.controller import RAMSController
 from rams.policy import BasePolicy, make_policy
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Load injector
-# ─────────────────────────────────────────────────────────────────────────────
-
-class LoadInjector:
-    def __init__(self, intensity: float):
-        self.intensity = max(0.0, min(1.0, intensity))
-        self._stop = threading.Event()
-        self._threads: list[threading.Thread] = []
-
-    def _burn(self):
-        while not self._stop.is_set():
-            _ = sum(i * i for i in range(2000))
-            time.sleep(max(0.0, (1.0 - self.intensity) * 0.0005))
-
-    def start(self):
-        n = max(0, round(self.intensity * 4))
-        for _ in range(n):
-            t = threading.Thread(target=self._burn, daemon=True)
-            t.start()
-            self._threads.append(t)
-
-    def stop(self):
-        self._stop.set()
-        for t in self._threads:
-            t.join(timeout=1.0)
-
-    def __enter__(self):  self.start();  return self
-    def __exit__(self, *_): self.stop()
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Trial record
-# ─────────────────────────────────────────────────────────────────────────────
 
 @dataclass
 class TrialRecord:
@@ -71,6 +36,8 @@ class TrialRecord:
     vru_detected:   bool  = False
     switch_occurred:bool  = False
     accuracy_proxy: float = 0.0   # per-inference mAP50 proxy
+    frame_name:     str = ""
+    block:          int = 0
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -454,5 +421,3 @@ def intensity_to_pressure(intensity: float, noise: float = 0.03) -> float:
                 base = INTENSITY_TO_PRESSURE[lo] * (1 - t) + INTENSITY_TO_PRESSURE[hi] * t
                 break
     return max(0.0, min(1.0, base + random.gauss(0, noise)))
-
-

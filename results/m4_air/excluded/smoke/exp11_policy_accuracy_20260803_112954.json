@@ -1,0 +1,190 @@
+{
+  "groups": [
+    {
+      "policy": "adaptive",
+      "policy_label": "Variance-adaptive EWMA",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 16,
+        "fp": 164,
+        "fn": 13,
+        "precision": 0.0889,
+        "recall": 0.5517,
+        "f1": 0.1531,
+        "false_negative_rate": 0.4483,
+        "recall_ci95": [
+          0.3755,
+          0.7159
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 63,
+        "fp": 498,
+        "fn": 32,
+        "precision": 0.1123,
+        "recall": 0.6632,
+        "f1": 0.1921,
+        "false_negative_rate": 0.3368,
+        "recall_ci95": [
+          0.5634,
+          0.7502
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 7,
+        "MEDIUM": 13
+      }
+    },
+    {
+      "policy": "predictive",
+      "policy_label": "EWMA-smoothed",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 16,
+        "fp": 160,
+        "fn": 13,
+        "precision": 0.0909,
+        "recall": 0.5517,
+        "f1": 0.1561,
+        "false_negative_rate": 0.4483,
+        "recall_ci95": [
+          0.3755,
+          0.7159
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 58,
+        "fp": 434,
+        "fn": 37,
+        "precision": 0.1179,
+        "recall": 0.6105,
+        "f1": 0.1976,
+        "false_negative_rate": 0.3895,
+        "recall_ci95": [
+          0.51,
+          0.7025
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 11,
+        "MEDIUM": 9
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 16,
+        "fp": 132,
+        "fn": 13,
+        "precision": 0.1081,
+        "recall": 0.5517,
+        "f1": 0.1808,
+        "false_negative_rate": 0.4483,
+        "recall_ci95": [
+          0.3755,
+          0.7159
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 54,
+        "fp": 386,
+        "fn": 41,
+        "precision": 0.1227,
+        "recall": 0.5684,
+        "f1": 0.2019,
+        "false_negative_rate": 0.4316,
+        "recall_ci95": [
+          0.4681,
+          0.6634
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 15,
+        "MEDIUM": 5
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 16,
+        "fp": 159,
+        "fn": 13,
+        "precision": 0.0914,
+        "recall": 0.5517,
+        "f1": 0.1569,
+        "false_negative_rate": 0.4483,
+        "recall_ci95": [
+          0.3755,
+          0.7159
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 58,
+        "fp": 473,
+        "fn": 37,
+        "precision": 0.1092,
+        "recall": 0.6105,
+        "f1": 0.1853,
+        "false_negative_rate": 0.3895,
+        "recall_ci95": [
+          0.51,
+          0.7025
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 6,
+        "MEDIUM": 14
+      }
+    },
+    {
+      "policy": "threshold",
+      "policy_label": "Threshold",
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "vru": {
+        "tp": 16,
+        "fp": 163,
+        "fn": 13,
+        "precision": 0.0894,
+        "recall": 0.5517,
+        "f1": 0.1538,
+        "false_negative_rate": 0.4483,
+        "recall_ci95": [
+          0.3755,
+          0.7159
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 60,
+        "fp": 472,
+        "fn": 35,
+        "precision": 0.1128,
+        "recall": 0.6316,
+        "f1": 0.1914,
+        "false_negative_rate": 0.3684,
+        "recall_ci95": [
+          0.5312,
+          0.7217
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 9,
+        "MEDIUM": 11
+      }
+    }
+  ],
+  "simulated": false
+}

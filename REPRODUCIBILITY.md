@@ -1,204 +1,159 @@
-# Reproducibility Guide
+# RAMS Reproducibility Guide
 
-This document explains how to reproduce RAMS experiments in a way that is
-consistent with the project artifacts used for evaluation.
+This guide covers the current RAMS evaluation workflow. It produces runtime,
+telemetry, tier-accuracy, policy-accuracy, and VRU-retention artifacts from
+real replay frames. Simulation is useful for setup checks only and must not be
+used as paper evidence.
 
-The repository already includes a curated `results/` snapshot for the main
-devices, so reproduction can be checked against those stored artifacts rather
-than starting from an empty output tree.
+The verified package archive in `packages/` is for the Windows CPU-ONNX
+workflow. Use this guide directly for source-based Jetson and macOS runs.
 
-## 1. Scope
+## 1. Scope and required assets
 
-This repository supports four practical levels of reproduction:
+The repository does not include datasets, model checkpoints, ONNX exports, or
+TensorRT engines. A full run requires:
 
-1. **Simulation smoke reproduction**
-   - validates controller logic, switching, and benchmark paths
-   - no datasets or model files required
+- YOLOv8 NANO, SMALL, and MEDIUM checkpoints and ONNX exports.
+- KITTI 2D object-detection training images and labels, arranged as a fixed
+  1,500-frame validation replay.
+- COCO `val2017` images and matching Ultralytics YOLO-format labels.
+- A completed device energy-profile JSON for runtime phases.
 
-2. **ONNX runtime reproduction**
-   - Windows/Linux CPU baseline path
-   - suitable for `exp7`, `exp8`, `exp9`, and full run-all
+The minimum layouts are:
 
-3. **Jetson ONNX reproduction**
-   - same controller on Jetson without TensorRT acceleration
+```text
+<data-root>/kitti/images/val/
+<data-root>/kitti/labels/val/
+<data-root>/coco/images/val2017/
+<data-root>/coco/labels/val2017/
+```
 
-4. **Jetson TensorRT reproduction**
-   - accelerated embedded deployment path
-   - platform-specific and documented separately in the Jetson runbook
+Create the KITTI replay from sorted training-frame indices 5981 through 7480,
+inclusive. Use exactly the same split across devices.
 
-## 2. Dependencies
-
-### Base
+## 2. Set up the environment
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+# Windows PowerShell: .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 pip install -r requirements.txt
-pip install -e .
-```
-
-### Inference
-
-```bash
 pip install -r requirements-inference.txt
+pip install -e .
+python -c "from rams import RAMSController; print('RAMS import OK')"
 ```
 
-Jetson TensorRT users should not assume generic pip packages are sufficient.
-Follow `docs/RAMS_Jetson_Runbook.md`.
+On NVIDIA systems, also install `nvidia-ml-py` when NVML telemetry is
+available. On Apple Silicon, CPU ONNX is the reference path. The optional
+Core ML backend requires an ONNX Runtime build containing
+`CoreMLExecutionProvider`; see the macOS package README.
 
-## 3. External Assets Required
+## 3. Download and export models
 
-The following assets are expected locally but are not versioned:
-
-- YOLO model weights or exports:
-  - `yolov8n.pt` or `yolov8n.onnx`
-  - `yolov8s.pt` or `yolov8s.onnx`
-  - `yolov8m.pt` or `yolov8m.onnx`
-- KITTI validation images/labels
-- optional COCO validation images/labels
-- Jetson TensorRT `.engine` files for the TRT backend
-
-## 3.1 Included Curated Results
-
-The repository includes final curated outputs for:
-
-- `results/i7_1165G7/`
-- `results/i7_13700F/`
-- `results/raspberry_pi5/`
-- `results/jetson_orin/onnx/`
-- `results/jetson_orin/trt/`
-
-These folders are intended as reference artifacts for comparison and paper
-traceability. Fresh runs may produce additional local files, but the included
-snapshot should remain stable.
-
-## 4. Minimum Smoke Check
-
-Run this first on any machine:
+Run from the repository root:
 
 ```bash
-python -m benchmark.run --n 5 --policy threshold --profile heavy --simulate
+python -c "from ultralytics import YOLO; [YOLO(name) for name in ('yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt')]"
+python -c "from ultralytics import YOLO; YOLO('yolov8n.pt').export(format='onnx', imgsz=320, opset=12); YOLO('yolov8s.pt').export(format='onnx', imgsz=416, opset=12); YOLO('yolov8m.pt').export(format='onnx', imgsz=640, opset=12)"
 ```
 
-Expected outcome:
+The expected input sizes are NANO 320, SMALL 416, and MEDIUM 640.
 
-- the command exits successfully
-- `results/` contains a timestamped JSON/CSV output pair
+## 4. Create the energy profile
 
-## 5. Calibration
-
-Before any real-device run, calibrate locally:
+Copy the template and document the actual device, operating mode, and power
+basis:
 
 ```bash
-python scripts/calibrate.py --seconds 30 --apply
+cp configs/energy_profile.example.json configs/energy_profile_<device>.json
 ```
 
-This writes a calibration JSON to `results/` and updates the runtime thresholds
-used by the policy layer.
+Energy fields are estimates based on the documented profile and recorded
+telemetry. They are not physical power measurements. For CPU-only paths where
+there is no GPU-utilization telemetry source, keep `gpu_dynamic_w` at zero.
 
-## 6. Paper-Facing Commands
+## 5. Smoke check
 
-### 6.1 Jetson TensorRT headline result
-
-This is the main Jetson latency/accuracy tradeoff artifact.
-
-Run:
+Use real KITTI and COCO paths. The smoke mode confirms installation only.
 
 ```bash
-python experiments/exp5_pareto.py --no-simulate --n 200
+python scripts/run_paper_suite.py --platform windows --backend onnx --smoke \
+  --device <device-label> \
+  --frames <data-root>/kitti/images/val \
+  --kitti-labels <data-root>/kitti/labels/val \
+  --coco-images <data-root>/coco/images/val2017 \
+  --coco-labels <data-root>/coco/labels/val2017
 ```
 
-Primary artifact:
+Do not include smoke outputs in paper tables.
 
-- `results/exp5_pareto.json`
+## 6. Full phased workflow
 
-The paper headline uses the Jetson TensorRT heavy-load row comparing:
-
-- `safety2`
-- `FIXED_MEDIUM`
-
-### 6.2 Safety-aware policy comparison
-
-Run:
+Set a platform and an explicit backend. Use `onnx` for the CPU reference path,
+`tensorrt` only with engines built on the exact target NVIDIA device, and
+`coreml` only after its provider check succeeds.
 
 ```bash
-python experiments/exp7_swas.py --no-simulate --n 100 --frames <KITTI_IMAGE_DIR>
+python scripts/run_paper_suite.py --phase calibration --platform <platform> \
+  --device <device-label>
+
+python scripts/run_paper_suite.py --phase runtime1 --platform <platform> --backend <backend> \
+  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
+  --coco-images <coco-images> --coco-labels <coco-labels> \
+  --energy-profile configs/energy_profile_<device>.json
+
+python scripts/run_paper_suite.py --phase runtime2 --platform <platform> --backend <backend> \
+  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
+  --coco-images <coco-images> --coco-labels <coco-labels> \
+  --energy-profile configs/energy_profile_<device>.json
+
+python scripts/run_paper_suite.py --phase runtime3 --platform <platform> --backend <backend> \
+  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
+  --coco-images <coco-images> --coco-labels <coco-labels> \
+  --energy-profile configs/energy_profile_<device>.json
+
+python scripts/run_paper_suite.py --phase runtime4 --platform <platform> --backend <backend> \
+  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
+  --coco-images <coco-images> --coco-labels <coco-labels> \
+  --energy-profile configs/energy_profile_<device>.json
+
+python scripts/run_paper_suite.py --phase accuracy --platform <platform> --backend <backend> \
+  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
+  --coco-images <coco-images> --coco-labels <coco-labels>
+
+python scripts/run_paper_suite.py --phase retention --platform <platform> --backend <backend> \
+  --device <device-label> --frames <kitti-images> --kitti-labels <kitti-labels> \
+  --coco-images <coco-images> --coco-labels <coco-labels>
 ```
 
-Primary artifacts:
+The suite runs 10 independent blocks of 200 frames for each reported runtime
+policy and load setting. `runtime4` is the process-isolated burst protocol.
+`scripts/run_phase2d_then_phase3.py` runs `runtime4` and `accuracy` back to
+back when the same configuration should be preserved.
 
-- `results/exp7_swas.json`
-- `results/exp7_swas.csv`
+## 7. Required retained artifacts
 
-### 6.3 Live KITTI VRU recall
+Keep the entire `results/` directory. A complete runtime run includes:
 
-Run:
+- Raw CSV records with timing components and telemetry.
+- JSON summaries with block-bootstrap latency intervals.
+- Replay manifests containing ordered frame hashes and the random seed.
+- Calibration snapshots and the completed energy profile.
+- `exp5_pareto_*`, `exp8_accuracy_*`, `exp11_policy_accuracy_*`, and
+  `exp12_retention_sensitivity_*` outputs.
 
-```bash
-python experiments/exp8_accuracy_per_tier.py \
-  --dataset kitti \
-  --images <KITTI_IMAGE_DIR> \
-  --labels <KITTI_LABEL_DIR> \
-  --max-images 300
-```
+For COCO mAP, each tier must state `map_source: ultralytics_val`. This is
+supplementary tier context. Policy-level KITTI recall is the runtime-policy
+accuracy evidence.
 
-Primary artifacts:
+## 8. Interpretation limits
 
-- `results/exp8_accuracy_kitti.json`
-- `results/exp8_accuracy_kitti.csv`
-
-### 6.4 Cross-device ONNX runtime comparison
-
-Run on each ONNX host:
-
-```bash
-python experiments/exp9_multidevice.py \
-  --device <DEVICE_NAME> \
-  --backend onnx \
-  --frames <KITTI_IMAGE_DIR> \
-  --n 100
-```
-
-Then aggregate:
-
-```bash
-python experiments/exp9_aggregate.py
-```
-
-Primary artifacts:
-
-- `results/multidevice/exp9_<device>_onnx_<timestamp>.json`
-- `results/exp9_summary.json`
-
-## 7. Full Suite Reproduction
-
-### Windows / general ONNX path
-
-```powershell
-python scripts\calibrate.py --seconds 30 --apply
-
-python experiments\complete_runall.py `
-  --no-simulate `
-  --n 100 `
-  --transient-total-n 180 `
-  --frames <KITTI_IMAGE_DIR> `
-  --kitti-images <KITTI_IMAGE_DIR> `
-  --kitti-labels <KITTI_LABEL_DIR> `
-  --device <DEVICE_NAME> `
-  --backend onnx
-```
-
-### Jetson path
-
-See:
-
-- `docs/RAMS_Jetson_Runbook.md`
-
-## 8. Interpretation Notes
-
-Not every experiment makes the same kind of claim:
-
-- `exp5` and `exp7` are best interpreted as **within-setting policy comparisons**
-  because they use tier-level accuracy proxies.
-- `exp8` is the **live safety envelope** because it measures recall directly.
-- `exp9` is the **cross-device runtime comparison**.
-
-This distinction is important for honest reproduction and reporting.
+- VRU retention is reactive. It does not establish vehicle safety or repair an
+  initial detector miss.
+- TDP-profile energy is an estimate, not a power measurement.
+- Never pool results from different devices or backends into one confidence
+  interval.
+- Do not reuse TensorRT engines across different Jetson device models.
+- Label any zero-shot cross-dataset KITTI result and state its mapping and
+  evaluation limitations.

@@ -20,6 +20,13 @@ datasets/
 
 # Archives and temporary packaging
 *.zip
+# Curated platform packages are intentional repository artifacts, not
+# temporary archives. Curated results are stored as browsable directories.
+!packages/*_new.zip
+!packages/RAMS_Windows_validation_process_v3_20260820.zip
+!results/
+!results/m4_air/
+!results/i7_11800H/
 tmp_*/
 
 # Paper build artifacts

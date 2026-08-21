@@ -1,0 +1,81 @@
+{
+  "groups": [
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "min_conf": 0.25,
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "n_gt_vru_frames": 7,
+      "detected_vru_given_gt": 3,
+      "detector_trigger_recall": 0.4286,
+      "retained_non_nano_given_gt": 1.0,
+      "lock_after_detection_rate": 1.0,
+      "max_gt_vru_streak": 2,
+      "max_lock_streak": 16,
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 20,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "min_conf": 0.4,
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "n_gt_vru_frames": 7,
+      "detected_vru_given_gt": 3,
+      "detector_trigger_recall": 0.4286,
+      "retained_non_nano_given_gt": 1.0,
+      "lock_after_detection_rate": 1.0,
+      "max_gt_vru_streak": 2,
+      "max_lock_streak": 16,
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 20,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "min_conf": 0.25,
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "n_gt_vru_frames": 7,
+      "detected_vru_given_gt": 3,
+      "detector_trigger_recall": 0.4286,
+      "retained_non_nano_given_gt": 1.0,
+      "lock_after_detection_rate": 1.0,
+      "max_gt_vru_streak": 2,
+      "max_lock_streak": 2,
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 10,
+        "MEDIUM": 10
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "min_conf": 0.4,
+      "load_profile": "moderate",
+      "n_frames": 20,
+      "n_gt_vru_frames": 7,
+      "detected_vru_given_gt": 3,
+      "detector_trigger_recall": 0.4286,
+      "retained_non_nano_given_gt": 1.0,
+      "lock_after_detection_rate": 1.0,
+      "max_gt_vru_streak": 2,
+      "max_lock_streak": 5,
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 14,
+        "MEDIUM": 6
+      }
+    }
+  ],
+  "n_frames": 20
+}

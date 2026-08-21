@@ -1,0 +1,81 @@
+{
+  "groups": [
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "min_conf": 0.25,
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "n_gt_vru_frames": 482,
+      "detected_vru_given_gt": 349,
+      "detector_trigger_recall": 0.7241,
+      "retained_non_nano_given_gt": 0.9979,
+      "lock_after_detection_rate": 1.0,
+      "max_gt_vru_streak": 6,
+      "max_lock_streak": 122,
+      "tier_counts": {
+        "NANO": 1,
+        "SMALL": 826,
+        "MEDIUM": 673
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "min_conf": 0.4,
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "n_gt_vru_frames": 482,
+      "detected_vru_given_gt": 332,
+      "detector_trigger_recall": 0.6888,
+      "retained_non_nano_given_gt": 0.9917,
+      "lock_after_detection_rate": 0.9547,
+      "max_gt_vru_streak": 6,
+      "max_lock_streak": 75,
+      "tier_counts": {
+        "NANO": 19,
+        "SMALL": 899,
+        "MEDIUM": 582
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "min_conf": 0.25,
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "n_gt_vru_frames": 482,
+      "detected_vru_given_gt": 370,
+      "detector_trigger_recall": 0.7676,
+      "retained_non_nano_given_gt": 0.9979,
+      "lock_after_detection_rate": 1.0,
+      "max_gt_vru_streak": 6,
+      "max_lock_streak": 39,
+      "tier_counts": {
+        "NANO": 2,
+        "SMALL": 434,
+        "MEDIUM": 1064
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "min_conf": 0.4,
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "n_gt_vru_frames": 482,
+      "detected_vru_given_gt": 359,
+      "detector_trigger_recall": 0.7448,
+      "retained_non_nano_given_gt": 1.0,
+      "lock_after_detection_rate": 0.9111,
+      "max_gt_vru_streak": 6,
+      "max_lock_streak": 49,
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 482,
+        "MEDIUM": 1018
+      }
+    }
+  ],
+  "n_frames": 1500
+}

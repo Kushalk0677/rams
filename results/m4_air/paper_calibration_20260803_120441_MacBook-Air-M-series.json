@@ -1,0 +1,63 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "platform_target": "macos",
+    "device": "MacBook-Air-M-series",
+    "backend": "onnx",
+    "frames": "/Users/georgexu/Downloads/macos_silicon_package_new/data/kitti/images/val",
+    "kitti_images": "/Users/georgexu/Downloads/macos_silicon_package_new/data/kitti/images/val",
+    "kitti_labels": "/Users/georgexu/Downloads/macos_silicon_package_new/data/kitti/labels/val",
+    "coco_images": "/Users/georgexu/Downloads/macos_silicon_package_new/data/coco/images/val2017",
+    "coco_labels": "/Users/georgexu/Downloads/macos_silicon_package_new/data/coco/labels/val2017",
+    "n_per_block": 200,
+    "blocks": 10,
+    "smoke": false,
+    "simulated": false,
+    "phase": "calibration",
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "os": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "energy_profile": null,
+    "requested_backend_env": "onnx",
+    "load_protocol": {
+      "steady_profiles": {
+        "injector": "thread_steady_v1"
+      },
+      "burst_profile": {
+        "injector": "process_isolated_burst_v2",
+        "reserved_logical_cpus": 1,
+        "burst_peak_intensity": 0.85,
+        "burst_on_frames": 20,
+        "burst_off_frames": 80,
+        "burst_settle_s": 0.2
+      }
+    }
+  },
+  {
+    "label": "calibration_config_before",
+    "path": "/Users/georgexu/Downloads/macos_silicon_package_new/results/calibration_snapshots/default_before_calibration_20260803_120441.yaml",
+    "ok": true
+  },
+  {
+    "label": "calibration",
+    "command": [
+      "/Users/georgexu/Downloads/macos_silicon_package_new/.venv/bin/python",
+      "scripts/calibrate.py",
+      "--seconds",
+      "30",
+      "--apply"
+    ],
+    "returncode": 0,
+    "elapsed_s": 33.81,
+    "ok": true
+  },
+  {
+    "label": "calibration_config_after",
+    "path": "/Users/georgexu/Downloads/macos_silicon_package_new/results/calibration_snapshots/default_after_calibration_20260803_120441.yaml",
+    "calibration_records": [
+      "/Users/georgexu/Downloads/macos_silicon_package_new/results/calibration_20260803_120515.json"
+    ],
+    "ok": true
+  }
+]

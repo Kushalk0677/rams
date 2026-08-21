@@ -4,7 +4,7 @@ setup(
     name="rams",
     version="0.1.0",
     description="Resource-Adaptive Model Switching for Edge AI",
-    author="Kushal Khemani, Evan Leri, George Xu",
+    author="Kushal Khemani, Evan Leri, Amit Hod, George Xu",
     packages=find_packages(),
     python_requires=">=3.9",
     install_requires=[
@@ -19,7 +19,7 @@ setup(
         "inference": [
             "opencv-python>=4.8",
             "onnxruntime>=1.17",
-            "ultralytics>=8.0",
+            "ultralytics==8.4.92",
             "torch>=2.0",
             "torchvision>=0.15",
         ],
@@ -27,7 +27,7 @@ setup(
             "matplotlib>=3.8",
             "opencv-python>=4.8",
             "onnxruntime>=1.17",
-            "ultralytics>=8.0",
+            "ultralytics==8.4.92",
             "torch>=2.0",
             "torchvision>=0.15",
         ],
