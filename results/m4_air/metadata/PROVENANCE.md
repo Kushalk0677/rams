@@ -8,7 +8,7 @@ Generated 2026-08-03. Read this before using any file in this archive.
 
 | | |
 |---|---|
-| Device | MacBook Air, Apple Silicon (arm64) |
+| Device | Apple M4 MacBook Air, 16 GB unified memory (arm64) |
 | OS | macOS 26.5.1 |
 | Python | 3.12.13 (Clang 21.0.0) |
 | Inference backend | ONNX Runtime 1.28.0, `CPUExecutionProvider` |
