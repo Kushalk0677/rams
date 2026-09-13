@@ -1,0 +1,881 @@
+
+══════════════════════════════════════════════════════════════
+  Experiment 5 — Accuracy–Latency Pareto Frontier
+  N=200  simulate=False
+══════════════════════════════════════════════════════════════
+
+  ── Load scenario: heavy (intensity=0.75) ──
+    block=1/10 method=FIXED_SMALL ...
+23:13:31  INFO     [RAMS] Starting resource monitor ...
+23:13:31  INFO     [RAMS] Loading model tiers ...
+23:13:35  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:13:36  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:13:37  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:13:37  INFO     [RAMS] Controller ready. Policy: fixed
+23:13:45  INFO     [RAMS] Controller stopped.
+    block=1/10 method=FIXED_NANO ...
+23:13:45  INFO     [RAMS] Starting resource monitor ...
+23:13:45  INFO     [RAMS] Loading model tiers ...
+23:13:45  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:13:45  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:13:46  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:13:46  INFO     [RAMS] Controller ready. Policy: fixed
+23:13:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.586)
+23:13:54  INFO     [RAMS] Controller stopped.
+    block=1/10 method=threshold ...
+23:13:54  INFO     [RAMS] Starting resource monitor ...
+23:13:54  INFO     [RAMS] Loading model tiers ...
+23:13:54  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:13:54  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:13:55  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:13:55  INFO     [RAMS] Controller ready. Policy: threshold
+23:13:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.692)
+23:14:03  INFO     [RAMS] Controller stopped.
+    block=1/10 method=predictive ...
+23:14:03  INFO     [RAMS] Starting resource monitor ...
+23:14:03  INFO     [RAMS] Loading model tiers ...
+23:14:04  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:14:04  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:14:05  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:14:05  INFO     [RAMS] Controller ready. Policy: predictive
+23:14:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.590)
+23:14:12  INFO     [RAMS] Controller stopped.
+    block=1/10 method=adaptive ...
+23:14:12  INFO     [RAMS] Starting resource monitor ...
+23:14:12  INFO     [RAMS] Loading model tiers ...
+23:14:13  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:14:13  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:14:14  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:14:14  INFO     [RAMS] Controller ready. Policy: adaptive
+23:14:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.633)
+23:14:21  INFO     [RAMS] Controller stopped.
+    block=1/10 method=FIXED_MEDIUM ...
+23:14:22  INFO     [RAMS] Starting resource monitor ...
+23:14:22  INFO     [RAMS] Loading model tiers ...
+23:14:22  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:14:22  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:14:23  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:14:23  INFO     [RAMS] Controller ready. Policy: fixed
+23:14:24  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.630)
+23:14:32  INFO     [RAMS] Controller stopped.
+    block=1/10 method=safety2 ...
+23:14:32  INFO     [RAMS] Starting resource monitor ...
+23:14:32  INFO     [RAMS] Loading model tiers ...
+23:14:32  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:14:32  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:14:33  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:14:33  INFO     [RAMS] Controller ready. Policy: safety2
+23:14:35  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.687)
+23:14:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.644)
+23:14:35  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.700)
+23:14:36  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+23:14:37  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.722)
+23:14:38  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.675)
+23:14:38  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.675)
+23:14:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.686)
+23:14:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.686)
+23:14:39  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.644)
+23:14:40  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.702)
+23:14:41  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.747)
+23:14:41  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+23:14:42  INFO     [RAMS] Controller stopped.
+    block=1/10 method=safety ...
+23:14:42  INFO     [RAMS] Starting resource monitor ...
+23:14:42  INFO     [RAMS] Loading model tiers ...
+23:14:42  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:14:43  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:14:44  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:14:44  INFO     [RAMS] Controller ready. Policy: safety
+23:14:51  INFO     [RAMS] Controller stopped.
+    block=2/10 method=predictive ...
+23:14:52  INFO     [RAMS] Starting resource monitor ...
+23:14:52  INFO     [RAMS] Loading model tiers ...
+23:14:52  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:14:52  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:14:53  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:14:53  INFO     [RAMS] Controller ready. Policy: predictive
+23:14:54  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.597)
+23:15:00  INFO     [RAMS] Controller stopped.
+    block=2/10 method=FIXED_NANO ...
+23:15:00  INFO     [RAMS] Starting resource monitor ...
+23:15:00  INFO     [RAMS] Loading model tiers ...
+23:15:01  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:01  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:15:02  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:15:02  INFO     [RAMS] Controller ready. Policy: fixed
+23:15:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.629)
+23:15:10  INFO     [RAMS] Controller stopped.
+    block=2/10 method=safety ...
+23:15:10  INFO     [RAMS] Starting resource monitor ...
+23:15:10  INFO     [RAMS] Loading model tiers ...
+23:15:10  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:11  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:15:11  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:15:11  INFO     [RAMS] Controller ready. Policy: safety
+23:15:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.585)
+23:15:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.676)
+23:15:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.723)
+23:15:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.655)
+23:15:19  INFO     [RAMS] Controller stopped.
+    block=2/10 method=FIXED_MEDIUM ...
+23:15:19  INFO     [RAMS] Starting resource monitor ...
+23:15:19  INFO     [RAMS] Loading model tiers ...
+23:15:19  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:20  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:15:20  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:15:20  INFO     [RAMS] Controller ready. Policy: fixed
+23:15:21  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.589)
+23:15:30  INFO     [RAMS] Controller stopped.
+    block=2/10 method=adaptive ...
+23:15:30  INFO     [RAMS] Starting resource monitor ...
+23:15:30  INFO     [RAMS] Loading model tiers ...
+23:15:30  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:30  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:15:31  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:15:31  INFO     [RAMS] Controller ready. Policy: adaptive
+23:15:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.608)
+23:15:39  INFO     [RAMS] Controller stopped.
+    block=2/10 method=threshold ...
+23:15:39  INFO     [RAMS] Starting resource monitor ...
+23:15:39  INFO     [RAMS] Loading model tiers ...
+23:15:39  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:40  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:15:40  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:15:40  INFO     [RAMS] Controller ready. Policy: threshold
+23:15:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.602)
+23:15:48  INFO     [RAMS] Controller stopped.
+    block=2/10 method=safety2 ...
+23:15:48  INFO     [RAMS] Starting resource monitor ...
+23:15:48  INFO     [RAMS] Loading model tiers ...
+23:15:49  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:49  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:15:50  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:15:50  INFO     [RAMS] Controller ready. Policy: safety2
+23:15:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.632)
+23:15:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.699)
+23:15:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.699)
+23:15:52  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.725)
+23:15:52  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.651)
+23:15:53  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.751)
+23:15:54  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.651)
+23:15:55  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.753)
+23:15:55  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.682)
+23:15:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.714)
+23:15:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.663)
+23:15:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.651)
+23:15:58  INFO     [RAMS] Controller stopped.
+    block=2/10 method=FIXED_SMALL ...
+23:15:58  INFO     [RAMS] Starting resource monitor ...
+23:15:58  INFO     [RAMS] Loading model tiers ...
+23:15:58  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:15:59  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:00  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:00  INFO     [RAMS] Controller ready. Policy: fixed
+23:16:07  INFO     [RAMS] Controller stopped.
+    block=3/10 method=threshold ...
+23:16:07  INFO     [RAMS] Starting resource monitor ...
+23:16:08  INFO     [RAMS] Loading model tiers ...
+23:16:08  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:16:08  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:09  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:09  INFO     [RAMS] Controller ready. Policy: threshold
+23:16:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.711)
+23:16:17  INFO     [RAMS] Controller stopped.
+    block=3/10 method=safety2 ...
+23:16:17  INFO     [RAMS] Starting resource monitor ...
+23:16:17  INFO     [RAMS] Loading model tiers ...
+23:16:17  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:16:17  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:18  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:18  INFO     [RAMS] Controller ready. Policy: safety2
+23:16:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.601)
+23:16:19  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.601)
+23:16:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+23:16:20  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.704)
+23:16:20  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.647)
+23:16:21  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.683)
+23:16:21  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.655)
+23:16:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.655)
+23:16:23  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.718)
+23:16:24  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.660)
+23:16:25  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.724)
+23:16:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.660)
+23:16:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.685)
+23:16:26  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.671)
+23:16:27  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.694)
+23:16:27  INFO     [RAMS] Controller stopped.
+    block=3/10 method=FIXED_NANO ...
+23:16:27  INFO     [RAMS] Starting resource monitor ...
+23:16:27  INFO     [RAMS] Loading model tiers ...
+23:16:27  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:16:27  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:28  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:28  INFO     [RAMS] Controller ready. Policy: fixed
+23:16:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.655)
+23:16:36  INFO     [RAMS] Controller stopped.
+    block=3/10 method=FIXED_SMALL ...
+23:16:36  INFO     [RAMS] Starting resource monitor ...
+23:16:36  INFO     [RAMS] Loading model tiers ...
+23:16:37  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:16:37  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:38  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:38  INFO     [RAMS] Controller ready. Policy: fixed
+23:16:46  INFO     [RAMS] Controller stopped.
+    block=3/10 method=predictive ...
+23:16:46  INFO     [RAMS] Starting resource monitor ...
+23:16:46  INFO     [RAMS] Loading model tiers ...
+23:16:46  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:16:46  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:47  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:47  INFO     [RAMS] Controller ready. Policy: predictive
+23:16:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:16:55  INFO     [RAMS] Controller stopped.
+    block=3/10 method=adaptive ...
+23:16:55  INFO     [RAMS] Starting resource monitor ...
+23:16:55  INFO     [RAMS] Loading model tiers ...
+23:16:55  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:16:56  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:16:56  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:16:56  INFO     [RAMS] Controller ready. Policy: adaptive
+23:16:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:17:04  INFO     [RAMS] Controller stopped.
+    block=3/10 method=FIXED_MEDIUM ...
+23:17:04  INFO     [RAMS] Starting resource monitor ...
+23:17:04  INFO     [RAMS] Loading model tiers ...
+23:17:04  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:17:05  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:17:05  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:17:05  INFO     [RAMS] Controller ready. Policy: fixed
+23:17:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.587)
+23:17:15  INFO     [RAMS] Controller stopped.
+    block=3/10 method=safety ...
+23:17:15  INFO     [RAMS] Starting resource monitor ...
+23:17:15  INFO     [RAMS] Loading model tiers ...
+23:17:15  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:17:15  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:17:16  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:17:16  INFO     [RAMS] Controller ready. Policy: safety
+23:17:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.674)
+23:17:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.674)
+23:17:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.682)
+23:17:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.682)
+23:17:24  INFO     [RAMS] Controller stopped.
+    block=4/10 method=predictive ...
+23:17:24  INFO     [RAMS] Starting resource monitor ...
+23:17:24  INFO     [RAMS] Loading model tiers ...
+23:17:24  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:17:25  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:17:25  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:17:25  INFO     [RAMS] Controller ready. Policy: predictive
+23:17:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:17:33  INFO     [RAMS] Controller stopped.
+    block=4/10 method=FIXED_NANO ...
+23:17:33  INFO     [RAMS] Starting resource monitor ...
+23:17:33  INFO     [RAMS] Loading model tiers ...
+23:17:33  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:17:34  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:17:34  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:17:34  INFO     [RAMS] Controller ready. Policy: fixed
+23:17:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.653)
+23:17:42  INFO     [RAMS] Controller stopped.
+    block=4/10 method=FIXED_SMALL ...
+23:17:42  INFO     [RAMS] Starting resource monitor ...
+23:17:42  INFO     [RAMS] Loading model tiers ...
+23:17:42  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:17:43  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:17:44  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:17:44  INFO     [RAMS] Controller ready. Policy: fixed
+23:17:51  INFO     [RAMS] Controller stopped.
+    block=4/10 method=adaptive ...
+23:17:51  INFO     [RAMS] Starting resource monitor ...
+23:17:51  INFO     [RAMS] Loading model tiers ...
+23:17:51  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:17:52  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:17:53  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:17:53  INFO     [RAMS] Controller ready. Policy: adaptive
+23:17:54  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:18:00  INFO     [RAMS] Controller stopped.
+    block=4/10 method=threshold ...
+23:18:01  INFO     [RAMS] Starting resource monitor ...
+23:18:01  INFO     [RAMS] Loading model tiers ...
+23:18:01  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:18:01  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:18:02  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:18:02  INFO     [RAMS] Controller ready. Policy: threshold
+23:18:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+23:18:09  INFO     [RAMS] Controller stopped.
+    block=4/10 method=FIXED_MEDIUM ...
+23:18:09  INFO     [RAMS] Starting resource monitor ...
+23:18:09  INFO     [RAMS] Loading model tiers ...
+23:18:10  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:18:10  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:18:11  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:18:11  INFO     [RAMS] Controller ready. Policy: fixed
+23:18:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.592)
+23:18:20  INFO     [RAMS] Controller stopped.
+    block=4/10 method=safety ...
+23:18:20  INFO     [RAMS] Starting resource monitor ...
+23:18:20  INFO     [RAMS] Loading model tiers ...
+23:18:20  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:18:21  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:18:22  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:18:22  INFO     [RAMS] Controller ready. Policy: safety
+23:18:29  INFO     [RAMS] Controller stopped.
+    block=4/10 method=safety2 ...
+23:18:30  INFO     [RAMS] Starting resource monitor ...
+23:18:30  INFO     [RAMS] Loading model tiers ...
+23:18:30  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:18:30  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:18:31  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:18:31  INFO     [RAMS] Controller ready. Policy: safety2
+23:18:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.684)
+23:18:33  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.735)
+23:18:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.676)
+23:18:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.703)
+23:18:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.687)
+23:18:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.676)
+23:18:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.668)
+23:18:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.651)
+23:18:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.717)
+23:18:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.689)
+23:18:38  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.709)
+23:18:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.692)
+23:18:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.720)
+23:18:40  INFO     [RAMS] Controller stopped.
+    block=5/10 method=adaptive ...
+23:18:40  INFO     [RAMS] Starting resource monitor ...
+23:18:40  INFO     [RAMS] Loading model tiers ...
+23:18:40  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:18:41  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:18:41  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:18:41  INFO     [RAMS] Controller ready. Policy: adaptive
+23:18:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.651)
+23:18:49  INFO     [RAMS] Controller stopped.
+    block=5/10 method=FIXED_MEDIUM ...
+23:18:49  INFO     [RAMS] Starting resource monitor ...
+23:18:49  INFO     [RAMS] Loading model tiers ...
+23:18:49  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:18:50  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:18:51  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:18:51  INFO     [RAMS] Controller ready. Policy: fixed
+23:18:52  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.590)
+23:18:59  INFO     [RAMS] Controller stopped.
+    block=5/10 method=safety2 ...
+23:19:00  INFO     [RAMS] Starting resource monitor ...
+23:19:00  INFO     [RAMS] Loading model tiers ...
+23:19:00  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:00  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:01  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:01  INFO     [RAMS] Controller ready. Policy: safety2
+23:19:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.688)
+23:19:02  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.702)
+23:19:03  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.701)
+23:19:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.701)
+23:19:04  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.732)
+23:19:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.720)
+23:19:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.681)
+23:19:05  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.701)
+23:19:06  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.775)
+23:19:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.775)
+23:19:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.657)
+23:19:07  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.695)
+23:19:07  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.695)
+23:19:08  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.737)
+23:19:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.652)
+23:19:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.667)
+23:19:09  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.653)
+23:19:10  INFO     [RAMS] Controller stopped.
+    block=5/10 method=FIXED_NANO ...
+23:19:10  INFO     [RAMS] Starting resource monitor ...
+23:19:10  INFO     [RAMS] Loading model tiers ...
+23:19:10  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:10  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:11  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:11  INFO     [RAMS] Controller ready. Policy: fixed
+23:19:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.597)
+23:19:19  INFO     [RAMS] Controller stopped.
+    block=5/10 method=FIXED_SMALL ...
+23:19:19  INFO     [RAMS] Starting resource monitor ...
+23:19:19  INFO     [RAMS] Loading model tiers ...
+23:19:19  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:19  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:20  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:20  INFO     [RAMS] Controller ready. Policy: fixed
+23:19:28  INFO     [RAMS] Controller stopped.
+    block=5/10 method=safety ...
+23:19:28  INFO     [RAMS] Starting resource monitor ...
+23:19:28  INFO     [RAMS] Loading model tiers ...
+23:19:29  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:29  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:30  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:30  INFO     [RAMS] Controller ready. Policy: safety
+23:19:31  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.588)
+23:19:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+23:19:38  INFO     [RAMS] Controller stopped.
+    block=5/10 method=threshold ...
+23:19:38  INFO     [RAMS] Starting resource monitor ...
+23:19:38  INFO     [RAMS] Loading model tiers ...
+23:19:38  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:38  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:39  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:39  INFO     [RAMS] Controller ready. Policy: threshold
+23:19:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.656)
+23:19:47  INFO     [RAMS] Controller stopped.
+    block=5/10 method=predictive ...
+23:19:47  INFO     [RAMS] Starting resource monitor ...
+23:19:47  INFO     [RAMS] Loading model tiers ...
+23:19:47  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:47  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:48  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:48  INFO     [RAMS] Controller ready. Policy: predictive
+23:19:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.587)
+23:19:56  INFO     [RAMS] Controller stopped.
+    block=6/10 method=adaptive ...
+23:19:56  INFO     [RAMS] Starting resource monitor ...
+23:19:56  INFO     [RAMS] Loading model tiers ...
+23:19:56  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:19:56  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:19:57  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:19:57  INFO     [RAMS] Controller ready. Policy: adaptive
+23:19:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.597)
+23:20:05  INFO     [RAMS] Controller stopped.
+    block=6/10 method=safety ...
+23:20:05  INFO     [RAMS] Starting resource monitor ...
+23:20:05  INFO     [RAMS] Loading model tiers ...
+23:20:05  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:20:06  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:20:06  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:20:06  INFO     [RAMS] Controller ready. Policy: safety
+23:20:14  INFO     [RAMS] Controller stopped.
+    block=6/10 method=FIXED_NANO ...
+23:20:15  INFO     [RAMS] Starting resource monitor ...
+23:20:15  INFO     [RAMS] Loading model tiers ...
+23:20:15  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:20:15  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:20:16  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:20:16  INFO     [RAMS] Controller ready. Policy: fixed
+23:20:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.617)
+23:20:23  INFO     [RAMS] Controller stopped.
+    block=6/10 method=FIXED_SMALL ...
+23:20:23  INFO     [RAMS] Starting resource monitor ...
+23:20:23  INFO     [RAMS] Loading model tiers ...
+23:20:24  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:20:24  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:20:25  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:20:25  INFO     [RAMS] Controller ready. Policy: fixed
+23:20:33  INFO     [RAMS] Controller stopped.
+    block=6/10 method=safety2 ...
+23:20:33  INFO     [RAMS] Starting resource monitor ...
+23:20:33  INFO     [RAMS] Loading model tiers ...
+23:20:33  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:20:34  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:20:34  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:20:34  INFO     [RAMS] Controller ready. Policy: safety2
+23:20:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.597)
+23:20:36  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.722)
+23:20:37  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.649)
+23:20:37  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.744)
+23:20:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.661)
+23:20:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.658)
+23:20:38  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.672)
+23:20:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.710)
+23:20:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.768)
+23:20:39  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.651)
+23:20:40  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.651)
+23:20:41  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.646)
+23:20:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.656)
+23:20:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.725)
+23:20:42  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.727)
+23:20:42  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.727)
+23:20:42  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.730)
+23:20:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.658)
+23:20:43  INFO     [RAMS] Controller stopped.
+    block=6/10 method=threshold ...
+23:20:43  INFO     [RAMS] Starting resource monitor ...
+23:20:43  INFO     [RAMS] Loading model tiers ...
+23:20:43  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:20:44  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:20:45  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:20:45  INFO     [RAMS] Controller ready. Policy: threshold
+23:20:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.616)
+23:20:52  INFO     [RAMS] Controller stopped.
+    block=6/10 method=FIXED_MEDIUM ...
+23:20:53  INFO     [RAMS] Starting resource monitor ...
+23:20:53  INFO     [RAMS] Loading model tiers ...
+23:20:53  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:20:53  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:20:54  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:20:54  INFO     [RAMS] Controller ready. Policy: fixed
+23:20:55  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.588)
+23:21:03  INFO     [RAMS] Controller stopped.
+    block=6/10 method=predictive ...
+23:21:03  INFO     [RAMS] Starting resource monitor ...
+23:21:03  INFO     [RAMS] Loading model tiers ...
+23:21:03  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:21:03  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:21:04  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:21:04  INFO     [RAMS] Controller ready. Policy: predictive
+23:21:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.584)
+23:21:12  INFO     [RAMS] Controller stopped.
+    block=7/10 method=adaptive ...
+23:21:12  INFO     [RAMS] Starting resource monitor ...
+23:21:12  INFO     [RAMS] Loading model tiers ...
+23:21:12  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:21:13  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:21:13  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:21:13  INFO     [RAMS] Controller ready. Policy: adaptive
+23:21:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.669)
+23:21:21  INFO     [RAMS] Controller stopped.
+    block=7/10 method=FIXED_SMALL ...
+23:21:21  INFO     [RAMS] Starting resource monitor ...
+23:21:21  INFO     [RAMS] Loading model tiers ...
+23:21:21  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:21:22  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:21:22  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:21:22  INFO     [RAMS] Controller ready. Policy: fixed
+23:21:30  INFO     [RAMS] Controller stopped.
+    block=7/10 method=FIXED_NANO ...
+23:21:30  INFO     [RAMS] Starting resource monitor ...
+23:21:30  INFO     [RAMS] Loading model tiers ...
+23:21:31  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:21:31  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:21:32  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:21:32  INFO     [RAMS] Controller ready. Policy: fixed
+23:21:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+23:21:40  INFO     [RAMS] Controller stopped.
+    block=7/10 method=FIXED_MEDIUM ...
+23:21:40  INFO     [RAMS] Starting resource monitor ...
+23:21:40  INFO     [RAMS] Loading model tiers ...
+23:21:40  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:21:40  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:21:41  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:21:41  INFO     [RAMS] Controller ready. Policy: fixed
+23:21:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.657)
+23:21:50  INFO     [RAMS] Controller stopped.
+    block=7/10 method=safety ...
+23:21:50  INFO     [RAMS] Starting resource monitor ...
+23:21:50  INFO     [RAMS] Loading model tiers ...
+23:21:50  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:21:51  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:21:51  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:21:51  INFO     [RAMS] Controller ready. Policy: safety
+23:21:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.597)
+23:21:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.686)
+23:22:00  INFO     [RAMS] Controller stopped.
+    block=7/10 method=threshold ...
+23:22:00  INFO     [RAMS] Starting resource monitor ...
+23:22:00  INFO     [RAMS] Loading model tiers ...
+23:22:00  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:00  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:01  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:01  INFO     [RAMS] Controller ready. Policy: threshold
+23:22:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+23:22:08  INFO     [RAMS] Controller stopped.
+    block=7/10 method=predictive ...
+23:22:08  INFO     [RAMS] Starting resource monitor ...
+23:22:08  INFO     [RAMS] Loading model tiers ...
+23:22:09  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:09  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:10  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:10  INFO     [RAMS] Controller ready. Policy: predictive
+23:22:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:22:18  INFO     [RAMS] Controller stopped.
+    block=7/10 method=safety2 ...
+23:22:18  INFO     [RAMS] Starting resource monitor ...
+23:22:18  INFO     [RAMS] Loading model tiers ...
+23:22:18  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:18  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:19  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:19  INFO     [RAMS] Controller ready. Policy: safety2
+23:22:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.653)
+23:22:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.716)
+23:22:22  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.706)
+23:22:22  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.706)
+23:22:23  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.694)
+23:22:23  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.662)
+23:22:24  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.679)
+23:22:24  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.701)
+23:22:25  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.689)
+23:22:25  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.647)
+23:22:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.693)
+23:22:26  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.677)
+23:22:26  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.644)
+23:22:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.643)
+23:22:27  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.649)
+23:22:28  INFO     [RAMS] Controller stopped.
+    block=8/10 method=adaptive ...
+23:22:28  INFO     [RAMS] Starting resource monitor ...
+23:22:28  INFO     [RAMS] Loading model tiers ...
+23:22:28  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:29  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:29  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:29  INFO     [RAMS] Controller ready. Policy: adaptive
+23:22:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:22:37  INFO     [RAMS] Controller stopped.
+    block=8/10 method=FIXED_SMALL ...
+23:22:37  INFO     [RAMS] Starting resource monitor ...
+23:22:37  INFO     [RAMS] Loading model tiers ...
+23:22:37  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:38  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:39  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:39  INFO     [RAMS] Controller ready. Policy: fixed
+23:22:46  INFO     [RAMS] Controller stopped.
+    block=8/10 method=threshold ...
+23:22:47  INFO     [RAMS] Starting resource monitor ...
+23:22:47  INFO     [RAMS] Loading model tiers ...
+23:22:47  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:47  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:48  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:48  INFO     [RAMS] Controller ready. Policy: threshold
+23:22:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.614)
+23:22:55  INFO     [RAMS] Controller stopped.
+    block=8/10 method=FIXED_MEDIUM ...
+23:22:55  INFO     [RAMS] Starting resource monitor ...
+23:22:55  INFO     [RAMS] Loading model tiers ...
+23:22:56  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:22:56  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:22:57  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:22:57  INFO     [RAMS] Controller ready. Policy: fixed
+23:22:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.639)
+23:23:06  INFO     [RAMS] Controller stopped.
+    block=8/10 method=safety2 ...
+23:23:06  INFO     [RAMS] Starting resource monitor ...
+23:23:06  INFO     [RAMS] Loading model tiers ...
+23:23:06  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:23:07  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:23:07  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:23:07  INFO     [RAMS] Controller ready. Policy: safety2
+23:23:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.664)
+23:23:09  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.640)
+23:23:09  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.671)
+23:23:10  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.663)
+23:23:11  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.692)
+23:23:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.675)
+23:23:13  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.670)
+23:23:14  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.664)
+23:23:15  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.690)
+23:23:15  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.652)
+23:23:16  INFO     [RAMS] Controller stopped.
+    block=8/10 method=predictive ...
+23:23:16  INFO     [RAMS] Starting resource monitor ...
+23:23:16  INFO     [RAMS] Loading model tiers ...
+23:23:16  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:23:17  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:23:18  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:23:18  INFO     [RAMS] Controller ready. Policy: predictive
+23:23:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.590)
+23:23:25  INFO     [RAMS] Controller stopped.
+    block=8/10 method=safety ...
+23:23:26  INFO     [RAMS] Starting resource monitor ...
+23:23:26  INFO     [RAMS] Loading model tiers ...
+23:23:26  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:23:26  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:23:27  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:23:27  INFO     [RAMS] Controller ready. Policy: safety
+23:23:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.604)
+23:23:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.696)
+23:23:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.657)
+23:23:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.648)
+23:23:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.665)
+23:23:33  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.648)
+23:23:35  INFO     [RAMS] Controller stopped.
+    block=8/10 method=FIXED_NANO ...
+23:23:35  INFO     [RAMS] Starting resource monitor ...
+23:23:35  INFO     [RAMS] Loading model tiers ...
+23:23:35  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:23:35  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:23:36  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:23:36  INFO     [RAMS] Controller ready. Policy: fixed
+23:23:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:23:44  INFO     [RAMS] Controller stopped.
+    block=9/10 method=predictive ...
+23:23:44  INFO     [RAMS] Starting resource monitor ...
+23:23:44  INFO     [RAMS] Loading model tiers ...
+23:23:44  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:23:44  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:23:45  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:23:45  INFO     [RAMS] Controller ready. Policy: predictive
+23:23:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.687)
+23:23:53  INFO     [RAMS] Controller stopped.
+    block=9/10 method=FIXED_SMALL ...
+23:23:53  INFO     [RAMS] Starting resource monitor ...
+23:23:53  INFO     [RAMS] Loading model tiers ...
+23:23:53  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:23:53  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:23:54  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:23:54  INFO     [RAMS] Controller ready. Policy: fixed
+23:24:02  INFO     [RAMS] Controller stopped.
+    block=9/10 method=FIXED_MEDIUM ...
+23:24:02  INFO     [RAMS] Starting resource monitor ...
+23:24:02  INFO     [RAMS] Loading model tiers ...
+23:24:02  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:24:02  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:24:03  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:24:03  INFO     [RAMS] Controller ready. Policy: fixed
+23:24:04  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.652)
+23:24:13  INFO     [RAMS] Controller stopped.
+    block=9/10 method=safety2 ...
+23:24:13  INFO     [RAMS] Starting resource monitor ...
+23:24:13  INFO     [RAMS] Loading model tiers ...
+23:24:13  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:24:13  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:24:14  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:24:14  INFO     [RAMS] Controller ready. Policy: safety2
+23:24:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.682)
+23:24:16  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.711)
+23:24:16  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.680)
+23:24:17  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.727)
+23:24:18  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.660)
+23:24:19  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.713)
+23:24:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.713)
+23:24:19  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.713)
+23:24:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.713)
+23:24:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.661)
+23:24:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.671)
+23:24:22  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.675)
+23:24:22  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.655)
+23:24:23  INFO     [RAMS] Controller stopped.
+    block=9/10 method=safety ...
+23:24:23  INFO     [RAMS] Starting resource monitor ...
+23:24:23  INFO     [RAMS] Loading model tiers ...
+23:24:23  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:24:23  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:24:24  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:24:24  INFO     [RAMS] Controller ready. Policy: safety
+23:24:32  INFO     [RAMS] Controller stopped.
+    block=9/10 method=adaptive ...
+23:24:32  INFO     [RAMS] Starting resource monitor ...
+23:24:32  INFO     [RAMS] Loading model tiers ...
+23:24:32  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:24:33  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:24:33  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:24:33  INFO     [RAMS] Controller ready. Policy: adaptive
+23:24:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.585)
+23:24:41  INFO     [RAMS] Controller stopped.
+    block=9/10 method=threshold ...
+23:24:41  INFO     [RAMS] Starting resource monitor ...
+23:24:41  INFO     [RAMS] Loading model tiers ...
+23:24:41  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:24:42  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:24:42  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:24:42  INFO     [RAMS] Controller ready. Policy: threshold
+23:24:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.599)
+23:24:50  INFO     [RAMS] Controller stopped.
+    block=9/10 method=FIXED_NANO ...
+23:24:50  INFO     [RAMS] Starting resource monitor ...
+23:24:50  INFO     [RAMS] Loading model tiers ...
+23:24:50  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:24:51  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:24:51  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:24:51  INFO     [RAMS] Controller ready. Policy: fixed
+23:24:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.648)
+23:24:59  INFO     [RAMS] Controller stopped.
+    block=10/10 method=threshold ...
+23:24:59  INFO     [RAMS] Starting resource monitor ...
+23:24:59  INFO     [RAMS] Loading model tiers ...
+23:24:59  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:00  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:01  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:01  INFO     [RAMS] Controller ready. Policy: threshold
+23:25:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:25:08  INFO     [RAMS] Controller stopped.
+    block=10/10 method=adaptive ...
+23:25:08  INFO     [RAMS] Starting resource monitor ...
+23:25:08  INFO     [RAMS] Loading model tiers ...
+23:25:08  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:09  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:10  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:10  INFO     [RAMS] Controller ready. Policy: adaptive
+23:25:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.651)
+23:25:17  INFO     [RAMS] Controller stopped.
+    block=10/10 method=FIXED_NANO ...
+23:25:17  INFO     [RAMS] Starting resource monitor ...
+23:25:17  INFO     [RAMS] Loading model tiers ...
+23:25:18  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:18  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:19  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:19  INFO     [RAMS] Controller ready. Policy: fixed
+23:25:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:25:26  INFO     [RAMS] Controller stopped.
+    block=10/10 method=predictive ...
+23:25:26  INFO     [RAMS] Starting resource monitor ...
+23:25:26  INFO     [RAMS] Loading model tiers ...
+23:25:26  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:27  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:28  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:28  INFO     [RAMS] Controller ready. Policy: predictive
+23:25:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.588)
+23:25:36  INFO     [RAMS] Controller stopped.
+    block=10/10 method=safety ...
+23:25:36  INFO     [RAMS] Starting resource monitor ...
+23:25:36  INFO     [RAMS] Loading model tiers ...
+23:25:36  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:36  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:37  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:37  INFO     [RAMS] Controller ready. Policy: safety
+23:25:45  INFO     [RAMS] Controller stopped.
+    block=10/10 method=FIXED_SMALL ...
+23:25:45  INFO     [RAMS] Starting resource monitor ...
+23:25:45  INFO     [RAMS] Loading model tiers ...
+23:25:45  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:45  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:47  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:47  INFO     [RAMS] Controller ready. Policy: fixed
+23:25:55  INFO     [RAMS] Controller stopped.
+    block=10/10 method=FIXED_MEDIUM ...
+23:25:55  INFO     [RAMS] Starting resource monitor ...
+23:25:55  INFO     [RAMS] Loading model tiers ...
+23:25:55  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:25:55  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:25:56  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:25:56  INFO     [RAMS] Controller ready. Policy: fixed
+23:25:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.653)
+23:26:05  INFO     [RAMS] Controller stopped.
+    block=10/10 method=safety2 ...
+23:26:05  INFO     [RAMS] Starting resource monitor ...
+23:26:05  INFO     [RAMS] Loading model tiers ...
+23:26:06  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:26:06  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:26:07  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:26:07  INFO     [RAMS] Controller ready. Policy: safety2
+23:26:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.668)
+23:26:09  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.718)
+23:26:09  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.665)
+23:26:10  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.668)
+23:26:10  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.650)
+23:26:11  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.707)
+23:26:11  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.707)
+23:26:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.679)
+23:26:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.685)
+23:26:13  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.745)
+23:26:14  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.696)
+23:26:14  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.732)
+23:26:14  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.733)
+23:26:15  INFO     [RAMS] Controller stopped.
+      threshold: latency=20.5 ms  acc_proxy=0.373
+      predictive: latency=20.6 ms  acc_proxy=0.372
+      safety: latency=21.4 ms  acc_proxy=0.447
+      adaptive: latency=20.4 ms  acc_proxy=0.372
+      safety2: latency=25.4 ms  acc_proxy=0.472
+      FIXED_NANO: latency=20.4 ms  acc_proxy=0.372
+      FIXED_SMALL: latency=21.6 ms  acc_proxy=0.448
+      FIXED_MEDIUM: latency=27.8 ms  acc_proxy=0.503
+  Chart saved → exp5_pareto_heavy.png
+
+═════════════════════════════════════════════════════════════════════════════════════════
+  Experiment 5: Accuracy–Latency Pareto (mean latency, tier dist)
+═════════════════════════════════════════════════════════════════════════════════════════
+Label           Group           N      Mean ms   ±Std     P95 ms   Tier dist             
+──────────────  ──────────────  ─────  ────────  ───────  ───────  ──────────────────────
+threshold       heavy           2000   20.5      3.2      24.8     NANO:99%  SMALL:1%    
+predictive      heavy           2000   20.6      3.3      24.9     NANO:100%             
+safety          heavy           2000   21.4      2.9      25.3     NANO:2%  SMALL:98%    
+adaptive        heavy           2000   20.4      2.7      24.2     NANO:100%             
+safety2         heavy           2000   25.4      4.1      31.0     MEDIUM:70%  NANO:19%  SMALL:12%
+FIXED_NANO      heavy           2000   20.4      3.9      24.5     NANO:100%             
+FIXED_SMALL     heavy           2000   21.6      4.0      25.4     SMALL:100%            
+FIXED_MEDIUM    heavy           2000   27.8      4.6      32.9     MEDIUM:100%           
+═════════════════════════════════════════════════════════════════════════════════════════
+
+  LaTeX table → /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/pareto_heavy/exp5_latex_heavy.tex
+

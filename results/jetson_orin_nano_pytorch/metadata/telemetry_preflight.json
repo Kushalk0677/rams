@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "samples": [
+    {
+      "gpu_util_pct": 0.0,
+      "gpu_temp": 54.25,
+      "gpu_clock_mhz": null,
+      "rails_w": {
+        "VDD_GPU_SOC": 5.195,
+        "VDD_CPU_CV": 2.798,
+        "VIN_SYS_5V0": 5.032
+      },
+      "raw": "09-08-2026 22:08:37 RAM 13153/62841MB (lfb 696x4MB) SWAP 3807/31420MB (cached 17MB) CPU [0%@2201,0%@2201,9%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@59.343C soc2@54.781C soc0@56.093C gpu@54.25C tj@59.343C soc1@56.562C VDD_GPU_SOC 5195mW/5196mW VDD_CPU_CV 2798mW/2798mW VIN_SYS_5V0 5032mW/5082mW",
+      "monotonic_s": 1137087.677762326,
+      "timestamp_ns": 1788905317243384566
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "gpu_temp": 54.125,
+      "gpu_clock_mhz": null,
+      "rails_w": {
+        "VDD_GPU_SOC": 5.195,
+        "VDD_CPU_CV": 2.399,
+        "VIN_SYS_5V0": 4.931
+      },
+      "raw": "09-08-2026 22:08:37 RAM 13153/62841MB (lfb 696x4MB) SWAP 3807/31420MB (cached 17MB) CPU [0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@59.031C soc2@54.781C soc0@56.093C gpu@54.125C tj@59.031C soc1@56.625C VDD_GPU_SOC 5195mW/5196mW VDD_CPU_CV 2399mW/2665mW VIN_SYS_5V0 4931mW/5032mW",
+      "monotonic_s": 1137087.783217365,
+      "timestamp_ns": 1788905317348839317
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "gpu_temp": 54.406,
+      "gpu_clock_mhz": null,
+      "rails_w": {
+        "VDD_GPU_SOC": 5.195,
+        "VDD_CPU_CV": 2.399,
+        "VIN_SYS_5V0": 4.83
+      },
+      "raw": "09-08-2026 22:08:37 RAM 13153/62841MB (lfb 696x4MB) SWAP 3807/31420MB (cached 17MB) CPU [0%@2201,0%@2201,9%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@58.968C soc2@54.781C soc0@56.156C gpu@54.406C tj@58.968C soc1@56.468C VDD_GPU_SOC 5195mW/5196mW VDD_CPU_CV 2399mW/2599mW VIN_SYS_5V0 4830mW/4981mW",
+      "monotonic_s": 1137087.888808882,
+      "timestamp_ns": 1788905317454431122
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "gpu_temp": 54.281,
+      "gpu_clock_mhz": null,
+      "rails_w": {
+        "VDD_GPU_SOC": 5.195,
+        "VDD_CPU_CV": 2.798,
+        "VIN_SYS_5V0": 4.931
+      },
+      "raw": "09-08-2026 22:08:37 RAM 13151/62841MB (lfb 696x4MB) SWAP 3807/31420MB (cached 17MB) CPU [27%@2201,27%@2201,18%@2201,20%@2201,10%@2201,9%@2201,20%@2201,9%@2201,27%@2201,18%@2201,18%@2201,16%@2201] GR3D_FREQ 0% cpu@59.375C soc2@54.875C soc0@55.968C gpu@54.281C tj@59.375C soc1@56.531C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 2798mW/2638mW VIN_SYS_5V0 4931mW/4971mW",
+      "monotonic_s": 1137087.99474641,
+      "timestamp_ns": 1788905317560369354
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "gpu_temp": 54.156,
+      "gpu_clock_mhz": null,
+      "rails_w": {
+        "VDD_GPU_SOC": 5.195,
+        "VDD_CPU_CV": 2.399,
+        "VIN_SYS_5V0": 4.83
+      },
+      "raw": "09-08-2026 22:08:37 RAM 13151/62841MB (lfb 696x4MB) SWAP 3807/31420MB (cached 17MB) CPU [0%@2201,0%@2201,9%@2201,0%@2201,8%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,8%@2201,0%@2201] GR3D_FREQ 0% cpu@59.187C soc2@54.75C soc0@56.031C gpu@54.156C tj@59.187C soc1@56.593C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 2399mW/2599mW VIN_SYS_5V0 4830mW/4948mW",
+      "monotonic_s": 1137088.100318183,
+      "timestamp_ns": 1788905317665940711
+    }
+  ],
+  "raw_path": "/home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/telemetry_raw_1_1788905317018864842.jsonl",
+  "optional_fields": [
+    "gpu_clock_mhz"
+  ],
+  "qualification": "VDD_GPU_SOC is a shared GPU/SOC rail, not GPU-only or total board power"
+}

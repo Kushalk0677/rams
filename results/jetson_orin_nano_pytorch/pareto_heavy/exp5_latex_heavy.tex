@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Accuracy–latency operating points for all RAMS policies and fixed-tier baselines under paired moderate and heavy replay load. Accuracy is a tier-level proxy and must be interpreted alongside policy-level detection metrics. N=200 inferences per condition.}
+\label{tab:exp5_pareto}
+\begin{tabular}{llrrrrrl}
+\toprule
+Label & Group & $N$ & Mean (ms) & $\pm$Std & P95 (ms) & Sw/inf & Tier dist \\
+\midrule
+  threshold & heavy & 2000 & \textbf{20.5} & 3.2 & 24.8 & 0.005 & NANO:99%, SMALL:1% \\
+  predictive & heavy & 2000 & \textbf{20.6} & 3.3 & 24.9 & 0.005 & NANO:100% \\
+  safety & heavy & 2000 & 21.4 & 2.9 & 25.3 & 0.009 & NANO:2%, SMALL:98% \\
+  adaptive & heavy & 2000 & \textbf{20.4} & 2.7 & 24.2 & 0.005 & NANO:100% \\
+  safety2 & heavy & 2000 & 25.4 & 4.1 & 31.0 & 0.070 & MEDIUM:70%, NANO:19%, SMALL:12% \\
+  FIXED_NANO & heavy & 2000 & \textbf{20.4} & 3.9 & 24.5 & 0.005 & NANO:100% \\
+  FIXED_SMALL & heavy & 2000 & 21.6 & 4.0 & 25.4 & 0.000 & SMALL:100% \\
+  FIXED_MEDIUM & heavy & 2000 & 27.8 & 4.6 & 32.9 & 0.005 & MEDIUM:100% \\
+\bottomrule
+\end{tabular}
+\end{table}

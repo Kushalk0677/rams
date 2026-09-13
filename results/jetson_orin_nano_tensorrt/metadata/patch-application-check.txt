@@ -1,0 +1,7 @@
+patch-application-check — RAMS TRT class-label patch, 2026-09-09T10:00:07-04:00
+RESULT: BYTE-IDENTICAL: patch applied to backup preimage == patched run tree (verified 2026-09-09 ~10:00 EDT, zero diff)
+base preimage: ~/backups/rams_corrected20260908_preimage_20260909.tar.gz sha256 7c938c2fdd5a4830a6bac45e1ced975141611a35c4b34acc7b09fd03768b3ff1 (untarred corrected-20260908/source)
+full patch: /home/soren/rams_trt_labels_20260909/trt-labels-full.patch sha256 8ec1f3d20db3052d81acd04c381b2d192d66fe6e763175052ade5ec03ea649a5
+source-only patch: /home/soren/rams_trt_labels_20260909/trt-class-labels.patch sha256 bf88c64e997e14d86c952cc1d1d4760246d0b856685ab100208b1c0e10930b0b
+git repo: /home/soren/rams_trt_labels_20260909/source HEAD b3ada2b0d7342cf8341f5ae36c07754a5819db9a (preimage commit 387ae84)
+method: tar-extract preimage; patch -p1 < trt-labels-full.patch; diff -r vs run tree excluding .git/__pycache__/yolov8* symlinks/.gitignore -> zero differences

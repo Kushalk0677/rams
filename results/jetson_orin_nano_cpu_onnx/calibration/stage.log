@@ -1,0 +1,77 @@
+13:23:46  INFO     Loaded 1500 frames from /data/kitti/images/val
+RAMS replay calibration
+Frames: /data/kitti/images/val (1500 available), backend: onnx
+The active YAML is unchanged unless --apply is supplied.
+
+[idle] fixed-SMALL real replay: 200 measured frames at target 0%
+13:23:46  INFO     [RAMS] Starting resource monitor ...
+13:23:46  INFO     [RAMS] Loading model tiers ...
+[0;93m2026-09-08 13:23:46.695217044 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+13:23:46  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:23:46  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:23:47  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:23:47  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.451, CPU=56.2%, latency=130.2 ms
+   50/200: R=0.344, CPU=40.8%, latency=130.2 ms
+   75/200: R=0.290, CPU=33.3%, latency=128.7 ms
+  100/200: R=0.303, CPU=35.2%, latency=129.1 ms
+  125/200: R=0.294, CPU=33.9%, latency=129.1 ms
+  150/200: R=0.284, CPU=32.5%, latency=129.9 ms
+  175/200: R=0.361, CPU=43.3%, latency=130.3 ms
+  200/200: R=0.389, CPU=47.2%, latency=130.5 ms
+13:24:22  INFO     [RAMS] Controller stopped.
+
+[light] fixed-SMALL real replay: 200 measured frames at target 25%
+13:24:22  INFO     [RAMS] Starting resource monitor ...
+13:24:22  INFO     [RAMS] Loading model tiers ...
+13:24:22  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:24:22  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:24:23  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:24:23  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.460, CPU=57.5%, latency=128.5 ms
+   50/200: R=0.532, CPU=67.8%, latency=129.6 ms
+   75/200: R=0.466, CPU=58.3%, latency=129.4 ms
+  100/200: R=0.531, CPU=67.5%, latency=132.7 ms
+  125/200: R=0.452, CPU=56.4%, latency=129.6 ms
+  150/200: R=0.458, CPU=57.1%, latency=131.0 ms
+  175/200: R=0.460, CPU=57.5%, latency=129.2 ms
+  200/200: R=0.460, CPU=57.5%, latency=128.9 ms
+13:24:55  INFO     [RAMS] Controller stopped.
+
+[moderate] fixed-SMALL real replay: 200 measured frames at target 50%
+13:24:55  INFO     [RAMS] Starting resource monitor ...
+13:24:55  INFO     [RAMS] Loading model tiers ...
+13:24:55  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:24:55  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:24:56  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:24:56  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.664, CPU=86.4%, latency=131.9 ms
+   50/200: R=0.681, CPU=89.1%, latency=177.1 ms
+   75/200: R=0.621, CPU=80.5%, latency=135.4 ms
+  100/200: R=0.647, CPU=84.2%, latency=128.9 ms
+  125/200: R=0.620, CPU=80.3%, latency=169.6 ms
+  150/200: R=0.698, CPU=91.3%, latency=200.1 ms
+  175/200: R=0.616, CPU=79.8%, latency=128.4 ms
+  200/200: R=0.662, CPU=86.4%, latency=128.9 ms
+13:25:33  INFO     [RAMS] Controller stopped.
+
+[heavy] fixed-SMALL real replay: 200 measured frames at target 75%
+13:25:33  INFO     [RAMS] Starting resource monitor ...
+13:25:33  INFO     [RAMS] Loading model tiers ...
+13:25:33  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:25:33  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:25:34  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:25:34  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.747, CPU=98.3%, latency=376.9 ms
+   50/200: R=0.752, CPU=99.2%, latency=240.4 ms
+   75/200: R=0.740, CPU=97.5%, latency=136.5 ms
+  100/200: R=0.729, CPU=95.8%, latency=168.3 ms
+  125/200: R=0.723, CPU=95.0%, latency=167.1 ms
+  150/200: R=0.734, CPU=96.6%, latency=157.2 ms
+  175/200: R=0.752, CPU=99.2%, latency=273.7 ms
+  200/200: R=0.710, CPU=93.2%, latency=139.2 ms
+13:26:34  INFO     [RAMS] Controller stopped.
+
+Applied common thresholds: lo=0.274, hi=0.606
+Previous configuration saved to: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/calibration/calibration_snapshots/default_before_replay_calibration_20260908_132634.yaml
+Calibration report: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/calibration/calibration_20260908_132634_replay.json

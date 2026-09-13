@@ -1,0 +1,312 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "platform_target": "jetson",
+    "device": "soren-edge",
+    "backend": "tensorrt",
+    "data_root": "/root/rams/data",
+    "frames": "/root/rams/data/kitti/images/val",
+    "kitti_images": "/root/rams/data/kitti/images/val",
+    "kitti_labels": "/root/rams/data/kitti/labels/val",
+    "coco_images": "/root/rams/data/coco/images/val2017",
+    "coco_labels": "/root/rams/data/coco/labels/val2017",
+    "n_per_block": 200,
+    "blocks": 10,
+    "smoke": false,
+    "simulated": false,
+    "phase": "all",
+    "python": "3.10.12 (main, Feb  4 2025, 14:57:36) [GCC 11.4.0]",
+    "os": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+    "machine": "aarch64",
+    "energy_profile": "configs/energy_profile_jetson.json",
+    "requested_backend_env": "tensorrt",
+    "load_protocol": {
+      "steady_profiles": {
+        "injector": "process_steady_v3",
+        "reserved_logical_cpus": 1
+      },
+      "burst_profile": {
+        "injector": "process_isolated_burst_v2",
+        "reserved_logical_cpus": 1,
+        "burst_peak_intensity": 0.85,
+        "burst_on_frames": 20,
+        "burst_off_frames": 80,
+        "burst_settle_s": 0.2
+      }
+    }
+  },
+  {
+    "label": "calibration_config_before",
+    "path": "/work/source/results/calibration_snapshots/default_before_calibration_20260906_093913.yaml",
+    "ok": true
+  },
+  {
+    "label": "calibration",
+    "command": [
+      "/usr/local/bin/python3",
+      "scripts/calibrate.py",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--n",
+      "200",
+      "--warmup",
+      "20",
+      "--apply"
+    ],
+    "returncode": 0,
+    "elapsed_s": 29.48,
+    "ok": true
+  },
+  {
+    "label": "calibration_config_after",
+    "path": "/work/source/results/calibration_snapshots/default_after_calibration_20260906_093913.yaml",
+    "calibration_records": [
+      "/work/source/results/calibration_20260906_093942_replay.json"
+    ],
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime1_idle",
+    "command": [
+      "/usr/local/bin/python3",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--policy",
+      "all",
+      "--profile",
+      "idle",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs/energy_profile_jetson.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 279.47,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime1_light",
+    "command": [
+      "/usr/local/bin/python3",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--policy",
+      "all",
+      "--profile",
+      "light",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs/energy_profile_jetson.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 284.26,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime2_moderate",
+    "command": [
+      "/usr/local/bin/python3",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--policy",
+      "all",
+      "--profile",
+      "moderate",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs/energy_profile_jetson.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 272.1,
+    "ok": true
+  },
+  {
+    "label": "pareto_runtime2",
+    "command": [
+      "/usr/local/bin/python3",
+      "experiments/exp5_pareto.py",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--scenarios",
+      "moderate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 449.61,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime3_heavy",
+    "command": [
+      "/usr/local/bin/python3",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--policy",
+      "all",
+      "--profile",
+      "heavy",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs/energy_profile_jetson.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 272.96,
+    "ok": true
+  },
+  {
+    "label": "pareto_runtime3",
+    "command": [
+      "/usr/local/bin/python3",
+      "experiments/exp5_pareto.py",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--scenarios",
+      "heavy"
+    ],
+    "returncode": 0,
+    "elapsed_s": 455.31,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime4_burst",
+    "command": [
+      "/usr/local/bin/python3",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "/root/rams/data/kitti/images/val",
+      "--policy",
+      "all",
+      "--profile",
+      "burst",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs/energy_profile_jetson.json",
+      "--burst-peak-intensity",
+      "0.85",
+      "--burst-on-frames",
+      "20",
+      "--burst-off-frames",
+      "80",
+      "--burst-settle-s",
+      "0.2",
+      "--load-reserve-logical-cpus",
+      "1"
+    ],
+    "returncode": 0,
+    "elapsed_s": 272.86,
+    "ok": true
+  },
+  {
+    "label": "tier_accuracy_context",
+    "command": [
+      "/usr/local/bin/python3",
+      "experiments/exp8_accuracy_per_tier.py",
+      "--dataset",
+      "kitti",
+      "--images",
+      "/root/rams/data/kitti/images/val",
+      "--labels",
+      "/root/rams/data/kitti/labels/val",
+      "--also-coco",
+      "--coco-images",
+      "/root/rams/data/coco/images/val2017",
+      "--coco-labels",
+      "/root/rams/data/coco/labels/val2017",
+      "--require-coco-ultralytics-map"
+    ],
+    "returncode": 0,
+    "elapsed_s": 856.75,
+    "ok": true
+  },
+  {
+    "label": "policy_level_kitti_accuracy",
+    "command": [
+      "/usr/local/bin/python3",
+      "experiments/exp11_policy_accuracy.py",
+      "--images",
+      "/root/rams/data/kitti/images/val",
+      "--labels",
+      "/root/rams/data/kitti/labels/val",
+      "--profiles",
+      "moderate",
+      "--seed",
+      "20260710"
+    ],
+    "returncode": 0,
+    "elapsed_s": 166.42,
+    "ok": true
+  },
+  {
+    "label": "vru_retention_sensitivity",
+    "command": [
+      "/usr/local/bin/python3",
+      "experiments/exp12_retention_sensitivity.py",
+      "--images",
+      "/root/rams/data/kitti/images/val",
+      "--labels",
+      "/root/rams/data/kitti/labels/val",
+      "--profile",
+      "moderate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 142.91,
+    "ok": true
+  }
+]

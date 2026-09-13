@@ -1,0 +1,1897 @@
+13:26:35  INFO     Loaded 1500 frames from /data/kitti/images/val
+13:26:35  INFO     Real inference mode: 1500 frames available
+13:26:35  INFO     === RAMS Benchmark  run_id=rams_20260908_132635_118f3ccde03f ===
+13:26:35  INFO     Policies: ['threshold', 'predictive', 'safety', 'adaptive', 'safety2', 'fixed_nano', 'fixed_small', 'fixed_medium']  |  Profiles: ['idle']  |  N/block=200  |  blocks=10  |  simulate=False  |  frames=/data/kitti/images/val
+13:26:35  INFO     
+--- Block 1/10  Policy: fixed_small  Load: idle (0%) ---
+13:26:35  INFO     [RAMS] Starting resource monitor ...
+13:26:35  INFO     [RAMS] Loading model tiers ...
+[0;93m2026-09-08 13:26:35.529416485 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+13:26:35  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:26:35  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:26:36  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:26:36  INFO     [RAMS] Controller ready. Policy: fixed
+13:26:42  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=127.3 ms  R=0.287  target=0.00  dets=0  vru=False  backend=onnx
+13:26:45  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=127.5 ms  R=0.275  target=0.00  dets=1  vru=False  backend=onnx
+13:26:47  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=128.3 ms  R=0.282  target=0.00  dets=1  vru=False  backend=onnx
+13:26:50  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=129.7 ms  R=0.402  target=0.00  dets=3  vru=False  backend=onnx
+13:26:53  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=130.9 ms  R=0.359  target=0.00  dets=12  vru=False  backend=onnx
+13:26:56  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=128.0 ms  R=0.287  target=0.00  dets=4  vru=False  backend=onnx
+13:26:59  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=128.3 ms  R=0.302  target=0.00  dets=7  vru=False  backend=onnx
+13:27:02  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=127.7 ms  R=0.343  target=0.00  dets=2  vru=False  backend=onnx
+13:27:04  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=128.1 ms  R=0.277  target=0.00  dets=2  vru=False  backend=onnx
+13:27:07  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.0 ms  R=0.302  target=0.00  dets=8  vru=False  backend=onnx
+13:27:08  INFO     [RAMS] Controller stopped.
+13:27:08  INFO     
+--- Block 1/10  Policy: fixed_nano  Load: idle (0%) ---
+13:27:08  INFO     [RAMS] Starting resource monitor ...
+13:27:08  INFO     [RAMS] Loading model tiers ...
+13:27:08  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:27:08  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:27:09  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:27:09  INFO     [RAMS] Controller ready. Policy: fixed
+13:27:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.092)
+13:27:10  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.2 ms  R=0.393  target=0.00  dets=0  vru=False  backend=onnx
+13:27:11  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.8 ms  R=0.355  target=0.00  dets=1  vru=False  backend=onnx
+13:27:12  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.6 ms  R=0.382  target=0.00  dets=1  vru=False  backend=onnx
+13:27:13  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.7 ms  R=0.333  target=0.00  dets=2  vru=False  backend=onnx
+13:27:14  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=32.9 ms  R=0.333  target=0.00  dets=11  vru=False  backend=onnx
+13:27:15  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.7 ms  R=0.345  target=0.00  dets=3  vru=False  backend=onnx
+13:27:16  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.7 ms  R=0.323  target=0.00  dets=4  vru=False  backend=onnx
+13:27:17  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.0 ms  R=0.335  target=0.00  dets=0  vru=False  backend=onnx
+13:27:18  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=32.0 ms  R=0.269  target=0.00  dets=3  vru=False  backend=onnx
+13:27:18  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.5 ms  R=0.269  target=0.00  dets=6  vru=False  backend=onnx
+13:27:19  INFO     [RAMS] Controller stopped.
+13:27:19  INFO     
+--- Block 1/10  Policy: threshold  Load: idle (0%) ---
+13:27:19  INFO     [RAMS] Starting resource monitor ...
+13:27:19  INFO     [RAMS] Loading model tiers ...
+13:27:19  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:27:19  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:27:20  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:27:20  INFO     [RAMS] Controller ready. Policy: threshold
+13:27:23  INFO       [threshold / idle] 20/200  tier=SMALL   latency=128.1 ms  R=0.317  target=0.00  dets=0  vru=False  backend=onnx
+13:27:26  INFO       [threshold / idle] 40/200  tier=SMALL   latency=129.1 ms  R=0.290  target=0.00  dets=1  vru=False  backend=onnx
+13:27:29  INFO       [threshold / idle] 60/200  tier=SMALL   latency=127.6 ms  R=0.285  target=0.00  dets=1  vru=False  backend=onnx
+13:27:32  INFO       [threshold / idle] 80/200  tier=SMALL   latency=128.6 ms  R=0.443  target=0.00  dets=3  vru=False  backend=onnx
+13:27:35  INFO       [threshold / idle] 100/200  tier=SMALL   latency=130.5 ms  R=0.438  target=0.00  dets=12  vru=False  backend=onnx
+13:27:37  INFO       [threshold / idle] 120/200  tier=SMALL   latency=127.7 ms  R=0.377  target=0.00  dets=4  vru=False  backend=onnx
+13:27:40  INFO       [threshold / idle] 140/200  tier=SMALL   latency=128.3 ms  R=0.280  target=0.00  dets=7  vru=False  backend=onnx
+13:27:43  INFO       [threshold / idle] 160/200  tier=SMALL   latency=127.6 ms  R=0.284  target=0.00  dets=2  vru=False  backend=onnx
+13:27:46  INFO       [threshold / idle] 180/200  tier=SMALL   latency=128.5 ms  R=0.283  target=0.00  dets=2  vru=False  backend=onnx
+13:27:49  INFO       [threshold / idle] 200/200  tier=SMALL   latency=128.6 ms  R=0.372  target=0.00  dets=8  vru=False  backend=onnx
+13:27:49  INFO     [RAMS] Controller stopped.
+13:27:49  INFO     
+--- Block 1/10  Policy: predictive  Load: idle (0%) ---
+13:27:49  INFO     [RAMS] Starting resource monitor ...
+13:27:49  INFO     [RAMS] Loading model tiers ...
+13:27:49  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:27:49  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:27:50  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:27:50  INFO     [RAMS] Controller ready. Policy: predictive
+13:27:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.063)
+13:27:53  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.425)
+13:27:55  INFO       [predictive / idle] 20/200  tier=SMALL   latency=129.9 ms  R=0.368  target=0.00  dets=0  vru=False  backend=onnx
+13:27:58  INFO       [predictive / idle] 40/200  tier=SMALL   latency=129.7 ms  R=0.347  target=0.00  dets=1  vru=False  backend=onnx
+13:28:01  INFO       [predictive / idle] 60/200  tier=SMALL   latency=128.3 ms  R=0.295  target=0.00  dets=1  vru=False  backend=onnx
+13:28:04  INFO       [predictive / idle] 80/200  tier=SMALL   latency=128.5 ms  R=0.310  target=0.00  dets=3  vru=False  backend=onnx
+13:28:07  INFO       [predictive / idle] 100/200  tier=SMALL   latency=129.8 ms  R=0.302  target=0.00  dets=12  vru=False  backend=onnx
+13:28:10  INFO       [predictive / idle] 120/200  tier=SMALL   latency=129.3 ms  R=0.306  target=0.00  dets=4  vru=False  backend=onnx
+13:28:12  INFO       [predictive / idle] 140/200  tier=SMALL   latency=128.6 ms  R=0.283  target=0.00  dets=7  vru=False  backend=onnx
+13:28:15  INFO       [predictive / idle] 160/200  tier=SMALL   latency=129.5 ms  R=0.377  target=0.00  dets=2  vru=False  backend=onnx
+13:28:18  INFO       [predictive / idle] 180/200  tier=SMALL   latency=129.8 ms  R=0.370  target=0.00  dets=2  vru=False  backend=onnx
+13:28:21  INFO       [predictive / idle] 200/200  tier=SMALL   latency=128.5 ms  R=0.293  target=0.00  dets=8  vru=False  backend=onnx
+13:28:21  INFO     [RAMS] Controller stopped.
+13:28:21  INFO     
+--- Block 1/10  Policy: adaptive  Load: idle (0%) ---
+13:28:21  INFO     [RAMS] Starting resource monitor ...
+13:28:21  INFO     [RAMS] Loading model tiers ...
+13:28:21  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:28:21  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:28:22  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:28:22  INFO     [RAMS] Controller ready. Policy: adaptive
+13:28:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.063)
+13:28:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.320)
+13:28:30  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=128.7 ms  R=0.283  target=0.00  dets=0  vru=False  backend=onnx
+13:28:32  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=128.2 ms  R=0.275  target=0.00  dets=1  vru=False  backend=onnx
+13:28:35  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=128.6 ms  R=0.297  target=0.00  dets=1  vru=False  backend=onnx
+13:28:38  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=129.9 ms  R=0.388  target=0.00  dets=3  vru=False  backend=onnx
+13:28:41  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=131.7 ms  R=0.362  target=0.00  dets=12  vru=False  backend=onnx
+13:28:44  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=127.7 ms  R=0.372  target=0.00  dets=4  vru=False  backend=onnx
+13:28:47  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=128.0 ms  R=0.291  target=0.00  dets=7  vru=False  backend=onnx
+13:28:49  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=127.3 ms  R=0.285  target=0.00  dets=2  vru=False  backend=onnx
+13:28:52  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=127.6 ms  R=0.283  target=0.00  dets=2  vru=False  backend=onnx
+13:28:55  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.1 ms  R=0.285  target=0.00  dets=8  vru=False  backend=onnx
+13:28:55  INFO     [RAMS] Controller stopped.
+13:28:55  INFO     
+--- Block 1/10  Policy: fixed_medium  Load: idle (0%) ---
+13:28:55  INFO     [RAMS] Starting resource monitor ...
+13:28:55  INFO     [RAMS] Loading model tiers ...
+13:28:55  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:28:55  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:28:56  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:28:56  INFO     [RAMS] Controller ready. Policy: fixed
+13:28:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.167)
+13:29:12  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=714.4 ms  R=0.293  target=0.00  dets=3  vru=False  backend=onnx
+13:29:26  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=719.7 ms  R=0.308  target=0.00  dets=1  vru=False  backend=onnx
+13:29:41  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=725.2 ms  R=0.348  target=0.00  dets=4  vru=False  backend=onnx
+13:29:56  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=718.8 ms  R=0.295  target=0.00  dets=5  vru=False  backend=onnx
+13:30:10  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=715.7 ms  R=0.377  target=0.00  dets=15  vru=False  backend=onnx
+13:30:25  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=721.8 ms  R=0.355  target=0.00  dets=4  vru=False  backend=onnx
+13:30:40  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=716.1 ms  R=0.300  target=0.00  dets=13  vru=False  backend=onnx
+13:30:54  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=715.1 ms  R=0.297  target=0.00  dets=6  vru=False  backend=onnx
+13:31:09  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=727.7 ms  R=0.389  target=0.00  dets=3  vru=False  backend=onnx
+13:31:23  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=713.2 ms  R=0.306  target=0.00  dets=16  vru=False  backend=onnx
+13:31:24  INFO     [RAMS] Controller stopped.
+13:31:24  INFO     
+--- Block 1/10  Policy: safety2  Load: idle (0%) ---
+13:31:24  INFO     [RAMS] Starting resource monitor ...
+13:31:24  INFO     [RAMS] Loading model tiers ...
+13:31:24  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:31:24  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:31:25  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:31:25  INFO     [RAMS] Controller ready. Policy: safety2
+13:31:27  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.352)
+13:31:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.417)
+13:31:30  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=129.5 ms  R=0.380  target=0.00  dets=0  vru=False  backend=onnx
+13:31:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.356)
+13:31:34  INFO       [safety2 / idle] 40/200  tier=MEDIUM  latency=714.4 ms  R=0.356  target=0.00  dets=1  vru=False  backend=onnx
+13:31:35  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:31:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.285)
+13:31:38  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:31:39  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=128.6 ms  R=0.304  target=0.00  dets=1  vru=False  backend=onnx
+13:31:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.279)
+13:31:43  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.399)
+13:31:44  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=128.1 ms  R=0.283  target=0.00  dets=3  vru=False  backend=onnx
+13:31:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.279)
+13:31:47  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.297)
+13:31:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+13:31:50  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.367)
+13:31:50  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.361)
+13:31:51  INFO       [safety2 / idle] 100/200  tier=MEDIUM  latency=720.4 ms  R=0.361  target=0.00  dets=15  vru=False  backend=onnx
+13:31:52  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.359)
+13:31:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.369)
+13:31:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+13:31:57  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=129.9 ms  R=0.297  target=0.00  dets=4  vru=False  backend=onnx
+13:31:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.299)
+13:31:59  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.306)
+13:32:01  INFO       [safety2 / idle] 140/200  tier=SMALL   latency=128.6 ms  R=0.302  target=0.00  dets=7  vru=False  backend=onnx
+13:32:04  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.372)
+13:32:06  INFO       [safety2 / idle] 160/200  tier=MEDIUM  latency=716.4 ms  R=0.293  target=0.00  dets=6  vru=False  backend=onnx
+13:32:06  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.310)
+13:32:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.279)
+13:32:10  INFO       [safety2 / idle] 180/200  tier=MEDIUM  latency=714.4 ms  R=0.299  target=0.00  dets=3  vru=False  backend=onnx
+13:32:11  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.411)
+13:32:11  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.358)
+13:32:13  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.367)
+13:32:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.356)
+13:32:20  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:32:20  INFO       [safety2 / idle] 200/200  tier=SMALL   latency=128.6 ms  R=0.279  target=0.00  dets=8  vru=False  backend=onnx
+13:32:21  INFO     [RAMS] Controller stopped.
+13:32:21  INFO     
+--- Block 1/10  Policy: safety  Load: idle (0%) ---
+13:32:21  INFO     [RAMS] Starting resource monitor ...
+13:32:21  INFO     [RAMS] Loading model tiers ...
+13:32:21  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:32:21  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:32:22  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:32:22  INFO     [RAMS] Controller ready. Policy: safety
+13:32:25  INFO       [safety / idle] 20/200  tier=SMALL   latency=127.8 ms  R=0.297  target=0.00  dets=0  vru=False  backend=onnx
+13:32:28  INFO       [safety / idle] 40/200  tier=SMALL   latency=128.1 ms  R=0.283  target=0.00  dets=1  vru=False  backend=onnx
+13:32:31  INFO       [safety / idle] 60/200  tier=SMALL   latency=128.3 ms  R=0.320  target=0.00  dets=1  vru=False  backend=onnx
+13:32:34  INFO       [safety / idle] 80/200  tier=SMALL   latency=130.5 ms  R=0.408  target=0.00  dets=3  vru=False  backend=onnx
+13:32:37  INFO       [safety / idle] 100/200  tier=SMALL   latency=130.1 ms  R=0.340  target=0.00  dets=12  vru=False  backend=onnx
+13:32:40  INFO       [safety / idle] 120/200  tier=SMALL   latency=129.2 ms  R=0.287  target=0.00  dets=4  vru=False  backend=onnx
+13:32:42  INFO       [safety / idle] 140/200  tier=SMALL   latency=129.8 ms  R=0.287  target=0.00  dets=7  vru=False  backend=onnx
+13:32:45  INFO       [safety / idle] 160/200  tier=SMALL   latency=129.6 ms  R=0.296  target=0.00  dets=2  vru=False  backend=onnx
+13:32:48  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.3 ms  R=0.306  target=0.00  dets=2  vru=False  backend=onnx
+13:32:51  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.7 ms  R=0.292  target=0.00  dets=8  vru=False  backend=onnx
+13:32:51  INFO     [RAMS] Controller stopped.
+13:32:51  INFO     
+--- Block 2/10  Policy: safety2  Load: idle (0%) ---
+13:32:51  INFO     [RAMS] Starting resource monitor ...
+13:32:51  INFO     [RAMS] Loading model tiers ...
+13:32:51  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:32:51  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:32:52  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:32:52  INFO     [RAMS] Controller ready. Policy: safety2
+13:32:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.461)
+13:32:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.374)
+13:32:56  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.380)
+13:32:58  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.356)
+13:32:59  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.341)
+13:33:01  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.387)
+13:33:01  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=130.2 ms  R=0.279  target=0.00  dets=16  vru=False  backend=onnx
+13:33:02  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.275)
+13:33:04  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.384)
+13:33:05  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.277)
+13:33:08  INFO       [safety2 / idle] 40/200  tier=MEDIUM  latency=713.5 ms  R=0.310  target=0.00  dets=13  vru=False  backend=onnx
+13:33:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:33:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+13:33:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.304)
+13:33:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.381)
+13:33:14  INFO       [safety2 / idle] 60/200  tier=MEDIUM  latency=714.2 ms  R=0.304  target=0.00  dets=8  vru=False  backend=onnx
+13:33:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.302)
+13:33:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.368)
+13:33:18  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.368)
+13:33:19  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=129.2 ms  R=0.369  target=0.00  dets=5  vru=False  backend=onnx
+13:33:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.459)
+13:33:22  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.334)
+13:33:22  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.300)
+13:33:24  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.312)
+13:33:25  INFO       [safety2 / idle] 100/200  tier=SMALL   latency=128.2 ms  R=0.378  target=0.00  dets=2  vru=False  backend=onnx
+13:33:28  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=129.6 ms  R=0.279  target=0.00  dets=10  vru=False  backend=onnx
+13:33:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.281)
+13:33:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.299)
+13:33:32  INFO       [safety2 / idle] 140/200  tier=SMALL   latency=128.3 ms  R=0.281  target=0.00  dets=3  vru=False  backend=onnx
+13:33:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+13:33:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:33:37  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=129.4 ms  R=0.466  target=0.00  dets=0  vru=False  backend=onnx
+13:33:40  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=130.6 ms  R=0.343  target=0.00  dets=4  vru=True  backend=onnx
+13:33:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.375)
+13:33:43  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+13:33:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.298)
+13:33:45  INFO       [safety2 / idle] 200/200  tier=MEDIUM  latency=715.3 ms  R=0.298  target=0.00  dets=5  vru=False  backend=onnx
+13:33:45  INFO     [RAMS] Controller stopped.
+13:33:45  INFO     
+--- Block 2/10  Policy: threshold  Load: idle (0%) ---
+13:33:45  INFO     [RAMS] Starting resource monitor ...
+13:33:45  INFO     [RAMS] Loading model tiers ...
+13:33:45  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:33:45  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:33:46  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:33:46  INFO     [RAMS] Controller ready. Policy: threshold
+13:33:50  INFO       [threshold / idle] 20/200  tier=SMALL   latency=131.6 ms  R=0.332  target=0.00  dets=16  vru=False  backend=onnx
+13:33:53  INFO       [threshold / idle] 40/200  tier=SMALL   latency=131.3 ms  R=0.281  target=0.00  dets=6  vru=False  backend=onnx
+13:33:56  INFO       [threshold / idle] 60/200  tier=SMALL   latency=129.2 ms  R=0.306  target=0.00  dets=6  vru=False  backend=onnx
+13:33:58  INFO       [threshold / idle] 80/200  tier=SMALL   latency=131.1 ms  R=0.352  target=0.00  dets=5  vru=False  backend=onnx
+13:34:01  INFO       [threshold / idle] 100/200  tier=SMALL   latency=129.9 ms  R=0.362  target=0.00  dets=2  vru=False  backend=onnx
+13:34:04  INFO       [threshold / idle] 120/200  tier=SMALL   latency=130.2 ms  R=0.290  target=0.00  dets=10  vru=False  backend=onnx
+13:34:07  INFO       [threshold / idle] 140/200  tier=SMALL   latency=128.9 ms  R=0.304  target=0.00  dets=3  vru=False  backend=onnx
+13:34:10  INFO       [threshold / idle] 160/200  tier=SMALL   latency=128.0 ms  R=0.378  target=0.00  dets=0  vru=False  backend=onnx
+13:34:13  INFO       [threshold / idle] 180/200  tier=SMALL   latency=129.4 ms  R=0.285  target=0.00  dets=4  vru=True  backend=onnx
+13:34:16  INFO       [threshold / idle] 200/200  tier=SMALL   latency=128.8 ms  R=0.310  target=0.00  dets=7  vru=False  backend=onnx
+13:34:16  INFO     [RAMS] Controller stopped.
+13:34:16  INFO     
+--- Block 2/10  Policy: fixed_medium  Load: idle (0%) ---
+13:34:16  INFO     [RAMS] Starting resource monitor ...
+13:34:16  INFO     [RAMS] Loading model tiers ...
+13:34:16  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:34:16  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:34:17  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:34:17  INFO     [RAMS] Controller ready. Policy: fixed
+13:34:18  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.063)
+13:34:32  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=716.8 ms  R=0.312  target=0.00  dets=21  vru=False  backend=onnx
+13:34:47  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=712.3 ms  R=0.338  target=0.00  dets=13  vru=False  backend=onnx
+13:35:01  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=716.5 ms  R=0.293  target=0.00  dets=8  vru=False  backend=onnx
+13:35:16  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=713.2 ms  R=0.299  target=0.00  dets=8  vru=False  backend=onnx
+13:35:30  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=710.4 ms  R=0.297  target=0.00  dets=2  vru=False  backend=onnx
+13:35:45  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=723.3 ms  R=0.367  target=0.00  dets=10  vru=False  backend=onnx
+13:36:00  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=710.2 ms  R=0.299  target=0.00  dets=8  vru=False  backend=onnx
+13:36:14  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=711.5 ms  R=0.304  target=0.00  dets=6  vru=False  backend=onnx
+13:36:29  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=725.5 ms  R=0.360  target=0.00  dets=4  vru=False  backend=onnx
+13:36:43  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=711.6 ms  R=0.317  target=0.00  dets=5  vru=False  backend=onnx
+13:36:43  INFO     [RAMS] Controller stopped.
+13:36:43  INFO     
+--- Block 2/10  Policy: fixed_small  Load: idle (0%) ---
+13:36:43  INFO     [RAMS] Starting resource monitor ...
+13:36:43  INFO     [RAMS] Loading model tiers ...
+13:36:43  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:36:44  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:36:44  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:36:44  INFO     [RAMS] Controller ready. Policy: fixed
+13:36:48  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=131.0 ms  R=0.298  target=0.00  dets=16  vru=False  backend=onnx
+13:36:51  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=129.2 ms  R=0.414  target=0.00  dets=6  vru=False  backend=onnx
+13:36:54  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=129.0 ms  R=0.356  target=0.00  dets=6  vru=False  backend=onnx
+13:36:57  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=128.7 ms  R=0.289  target=0.00  dets=5  vru=False  backend=onnx
+13:37:00  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=128.4 ms  R=0.281  target=0.00  dets=2  vru=False  backend=onnx
+13:37:02  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=129.0 ms  R=0.290  target=0.00  dets=10  vru=False  backend=onnx
+13:37:05  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=128.0 ms  R=0.310  target=0.00  dets=3  vru=False  backend=onnx
+13:37:08  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=128.1 ms  R=0.387  target=0.00  dets=0  vru=False  backend=onnx
+13:37:11  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=130.9 ms  R=0.380  target=0.00  dets=4  vru=True  backend=onnx
+13:37:14  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=130.7 ms  R=0.394  target=0.00  dets=7  vru=False  backend=onnx
+13:37:14  INFO     [RAMS] Controller stopped.
+13:37:14  INFO     
+--- Block 2/10  Policy: safety  Load: idle (0%) ---
+13:37:14  INFO     [RAMS] Starting resource monitor ...
+13:37:14  INFO     [RAMS] Loading model tiers ...
+13:37:14  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:37:14  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:37:15  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:37:15  INFO     [RAMS] Controller ready. Policy: safety
+13:37:19  INFO       [safety / idle] 20/200  tier=SMALL   latency=130.0 ms  R=0.300  target=0.00  dets=16  vru=False  backend=onnx
+13:37:21  INFO       [safety / idle] 40/200  tier=SMALL   latency=128.1 ms  R=0.279  target=0.00  dets=6  vru=False  backend=onnx
+13:37:24  INFO       [safety / idle] 60/200  tier=SMALL   latency=128.5 ms  R=0.287  target=0.00  dets=6  vru=False  backend=onnx
+13:37:27  INFO       [safety / idle] 80/200  tier=SMALL   latency=128.2 ms  R=0.294  target=0.00  dets=5  vru=False  backend=onnx
+13:37:30  INFO       [safety / idle] 100/200  tier=SMALL   latency=128.2 ms  R=0.285  target=0.00  dets=2  vru=False  backend=onnx
+13:37:33  INFO       [safety / idle] 120/200  tier=SMALL   latency=130.5 ms  R=0.379  target=0.00  dets=10  vru=False  backend=onnx
+13:37:36  INFO       [safety / idle] 140/200  tier=SMALL   latency=129.7 ms  R=0.348  target=0.00  dets=3  vru=False  backend=onnx
+13:37:38  INFO       [safety / idle] 160/200  tier=SMALL   latency=128.3 ms  R=0.294  target=0.00  dets=0  vru=False  backend=onnx
+13:37:41  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.3 ms  R=0.292  target=0.00  dets=4  vru=True  backend=onnx
+13:37:44  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.8 ms  R=0.294  target=0.00  dets=7  vru=False  backend=onnx
+13:37:44  INFO     [RAMS] Controller stopped.
+13:37:44  INFO     
+--- Block 2/10  Policy: adaptive  Load: idle (0%) ---
+13:37:44  INFO     [RAMS] Starting resource monitor ...
+13:37:44  INFO     [RAMS] Loading model tiers ...
+13:37:44  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:37:44  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:37:45  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:37:45  INFO     [RAMS] Controller ready. Policy: adaptive
+13:37:46  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.063)
+13:37:50  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.387)
+13:37:52  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=129.9 ms  R=0.372  target=0.00  dets=16  vru=False  backend=onnx
+13:37:55  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=130.4 ms  R=0.400  target=0.00  dets=6  vru=False  backend=onnx
+13:37:58  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=130.4 ms  R=0.341  target=0.00  dets=6  vru=False  backend=onnx
+13:38:01  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=131.3 ms  R=0.283  target=0.00  dets=5  vru=False  backend=onnx
+13:38:03  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=128.9 ms  R=0.295  target=0.00  dets=2  vru=False  backend=onnx
+13:38:06  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=128.3 ms  R=0.291  target=0.00  dets=10  vru=False  backend=onnx
+13:38:09  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=127.4 ms  R=0.369  target=0.00  dets=3  vru=False  backend=onnx
+13:38:12  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=127.8 ms  R=0.273  target=0.00  dets=0  vru=False  backend=onnx
+13:38:15  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=128.6 ms  R=0.361  target=0.00  dets=4  vru=True  backend=onnx
+13:38:18  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.9 ms  R=0.370  target=0.00  dets=7  vru=False  backend=onnx
+13:38:18  INFO     [RAMS] Controller stopped.
+13:38:18  INFO     
+--- Block 2/10  Policy: fixed_nano  Load: idle (0%) ---
+13:38:18  INFO     [RAMS] Starting resource monitor ...
+13:38:18  INFO     [RAMS] Loading model tiers ...
+13:38:18  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:38:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:38:19  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:38:19  INFO     [RAMS] Controller ready. Policy: fixed
+13:38:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.134)
+13:38:21  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=32.8 ms  R=0.273  target=0.00  dets=13  vru=False  backend=onnx
+13:38:21  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.5 ms  R=0.259  target=0.00  dets=4  vru=False  backend=onnx
+13:38:22  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=32.2 ms  R=0.265  target=0.00  dets=3  vru=False  backend=onnx
+13:38:23  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.8 ms  R=0.279  target=0.00  dets=5  vru=False  backend=onnx
+13:38:24  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=31.3 ms  R=0.259  target=0.00  dets=1  vru=False  backend=onnx
+13:38:25  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.7 ms  R=0.311  target=0.00  dets=4  vru=False  backend=onnx
+13:38:26  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.6 ms  R=0.371  target=0.00  dets=2  vru=False  backend=onnx
+13:38:27  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.1 ms  R=0.273  target=0.00  dets=0  vru=False  backend=onnx
+13:38:28  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.2 ms  R=0.281  target=0.00  dets=2  vru=False  backend=onnx
+13:38:29  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.7 ms  R=0.258  target=0.00  dets=6  vru=False  backend=onnx
+13:38:29  INFO     [RAMS] Controller stopped.
+13:38:29  INFO     
+--- Block 2/10  Policy: predictive  Load: idle (0%) ---
+13:38:29  INFO     [RAMS] Starting resource monitor ...
+13:38:29  INFO     [RAMS] Loading model tiers ...
+13:38:29  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:38:29  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:38:30  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:38:30  INFO     [RAMS] Controller ready. Policy: predictive
+13:38:31  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.057)
+13:38:35  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.465)
+13:38:37  INFO       [predictive / idle] 20/200  tier=SMALL   latency=132.9 ms  R=0.432  target=0.00  dets=16  vru=False  backend=onnx
+13:38:40  INFO       [predictive / idle] 40/200  tier=SMALL   latency=130.7 ms  R=0.392  target=0.00  dets=6  vru=False  backend=onnx
+13:38:43  INFO       [predictive / idle] 60/200  tier=SMALL   latency=128.5 ms  R=0.291  target=0.00  dets=6  vru=False  backend=onnx
+13:38:45  INFO       [predictive / idle] 80/200  tier=SMALL   latency=129.2 ms  R=0.283  target=0.00  dets=5  vru=False  backend=onnx
+13:38:48  INFO       [predictive / idle] 100/200  tier=SMALL   latency=128.6 ms  R=0.298  target=0.00  dets=2  vru=False  backend=onnx
+13:38:51  INFO       [predictive / idle] 120/200  tier=SMALL   latency=129.0 ms  R=0.324  target=0.00  dets=10  vru=False  backend=onnx
+13:38:54  INFO       [predictive / idle] 140/200  tier=SMALL   latency=129.1 ms  R=0.293  target=0.00  dets=3  vru=False  backend=onnx
+13:38:57  INFO       [predictive / idle] 160/200  tier=SMALL   latency=130.2 ms  R=0.339  target=0.00  dets=0  vru=False  backend=onnx
+13:39:00  INFO       [predictive / idle] 180/200  tier=SMALL   latency=128.7 ms  R=0.352  target=0.00  dets=4  vru=True  backend=onnx
+13:39:02  INFO       [predictive / idle] 200/200  tier=SMALL   latency=128.6 ms  R=0.366  target=0.00  dets=7  vru=False  backend=onnx
+13:39:03  INFO     [RAMS] Controller stopped.
+13:39:03  INFO     
+--- Block 3/10  Policy: threshold  Load: idle (0%) ---
+13:39:03  INFO     [RAMS] Starting resource monitor ...
+13:39:03  INFO     [RAMS] Loading model tiers ...
+13:39:03  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:39:03  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:39:04  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:39:04  INFO     [RAMS] Controller ready. Policy: threshold
+13:39:07  INFO       [threshold / idle] 20/200  tier=SMALL   latency=128.6 ms  R=0.314  target=0.00  dets=7  vru=False  backend=onnx
+13:39:10  INFO       [threshold / idle] 40/200  tier=SMALL   latency=128.8 ms  R=0.300  target=0.00  dets=9  vru=False  backend=onnx
+13:39:13  INFO       [threshold / idle] 60/200  tier=SMALL   latency=129.8 ms  R=0.342  target=0.00  dets=14  vru=False  backend=onnx
+13:39:16  INFO       [threshold / idle] 80/200  tier=SMALL   latency=130.9 ms  R=0.279  target=0.00  dets=15  vru=True  backend=onnx
+13:39:19  INFO       [threshold / idle] 100/200  tier=SMALL   latency=129.6 ms  R=0.364  target=0.00  dets=2  vru=False  backend=onnx
+13:39:22  INFO       [threshold / idle] 120/200  tier=SMALL   latency=130.9 ms  R=0.356  target=0.00  dets=5  vru=False  backend=onnx
+13:39:24  INFO       [threshold / idle] 140/200  tier=SMALL   latency=128.0 ms  R=0.300  target=0.00  dets=3  vru=True  backend=onnx
+13:39:27  INFO       [threshold / idle] 160/200  tier=SMALL   latency=128.0 ms  R=0.299  target=0.00  dets=2  vru=False  backend=onnx
+13:39:30  INFO       [threshold / idle] 180/200  tier=SMALL   latency=128.5 ms  R=0.405  target=0.00  dets=6  vru=False  backend=onnx
+13:39:33  INFO       [threshold / idle] 200/200  tier=SMALL   latency=129.4 ms  R=0.289  target=0.00  dets=5  vru=False  backend=onnx
+13:39:33  INFO     [RAMS] Controller stopped.
+13:39:33  INFO     
+--- Block 3/10  Policy: adaptive  Load: idle (0%) ---
+13:39:33  INFO     [RAMS] Starting resource monitor ...
+13:39:33  INFO     [RAMS] Loading model tiers ...
+13:39:33  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:39:33  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:39:34  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:39:34  INFO     [RAMS] Controller ready. Policy: adaptive
+13:39:35  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.138)
+13:39:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.376)
+13:39:41  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=131.0 ms  R=0.341  target=0.00  dets=7  vru=False  backend=onnx
+13:39:44  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=129.8 ms  R=0.406  target=0.00  dets=9  vru=False  backend=onnx
+13:39:47  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=129.9 ms  R=0.365  target=0.00  dets=14  vru=False  backend=onnx
+13:39:50  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=130.9 ms  R=0.283  target=0.00  dets=15  vru=True  backend=onnx
+13:39:53  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=127.9 ms  R=0.289  target=0.00  dets=2  vru=False  backend=onnx
+13:39:56  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=128.7 ms  R=0.297  target=0.00  dets=5  vru=False  backend=onnx
+13:39:58  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=128.4 ms  R=0.285  target=0.00  dets=3  vru=True  backend=onnx
+13:40:01  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=130.4 ms  R=0.435  target=0.00  dets=2  vru=False  backend=onnx
+13:40:04  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=130.3 ms  R=0.470  target=0.00  dets=6  vru=False  backend=onnx
+13:40:07  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=129.8 ms  R=0.374  target=0.00  dets=5  vru=False  backend=onnx
+13:40:07  INFO     [RAMS] Controller stopped.
+13:40:07  INFO     
+--- Block 3/10  Policy: predictive  Load: idle (0%) ---
+13:40:07  INFO     [RAMS] Starting resource monitor ...
+13:40:07  INFO     [RAMS] Loading model tiers ...
+13:40:07  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:40:07  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:40:08  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:40:08  INFO     [RAMS] Controller ready. Policy: predictive
+13:40:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.114)
+13:40:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.364)
+13:40:14  INFO       [predictive / idle] 20/200  tier=SMALL   latency=129.1 ms  R=0.307  target=0.00  dets=7  vru=False  backend=onnx
+13:40:17  INFO       [predictive / idle] 40/200  tier=SMALL   latency=129.0 ms  R=0.376  target=0.00  dets=9  vru=False  backend=onnx
+13:40:20  INFO       [predictive / idle] 60/200  tier=SMALL   latency=130.1 ms  R=0.291  target=0.00  dets=14  vru=False  backend=onnx
+13:40:23  INFO       [predictive / idle] 80/200  tier=SMALL   latency=131.2 ms  R=0.348  target=0.00  dets=15  vru=True  backend=onnx
+13:40:26  INFO       [predictive / idle] 100/200  tier=SMALL   latency=131.1 ms  R=0.370  target=0.00  dets=2  vru=False  backend=onnx
+13:40:28  INFO       [predictive / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.293  target=0.00  dets=5  vru=False  backend=onnx
+13:40:31  INFO       [predictive / idle] 140/200  tier=SMALL   latency=127.9 ms  R=0.296  target=0.00  dets=3  vru=True  backend=onnx
+13:40:34  INFO       [predictive / idle] 160/200  tier=SMALL   latency=128.1 ms  R=0.281  target=0.00  dets=2  vru=False  backend=onnx
+13:40:37  INFO       [predictive / idle] 180/200  tier=SMALL   latency=128.5 ms  R=0.303  target=0.00  dets=6  vru=False  backend=onnx
+13:40:40  INFO       [predictive / idle] 200/200  tier=SMALL   latency=128.6 ms  R=0.301  target=0.00  dets=5  vru=False  backend=onnx
+13:40:40  INFO     [RAMS] Controller stopped.
+13:40:40  INFO     
+--- Block 3/10  Policy: fixed_medium  Load: idle (0%) ---
+13:40:40  INFO     [RAMS] Starting resource monitor ...
+13:40:40  INFO     [RAMS] Loading model tiers ...
+13:40:40  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:40:40  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:40:41  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:40:41  INFO     [RAMS] Controller ready. Policy: fixed
+13:40:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.057)
+13:40:56  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=712.9 ms  R=0.306  target=0.00  dets=8  vru=False  backend=onnx
+13:41:11  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=717.2 ms  R=0.366  target=0.00  dets=10  vru=True  backend=onnx
+13:41:26  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=716.1 ms  R=0.293  target=0.00  dets=14  vru=False  backend=onnx
+13:41:40  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=716.5 ms  R=0.304  target=0.00  dets=18  vru=True  backend=onnx
+13:41:55  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=710.1 ms  R=0.480  target=0.00  dets=2  vru=False  backend=onnx
+13:42:09  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=711.8 ms  R=0.304  target=0.00  dets=13  vru=False  backend=onnx
+13:42:24  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=714.1 ms  R=0.354  target=0.00  dets=6  vru=True  backend=onnx
+13:42:39  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=715.8 ms  R=0.293  target=0.00  dets=4  vru=False  backend=onnx
+13:42:53  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=720.1 ms  R=0.310  target=0.00  dets=10  vru=False  backend=onnx
+13:43:08  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=715.2 ms  R=0.297  target=0.00  dets=6  vru=True  backend=onnx
+13:43:08  INFO     [RAMS] Controller stopped.
+13:43:08  INFO     
+--- Block 3/10  Policy: safety2  Load: idle (0%) ---
+13:43:08  INFO     [RAMS] Starting resource monitor ...
+13:43:08  INFO     [RAMS] Loading model tiers ...
+13:43:08  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:43:08  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:43:09  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:43:09  INFO     [RAMS] Controller ready. Policy: safety2
+13:43:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+13:43:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.447)
+13:43:14  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=130.8 ms  R=0.447  target=0.00  dets=7  vru=False  backend=onnx
+13:43:15  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.370)
+13:43:17  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.356)
+13:43:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.383)
+13:43:20  INFO       [safety2 / idle] 40/200  tier=MEDIUM  latency=714.7 ms  R=0.370  target=0.00  dets=10  vru=True  backend=onnx
+13:43:21  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.295)
+13:43:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.299)
+13:43:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.297)
+13:43:25  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=130.1 ms  R=0.295  target=0.00  dets=14  vru=False  backend=onnx
+13:43:26  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+13:43:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.304)
+13:43:29  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.306)
+13:43:31  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.295)
+13:43:32  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=130.5 ms  R=0.295  target=0.00  dets=15  vru=True  backend=onnx
+13:43:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.285)
+13:43:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.361)
+13:43:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.350)
+13:43:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.369)
+13:43:40  INFO       [safety2 / idle] 100/200  tier=SMALL   latency=129.5 ms  R=0.359  target=0.00  dets=2  vru=False  backend=onnx
+13:43:40  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.369)
+13:43:42  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.302)
+13:43:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.301)
+13:43:46  INFO       [safety2 / idle] 120/200  tier=MEDIUM  latency=710.9 ms  R=0.301  target=0.00  dets=13  vru=False  backend=onnx
+13:43:46  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:43:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.297)
+13:43:50  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.323)
+13:43:51  INFO       [safety2 / idle] 140/200  tier=SMALL   latency=127.2 ms  R=0.289  target=0.00  dets=3  vru=True  backend=onnx
+13:43:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+13:43:53  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.402)
+13:43:55  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=128.5 ms  R=0.285  target=0.00  dets=2  vru=False  backend=onnx
+13:43:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.352)
+13:43:59  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.391)
+13:44:00  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=129.6 ms  R=0.360  target=0.00  dets=6  vru=False  backend=onnx
+13:44:00  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.377)
+13:44:02  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.366)
+13:44:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.296)
+13:44:05  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+13:44:06  INFO       [safety2 / idle] 200/200  tier=SMALL   latency=129.0 ms  R=0.296  target=0.00  dets=5  vru=False  backend=onnx
+13:44:06  INFO     [RAMS] Controller stopped.
+13:44:06  INFO     
+--- Block 3/10  Policy: fixed_small  Load: idle (0%) ---
+13:44:06  INFO     [RAMS] Starting resource monitor ...
+13:44:06  INFO     [RAMS] Loading model tiers ...
+13:44:06  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:44:07  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:44:07  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:44:07  INFO     [RAMS] Controller ready. Policy: fixed
+13:44:11  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=128.8 ms  R=0.302  target=0.00  dets=7  vru=False  backend=onnx
+13:44:14  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=127.8 ms  R=0.300  target=0.00  dets=9  vru=False  backend=onnx
+13:44:17  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=128.9 ms  R=0.291  target=0.00  dets=14  vru=False  backend=onnx
+13:44:20  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=130.9 ms  R=0.360  target=0.00  dets=15  vru=True  backend=onnx
+13:44:22  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=129.9 ms  R=0.438  target=0.00  dets=2  vru=False  backend=onnx
+13:44:25  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=128.6 ms  R=0.292  target=0.00  dets=5  vru=False  backend=onnx
+13:44:28  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=127.9 ms  R=0.291  target=0.00  dets=3  vru=True  backend=onnx
+13:44:31  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=127.2 ms  R=0.293  target=0.00  dets=2  vru=False  backend=onnx
+13:44:34  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=127.8 ms  R=0.300  target=0.00  dets=6  vru=False  backend=onnx
+13:44:36  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.7 ms  R=0.302  target=0.00  dets=5  vru=False  backend=onnx
+13:44:37  INFO     [RAMS] Controller stopped.
+13:44:37  INFO     
+--- Block 3/10  Policy: safety  Load: idle (0%) ---
+13:44:37  INFO     [RAMS] Starting resource monitor ...
+13:44:37  INFO     [RAMS] Loading model tiers ...
+13:44:37  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:44:37  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:44:38  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:44:38  INFO     [RAMS] Controller ready. Policy: safety
+13:44:41  INFO       [safety / idle] 20/200  tier=SMALL   latency=129.8 ms  R=0.368  target=0.00  dets=7  vru=False  backend=onnx
+13:44:44  INFO       [safety / idle] 40/200  tier=SMALL   latency=129.0 ms  R=0.417  target=0.00  dets=9  vru=False  backend=onnx
+13:44:47  INFO       [safety / idle] 60/200  tier=SMALL   latency=130.2 ms  R=0.294  target=0.00  dets=14  vru=False  backend=onnx
+13:44:50  INFO       [safety / idle] 80/200  tier=SMALL   latency=130.2 ms  R=0.285  target=0.00  dets=15  vru=True  backend=onnx
+13:44:53  INFO       [safety / idle] 100/200  tier=SMALL   latency=128.8 ms  R=0.297  target=0.00  dets=2  vru=False  backend=onnx
+13:44:56  INFO       [safety / idle] 120/200  tier=SMALL   latency=128.6 ms  R=0.297  target=0.00  dets=5  vru=False  backend=onnx
+13:44:58  INFO       [safety / idle] 140/200  tier=SMALL   latency=128.2 ms  R=0.310  target=0.00  dets=3  vru=True  backend=onnx
+13:45:01  INFO       [safety / idle] 160/200  tier=SMALL   latency=128.2 ms  R=0.361  target=0.00  dets=2  vru=False  backend=onnx
+13:45:04  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.7 ms  R=0.383  target=0.00  dets=6  vru=False  backend=onnx
+13:45:07  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.6 ms  R=0.297  target=0.00  dets=5  vru=False  backend=onnx
+13:45:07  INFO     [RAMS] Controller stopped.
+13:45:07  INFO     
+--- Block 3/10  Policy: fixed_nano  Load: idle (0%) ---
+13:45:07  INFO     [RAMS] Starting resource monitor ...
+13:45:07  INFO     [RAMS] Loading model tiers ...
+13:45:07  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:45:07  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:45:08  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:45:08  INFO     [RAMS] Controller ready. Policy: fixed
+13:45:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.104)
+13:45:10  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.3 ms  R=0.260  target=0.00  dets=5  vru=False  backend=onnx
+13:45:11  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.1 ms  R=0.271  target=0.00  dets=1  vru=False  backend=onnx
+13:45:12  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=32.2 ms  R=0.259  target=0.00  dets=9  vru=False  backend=onnx
+13:45:13  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=32.3 ms  R=0.287  target=0.00  dets=8  vru=False  backend=onnx
+13:45:13  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=30.9 ms  R=0.275  target=0.00  dets=0  vru=False  backend=onnx
+13:45:14  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.6 ms  R=0.351  target=0.00  dets=4  vru=False  backend=onnx
+13:45:15  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.2 ms  R=0.297  target=0.00  dets=2  vru=True  backend=onnx
+13:45:16  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.3 ms  R=0.273  target=0.00  dets=2  vru=False  backend=onnx
+13:45:17  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.5 ms  R=0.265  target=0.00  dets=5  vru=False  backend=onnx
+13:45:18  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.2 ms  R=0.277  target=0.00  dets=2  vru=False  backend=onnx
+13:45:18  INFO     [RAMS] Controller stopped.
+13:45:18  INFO     
+--- Block 4/10  Policy: adaptive  Load: idle (0%) ---
+13:45:18  INFO     [RAMS] Starting resource monitor ...
+13:45:18  INFO     [RAMS] Loading model tiers ...
+13:45:18  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:45:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:45:19  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:45:19  INFO     [RAMS] Controller ready. Policy: adaptive
+13:45:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.057)
+13:45:23  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.396)
+13:45:25  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=127.3 ms  R=0.389  target=0.00  dets=1  vru=False  backend=onnx
+13:45:28  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=127.6 ms  R=0.293  target=0.00  dets=2  vru=False  backend=onnx
+13:45:31  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.297  target=0.00  dets=3  vru=False  backend=onnx
+13:45:34  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=127.7 ms  R=0.304  target=0.00  dets=1  vru=False  backend=onnx
+13:45:36  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=129.0 ms  R=0.405  target=0.00  dets=12  vru=False  backend=onnx
+13:45:39  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=128.8 ms  R=0.291  target=0.00  dets=6  vru=False  backend=onnx
+13:45:42  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=128.4 ms  R=0.285  target=0.00  dets=10  vru=False  backend=onnx
+13:45:45  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=130.0 ms  R=0.348  target=0.00  dets=2  vru=False  backend=onnx
+13:45:48  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=129.5 ms  R=0.397  target=0.00  dets=1  vru=True  backend=onnx
+13:45:51  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=127.5 ms  R=0.291  target=0.00  dets=1  vru=True  backend=onnx
+13:45:51  INFO     [RAMS] Controller stopped.
+13:45:51  INFO     
+--- Block 4/10  Policy: predictive  Load: idle (0%) ---
+13:45:51  INFO     [RAMS] Starting resource monitor ...
+13:45:51  INFO     [RAMS] Loading model tiers ...
+13:45:51  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:45:51  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:45:52  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:45:52  INFO     [RAMS] Controller ready. Policy: predictive
+13:45:53  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.063)
+13:45:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.399)
+13:45:58  INFO       [predictive / idle] 20/200  tier=SMALL   latency=127.8 ms  R=0.390  target=0.00  dets=1  vru=False  backend=onnx
+13:46:01  INFO       [predictive / idle] 40/200  tier=SMALL   latency=128.6 ms  R=0.289  target=0.00  dets=2  vru=False  backend=onnx
+13:46:04  INFO       [predictive / idle] 60/200  tier=SMALL   latency=127.9 ms  R=0.295  target=0.00  dets=3  vru=False  backend=onnx
+13:46:07  INFO       [predictive / idle] 80/200  tier=SMALL   latency=129.0 ms  R=0.371  target=0.00  dets=1  vru=False  backend=onnx
+13:46:10  INFO       [predictive / idle] 100/200  tier=SMALL   latency=129.7 ms  R=0.366  target=0.00  dets=12  vru=False  backend=onnx
+13:46:12  INFO       [predictive / idle] 120/200  tier=SMALL   latency=127.6 ms  R=0.299  target=0.00  dets=6  vru=False  backend=onnx
+13:46:15  INFO       [predictive / idle] 140/200  tier=SMALL   latency=129.6 ms  R=0.301  target=0.00  dets=10  vru=False  backend=onnx
+13:46:18  INFO       [predictive / idle] 160/200  tier=SMALL   latency=127.3 ms  R=0.304  target=0.00  dets=2  vru=False  backend=onnx
+13:46:21  INFO       [predictive / idle] 180/200  tier=SMALL   latency=127.7 ms  R=0.295  target=0.00  dets=1  vru=True  backend=onnx
+13:46:24  INFO       [predictive / idle] 200/200  tier=SMALL   latency=127.4 ms  R=0.318  target=0.00  dets=1  vru=True  backend=onnx
+13:46:24  INFO     [RAMS] Controller stopped.
+13:46:24  INFO     
+--- Block 4/10  Policy: fixed_nano  Load: idle (0%) ---
+13:46:24  INFO     [RAMS] Starting resource monitor ...
+13:46:24  INFO     [RAMS] Loading model tiers ...
+13:46:24  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:46:24  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:46:25  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:46:25  INFO     [RAMS] Controller ready. Policy: fixed
+13:46:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.132)
+13:46:27  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.1 ms  R=0.347  target=0.00  dets=0  vru=False  backend=onnx
+13:46:28  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.6 ms  R=0.354  target=0.00  dets=1  vru=False  backend=onnx
+13:46:29  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.1 ms  R=0.364  target=0.00  dets=2  vru=False  backend=onnx
+13:46:29  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.1 ms  R=0.438  target=0.00  dets=1  vru=False  backend=onnx
+13:46:30  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=32.2 ms  R=0.342  target=0.00  dets=9  vru=False  backend=onnx
+13:46:31  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.6 ms  R=0.346  target=0.00  dets=6  vru=False  backend=onnx
+13:46:32  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.9 ms  R=0.277  target=0.00  dets=6  vru=False  backend=onnx
+13:46:33  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.2 ms  R=0.283  target=0.00  dets=1  vru=False  backend=onnx
+13:46:34  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.4 ms  R=0.273  target=0.00  dets=2  vru=True  backend=onnx
+13:46:35  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.0 ms  R=0.279  target=0.00  dets=1  vru=True  backend=onnx
+13:46:35  INFO     [RAMS] Controller stopped.
+13:46:35  INFO     
+--- Block 4/10  Policy: fixed_medium  Load: idle (0%) ---
+13:46:35  INFO     [RAMS] Starting resource monitor ...
+13:46:35  INFO     [RAMS] Loading model tiers ...
+13:46:35  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:46:35  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:46:36  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:46:36  INFO     [RAMS] Controller ready. Policy: fixed
+13:46:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.057)
+13:46:51  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=718.4 ms  R=0.409  target=0.00  dets=2  vru=False  backend=onnx
+13:47:06  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=710.3 ms  R=0.306  target=0.00  dets=4  vru=False  backend=onnx
+13:47:20  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=708.9 ms  R=0.305  target=0.00  dets=6  vru=False  backend=onnx
+13:47:35  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=719.4 ms  R=0.369  target=0.00  dets=4  vru=False  backend=onnx
+13:47:49  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=710.3 ms  R=0.303  target=0.00  dets=17  vru=True  backend=onnx
+13:48:04  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=709.5 ms  R=0.299  target=0.00  dets=8  vru=False  backend=onnx
+13:48:18  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=716.4 ms  R=0.359  target=0.00  dets=10  vru=False  backend=onnx
+13:48:33  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=710.5 ms  R=0.304  target=0.00  dets=3  vru=False  backend=onnx
+13:48:47  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=710.2 ms  R=0.318  target=0.00  dets=16  vru=True  backend=onnx
+13:49:02  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=718.7 ms  R=0.356  target=0.00  dets=9  vru=True  backend=onnx
+13:49:02  INFO     [RAMS] Controller stopped.
+13:49:02  INFO     
+--- Block 4/10  Policy: fixed_small  Load: idle (0%) ---
+13:49:02  INFO     [RAMS] Starting resource monitor ...
+13:49:02  INFO     [RAMS] Loading model tiers ...
+13:49:02  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:49:02  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:49:03  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:49:03  INFO     [RAMS] Controller ready. Policy: fixed
+13:49:07  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=128.3 ms  R=0.300  target=0.00  dets=1  vru=False  backend=onnx
+13:49:10  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=127.6 ms  R=0.302  target=0.00  dets=2  vru=False  backend=onnx
+13:49:12  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=128.0 ms  R=0.293  target=0.00  dets=3  vru=False  backend=onnx
+13:49:15  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=126.9 ms  R=0.299  target=0.00  dets=1  vru=False  backend=onnx
+13:49:18  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=129.5 ms  R=0.365  target=0.00  dets=12  vru=False  backend=onnx
+13:49:21  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=128.4 ms  R=0.366  target=0.00  dets=6  vru=False  backend=onnx
+13:49:24  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=128.1 ms  R=0.344  target=0.00  dets=10  vru=False  backend=onnx
+13:49:27  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=127.9 ms  R=0.297  target=0.00  dets=2  vru=False  backend=onnx
+13:49:29  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=126.8 ms  R=0.304  target=0.00  dets=1  vru=True  backend=onnx
+13:49:32  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=127.5 ms  R=0.297  target=0.00  dets=1  vru=True  backend=onnx
+13:49:32  INFO     [RAMS] Controller stopped.
+13:49:32  INFO     
+--- Block 4/10  Policy: safety2  Load: idle (0%) ---
+13:49:32  INFO     [RAMS] Starting resource monitor ...
+13:49:32  INFO     [RAMS] Loading model tiers ...
+13:49:32  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:49:32  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:49:33  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:49:33  INFO     [RAMS] Controller ready. Policy: safety2
+13:49:35  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.302)
+13:49:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:49:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.297)
+13:49:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.370)
+13:49:40  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.339)
+13:49:42  INFO       [safety2 / idle] 20/200  tier=MEDIUM  latency=720.2 ms  R=0.359  target=0.00  dets=2  vru=False  backend=onnx
+13:49:42  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.362)
+13:49:43  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.395)
+13:49:45  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.346)
+13:49:46  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.281)
+13:49:49  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.361)
+13:49:49  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=127.2 ms  R=0.361  target=0.00  dets=2  vru=False  backend=onnx
+13:49:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.297)
+13:49:51  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.317)
+13:49:52  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.281)
+13:49:55  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.380)
+13:49:55  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=127.4 ms  R=0.285  target=0.00  dets=3  vru=False  backend=onnx
+13:49:56  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.303)
+13:49:58  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:49:59  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.331)
+13:50:01  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.434)
+13:50:01  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.350)
+13:50:03  INFO       [safety2 / idle] 80/200  tier=MEDIUM  latency=729.8 ms  R=0.355  target=0.00  dets=4  vru=False  backend=onnx
+13:50:03  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.371)
+13:50:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.371)
+13:50:08  INFO       [safety2 / idle] 100/200  tier=MEDIUM  latency=721.6 ms  R=0.297  target=0.00  dets=17  vru=True  backend=onnx
+13:50:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.310)
+13:50:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.367)
+13:50:11  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+13:50:12  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=127.6 ms  R=0.293  target=0.00  dets=6  vru=False  backend=onnx
+13:50:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+13:50:16  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.303)
+13:50:17  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+13:50:18  INFO       [safety2 / idle] 140/200  tier=MEDIUM  latency=713.0 ms  R=0.291  target=0.00  dets=10  vru=False  backend=onnx
+13:50:21  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:50:21  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.287)
+13:50:24  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.481)
+13:50:25  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=130.0 ms  R=0.366  target=0.00  dets=2  vru=False  backend=onnx
+13:50:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.322)
+13:50:29  INFO       [safety2 / idle] 180/200  tier=MEDIUM  latency=715.3 ms  R=0.301  target=0.00  dets=16  vru=True  backend=onnx
+13:50:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.306)
+13:50:31  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.285)
+13:50:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.378)
+13:50:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.295)
+13:50:35  INFO       [safety2 / idle] 200/200  tier=MEDIUM  latency=712.5 ms  R=0.320  target=0.00  dets=9  vru=True  backend=onnx
+13:50:36  INFO     [RAMS] Controller stopped.
+13:50:36  INFO     
+--- Block 4/10  Policy: safety  Load: idle (0%) ---
+13:50:36  INFO     [RAMS] Starting resource monitor ...
+13:50:36  INFO     [RAMS] Loading model tiers ...
+13:50:36  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:50:36  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:50:37  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:50:37  INFO     [RAMS] Controller ready. Policy: safety
+13:50:40  INFO       [safety / idle] 20/200  tier=SMALL   latency=126.7 ms  R=0.295  target=0.00  dets=1  vru=False  backend=onnx
+13:50:43  INFO       [safety / idle] 40/200  tier=SMALL   latency=129.1 ms  R=0.364  target=0.00  dets=2  vru=False  backend=onnx
+13:50:46  INFO       [safety / idle] 60/200  tier=SMALL   latency=128.5 ms  R=0.364  target=0.00  dets=3  vru=False  backend=onnx
+13:50:49  INFO       [safety / idle] 80/200  tier=SMALL   latency=127.4 ms  R=0.362  target=0.00  dets=1  vru=False  backend=onnx
+13:50:52  INFO       [safety / idle] 100/200  tier=SMALL   latency=129.0 ms  R=0.384  target=0.00  dets=12  vru=False  backend=onnx
+13:50:55  INFO       [safety / idle] 120/200  tier=SMALL   latency=128.6 ms  R=0.283  target=0.00  dets=6  vru=False  backend=onnx
+13:50:57  INFO       [safety / idle] 140/200  tier=SMALL   latency=129.3 ms  R=0.283  target=0.00  dets=10  vru=False  backend=onnx
+13:51:00  INFO       [safety / idle] 160/200  tier=SMALL   latency=127.8 ms  R=0.283  target=0.00  dets=2  vru=False  backend=onnx
+13:51:03  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.0 ms  R=0.289  target=0.00  dets=1  vru=True  backend=onnx
+13:51:06  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.3 ms  R=0.432  target=0.00  dets=1  vru=True  backend=onnx
+13:51:06  INFO     [RAMS] Controller stopped.
+13:51:06  INFO     
+--- Block 4/10  Policy: threshold  Load: idle (0%) ---
+13:51:06  INFO     [RAMS] Starting resource monitor ...
+13:51:06  INFO     [RAMS] Loading model tiers ...
+13:51:06  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:51:06  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:51:07  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:51:07  INFO     [RAMS] Controller ready. Policy: threshold
+13:51:11  INFO       [threshold / idle] 20/200  tier=SMALL   latency=127.7 ms  R=0.442  target=0.00  dets=1  vru=False  backend=onnx
+13:51:13  INFO       [threshold / idle] 40/200  tier=SMALL   latency=127.4 ms  R=0.281  target=0.00  dets=2  vru=False  backend=onnx
+13:51:16  INFO       [threshold / idle] 60/200  tier=SMALL   latency=127.1 ms  R=0.285  target=0.00  dets=3  vru=False  backend=onnx
+13:51:19  INFO       [threshold / idle] 80/200  tier=SMALL   latency=127.0 ms  R=0.291  target=0.00  dets=1  vru=False  backend=onnx
+13:51:22  INFO       [threshold / idle] 100/200  tier=SMALL   latency=129.7 ms  R=0.293  target=0.00  dets=12  vru=False  backend=onnx
+13:51:25  INFO       [threshold / idle] 120/200  tier=SMALL   latency=129.5 ms  R=0.366  target=0.00  dets=6  vru=False  backend=onnx
+13:51:28  INFO       [threshold / idle] 140/200  tier=SMALL   latency=133.2 ms  R=0.456  target=0.00  dets=10  vru=False  backend=onnx
+13:51:30  INFO       [threshold / idle] 160/200  tier=SMALL   latency=130.4 ms  R=0.380  target=0.00  dets=2  vru=False  backend=onnx
+13:51:33  INFO       [threshold / idle] 180/200  tier=SMALL   latency=128.9 ms  R=0.279  target=0.00  dets=1  vru=True  backend=onnx
+13:51:36  INFO       [threshold / idle] 200/200  tier=SMALL   latency=128.3 ms  R=0.289  target=0.00  dets=1  vru=True  backend=onnx
+13:51:36  INFO     [RAMS] Controller stopped.
+13:51:36  INFO     
+--- Block 5/10  Policy: safety  Load: idle (0%) ---
+13:51:36  INFO     [RAMS] Starting resource monitor ...
+13:51:36  INFO     [RAMS] Loading model tiers ...
+13:51:36  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:51:37  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:51:37  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:51:37  INFO     [RAMS] Controller ready. Policy: safety
+13:51:41  INFO       [safety / idle] 20/200  tier=SMALL   latency=130.5 ms  R=0.293  target=0.00  dets=11  vru=True  backend=onnx
+13:51:44  INFO       [safety / idle] 40/200  tier=SMALL   latency=129.6 ms  R=0.283  target=0.00  dets=15  vru=False  backend=onnx
+13:51:47  INFO       [safety / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.281  target=0.00  dets=2  vru=False  backend=onnx
+13:51:50  INFO       [safety / idle] 80/200  tier=SMALL   latency=130.0 ms  R=0.467  target=0.00  dets=10  vru=False  backend=onnx
+13:51:53  INFO       [safety / idle] 100/200  tier=SMALL   latency=129.8 ms  R=0.359  target=0.00  dets=10  vru=False  backend=onnx
+13:51:55  INFO       [safety / idle] 120/200  tier=SMALL   latency=127.8 ms  R=0.283  target=0.00  dets=4  vru=False  backend=onnx
+13:51:58  INFO       [safety / idle] 140/200  tier=SMALL   latency=128.5 ms  R=0.285  target=0.00  dets=9  vru=True  backend=onnx
+13:52:01  INFO       [safety / idle] 160/200  tier=SMALL   latency=127.5 ms  R=0.291  target=0.00  dets=1  vru=False  backend=onnx
+13:52:04  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.0 ms  R=0.381  target=0.00  dets=2  vru=False  backend=onnx
+13:52:07  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.5 ms  R=0.285  target=0.00  dets=1  vru=False  backend=onnx
+13:52:07  INFO     [RAMS] Controller stopped.
+13:52:07  INFO     
+--- Block 5/10  Policy: fixed_nano  Load: idle (0%) ---
+13:52:07  INFO     [RAMS] Starting resource monitor ...
+13:52:07  INFO     [RAMS] Loading model tiers ...
+13:52:07  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:52:07  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:52:08  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:52:08  INFO     [RAMS] Controller ready. Policy: fixed
+13:52:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.145)
+13:52:10  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=32.9 ms  R=0.379  target=0.00  dets=7  vru=False  backend=onnx
+13:52:10  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=32.4 ms  R=0.431  target=0.00  dets=10  vru=False  backend=onnx
+13:52:11  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.9 ms  R=0.343  target=0.00  dets=2  vru=False  backend=onnx
+13:52:12  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.7 ms  R=0.355  target=0.00  dets=6  vru=False  backend=onnx
+13:52:13  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=30.8 ms  R=0.343  target=0.00  dets=2  vru=False  backend=onnx
+13:52:14  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=30.9 ms  R=0.320  target=0.00  dets=2  vru=False  backend=onnx
+13:52:15  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.5 ms  R=0.305  target=0.00  dets=1  vru=False  backend=onnx
+13:52:16  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=30.6 ms  R=0.283  target=0.00  dets=0  vru=False  backend=onnx
+13:52:17  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.1 ms  R=0.270  target=0.00  dets=1  vru=False  backend=onnx
+13:52:17  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=30.7 ms  R=0.279  target=0.00  dets=1  vru=False  backend=onnx
+13:52:18  INFO     [RAMS] Controller stopped.
+13:52:18  INFO     
+--- Block 5/10  Policy: fixed_medium  Load: idle (0%) ---
+13:52:18  INFO     [RAMS] Starting resource monitor ...
+13:52:18  INFO     [RAMS] Loading model tiers ...
+13:52:18  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:52:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:52:19  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:52:19  INFO     [RAMS] Controller ready. Policy: fixed
+13:52:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.058)
+13:52:34  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=724.0 ms  R=0.394  target=0.00  dets=17  vru=True  backend=onnx
+13:52:49  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=715.4 ms  R=0.301  target=0.00  dets=16  vru=False  backend=onnx
+13:53:03  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=712.4 ms  R=0.385  target=0.00  dets=3  vru=True  backend=onnx
+13:53:18  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=723.4 ms  R=0.365  target=0.00  dets=11  vru=False  backend=onnx
+13:53:32  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=712.1 ms  R=0.396  target=0.00  dets=10  vru=True  backend=onnx
+13:53:47  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=712.8 ms  R=0.301  target=0.00  dets=5  vru=False  backend=onnx
+13:54:02  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=721.1 ms  R=0.366  target=0.00  dets=19  vru=True  backend=onnx
+13:54:16  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=716.6 ms  R=0.312  target=0.00  dets=2  vru=False  backend=onnx
+13:54:31  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=712.6 ms  R=0.299  target=0.00  dets=3  vru=False  backend=onnx
+13:54:45  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=713.4 ms  R=0.351  target=0.00  dets=4  vru=False  backend=onnx
+13:54:45  INFO     [RAMS] Controller stopped.
+13:54:45  INFO     
+--- Block 5/10  Policy: adaptive  Load: idle (0%) ---
+13:54:45  INFO     [RAMS] Starting resource monitor ...
+13:54:45  INFO     [RAMS] Loading model tiers ...
+13:54:45  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:54:46  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:54:46  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:54:46  INFO     [RAMS] Controller ready. Policy: adaptive
+13:54:47  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.069)
+13:54:51  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:54:53  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=128.0 ms  R=0.303  target=0.00  dets=11  vru=True  backend=onnx
+13:54:56  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=128.5 ms  R=0.311  target=0.00  dets=15  vru=False  backend=onnx
+13:54:59  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=127.0 ms  R=0.388  target=0.00  dets=2  vru=False  backend=onnx
+13:55:02  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=129.5 ms  R=0.373  target=0.00  dets=10  vru=False  backend=onnx
+13:55:04  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=129.2 ms  R=0.345  target=0.00  dets=10  vru=False  backend=onnx
+13:55:07  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=127.2 ms  R=0.283  target=0.00  dets=4  vru=False  backend=onnx
+13:55:10  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=128.5 ms  R=0.303  target=0.00  dets=9  vru=True  backend=onnx
+13:55:13  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=127.7 ms  R=0.391  target=0.00  dets=1  vru=False  backend=onnx
+13:55:16  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=130.1 ms  R=0.309  target=0.00  dets=2  vru=False  backend=onnx
+13:55:18  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.1 ms  R=0.303  target=0.00  dets=1  vru=False  backend=onnx
+13:55:19  INFO     [RAMS] Controller stopped.
+13:55:19  INFO     
+--- Block 5/10  Policy: predictive  Load: idle (0%) ---
+13:55:19  INFO     [RAMS] Starting resource monitor ...
+13:55:19  INFO     [RAMS] Loading model tiers ...
+13:55:19  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:55:19  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:55:20  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:55:20  INFO     [RAMS] Controller ready. Policy: predictive
+13:55:21  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.145)
+13:55:23  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.406)
+13:55:25  INFO       [predictive / idle] 20/200  tier=SMALL   latency=130.0 ms  R=0.392  target=0.00  dets=11  vru=True  backend=onnx
+13:55:28  INFO       [predictive / idle] 40/200  tier=SMALL   latency=128.8 ms  R=0.303  target=0.00  dets=15  vru=False  backend=onnx
+13:55:31  INFO       [predictive / idle] 60/200  tier=SMALL   latency=127.0 ms  R=0.315  target=0.00  dets=2  vru=False  backend=onnx
+13:55:34  INFO       [predictive / idle] 80/200  tier=SMALL   latency=129.1 ms  R=0.297  target=0.00  dets=10  vru=False  backend=onnx
+13:55:36  INFO       [predictive / idle] 100/200  tier=SMALL   latency=127.7 ms  R=0.293  target=0.00  dets=10  vru=False  backend=onnx
+13:55:39  INFO       [predictive / idle] 120/200  tier=SMALL   latency=127.3 ms  R=0.285  target=0.00  dets=4  vru=False  backend=onnx
+13:55:42  INFO       [predictive / idle] 140/200  tier=SMALL   latency=127.5 ms  R=0.288  target=0.00  dets=9  vru=True  backend=onnx
+13:55:45  INFO       [predictive / idle] 160/200  tier=SMALL   latency=128.5 ms  R=0.475  target=0.00  dets=1  vru=False  backend=onnx
+13:55:48  INFO       [predictive / idle] 180/200  tier=SMALL   latency=129.8 ms  R=0.357  target=0.00  dets=2  vru=False  backend=onnx
+13:55:51  INFO       [predictive / idle] 200/200  tier=SMALL   latency=127.4 ms  R=0.280  target=0.00  dets=1  vru=False  backend=onnx
+13:55:51  INFO     [RAMS] Controller stopped.
+13:55:51  INFO     
+--- Block 5/10  Policy: safety2  Load: idle (0%) ---
+13:55:51  INFO     [RAMS] Starting resource monitor ...
+13:55:51  INFO     [RAMS] Loading model tiers ...
+13:55:51  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:55:51  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:55:52  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:55:52  INFO     [RAMS] Controller ready. Policy: safety2
+13:55:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.298)
+13:55:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.310)
+13:55:57  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=128.7 ms  R=0.293  target=0.00  dets=11  vru=True  backend=onnx
+13:55:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.301)
+13:56:00  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.317)
+13:56:00  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.301)
+13:56:02  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:56:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.283)
+13:56:05  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.450)
+13:56:05  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=130.3 ms  R=0.373  target=0.00  dets=15  vru=False  backend=onnx
+13:56:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.356)
+13:56:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.391)
+13:56:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.355)
+13:56:11  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+13:56:12  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=128.4 ms  R=0.381  target=0.00  dets=2  vru=False  backend=onnx
+13:56:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.276)
+13:56:15  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.393)
+13:56:15  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.297)
+13:56:17  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.295)
+13:56:18  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=128.7 ms  R=0.295  target=0.00  dets=10  vru=False  backend=onnx
+13:56:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.285)
+13:56:21  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.297)
+13:56:23  INFO       [safety2 / idle] 100/200  tier=SMALL   latency=129.4 ms  R=0.295  target=0.00  dets=10  vru=False  backend=onnx
+13:56:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.295)
+13:56:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.297)
+13:56:26  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.352)
+13:56:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.374)
+13:56:29  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.353  target=0.00  dets=4  vru=False  backend=onnx
+13:56:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.366)
+13:56:35  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.311)
+13:56:35  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+13:56:36  INFO       [safety2 / idle] 140/200  tier=MEDIUM  latency=718.3 ms  R=0.293  target=0.00  dets=19  vru=True  backend=onnx
+13:56:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.303)
+13:56:40  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=127.2 ms  R=0.281  target=0.00  dets=1  vru=False  backend=onnx
+13:56:43  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=127.6 ms  R=0.272  target=0.00  dets=2  vru=False  backend=onnx
+13:56:43  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.290)
+13:56:45  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.299)
+13:56:45  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.280)
+13:56:47  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.370)
+13:56:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.388)
+13:56:50  INFO       [safety2 / idle] 200/200  tier=MEDIUM  latency=723.1 ms  R=0.421  target=0.00  dets=4  vru=False  backend=onnx
+13:56:50  INFO     [RAMS] Controller stopped.
+13:56:50  INFO     
+--- Block 5/10  Policy: fixed_small  Load: idle (0%) ---
+13:56:50  INFO     [RAMS] Starting resource monitor ...
+13:56:50  INFO     [RAMS] Loading model tiers ...
+13:56:50  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:56:51  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:56:51  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:56:51  INFO     [RAMS] Controller ready. Policy: fixed
+13:56:55  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=129.2 ms  R=0.291  target=0.00  dets=11  vru=True  backend=onnx
+13:56:58  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=129.8 ms  R=0.287  target=0.00  dets=15  vru=False  backend=onnx
+13:57:01  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=127.6 ms  R=0.376  target=0.00  dets=2  vru=False  backend=onnx
+13:57:04  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=130.8 ms  R=0.301  target=0.00  dets=10  vru=False  backend=onnx
+13:57:07  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=128.3 ms  R=0.291  target=0.00  dets=10  vru=False  backend=onnx
+13:57:09  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.402  target=0.00  dets=4  vru=False  backend=onnx
+13:57:12  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=130.0 ms  R=0.360  target=0.00  dets=9  vru=True  backend=onnx
+13:57:15  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=127.7 ms  R=0.380  target=0.00  dets=1  vru=False  backend=onnx
+13:57:18  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=128.0 ms  R=0.276  target=0.00  dets=2  vru=False  backend=onnx
+13:57:21  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.0 ms  R=0.287  target=0.00  dets=1  vru=False  backend=onnx
+13:57:21  INFO     [RAMS] Controller stopped.
+13:57:21  INFO     
+--- Block 5/10  Policy: threshold  Load: idle (0%) ---
+13:57:21  INFO     [RAMS] Starting resource monitor ...
+13:57:21  INFO     [RAMS] Loading model tiers ...
+13:57:21  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:57:21  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:57:22  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:57:22  INFO     [RAMS] Controller ready. Policy: threshold
+13:57:26  INFO       [threshold / idle] 20/200  tier=SMALL   latency=130.7 ms  R=0.293  target=0.00  dets=11  vru=True  backend=onnx
+13:57:29  INFO       [threshold / idle] 40/200  tier=SMALL   latency=129.8 ms  R=0.281  target=0.00  dets=15  vru=False  backend=onnx
+13:57:31  INFO       [threshold / idle] 60/200  tier=SMALL   latency=130.6 ms  R=0.349  target=0.00  dets=2  vru=False  backend=onnx
+13:57:34  INFO       [threshold / idle] 80/200  tier=SMALL   latency=130.2 ms  R=0.369  target=0.00  dets=10  vru=False  backend=onnx
+13:57:37  INFO       [threshold / idle] 100/200  tier=SMALL   latency=128.7 ms  R=0.281  target=0.00  dets=10  vru=False  backend=onnx
+13:57:40  INFO       [threshold / idle] 120/200  tier=SMALL   latency=128.0 ms  R=0.280  target=0.00  dets=4  vru=False  backend=onnx
+13:57:43  INFO       [threshold / idle] 140/200  tier=SMALL   latency=128.2 ms  R=0.283  target=0.00  dets=9  vru=True  backend=onnx
+13:57:45  INFO       [threshold / idle] 160/200  tier=SMALL   latency=129.6 ms  R=0.291  target=0.00  dets=1  vru=False  backend=onnx
+13:57:48  INFO       [threshold / idle] 180/200  tier=SMALL   latency=128.4 ms  R=0.287  target=0.00  dets=2  vru=False  backend=onnx
+13:57:51  INFO       [threshold / idle] 200/200  tier=SMALL   latency=127.9 ms  R=0.304  target=0.00  dets=1  vru=False  backend=onnx
+13:57:51  INFO     [RAMS] Controller stopped.
+13:57:51  INFO     
+--- Block 6/10  Policy: adaptive  Load: idle (0%) ---
+13:57:51  INFO     [RAMS] Starting resource monitor ...
+13:57:51  INFO     [RAMS] Loading model tiers ...
+13:57:51  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:57:51  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:57:52  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:57:52  INFO     [RAMS] Controller ready. Policy: adaptive
+13:57:53  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.134)
+13:57:55  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.448)
+13:57:57  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=128.6 ms  R=0.354  target=0.00  dets=2  vru=False  backend=onnx
+13:58:00  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=127.9 ms  R=0.291  target=0.00  dets=2  vru=False  backend=onnx
+13:58:03  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=128.4 ms  R=0.400  target=0.00  dets=5  vru=False  backend=onnx
+13:58:06  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=129.3 ms  R=0.285  target=0.00  dets=3  vru=True  backend=onnx
+13:58:09  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=127.9 ms  R=0.285  target=0.00  dets=2  vru=False  backend=onnx
+13:58:11  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.286  target=0.00  dets=5  vru=False  backend=onnx
+13:58:14  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=129.9 ms  R=0.344  target=0.00  dets=4  vru=False  backend=onnx
+13:58:17  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=128.2 ms  R=0.363  target=0.00  dets=1  vru=False  backend=onnx
+13:58:20  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=129.3 ms  R=0.391  target=0.00  dets=6  vru=False  backend=onnx
+13:58:23  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=129.2 ms  R=0.304  target=0.00  dets=0  vru=False  backend=onnx
+13:58:23  INFO     [RAMS] Controller stopped.
+13:58:23  INFO     
+--- Block 6/10  Policy: safety2  Load: idle (0%) ---
+13:58:23  INFO     [RAMS] Starting resource monitor ...
+13:58:23  INFO     [RAMS] Loading model tiers ...
+13:58:23  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:58:23  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:58:24  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:58:24  INFO     [RAMS] Controller ready. Policy: safety2
+13:58:25  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.299)
+13:58:27  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.288)
+13:58:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+13:58:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.299)
+13:58:31  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=127.2 ms  R=0.303  target=0.00  dets=2  vru=False  backend=onnx
+13:58:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.282)
+13:58:35  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.374)
+13:58:35  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.360)
+13:58:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.360)
+13:58:38  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=128.4 ms  R=0.360  target=0.00  dets=2  vru=False  backend=onnx
+13:58:40  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.324  target=0.00  dets=5  vru=False  backend=onnx
+13:58:43  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=127.9 ms  R=0.286  target=0.00  dets=3  vru=True  backend=onnx
+13:58:43  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.282)
+13:58:45  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+13:58:47  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.296)
+13:58:49  INFO       [safety2 / idle] 100/200  tier=MEDIUM  latency=709.2 ms  R=0.298  target=0.00  dets=4  vru=True  backend=onnx
+13:58:49  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:58:52  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.282  target=0.00  dets=5  vru=False  backend=onnx
+13:58:52  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.300)
+13:58:55  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+13:58:55  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.286)
+13:58:57  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.368)
+13:58:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.365)
+13:59:00  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.372)
+13:59:00  INFO       [safety2 / idle] 140/200  tier=SMALL   latency=129.6 ms  R=0.366  target=0.00  dets=4  vru=False  backend=onnx
+13:59:02  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+13:59:04  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.304)
+13:59:05  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.379)
+13:59:06  INFO       [safety2 / idle] 160/200  tier=MEDIUM  latency=711.3 ms  R=0.379  target=0.00  dets=1  vru=False  backend=onnx
+13:59:07  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.306)
+13:59:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.363)
+13:59:10  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.317)
+13:59:10  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.290)
+13:59:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+13:59:13  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=128.2 ms  R=0.303  target=0.00  dets=6  vru=False  backend=onnx
+13:59:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.290)
+13:59:16  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+13:59:17  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.411)
+13:59:19  INFO       [safety2 / idle] 200/200  tier=MEDIUM  latency=723.1 ms  R=0.374  target=0.00  dets=4  vru=False  backend=onnx
+13:59:19  INFO     [RAMS] Controller stopped.
+13:59:19  INFO     
+--- Block 6/10  Policy: threshold  Load: idle (0%) ---
+13:59:19  INFO     [RAMS] Starting resource monitor ...
+13:59:19  INFO     [RAMS] Loading model tiers ...
+13:59:19  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:59:19  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:59:20  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:59:20  INFO     [RAMS] Controller ready. Policy: threshold
+13:59:24  INFO       [threshold / idle] 20/200  tier=SMALL   latency=128.8 ms  R=0.370  target=0.00  dets=2  vru=False  backend=onnx
+13:59:27  INFO       [threshold / idle] 40/200  tier=SMALL   latency=127.3 ms  R=0.287  target=0.00  dets=2  vru=False  backend=onnx
+13:59:29  INFO       [threshold / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.280  target=0.00  dets=5  vru=False  backend=onnx
+13:59:32  INFO       [threshold / idle] 80/200  tier=SMALL   latency=127.1 ms  R=0.289  target=0.00  dets=3  vru=True  backend=onnx
+13:59:35  INFO       [threshold / idle] 100/200  tier=SMALL   latency=127.2 ms  R=0.303  target=0.00  dets=2  vru=False  backend=onnx
+13:59:38  INFO       [threshold / idle] 120/200  tier=SMALL   latency=128.1 ms  R=0.285  target=0.00  dets=5  vru=False  backend=onnx
+13:59:41  INFO       [threshold / idle] 140/200  tier=SMALL   latency=129.8 ms  R=0.377  target=0.00  dets=4  vru=False  backend=onnx
+13:59:44  INFO       [threshold / idle] 160/200  tier=SMALL   latency=128.9 ms  R=0.352  target=0.00  dets=1  vru=False  backend=onnx
+13:59:46  INFO       [threshold / idle] 180/200  tier=SMALL   latency=128.5 ms  R=0.285  target=0.00  dets=6  vru=False  backend=onnx
+13:59:49  INFO       [threshold / idle] 200/200  tier=SMALL   latency=127.8 ms  R=0.301  target=0.00  dets=0  vru=False  backend=onnx
+13:59:49  INFO     [RAMS] Controller stopped.
+13:59:49  INFO     
+--- Block 6/10  Policy: fixed_nano  Load: idle (0%) ---
+13:59:49  INFO     [RAMS] Starting resource monitor ...
+13:59:49  INFO     [RAMS] Loading model tiers ...
+13:59:49  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+13:59:49  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+13:59:50  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+13:59:50  INFO     [RAMS] Controller ready. Policy: fixed
+13:59:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.063)
+13:59:52  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.5 ms  R=0.276  target=0.00  dets=1  vru=False  backend=onnx
+13:59:53  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.2 ms  R=0.291  target=0.00  dets=1  vru=False  backend=onnx
+13:59:54  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.3 ms  R=0.281  target=0.00  dets=4  vru=False  backend=onnx
+13:59:55  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.7 ms  R=0.278  target=0.00  dets=4  vru=True  backend=onnx
+13:59:56  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=31.3 ms  R=0.282  target=0.00  dets=3  vru=False  backend=onnx
+13:59:57  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.5 ms  R=0.258  target=0.00  dets=4  vru=False  backend=onnx
+13:59:57  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.1 ms  R=0.278  target=0.00  dets=3  vru=False  backend=onnx
+13:59:58  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.0 ms  R=0.282  target=0.00  dets=1  vru=False  backend=onnx
+13:59:59  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.5 ms  R=0.283  target=0.00  dets=6  vru=False  backend=onnx
+14:00:00  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.3 ms  R=0.408  target=0.00  dets=0  vru=False  backend=onnx
+14:00:00  INFO     [RAMS] Controller stopped.
+14:00:00  INFO     
+--- Block 6/10  Policy: fixed_medium  Load: idle (0%) ---
+14:00:00  INFO     [RAMS] Starting resource monitor ...
+14:00:00  INFO     [RAMS] Loading model tiers ...
+14:00:00  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:00:00  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:00:01  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:00:01  INFO     [RAMS] Controller ready. Policy: fixed
+14:00:02  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.337)
+14:00:17  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=709.6 ms  R=0.299  target=0.00  dets=3  vru=False  backend=onnx
+14:00:31  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=712.0 ms  R=0.297  target=0.00  dets=4  vru=False  backend=onnx
+14:00:46  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=720.0 ms  R=0.378  target=0.00  dets=7  vru=False  backend=onnx
+14:01:00  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=717.5 ms  R=0.309  target=0.00  dets=6  vru=True  backend=onnx
+14:01:15  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=709.8 ms  R=0.306  target=0.00  dets=4  vru=True  backend=onnx
+14:01:29  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=727.4 ms  R=0.360  target=0.00  dets=10  vru=True  backend=onnx
+14:01:44  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=710.1 ms  R=0.293  target=0.00  dets=5  vru=False  backend=onnx
+14:01:59  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=710.5 ms  R=0.388  target=0.00  dets=1  vru=False  backend=onnx
+14:02:13  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=720.1 ms  R=0.366  target=0.00  dets=10  vru=False  backend=onnx
+14:02:28  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=714.8 ms  R=0.400  target=0.00  dets=4  vru=False  backend=onnx
+14:02:28  INFO     [RAMS] Controller stopped.
+14:02:28  INFO     
+--- Block 6/10  Policy: fixed_small  Load: idle (0%) ---
+14:02:28  INFO     [RAMS] Starting resource monitor ...
+14:02:28  INFO     [RAMS] Loading model tiers ...
+14:02:28  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:02:28  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:02:29  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:02:29  INFO     [RAMS] Controller ready. Policy: fixed
+14:02:33  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=129.0 ms  R=0.368  target=0.00  dets=2  vru=False  backend=onnx
+14:02:35  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=128.6 ms  R=0.349  target=0.00  dets=2  vru=False  backend=onnx
+14:02:38  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=128.5 ms  R=0.295  target=0.00  dets=5  vru=False  backend=onnx
+14:02:41  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=128.1 ms  R=0.308  target=0.00  dets=3  vru=True  backend=onnx
+14:02:44  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=129.1 ms  R=0.301  target=0.00  dets=2  vru=False  backend=onnx
+14:02:47  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=128.3 ms  R=0.297  target=0.00  dets=5  vru=False  backend=onnx
+14:02:50  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=128.3 ms  R=0.280  target=0.00  dets=4  vru=False  backend=onnx
+14:02:52  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=129.9 ms  R=0.359  target=0.00  dets=1  vru=False  backend=onnx
+14:02:55  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=128.5 ms  R=0.374  target=0.00  dets=6  vru=False  backend=onnx
+14:02:58  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.8 ms  R=0.379  target=0.00  dets=0  vru=False  backend=onnx
+14:02:58  INFO     [RAMS] Controller stopped.
+14:02:58  INFO     
+--- Block 6/10  Policy: safety  Load: idle (0%) ---
+14:02:58  INFO     [RAMS] Starting resource monitor ...
+14:02:58  INFO     [RAMS] Loading model tiers ...
+14:02:58  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:02:58  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:02:59  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:02:59  INFO     [RAMS] Controller ready. Policy: safety
+14:03:03  INFO       [safety / idle] 20/200  tier=SMALL   latency=128.1 ms  R=0.388  target=0.00  dets=2  vru=False  backend=onnx
+14:03:06  INFO       [safety / idle] 40/200  tier=SMALL   latency=128.2 ms  R=0.289  target=0.00  dets=2  vru=False  backend=onnx
+14:03:09  INFO       [safety / idle] 60/200  tier=SMALL   latency=128.2 ms  R=0.285  target=0.00  dets=5  vru=False  backend=onnx
+14:03:11  INFO       [safety / idle] 80/200  tier=SMALL   latency=129.1 ms  R=0.285  target=0.00  dets=3  vru=True  backend=onnx
+14:03:14  INFO       [safety / idle] 100/200  tier=SMALL   latency=129.7 ms  R=0.355  target=0.00  dets=2  vru=False  backend=onnx
+14:03:17  INFO       [safety / idle] 120/200  tier=SMALL   latency=128.9 ms  R=0.371  target=0.00  dets=5  vru=False  backend=onnx
+14:03:20  INFO       [safety / idle] 140/200  tier=SMALL   latency=129.2 ms  R=0.285  target=0.00  dets=4  vru=False  backend=onnx
+14:03:23  INFO       [safety / idle] 160/200  tier=SMALL   latency=127.9 ms  R=0.283  target=0.00  dets=1  vru=False  backend=onnx
+14:03:26  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.3 ms  R=0.293  target=0.00  dets=6  vru=False  backend=onnx
+14:03:28  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.0 ms  R=0.311  target=0.00  dets=0  vru=False  backend=onnx
+14:03:28  INFO     [RAMS] Controller stopped.
+14:03:28  INFO     
+--- Block 6/10  Policy: predictive  Load: idle (0%) ---
+14:03:28  INFO     [RAMS] Starting resource monitor ...
+14:03:28  INFO     [RAMS] Loading model tiers ...
+14:03:29  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:03:29  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:03:29  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:03:29  INFO     [RAMS] Controller ready. Policy: predictive
+14:03:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.063)
+14:03:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.382)
+14:03:36  INFO       [predictive / idle] 20/200  tier=SMALL   latency=129.7 ms  R=0.362  target=0.00  dets=2  vru=False  backend=onnx
+14:03:39  INFO       [predictive / idle] 40/200  tier=SMALL   latency=129.3 ms  R=0.410  target=0.00  dets=2  vru=False  backend=onnx
+14:03:42  INFO       [predictive / idle] 60/200  tier=SMALL   latency=129.5 ms  R=0.301  target=0.00  dets=5  vru=False  backend=onnx
+14:03:45  INFO       [predictive / idle] 80/200  tier=SMALL   latency=127.7 ms  R=0.290  target=0.00  dets=3  vru=True  backend=onnx
+14:03:48  INFO       [predictive / idle] 100/200  tier=SMALL   latency=128.0 ms  R=0.303  target=0.00  dets=2  vru=False  backend=onnx
+14:03:50  INFO       [predictive / idle] 120/200  tier=SMALL   latency=128.1 ms  R=0.303  target=0.00  dets=5  vru=False  backend=onnx
+14:03:53  INFO       [predictive / idle] 140/200  tier=SMALL   latency=128.4 ms  R=0.295  target=0.00  dets=4  vru=False  backend=onnx
+14:03:56  INFO       [predictive / idle] 160/200  tier=SMALL   latency=129.7 ms  R=0.420  target=0.00  dets=1  vru=False  backend=onnx
+14:03:59  INFO       [predictive / idle] 180/200  tier=SMALL   latency=127.6 ms  R=0.345  target=0.00  dets=6  vru=False  backend=onnx
+14:04:02  INFO       [predictive / idle] 200/200  tier=SMALL   latency=127.0 ms  R=0.343  target=0.00  dets=0  vru=False  backend=onnx
+14:04:02  INFO     [RAMS] Controller stopped.
+14:04:02  INFO     
+--- Block 7/10  Policy: adaptive  Load: idle (0%) ---
+14:04:02  INFO     [RAMS] Starting resource monitor ...
+14:04:02  INFO     [RAMS] Loading model tiers ...
+14:04:02  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:04:02  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:04:03  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:04:03  INFO     [RAMS] Controller ready. Policy: adaptive
+14:04:04  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.058)
+14:04:09  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.396)
+14:04:11  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=127.2 ms  R=0.288  target=0.00  dets=1  vru=False  backend=onnx
+14:04:13  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=128.2 ms  R=0.282  target=0.00  dets=6  vru=False  backend=onnx
+14:04:16  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=127.0 ms  R=0.280  target=0.00  dets=3  vru=False  backend=onnx
+14:04:19  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=130.5 ms  R=0.380  target=0.00  dets=4  vru=False  backend=onnx
+14:04:22  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=132.2 ms  R=0.381  target=0.00  dets=9  vru=False  backend=onnx
+14:04:25  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=127.7 ms  R=0.290  target=0.00  dets=2  vru=False  backend=onnx
+14:04:28  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=128.2 ms  R=0.280  target=0.00  dets=7  vru=True  backend=onnx
+14:04:30  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=126.7 ms  R=0.286  target=0.00  dets=0  vru=False  backend=onnx
+14:04:33  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=127.9 ms  R=0.291  target=0.00  dets=4  vru=False  backend=onnx
+14:04:36  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.8 ms  R=0.372  target=0.00  dets=8  vru=True  backend=onnx
+14:04:36  INFO     [RAMS] Controller stopped.
+14:04:36  INFO     
+--- Block 7/10  Policy: fixed_nano  Load: idle (0%) ---
+14:04:36  INFO     [RAMS] Starting resource monitor ...
+14:04:36  INFO     [RAMS] Loading model tiers ...
+14:04:36  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:04:36  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:04:37  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:04:37  INFO     [RAMS] Controller ready. Policy: fixed
+14:04:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.081)
+14:04:39  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=30.9 ms  R=0.389  target=0.00  dets=1  vru=False  backend=onnx
+14:04:40  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.2 ms  R=0.435  target=0.00  dets=0  vru=False  backend=onnx
+14:04:41  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.3 ms  R=0.344  target=0.00  dets=3  vru=False  backend=onnx
+14:04:42  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.2 ms  R=0.338  target=0.00  dets=3  vru=False  backend=onnx
+14:04:43  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=31.8 ms  R=0.336  target=0.00  dets=11  vru=False  backend=onnx
+14:04:43  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=30.7 ms  R=0.340  target=0.00  dets=1  vru=False  backend=onnx
+14:04:44  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=30.8 ms  R=0.309  target=0.00  dets=1  vru=False  backend=onnx
+14:04:45  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=30.8 ms  R=0.276  target=0.00  dets=0  vru=False  backend=onnx
+14:04:46  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.0 ms  R=0.283  target=0.00  dets=3  vru=False  backend=onnx
+14:04:47  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.4 ms  R=0.270  target=0.00  dets=5  vru=False  backend=onnx
+14:04:47  INFO     [RAMS] Controller stopped.
+14:04:47  INFO     
+--- Block 7/10  Policy: fixed_medium  Load: idle (0%) ---
+14:04:47  INFO     [RAMS] Starting resource monitor ...
+14:04:47  INFO     [RAMS] Loading model tiers ...
+14:04:47  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:04:47  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:04:48  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:04:48  INFO     [RAMS] Controller ready. Policy: fixed
+14:04:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.070)
+14:05:04  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=720.2 ms  R=0.500  target=0.00  dets=1  vru=False  backend=onnx
+14:05:18  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=709.5 ms  R=0.307  target=0.00  dets=7  vru=False  backend=onnx
+14:05:33  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=711.1 ms  R=0.394  target=0.00  dets=3  vru=False  backend=onnx
+14:05:47  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=720.4 ms  R=0.360  target=0.00  dets=5  vru=True  backend=onnx
+14:06:02  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=709.9 ms  R=0.301  target=0.00  dets=15  vru=False  backend=onnx
+14:06:16  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=709.1 ms  R=0.297  target=0.00  dets=3  vru=True  backend=onnx
+14:06:31  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=718.3 ms  R=0.375  target=0.00  dets=10  vru=True  backend=onnx
+14:06:45  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=709.0 ms  R=0.299  target=0.00  dets=1  vru=False  backend=onnx
+14:07:00  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=708.8 ms  R=0.290  target=0.00  dets=8  vru=False  backend=onnx
+14:07:14  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=717.7 ms  R=0.375  target=0.00  dets=7  vru=True  backend=onnx
+14:07:14  INFO     [RAMS] Controller stopped.
+14:07:14  INFO     
+--- Block 7/10  Policy: fixed_small  Load: idle (0%) ---
+14:07:14  INFO     [RAMS] Starting resource monitor ...
+14:07:14  INFO     [RAMS] Loading model tiers ...
+14:07:14  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:07:15  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:07:15  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:07:15  INFO     [RAMS] Controller ready. Policy: fixed
+14:07:19  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=127.3 ms  R=0.384  target=0.00  dets=1  vru=False  backend=onnx
+14:07:22  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=128.4 ms  R=0.281  target=0.00  dets=6  vru=False  backend=onnx
+14:07:25  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=127.3 ms  R=0.285  target=0.00  dets=3  vru=False  backend=onnx
+14:07:28  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=129.6 ms  R=0.293  target=0.00  dets=4  vru=False  backend=onnx
+14:07:30  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=132.5 ms  R=0.428  target=0.00  dets=9  vru=False  backend=onnx
+14:07:33  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=128.1 ms  R=0.359  target=0.00  dets=2  vru=False  backend=onnx
+14:07:36  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=128.6 ms  R=0.381  target=0.00  dets=7  vru=True  backend=onnx
+14:07:39  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=127.3 ms  R=0.278  target=0.00  dets=0  vru=False  backend=onnx
+14:07:42  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=127.9 ms  R=0.285  target=0.00  dets=4  vru=False  backend=onnx
+14:07:45  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.1 ms  R=0.285  target=0.00  dets=8  vru=True  backend=onnx
+14:07:45  INFO     [RAMS] Controller stopped.
+14:07:45  INFO     
+--- Block 7/10  Policy: safety2  Load: idle (0%) ---
+14:07:45  INFO     [RAMS] Starting resource monitor ...
+14:07:45  INFO     [RAMS] Loading model tiers ...
+14:07:45  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:07:45  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:07:46  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:07:46  INFO     [RAMS] Controller ready. Policy: safety2
+14:07:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.293)
+14:07:50  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.414)
+14:07:51  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=127.6 ms  R=0.389  target=0.00  dets=1  vru=False  backend=onnx
+14:07:52  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.428)
+14:07:54  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.360)
+14:07:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.357)
+14:07:57  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.407)
+14:07:58  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=128.9 ms  R=0.345  target=0.00  dets=6  vru=False  backend=onnx
+14:07:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.368)
+14:08:02  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+14:08:04  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.280)
+14:08:05  INFO       [safety2 / idle] 60/200  tier=MEDIUM  latency=719.0 ms  R=0.295  target=0.00  dets=3  vru=False  backend=onnx
+14:08:06  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.303)
+14:08:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+14:08:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+14:08:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.286)
+14:08:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+14:08:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.288)
+14:08:13  INFO       [safety2 / idle] 80/200  tier=MEDIUM  latency=723.1 ms  R=0.293  target=0.00  dets=5  vru=True  backend=onnx
+14:08:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.444)
+14:08:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.362)
+14:08:18  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.369)
+14:08:18  INFO       [safety2 / idle] 100/200  tier=SMALL   latency=128.8 ms  R=0.369  target=0.00  dets=9  vru=False  backend=onnx
+14:08:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.298)
+14:08:22  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.293)
+14:08:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.299)
+14:08:24  INFO       [safety2 / idle] 120/200  tier=MEDIUM  latency=720.5 ms  R=0.299  target=0.00  dets=3  vru=True  backend=onnx
+14:08:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.307)
+14:08:26  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.310)
+14:08:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:08:29  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.300)
+14:08:30  INFO       [safety2 / idle] 140/200  tier=MEDIUM  latency=718.3 ms  R=0.300  target=0.00  dets=10  vru=True  backend=onnx
+14:08:31  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:08:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.286)
+14:08:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+14:08:36  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=129.6 ms  R=0.356  target=0.00  dets=0  vru=False  backend=onnx
+14:08:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.360)
+14:08:40  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.357)
+14:08:40  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=128.1 ms  R=0.358  target=0.00  dets=4  vru=False  backend=onnx
+14:08:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.298)
+14:08:43  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.400)
+14:08:45  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.282)
+14:08:47  INFO       [safety2 / idle] 200/200  tier=MEDIUM  latency=713.9 ms  R=0.400  target=0.00  dets=7  vru=True  backend=onnx
+14:08:47  INFO     [RAMS] Controller stopped.
+14:08:47  INFO     
+--- Block 7/10  Policy: threshold  Load: idle (0%) ---
+14:08:47  INFO     [RAMS] Starting resource monitor ...
+14:08:47  INFO     [RAMS] Loading model tiers ...
+14:08:47  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:08:47  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:08:48  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:08:48  INFO     [RAMS] Controller ready. Policy: threshold
+14:08:52  INFO       [threshold / idle] 20/200  tier=SMALL   latency=127.1 ms  R=0.293  target=0.00  dets=1  vru=False  backend=onnx
+14:08:55  INFO       [threshold / idle] 40/200  tier=SMALL   latency=127.6 ms  R=0.283  target=0.00  dets=6  vru=False  backend=onnx
+14:08:57  INFO       [threshold / idle] 60/200  tier=SMALL   latency=128.7 ms  R=0.379  target=0.00  dets=3  vru=False  backend=onnx
+14:09:00  INFO       [threshold / idle] 80/200  tier=SMALL   latency=130.1 ms  R=0.447  target=0.00  dets=4  vru=False  backend=onnx
+14:09:03  INFO       [threshold / idle] 100/200  tier=SMALL   latency=132.1 ms  R=0.288  target=0.00  dets=9  vru=False  backend=onnx
+14:09:06  INFO       [threshold / idle] 120/200  tier=SMALL   latency=128.0 ms  R=0.297  target=0.00  dets=2  vru=False  backend=onnx
+14:09:09  INFO       [threshold / idle] 140/200  tier=SMALL   latency=128.4 ms  R=0.299  target=0.00  dets=7  vru=True  backend=onnx
+14:09:11  INFO       [threshold / idle] 160/200  tier=SMALL   latency=129.0 ms  R=0.283  target=0.00  dets=0  vru=False  backend=onnx
+14:09:14  INFO       [threshold / idle] 180/200  tier=SMALL   latency=128.4 ms  R=0.288  target=0.00  dets=4  vru=False  backend=onnx
+14:09:17  INFO       [threshold / idle] 200/200  tier=SMALL   latency=130.9 ms  R=0.425  target=0.00  dets=8  vru=True  backend=onnx
+14:09:17  INFO     [RAMS] Controller stopped.
+14:09:17  INFO     
+--- Block 7/10  Policy: predictive  Load: idle (0%) ---
+14:09:17  INFO     [RAMS] Starting resource monitor ...
+14:09:17  INFO     [RAMS] Loading model tiers ...
+14:09:17  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:09:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:09:18  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:09:18  INFO     [RAMS] Controller ready. Policy: predictive
+14:09:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.188)
+14:09:20  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.456)
+14:09:23  INFO       [predictive / idle] 20/200  tier=SMALL   latency=129.5 ms  R=0.357  target=0.00  dets=1  vru=False  backend=onnx
+14:09:26  INFO       [predictive / idle] 40/200  tier=SMALL   latency=127.8 ms  R=0.286  target=0.00  dets=6  vru=False  backend=onnx
+14:09:28  INFO       [predictive / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.288  target=0.00  dets=3  vru=False  backend=onnx
+14:09:31  INFO       [predictive / idle] 80/200  tier=SMALL   latency=128.5 ms  R=0.391  target=0.00  dets=4  vru=False  backend=onnx
+14:09:34  INFO       [predictive / idle] 100/200  tier=SMALL   latency=129.9 ms  R=0.290  target=0.00  dets=9  vru=False  backend=onnx
+14:09:37  INFO       [predictive / idle] 120/200  tier=SMALL   latency=127.5 ms  R=0.290  target=0.00  dets=2  vru=False  backend=onnx
+14:09:40  INFO       [predictive / idle] 140/200  tier=SMALL   latency=128.8 ms  R=0.353  target=0.00  dets=7  vru=True  backend=onnx
+14:09:43  INFO       [predictive / idle] 160/200  tier=SMALL   latency=128.3 ms  R=0.360  target=0.00  dets=0  vru=False  backend=onnx
+14:09:45  INFO       [predictive / idle] 180/200  tier=SMALL   latency=128.9 ms  R=0.303  target=0.00  dets=4  vru=False  backend=onnx
+14:09:48  INFO       [predictive / idle] 200/200  tier=SMALL   latency=130.5 ms  R=0.282  target=0.00  dets=8  vru=True  backend=onnx
+14:09:48  INFO     [RAMS] Controller stopped.
+14:09:48  INFO     
+--- Block 7/10  Policy: safety  Load: idle (0%) ---
+14:09:48  INFO     [RAMS] Starting resource monitor ...
+14:09:48  INFO     [RAMS] Loading model tiers ...
+14:09:48  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:09:48  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:09:49  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:09:49  INFO     [RAMS] Controller ready. Policy: safety
+14:09:53  INFO       [safety / idle] 20/200  tier=SMALL   latency=128.4 ms  R=0.309  target=0.00  dets=1  vru=False  backend=onnx
+14:09:56  INFO       [safety / idle] 40/200  tier=SMALL   latency=127.5 ms  R=0.304  target=0.00  dets=6  vru=False  backend=onnx
+14:09:59  INFO       [safety / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.303  target=0.00  dets=3  vru=False  backend=onnx
+14:10:02  INFO       [safety / idle] 80/200  tier=SMALL   latency=129.4 ms  R=0.388  target=0.00  dets=4  vru=False  backend=onnx
+14:10:04  INFO       [safety / idle] 100/200  tier=SMALL   latency=130.0 ms  R=0.355  target=0.00  dets=9  vru=False  backend=onnx
+14:10:07  INFO       [safety / idle] 120/200  tier=SMALL   latency=128.5 ms  R=0.288  target=0.00  dets=2  vru=False  backend=onnx
+14:10:10  INFO       [safety / idle] 140/200  tier=SMALL   latency=128.0 ms  R=0.281  target=0.00  dets=7  vru=True  backend=onnx
+14:10:13  INFO       [safety / idle] 160/200  tier=SMALL   latency=127.5 ms  R=0.293  target=0.00  dets=0  vru=False  backend=onnx
+14:10:16  INFO       [safety / idle] 180/200  tier=SMALL   latency=128.0 ms  R=0.299  target=0.00  dets=4  vru=False  backend=onnx
+14:10:18  INFO       [safety / idle] 200/200  tier=SMALL   latency=128.5 ms  R=0.299  target=0.00  dets=8  vru=True  backend=onnx
+14:10:19  INFO     [RAMS] Controller stopped.
+14:10:19  INFO     
+--- Block 8/10  Policy: fixed_small  Load: idle (0%) ---
+14:10:19  INFO     [RAMS] Starting resource monitor ...
+14:10:19  INFO     [RAMS] Loading model tiers ...
+14:10:19  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:10:19  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:10:20  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:10:20  INFO     [RAMS] Controller ready. Policy: fixed
+14:10:23  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=130.5 ms  R=0.377  target=0.00  dets=1  vru=False  backend=onnx
+14:10:26  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=129.0 ms  R=0.384  target=0.00  dets=5  vru=False  backend=onnx
+14:10:29  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=128.8 ms  R=0.297  target=0.00  dets=8  vru=False  backend=onnx
+14:10:32  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=128.0 ms  R=0.297  target=0.00  dets=5  vru=False  backend=onnx
+14:10:35  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=128.4 ms  R=0.337  target=0.00  dets=9  vru=False  backend=onnx
+14:10:38  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=127.1 ms  R=0.301  target=0.00  dets=0  vru=False  backend=onnx
+14:10:40  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=127.8 ms  R=0.396  target=0.00  dets=1  vru=False  backend=onnx
+14:10:43  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=130.7 ms  R=0.429  target=0.00  dets=1  vru=False  backend=onnx
+14:10:46  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=129.1 ms  R=0.344  target=0.00  dets=3  vru=False  backend=onnx
+14:10:49  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=129.4 ms  R=0.356  target=0.00  dets=12  vru=False  backend=onnx
+14:10:49  INFO     [RAMS] Controller stopped.
+14:10:49  INFO     
+--- Block 8/10  Policy: safety  Load: idle (0%) ---
+14:10:49  INFO     [RAMS] Starting resource monitor ...
+14:10:49  INFO     [RAMS] Loading model tiers ...
+14:10:49  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:10:49  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:10:50  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:10:50  INFO     [RAMS] Controller ready. Policy: safety
+14:10:54  INFO       [safety / idle] 20/200  tier=SMALL   latency=127.8 ms  R=0.299  target=0.00  dets=1  vru=False  backend=onnx
+14:10:57  INFO       [safety / idle] 40/200  tier=SMALL   latency=128.3 ms  R=0.303  target=0.00  dets=5  vru=False  backend=onnx
+14:10:59  INFO       [safety / idle] 60/200  tier=SMALL   latency=128.3 ms  R=0.299  target=0.00  dets=8  vru=False  backend=onnx
+14:11:02  INFO       [safety / idle] 80/200  tier=SMALL   latency=129.1 ms  R=0.288  target=0.00  dets=5  vru=False  backend=onnx
+14:11:05  INFO       [safety / idle] 100/200  tier=SMALL   latency=129.3 ms  R=0.362  target=0.00  dets=9  vru=False  backend=onnx
+14:11:08  INFO       [safety / idle] 120/200  tier=SMALL   latency=128.5 ms  R=0.404  target=0.00  dets=0  vru=False  backend=onnx
+14:11:11  INFO       [safety / idle] 140/200  tier=SMALL   latency=127.5 ms  R=0.337  target=0.00  dets=1  vru=False  backend=onnx
+14:11:14  INFO       [safety / idle] 160/200  tier=SMALL   latency=127.5 ms  R=0.299  target=0.00  dets=1  vru=False  backend=onnx
+14:11:16  INFO       [safety / idle] 180/200  tier=SMALL   latency=127.5 ms  R=0.405  target=0.00  dets=3  vru=False  backend=onnx
+14:11:19  INFO       [safety / idle] 200/200  tier=SMALL   latency=129.6 ms  R=0.301  target=0.00  dets=12  vru=False  backend=onnx
+14:11:19  INFO     [RAMS] Controller stopped.
+14:11:19  INFO     
+--- Block 8/10  Policy: threshold  Load: idle (0%) ---
+14:11:19  INFO     [RAMS] Starting resource monitor ...
+14:11:19  INFO     [RAMS] Loading model tiers ...
+14:11:19  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:11:19  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:11:20  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:11:20  INFO     [RAMS] Controller ready. Policy: threshold
+14:11:24  INFO       [threshold / idle] 20/200  tier=SMALL   latency=129.1 ms  R=0.295  target=0.00  dets=1  vru=False  backend=onnx
+14:11:27  INFO       [threshold / idle] 40/200  tier=SMALL   latency=128.3 ms  R=0.352  target=0.00  dets=5  vru=False  backend=onnx
+14:11:30  INFO       [threshold / idle] 60/200  tier=SMALL   latency=129.4 ms  R=0.369  target=0.00  dets=8  vru=False  backend=onnx
+14:11:33  INFO       [threshold / idle] 80/200  tier=SMALL   latency=127.7 ms  R=0.281  target=0.00  dets=5  vru=False  backend=onnx
+14:11:35  INFO       [threshold / idle] 100/200  tier=SMALL   latency=128.6 ms  R=0.379  target=0.00  dets=9  vru=False  backend=onnx
+14:11:38  INFO       [threshold / idle] 120/200  tier=SMALL   latency=128.1 ms  R=0.299  target=0.00  dets=0  vru=False  backend=onnx
+14:11:41  INFO       [threshold / idle] 140/200  tier=SMALL   latency=127.4 ms  R=0.276  target=0.00  dets=1  vru=False  backend=onnx
+14:11:44  INFO       [threshold / idle] 160/200  tier=SMALL   latency=127.4 ms  R=0.283  target=0.00  dets=1  vru=False  backend=onnx
+14:11:47  INFO       [threshold / idle] 180/200  tier=SMALL   latency=127.1 ms  R=0.285  target=0.00  dets=3  vru=False  backend=onnx
+14:11:49  INFO       [threshold / idle] 200/200  tier=SMALL   latency=129.9 ms  R=0.435  target=0.00  dets=12  vru=False  backend=onnx
+14:11:50  INFO     [RAMS] Controller stopped.
+14:11:50  INFO     
+--- Block 8/10  Policy: safety2  Load: idle (0%) ---
+14:11:50  INFO     [RAMS] Starting resource monitor ...
+14:11:50  INFO     [RAMS] Loading model tiers ...
+14:11:50  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:11:50  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:11:51  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:11:51  INFO     [RAMS] Controller ready. Policy: safety2
+14:11:53  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.349)
+14:11:55  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+14:11:56  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=127.8 ms  R=0.303  target=0.00  dets=1  vru=False  backend=onnx
+14:11:59  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=127.6 ms  R=0.298  target=0.00  dets=5  vru=False  backend=onnx
+14:12:00  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.319)
+14:12:06  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.307)
+14:12:07  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=127.9 ms  R=0.286  target=0.00  dets=8  vru=False  backend=onnx
+14:12:07  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.296)
+14:12:10  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.379)
+14:12:10  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.370)
+14:12:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.380)
+14:12:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.364)
+14:12:15  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+14:12:15  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=128.5 ms  R=0.303  target=0.00  dets=5  vru=False  backend=onnx
+14:12:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.284)
+14:12:18  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:12:18  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.288)
+14:12:22  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+14:12:23  INFO       [safety2 / idle] 100/200  tier=SMALL   latency=129.5 ms  R=0.290  target=0.00  dets=9  vru=False  backend=onnx
+14:12:25  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.300)
+14:12:27  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:12:28  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=127.8 ms  R=0.286  target=0.00  dets=0  vru=False  backend=onnx
+14:12:31  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.391)
+14:12:31  INFO       [safety2 / idle] 140/200  tier=MEDIUM  latency=723.2 ms  R=0.391  target=0.00  dets=1  vru=False  backend=onnx
+14:12:33  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.371)
+14:12:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.384)
+14:12:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.354)
+14:12:37  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=127.6 ms  R=0.280  target=0.00  dets=1  vru=False  backend=onnx
+14:12:38  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.301)
+14:12:40  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.307)
+14:12:42  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=127.5 ms  R=0.300  target=0.00  dets=3  vru=False  backend=onnx
+14:12:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.288)
+14:12:44  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.291)
+14:12:45  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.280)
+14:12:47  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+14:12:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.276)
+14:12:49  INFO       [safety2 / idle] 200/200  tier=MEDIUM  latency=721.0 ms  R=0.276  target=0.00  dets=15  vru=False  backend=onnx
+14:12:49  INFO     [RAMS] Controller stopped.
+14:12:49  INFO     
+--- Block 8/10  Policy: fixed_nano  Load: idle (0%) ---
+14:12:49  INFO     [RAMS] Starting resource monitor ...
+14:12:49  INFO     [RAMS] Loading model tiers ...
+14:12:49  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:12:49  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:12:50  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:12:50  INFO     [RAMS] Controller ready. Policy: fixed
+14:12:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.064)
+14:12:52  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.2 ms  R=0.331  target=0.00  dets=0  vru=False  backend=onnx
+14:12:52  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.3 ms  R=0.365  target=0.00  dets=3  vru=False  backend=onnx
+14:12:53  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.8 ms  R=0.409  target=0.00  dets=2  vru=False  backend=onnx
+14:12:54  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=32.2 ms  R=0.366  target=0.00  dets=5  vru=False  backend=onnx
+14:12:55  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=32.2 ms  R=0.336  target=0.00  dets=6  vru=False  backend=onnx
+14:12:56  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.3 ms  R=0.330  target=0.00  dets=0  vru=False  backend=onnx
+14:12:57  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.8 ms  R=0.342  target=0.00  dets=1  vru=False  backend=onnx
+14:12:58  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.4 ms  R=0.283  target=0.00  dets=1  vru=False  backend=onnx
+14:12:59  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=30.8 ms  R=0.295  target=0.00  dets=2  vru=False  backend=onnx
+14:12:59  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.9 ms  R=0.295  target=0.00  dets=11  vru=False  backend=onnx
+14:13:00  INFO     [RAMS] Controller stopped.
+14:13:00  INFO     
+--- Block 8/10  Policy: fixed_medium  Load: idle (0%) ---
+14:13:00  INFO     [RAMS] Starting resource monitor ...
+14:13:00  INFO     [RAMS] Loading model tiers ...
+14:13:00  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:13:00  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:13:01  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:13:01  INFO     [RAMS] Controller ready. Policy: fixed
+14:13:02  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.064)
+14:13:16  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=721.0 ms  R=0.433  target=0.00  dets=4  vru=True  backend=onnx
+14:13:31  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=713.2 ms  R=0.301  target=0.00  dets=8  vru=False  backend=onnx
+14:13:45  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=720.0 ms  R=0.315  target=0.00  dets=11  vru=True  backend=onnx
+14:14:00  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=721.7 ms  R=0.374  target=0.00  dets=6  vru=False  backend=onnx
+14:14:15  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=715.5 ms  R=0.301  target=0.00  dets=10  vru=False  backend=onnx
+14:14:29  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=715.3 ms  R=0.396  target=0.00  dets=3  vru=False  backend=onnx
+14:14:44  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=724.7 ms  R=0.415  target=0.00  dets=1  vru=False  backend=onnx
+14:14:58  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=715.1 ms  R=0.311  target=0.00  dets=4  vru=False  backend=onnx
+14:15:13  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=719.4 ms  R=0.298  target=0.00  dets=5  vru=False  backend=onnx
+14:15:28  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=720.1 ms  R=0.355  target=0.00  dets=15  vru=False  backend=onnx
+14:15:28  INFO     [RAMS] Controller stopped.
+14:15:28  INFO     
+--- Block 8/10  Policy: predictive  Load: idle (0%) ---
+14:15:28  INFO     [RAMS] Starting resource monitor ...
+14:15:28  INFO     [RAMS] Loading model tiers ...
+14:15:28  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:15:28  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:15:29  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:15:29  INFO     [RAMS] Controller ready. Policy: predictive
+14:15:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.069)
+14:15:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.388)
+14:15:36  INFO       [predictive / idle] 20/200  tier=SMALL   latency=128.8 ms  R=0.370  target=0.00  dets=1  vru=False  backend=onnx
+14:15:38  INFO       [predictive / idle] 40/200  tier=SMALL   latency=131.9 ms  R=0.307  target=0.00  dets=5  vru=False  backend=onnx
+14:15:41  INFO       [predictive / idle] 60/200  tier=SMALL   latency=128.9 ms  R=0.286  target=0.00  dets=8  vru=False  backend=onnx
+14:15:44  INFO       [predictive / idle] 80/200  tier=SMALL   latency=131.0 ms  R=0.359  target=0.00  dets=5  vru=False  backend=onnx
+14:15:47  INFO       [predictive / idle] 100/200  tier=SMALL   latency=130.6 ms  R=0.354  target=0.00  dets=9  vru=False  backend=onnx
+14:15:50  INFO       [predictive / idle] 120/200  tier=SMALL   latency=128.0 ms  R=0.295  target=0.00  dets=0  vru=False  backend=onnx
+14:15:53  INFO       [predictive / idle] 140/200  tier=SMALL   latency=127.9 ms  R=0.301  target=0.00  dets=1  vru=False  backend=onnx
+14:15:56  INFO       [predictive / idle] 160/200  tier=SMALL   latency=130.1 ms  R=0.331  target=0.00  dets=1  vru=False  backend=onnx
+14:15:58  INFO       [predictive / idle] 180/200  tier=SMALL   latency=129.0 ms  R=0.284  target=0.00  dets=3  vru=False  backend=onnx
+14:16:01  INFO       [predictive / idle] 200/200  tier=SMALL   latency=129.1 ms  R=0.288  target=0.00  dets=12  vru=False  backend=onnx
+14:16:01  INFO     [RAMS] Controller stopped.
+14:16:01  INFO     
+--- Block 8/10  Policy: adaptive  Load: idle (0%) ---
+14:16:01  INFO     [RAMS] Starting resource monitor ...
+14:16:01  INFO     [RAMS] Loading model tiers ...
+14:16:01  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:16:02  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:16:02  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:16:02  INFO     [RAMS] Controller ready. Policy: adaptive
+14:16:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.113)
+14:16:06  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.361)
+14:16:08  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=130.0 ms  R=0.356  target=0.00  dets=1  vru=False  backend=onnx
+14:16:11  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=128.5 ms  R=0.286  target=0.00  dets=5  vru=False  backend=onnx
+14:16:14  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=127.6 ms  R=0.366  target=0.00  dets=8  vru=False  backend=onnx
+14:16:17  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=128.6 ms  R=0.282  target=0.00  dets=5  vru=False  backend=onnx
+14:16:19  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=128.0 ms  R=0.286  target=0.00  dets=9  vru=False  backend=onnx
+14:16:22  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=126.7 ms  R=0.278  target=0.00  dets=0  vru=False  backend=onnx
+14:16:25  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=126.9 ms  R=0.282  target=0.00  dets=1  vru=False  backend=onnx
+14:16:28  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=128.3 ms  R=0.377  target=0.00  dets=1  vru=False  backend=onnx
+14:16:31  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=128.6 ms  R=0.354  target=0.00  dets=3  vru=False  backend=onnx
+14:16:33  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.9 ms  R=0.288  target=0.00  dets=12  vru=False  backend=onnx
+14:16:34  INFO     [RAMS] Controller stopped.
+14:16:34  INFO     
+--- Block 9/10  Policy: fixed_medium  Load: idle (0%) ---
+14:16:34  INFO     [RAMS] Starting resource monitor ...
+14:16:34  INFO     [RAMS] Loading model tiers ...
+14:16:34  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:16:34  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:16:35  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:16:35  INFO     [RAMS] Controller ready. Policy: fixed
+14:16:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.150)
+14:16:50  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=721.7 ms  R=0.371  target=0.00  dets=4  vru=False  backend=onnx
+14:17:05  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=715.2 ms  R=0.301  target=0.00  dets=13  vru=False  backend=onnx
+14:17:19  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=718.0 ms  R=0.387  target=0.00  dets=6  vru=False  backend=onnx
+14:17:34  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=722.0 ms  R=0.383  target=0.00  dets=3  vru=False  backend=onnx
+14:17:48  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=713.1 ms  R=0.300  target=0.00  dets=16  vru=False  backend=onnx
+14:18:03  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=718.3 ms  R=0.298  target=0.00  dets=21  vru=False  backend=onnx
+14:18:18  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=723.6 ms  R=0.360  target=0.00  dets=13  vru=False  backend=onnx
+14:18:32  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=714.6 ms  R=0.298  target=0.00  dets=8  vru=False  backend=onnx
+14:18:47  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=712.5 ms  R=0.303  target=0.00  dets=8  vru=False  backend=onnx
+14:19:01  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=721.5 ms  R=0.466  target=0.00  dets=2  vru=False  backend=onnx
+14:19:01  INFO     [RAMS] Controller stopped.
+14:19:01  INFO     
+--- Block 9/10  Policy: adaptive  Load: idle (0%) ---
+14:19:01  INFO     [RAMS] Starting resource monitor ...
+14:19:02  INFO     [RAMS] Loading model tiers ...
+14:19:02  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:19:02  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:19:03  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:19:03  INFO     [RAMS] Controller ready. Policy: adaptive
+14:19:04  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.097)
+14:19:07  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:19:09  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=128.1 ms  R=0.300  target=0.00  dets=4  vru=False  backend=onnx
+14:19:12  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=128.3 ms  R=0.303  target=0.00  dets=7  vru=False  backend=onnx
+14:19:15  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=127.7 ms  R=0.286  target=0.00  dets=2  vru=False  backend=onnx
+14:19:18  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=129.5 ms  R=0.408  target=0.00  dets=2  vru=False  backend=onnx
+14:19:21  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=129.7 ms  R=0.363  target=0.00  dets=8  vru=False  backend=onnx
+14:19:23  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=129.5 ms  R=0.360  target=0.00  dets=16  vru=False  backend=onnx
+14:19:26  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=127.8 ms  R=0.298  target=0.00  dets=6  vru=False  backend=onnx
+14:19:29  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=127.5 ms  R=0.296  target=0.00  dets=6  vru=False  backend=onnx
+14:19:32  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=127.8 ms  R=0.321  target=0.00  dets=5  vru=False  backend=onnx
+14:19:35  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.2 ms  R=0.294  target=0.00  dets=2  vru=False  backend=onnx
+14:19:35  INFO     [RAMS] Controller stopped.
+14:19:35  INFO     
+--- Block 9/10  Policy: threshold  Load: idle (0%) ---
+14:19:35  INFO     [RAMS] Starting resource monitor ...
+14:19:35  INFO     [RAMS] Loading model tiers ...
+14:19:35  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:19:35  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:19:36  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:19:36  INFO     [RAMS] Controller ready. Policy: threshold
+14:19:39  INFO       [threshold / idle] 20/200  tier=SMALL   latency=128.7 ms  R=0.369  target=0.00  dets=4  vru=False  backend=onnx
+14:19:42  INFO       [threshold / idle] 40/200  tier=SMALL   latency=131.0 ms  R=0.357  target=0.00  dets=7  vru=False  backend=onnx
+14:19:45  INFO       [threshold / idle] 60/200  tier=SMALL   latency=127.5 ms  R=0.291  target=0.00  dets=2  vru=False  backend=onnx
+14:19:48  INFO       [threshold / idle] 80/200  tier=SMALL   latency=127.9 ms  R=0.297  target=0.00  dets=2  vru=False  backend=onnx
+14:19:51  INFO       [threshold / idle] 100/200  tier=SMALL   latency=128.3 ms  R=0.397  target=0.00  dets=8  vru=False  backend=onnx
+14:19:54  INFO       [threshold / idle] 120/200  tier=SMALL   latency=130.6 ms  R=0.297  target=0.00  dets=16  vru=False  backend=onnx
+14:19:56  INFO       [threshold / idle] 140/200  tier=SMALL   latency=128.2 ms  R=0.304  target=0.00  dets=6  vru=False  backend=onnx
+14:19:59  INFO       [threshold / idle] 160/200  tier=SMALL   latency=127.7 ms  R=0.298  target=0.00  dets=6  vru=False  backend=onnx
+14:20:02  INFO       [threshold / idle] 180/200  tier=SMALL   latency=129.6 ms  R=0.353  target=0.00  dets=5  vru=False  backend=onnx
+14:20:05  INFO       [threshold / idle] 200/200  tier=SMALL   latency=129.8 ms  R=0.374  target=0.00  dets=2  vru=False  backend=onnx
+14:20:05  INFO     [RAMS] Controller stopped.
+14:20:05  INFO     
+--- Block 9/10  Policy: fixed_nano  Load: idle (0%) ---
+14:20:05  INFO     [RAMS] Starting resource monitor ...
+14:20:05  INFO     [RAMS] Loading model tiers ...
+14:20:05  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:20:05  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:20:06  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:20:06  INFO     [RAMS] Controller ready. Policy: fixed
+14:20:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.058)
+14:20:08  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.1 ms  R=0.282  target=0.00  dets=3  vru=False  backend=onnx
+14:20:09  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.2 ms  R=0.281  target=0.00  dets=4  vru=False  backend=onnx
+14:20:10  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=31.2 ms  R=0.332  target=0.00  dets=0  vru=False  backend=onnx
+14:20:11  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.7 ms  R=0.303  target=0.00  dets=3  vru=False  backend=onnx
+14:20:11  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=31.1 ms  R=0.274  target=0.00  dets=6  vru=False  backend=onnx
+14:20:12  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=32.6 ms  R=0.274  target=0.00  dets=13  vru=False  backend=onnx
+14:20:13  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.4 ms  R=0.264  target=0.00  dets=4  vru=False  backend=onnx
+14:20:14  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=30.9 ms  R=0.268  target=0.00  dets=3  vru=False  backend=onnx
+14:20:15  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=31.2 ms  R=0.276  target=0.00  dets=5  vru=False  backend=onnx
+14:20:16  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=31.1 ms  R=0.278  target=0.00  dets=1  vru=False  backend=onnx
+14:20:16  INFO     [RAMS] Controller stopped.
+14:20:16  INFO     
+--- Block 9/10  Policy: safety  Load: idle (0%) ---
+14:20:16  INFO     [RAMS] Starting resource monitor ...
+14:20:16  INFO     [RAMS] Loading model tiers ...
+14:20:16  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:20:16  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:20:17  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:20:17  INFO     [RAMS] Controller ready. Policy: safety
+14:20:21  INFO       [safety / idle] 20/200  tier=SMALL   latency=128.0 ms  R=0.293  target=0.00  dets=4  vru=False  backend=onnx
+14:20:24  INFO       [safety / idle] 40/200  tier=SMALL   latency=129.1 ms  R=0.462  target=0.00  dets=7  vru=False  backend=onnx
+14:20:27  INFO       [safety / idle] 60/200  tier=SMALL   latency=129.2 ms  R=0.377  target=0.00  dets=2  vru=False  backend=onnx
+14:20:29  INFO       [safety / idle] 80/200  tier=SMALL   latency=128.3 ms  R=0.299  target=0.00  dets=2  vru=False  backend=onnx
+14:20:32  INFO       [safety / idle] 100/200  tier=SMALL   latency=128.5 ms  R=0.282  target=0.00  dets=8  vru=False  backend=onnx
+14:20:35  INFO       [safety / idle] 120/200  tier=SMALL   latency=129.5 ms  R=0.283  target=0.00  dets=16  vru=False  backend=onnx
+14:20:38  INFO       [safety / idle] 140/200  tier=SMALL   latency=127.6 ms  R=0.369  target=0.00  dets=6  vru=False  backend=onnx
+14:20:41  INFO       [safety / idle] 160/200  tier=SMALL   latency=128.4 ms  R=0.285  target=0.00  dets=6  vru=False  backend=onnx
+14:20:43  INFO       [safety / idle] 180/200  tier=SMALL   latency=129.2 ms  R=0.362  target=0.00  dets=5  vru=False  backend=onnx
+14:20:46  INFO       [safety / idle] 200/200  tier=SMALL   latency=127.9 ms  R=0.363  target=0.00  dets=2  vru=False  backend=onnx
+14:20:46  INFO     [RAMS] Controller stopped.
+14:20:46  INFO     
+--- Block 9/10  Policy: predictive  Load: idle (0%) ---
+14:20:46  INFO     [RAMS] Starting resource monitor ...
+14:20:46  INFO     [RAMS] Loading model tiers ...
+14:20:46  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:20:47  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:20:47  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:20:47  INFO     [RAMS] Controller ready. Policy: predictive
+14:20:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.151)
+14:20:51  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:20:54  INFO       [predictive / idle] 20/200  tier=SMALL   latency=130.3 ms  R=0.280  target=0.00  dets=4  vru=False  backend=onnx
+14:20:56  INFO       [predictive / idle] 40/200  tier=SMALL   latency=129.1 ms  R=0.282  target=0.00  dets=7  vru=False  backend=onnx
+14:20:59  INFO       [predictive / idle] 60/200  tier=SMALL   latency=128.4 ms  R=0.296  target=0.00  dets=2  vru=False  backend=onnx
+14:21:02  INFO       [predictive / idle] 80/200  tier=SMALL   latency=128.6 ms  R=0.294  target=0.00  dets=2  vru=False  backend=onnx
+14:21:05  INFO       [predictive / idle] 100/200  tier=SMALL   latency=129.9 ms  R=0.429  target=0.00  dets=8  vru=False  backend=onnx
+14:21:08  INFO       [predictive / idle] 120/200  tier=SMALL   latency=130.8 ms  R=0.360  target=0.00  dets=16  vru=False  backend=onnx
+14:21:11  INFO       [predictive / idle] 140/200  tier=SMALL   latency=129.1 ms  R=0.358  target=0.00  dets=6  vru=False  backend=onnx
+14:21:13  INFO       [predictive / idle] 160/200  tier=SMALL   latency=127.7 ms  R=0.298  target=0.00  dets=6  vru=False  backend=onnx
+14:21:16  INFO       [predictive / idle] 180/200  tier=SMALL   latency=127.9 ms  R=0.298  target=0.00  dets=5  vru=False  backend=onnx
+14:21:19  INFO       [predictive / idle] 200/200  tier=SMALL   latency=127.5 ms  R=0.301  target=0.00  dets=2  vru=False  backend=onnx
+14:21:19  INFO     [RAMS] Controller stopped.
+14:21:19  INFO     
+--- Block 9/10  Policy: fixed_small  Load: idle (0%) ---
+14:21:19  INFO     [RAMS] Starting resource monitor ...
+14:21:19  INFO     [RAMS] Loading model tiers ...
+14:21:19  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:21:19  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:21:20  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:21:20  INFO     [RAMS] Controller ready. Policy: fixed
+14:21:24  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=128.4 ms  R=0.301  target=0.00  dets=4  vru=False  backend=onnx
+14:21:27  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=130.1 ms  R=0.458  target=0.00  dets=7  vru=False  backend=onnx
+14:21:30  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=130.8 ms  R=0.363  target=0.00  dets=2  vru=False  backend=onnx
+14:21:33  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=127.9 ms  R=0.304  target=0.00  dets=2  vru=False  backend=onnx
+14:21:35  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=128.4 ms  R=0.299  target=0.00  dets=8  vru=False  backend=onnx
+14:21:38  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=129.7 ms  R=0.304  target=0.00  dets=16  vru=False  backend=onnx
+14:21:41  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=128.7 ms  R=0.291  target=0.00  dets=6  vru=False  backend=onnx
+14:21:44  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=128.1 ms  R=0.333  target=0.00  dets=6  vru=False  backend=onnx
+14:21:47  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=129.0 ms  R=0.285  target=0.00  dets=5  vru=False  backend=onnx
+14:21:49  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.9 ms  R=0.369  target=0.00  dets=2  vru=False  backend=onnx
+14:21:50  INFO     [RAMS] Controller stopped.
+14:21:50  INFO     
+--- Block 9/10  Policy: safety2  Load: idle (0%) ---
+14:21:50  INFO     [RAMS] Starting resource monitor ...
+14:21:50  INFO     [RAMS] Loading model tiers ...
+14:21:50  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:21:50  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:21:51  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:21:51  INFO     [RAMS] Controller ready. Policy: safety2
+14:21:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.328)
+14:21:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+14:21:56  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=128.9 ms  R=0.300  target=0.00  dets=4  vru=False  backend=onnx
+14:21:56  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.301)
+14:21:59  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+14:22:01  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=129.2 ms  R=0.320  target=0.00  dets=7  vru=False  backend=onnx
+14:22:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.284)
+14:22:05  INFO       [safety2 / idle] 60/200  tier=MEDIUM  latency=715.3 ms  R=0.310  target=0.00  dets=6  vru=False  backend=onnx
+14:22:05  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+14:22:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.298)
+14:22:09  INFO       [safety2 / idle] 80/200  tier=MEDIUM  latency=727.2 ms  R=0.441  target=0.00  dets=3  vru=False  backend=onnx
+14:22:10  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.463)
+14:22:11  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.401)
+14:22:13  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.366)
+14:22:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.361)
+14:22:20  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.382)
+14:22:20  INFO       [safety2 / idle] 100/200  tier=SMALL   latency=128.8 ms  R=0.294  target=0.00  dets=8  vru=False  backend=onnx
+14:22:21  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.286)
+14:22:23  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.306)
+14:22:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.291)
+14:22:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+14:22:25  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.292)
+14:22:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+14:22:28  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=130.1 ms  R=0.292  target=0.00  dets=16  vru=False  backend=onnx
+14:22:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.298)
+14:22:31  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.372)
+14:22:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.353)
+14:22:34  INFO       [safety2 / idle] 140/200  tier=MEDIUM  latency=719.5 ms  R=0.448  target=0.00  dets=13  vru=False  backend=onnx
+14:22:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.366)
+14:22:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.315)
+14:22:38  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.299)
+14:22:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.303)
+14:22:41  INFO       [safety2 / idle] 160/200  tier=MEDIUM  latency=710.9 ms  R=0.295  target=0.00  dets=8  vru=False  backend=onnx
+14:22:41  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.388)
+14:22:43  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.305)
+14:22:45  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.307)
+14:22:45  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=127.4 ms  R=0.284  target=0.00  dets=5  vru=False  backend=onnx
+14:22:46  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.290)
+14:22:49  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:22:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.371)
+14:22:51  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.324)
+14:22:52  INFO       [safety2 / idle] 200/200  tier=SMALL   latency=129.5 ms  R=0.360  target=0.00  dets=2  vru=False  backend=onnx
+14:22:52  INFO     [RAMS] Controller stopped.
+14:22:52  INFO     
+--- Block 10/10  Policy: threshold  Load: idle (0%) ---
+14:22:52  INFO     [RAMS] Starting resource monitor ...
+14:22:52  INFO     [RAMS] Loading model tiers ...
+14:22:52  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:22:52  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:22:53  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:22:53  INFO     [RAMS] Controller ready. Policy: threshold
+14:22:57  INFO       [threshold / idle] 20/200  tier=SMALL   latency=131.0 ms  R=0.356  target=0.00  dets=10  vru=False  backend=onnx
+14:22:59  INFO       [threshold / idle] 40/200  tier=SMALL   latency=127.5 ms  R=0.286  target=0.00  dets=3  vru=False  backend=onnx
+14:23:02  INFO       [threshold / idle] 60/200  tier=SMALL   latency=129.2 ms  R=0.280  target=0.00  dets=0  vru=False  backend=onnx
+14:23:05  INFO       [threshold / idle] 80/200  tier=SMALL   latency=128.9 ms  R=0.293  target=0.00  dets=4  vru=True  backend=onnx
+14:23:08  INFO       [threshold / idle] 100/200  tier=SMALL   latency=128.4 ms  R=0.303  target=0.00  dets=7  vru=False  backend=onnx
+14:23:11  INFO       [threshold / idle] 120/200  tier=SMALL   latency=130.4 ms  R=0.303  target=0.00  dets=7  vru=False  backend=onnx
+14:23:14  INFO       [threshold / idle] 140/200  tier=SMALL   latency=129.6 ms  R=0.353  target=0.00  dets=9  vru=False  backend=onnx
+14:23:16  INFO       [threshold / idle] 160/200  tier=SMALL   latency=130.6 ms  R=0.349  target=0.00  dets=14  vru=False  backend=onnx
+14:23:19  INFO       [threshold / idle] 180/200  tier=SMALL   latency=130.1 ms  R=0.297  target=0.00  dets=15  vru=True  backend=onnx
+14:23:22  INFO       [threshold / idle] 200/200  tier=SMALL   latency=128.1 ms  R=0.301  target=0.00  dets=2  vru=False  backend=onnx
+14:23:22  INFO     [RAMS] Controller stopped.
+14:23:22  INFO     
+--- Block 10/10  Policy: adaptive  Load: idle (0%) ---
+14:23:22  INFO     [RAMS] Starting resource monitor ...
+14:23:22  INFO     [RAMS] Loading model tiers ...
+14:23:22  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:23:22  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:23:23  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:23:23  INFO     [RAMS] Controller ready. Policy: adaptive
+14:23:24  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.093)
+14:23:29  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.300)
+14:23:31  INFO       [adaptive / idle] 20/200  tier=SMALL   latency=127.9 ms  R=0.286  target=0.00  dets=10  vru=False  backend=onnx
+14:23:34  INFO       [adaptive / idle] 40/200  tier=SMALL   latency=129.2 ms  R=0.447  target=0.00  dets=3  vru=False  backend=onnx
+14:23:37  INFO       [adaptive / idle] 60/200  tier=SMALL   latency=128.6 ms  R=0.362  target=0.00  dets=0  vru=False  backend=onnx
+14:23:40  INFO       [adaptive / idle] 80/200  tier=SMALL   latency=127.5 ms  R=0.337  target=0.00  dets=4  vru=True  backend=onnx
+14:23:42  INFO       [adaptive / idle] 100/200  tier=SMALL   latency=128.2 ms  R=0.284  target=0.00  dets=7  vru=False  backend=onnx
+14:23:45  INFO       [adaptive / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.284  target=0.00  dets=7  vru=False  backend=onnx
+14:23:48  INFO       [adaptive / idle] 140/200  tier=SMALL   latency=127.8 ms  R=0.288  target=0.00  dets=9  vru=False  backend=onnx
+14:23:51  INFO       [adaptive / idle] 160/200  tier=SMALL   latency=128.8 ms  R=0.282  target=0.00  dets=14  vru=False  backend=onnx
+14:23:54  INFO       [adaptive / idle] 180/200  tier=SMALL   latency=129.6 ms  R=0.288  target=0.00  dets=15  vru=True  backend=onnx
+14:23:56  INFO       [adaptive / idle] 200/200  tier=SMALL   latency=128.9 ms  R=0.371  target=0.00  dets=2  vru=False  backend=onnx
+14:23:57  INFO     [RAMS] Controller stopped.
+14:23:57  INFO     
+--- Block 10/10  Policy: fixed_small  Load: idle (0%) ---
+14:23:57  INFO     [RAMS] Starting resource monitor ...
+14:23:57  INFO     [RAMS] Loading model tiers ...
+14:23:57  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:23:57  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:23:58  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:23:58  INFO     [RAMS] Controller ready. Policy: fixed
+14:24:02  INFO       [fixed_small / idle] 20/200  tier=SMALL   latency=129.0 ms  R=0.295  target=0.00  dets=10  vru=False  backend=onnx
+14:24:04  INFO       [fixed_small / idle] 40/200  tier=SMALL   latency=127.2 ms  R=0.298  target=0.00  dets=3  vru=False  backend=onnx
+14:24:07  INFO       [fixed_small / idle] 60/200  tier=SMALL   latency=126.9 ms  R=0.300  target=0.00  dets=0  vru=False  backend=onnx
+14:24:10  INFO       [fixed_small / idle] 80/200  tier=SMALL   latency=127.5 ms  R=0.303  target=0.00  dets=4  vru=True  backend=onnx
+14:24:13  INFO       [fixed_small / idle] 100/200  tier=SMALL   latency=130.9 ms  R=0.298  target=0.00  dets=7  vru=False  backend=onnx
+14:24:16  INFO       [fixed_small / idle] 120/200  tier=SMALL   latency=130.8 ms  R=0.288  target=0.00  dets=7  vru=False  backend=onnx
+14:24:18  INFO       [fixed_small / idle] 140/200  tier=SMALL   latency=129.3 ms  R=0.415  target=0.00  dets=9  vru=False  backend=onnx
+14:24:21  INFO       [fixed_small / idle] 160/200  tier=SMALL   latency=131.1 ms  R=0.366  target=0.00  dets=14  vru=False  backend=onnx
+14:24:24  INFO       [fixed_small / idle] 180/200  tier=SMALL   latency=130.2 ms  R=0.286  target=0.00  dets=15  vru=True  backend=onnx
+14:24:27  INFO       [fixed_small / idle] 200/200  tier=SMALL   latency=128.4 ms  R=0.379  target=0.00  dets=2  vru=False  backend=onnx
+14:24:27  INFO     [RAMS] Controller stopped.
+14:24:27  INFO     
+--- Block 10/10  Policy: fixed_medium  Load: idle (0%) ---
+14:24:27  INFO     [RAMS] Starting resource monitor ...
+14:24:27  INFO     [RAMS] Loading model tiers ...
+14:24:27  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:24:27  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:24:28  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:24:28  INFO     [RAMS] Controller ready. Policy: fixed
+14:24:29  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.064)
+14:24:44  INFO       [fixed_medium / idle] 20/200  tier=MEDIUM  latency=724.1 ms  R=0.361  target=0.00  dets=10  vru=False  backend=onnx
+14:24:58  INFO       [fixed_medium / idle] 40/200  tier=MEDIUM  latency=717.3 ms  R=0.309  target=0.00  dets=8  vru=False  backend=onnx
+14:25:13  INFO       [fixed_medium / idle] 60/200  tier=MEDIUM  latency=717.6 ms  R=0.305  target=0.00  dets=6  vru=False  backend=onnx
+14:25:28  INFO       [fixed_medium / idle] 80/200  tier=MEDIUM  latency=714.0 ms  R=0.295  target=0.00  dets=4  vru=False  backend=onnx
+14:25:42  INFO       [fixed_medium / idle] 100/200  tier=MEDIUM  latency=723.0 ms  R=0.298  target=0.00  dets=5  vru=False  backend=onnx
+14:25:57  INFO       [fixed_medium / idle] 120/200  tier=MEDIUM  latency=718.0 ms  R=0.311  target=0.00  dets=8  vru=False  backend=onnx
+14:26:11  INFO       [fixed_medium / idle] 140/200  tier=MEDIUM  latency=712.5 ms  R=0.309  target=0.00  dets=10  vru=True  backend=onnx
+14:26:26  INFO       [fixed_medium / idle] 160/200  tier=MEDIUM  latency=729.3 ms  R=0.414  target=0.00  dets=14  vru=False  backend=onnx
+14:26:41  INFO       [fixed_medium / idle] 180/200  tier=MEDIUM  latency=716.4 ms  R=0.306  target=0.00  dets=18  vru=True  backend=onnx
+14:26:55  INFO       [fixed_medium / idle] 200/200  tier=MEDIUM  latency=719.6 ms  R=0.298  target=0.00  dets=2  vru=False  backend=onnx
+14:26:55  INFO     [RAMS] Controller stopped.
+14:26:55  INFO     
+--- Block 10/10  Policy: fixed_nano  Load: idle (0%) ---
+14:26:55  INFO     [RAMS] Starting resource monitor ...
+14:26:55  INFO     [RAMS] Loading model tiers ...
+14:26:55  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:26:56  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:26:56  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:26:56  INFO     [RAMS] Controller ready. Policy: fixed
+14:26:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.064)
+14:26:58  INFO       [fixed_nano / idle] 20/200  tier=NANO    latency=31.5 ms  R=0.278  target=0.00  dets=4  vru=False  backend=onnx
+14:26:59  INFO       [fixed_nano / idle] 40/200  tier=NANO    latency=31.0 ms  R=0.283  target=0.00  dets=2  vru=False  backend=onnx
+14:27:00  INFO       [fixed_nano / idle] 60/200  tier=NANO    latency=30.9 ms  R=0.382  target=0.00  dets=0  vru=False  backend=onnx
+14:27:01  INFO       [fixed_nano / idle] 80/200  tier=NANO    latency=31.3 ms  R=0.274  target=0.00  dets=2  vru=False  backend=onnx
+14:27:02  INFO       [fixed_nano / idle] 100/200  tier=NANO    latency=32.1 ms  R=0.266  target=0.00  dets=6  vru=False  backend=onnx
+14:27:03  INFO       [fixed_nano / idle] 120/200  tier=NANO    latency=31.3 ms  R=0.268  target=0.00  dets=5  vru=False  backend=onnx
+14:27:03  INFO       [fixed_nano / idle] 140/200  tier=NANO    latency=31.0 ms  R=0.278  target=0.00  dets=1  vru=False  backend=onnx
+14:27:04  INFO       [fixed_nano / idle] 160/200  tier=NANO    latency=31.7 ms  R=0.288  target=0.00  dets=9  vru=False  backend=onnx
+14:27:05  INFO       [fixed_nano / idle] 180/200  tier=NANO    latency=32.5 ms  R=0.266  target=0.00  dets=8  vru=False  backend=onnx
+14:27:06  INFO       [fixed_nano / idle] 200/200  tier=NANO    latency=30.9 ms  R=0.291  target=0.00  dets=0  vru=False  backend=onnx
+14:27:06  INFO     [RAMS] Controller stopped.
+14:27:06  INFO     
+--- Block 10/10  Policy: safety2  Load: idle (0%) ---
+14:27:06  INFO     [RAMS] Starting resource monitor ...
+14:27:06  INFO     [RAMS] Loading model tiers ...
+14:27:06  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:27:06  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:27:07  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:27:07  INFO     [RAMS] Controller ready. Policy: safety2
+14:27:11  INFO       [safety2 / idle] 20/200  tier=SMALL   latency=131.2 ms  R=0.357  target=0.00  dets=10  vru=False  backend=onnx
+14:27:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.369)
+14:27:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.323)
+14:27:16  INFO       [safety2 / idle] 40/200  tier=SMALL   latency=127.5 ms  R=0.282  target=0.00  dets=3  vru=False  backend=onnx
+14:27:17  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.286)
+14:27:19  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.394)
+14:27:20  INFO       [safety2 / idle] 60/200  tier=SMALL   latency=127.2 ms  R=0.300  target=0.00  dets=0  vru=False  backend=onnx
+14:27:23  INFO       [safety2 / idle] 80/200  tier=SMALL   latency=128.4 ms  R=0.303  target=0.00  dets=4  vru=True  backend=onnx
+14:27:24  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.303)
+14:27:27  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.298)
+14:27:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.290)
+14:27:28  INFO       [safety2 / idle] 100/200  tier=MEDIUM  latency=709.9 ms  R=0.290  target=0.00  dets=5  vru=False  backend=onnx
+14:27:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.365)
+14:27:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.369)
+14:27:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.460)
+14:27:34  INFO       [safety2 / idle] 120/200  tier=SMALL   latency=128.2 ms  R=0.460  target=0.00  dets=7  vru=False  backend=onnx
+14:27:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.342)
+14:27:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.294)
+14:27:38  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.318)
+14:27:40  INFO       [safety2 / idle] 140/200  tier=MEDIUM  latency=711.0 ms  R=0.311  target=0.00  dets=10  vru=True  backend=onnx
+14:27:40  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.294)
+14:27:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.296)
+14:27:44  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.301)
+14:27:45  INFO       [safety2 / idle] 160/200  tier=SMALL   latency=129.3 ms  R=0.282  target=0.00  dets=14  vru=False  backend=onnx
+14:27:46  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.294)
+14:27:48  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.305)
+14:27:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.280)
+14:27:51  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.417)
+14:27:51  INFO       [safety2 / idle] 180/200  tier=SMALL   latency=130.0 ms  R=0.417  target=0.00  dets=15  vru=True  backend=onnx
+14:27:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.351)
+14:27:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.367)
+14:27:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.362)
+14:27:59  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.294)
+14:27:59  INFO       [safety2 / idle] 200/200  tier=SMALL   latency=127.1 ms  R=0.278  target=0.00  dets=2  vru=False  backend=onnx
+14:27:59  INFO     [RAMS] Controller stopped.
+14:27:59  INFO     
+--- Block 10/10  Policy: safety  Load: idle (0%) ---
+14:27:59  INFO     [RAMS] Starting resource monitor ...
+14:27:59  INFO     [RAMS] Loading model tiers ...
+14:28:00  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:28:00  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:28:00  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:28:00  INFO     [RAMS] Controller ready. Policy: safety
+14:28:04  INFO       [safety / idle] 20/200  tier=SMALL   latency=128.6 ms  R=0.282  target=0.00  dets=10  vru=False  backend=onnx
+14:28:07  INFO       [safety / idle] 40/200  tier=SMALL   latency=127.6 ms  R=0.291  target=0.00  dets=3  vru=False  backend=onnx
+14:28:10  INFO       [safety / idle] 60/200  tier=SMALL   latency=127.8 ms  R=0.376  target=0.00  dets=0  vru=False  backend=onnx
+14:28:13  INFO       [safety / idle] 80/200  tier=SMALL   latency=128.8 ms  R=0.365  target=0.00  dets=4  vru=True  backend=onnx
+14:28:16  INFO       [safety / idle] 100/200  tier=SMALL   latency=130.3 ms  R=0.366  target=0.00  dets=7  vru=False  backend=onnx
+14:28:18  INFO       [safety / idle] 120/200  tier=SMALL   latency=127.8 ms  R=0.326  target=0.00  dets=7  vru=False  backend=onnx
+14:28:21  INFO       [safety / idle] 140/200  tier=SMALL   latency=127.7 ms  R=0.291  target=0.00  dets=9  vru=False  backend=onnx
+14:28:24  INFO       [safety / idle] 160/200  tier=SMALL   latency=129.3 ms  R=0.367  target=0.00  dets=14  vru=False  backend=onnx
+14:28:27  INFO       [safety / idle] 180/200  tier=SMALL   latency=130.3 ms  R=0.282  target=0.00  dets=15  vru=True  backend=onnx
+14:28:30  INFO       [safety / idle] 200/200  tier=SMALL   latency=127.3 ms  R=0.286  target=0.00  dets=2  vru=False  backend=onnx
+14:28:30  INFO     [RAMS] Controller stopped.
+14:28:30  INFO     
+--- Block 10/10  Policy: predictive  Load: idle (0%) ---
+14:28:30  INFO     [RAMS] Starting resource monitor ...
+14:28:30  INFO     [RAMS] Loading model tiers ...
+14:28:30  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+14:28:30  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+14:28:31  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+14:28:31  INFO     [RAMS] Controller ready. Policy: predictive
+14:28:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.064)
+14:28:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.421)
+14:28:36  INFO       [predictive / idle] 20/200  tier=SMALL   latency=128.9 ms  R=0.401  target=0.00  dets=10  vru=False  backend=onnx
+14:28:39  INFO       [predictive / idle] 40/200  tier=SMALL   latency=127.4 ms  R=0.369  target=0.00  dets=3  vru=False  backend=onnx
+14:28:42  INFO       [predictive / idle] 60/200  tier=SMALL   latency=127.2 ms  R=0.382  target=0.00  dets=0  vru=False  backend=onnx
+14:28:45  INFO       [predictive / idle] 80/200  tier=SMALL   latency=127.5 ms  R=0.301  target=0.00  dets=4  vru=True  backend=onnx
+14:28:48  INFO       [predictive / idle] 100/200  tier=SMALL   latency=127.6 ms  R=0.294  target=0.00  dets=7  vru=False  backend=onnx
+14:28:50  INFO       [predictive / idle] 120/200  tier=SMALL   latency=128.0 ms  R=0.292  target=0.00  dets=7  vru=False  backend=onnx
+14:28:53  INFO       [predictive / idle] 140/200  tier=SMALL   latency=127.5 ms  R=0.292  target=0.00  dets=9  vru=False  backend=onnx
+14:28:56  INFO       [predictive / idle] 160/200  tier=SMALL   latency=130.3 ms  R=0.450  target=0.00  dets=14  vru=False  backend=onnx
+14:28:59  INFO       [predictive / idle] 180/200  tier=SMALL   latency=130.7 ms  R=0.375  target=0.00  dets=15  vru=True  backend=onnx
+14:29:02  INFO       [predictive / idle] 200/200  tier=SMALL   latency=127.3 ms  R=0.298  target=0.00  dets=2  vru=False  backend=onnx
+14:29:02  INFO     [RAMS] Controller stopped.
+14:29:03  INFO     Results -> /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/runtime1_idle/rams_20260908_132635_118f3ccde03f.csv
+14:29:03  INFO     Summary -> /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/runtime1_idle/rams_20260908_132635_118f3ccde03f.json
+14:29:03  INFO     Replay manifest -> /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/runtime1_idle/rams_20260908_132635_118f3ccde03f_manifest.json
+
+================================================================================
+Policy         Profile        N   Mean ms    P95 ms    VRU%  Tiers
+--------------------------------------------------------------------------------
+adaptive       idle        2000     143.3     131.3   25.9%  MEDIUM:50, SMALL:1950
+fixed_medium   idle        2000     716.0     725.3   33.3%  MEDIUM:2000
+fixed_nano     idle        2000      31.5      32.5   16.1%  NANO:2000
+fixed_small    idle        2000     128.7     130.8   25.9%  SMALL:2000
+predictive     idle        2000     140.3     131.1   25.8%  MEDIUM:39, SMALL:1961
+safety         idle        2000     128.7     130.5   25.9%  SMALL:2000
+safety2        idle        2000     269.6     721.5   27.6%  MEDIUM:479, SMALL:1521
+threshold      idle        2000     129.0     131.2   25.9%  SMALL:2000
+================================================================================
+
+Backends used: {'onnx'}

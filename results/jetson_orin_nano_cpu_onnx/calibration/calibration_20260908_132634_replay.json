@@ -1,0 +1,166 @@
+{
+  "host": "118f3ccde03f",
+  "platform": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+  "python": "3.10.12 (main, Feb  4 2025, 14:57:36) [GCC 11.4.0]",
+  "backend": "onnx",
+  "frames": "/data/kitti/images/val",
+  "n_per_profile": 200,
+  "warmup_frames": 20,
+  "steady_settle_s": 1.0,
+  "load_injector": "process_steady_v3",
+  "profiles": {
+    "idle": {
+      "profile": "idle",
+      "target_intensity": 0.0,
+      "pressure": {
+        "n": 200,
+        "mean": 0.3339,
+        "std": 0.0514,
+        "p10": 0.2845,
+        "p25": 0.2889,
+        "p50": 0.3069,
+        "p75": 0.3675,
+        "p90": 0.3902
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 39.4875,
+        "std": 7.2876,
+        "p10": 32.5,
+        "p25": 33.1,
+        "p50": 35.7,
+        "p75": 44.2,
+        "p90": 47.58
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 129.6629,
+        "std": 1.0703,
+        "p10": 128.4991,
+        "p25": 128.8485,
+        "p50": 129.5316,
+        "p75": 130.2426,
+        "p90": 131.1126
+      }
+    },
+    "light": {
+      "profile": "light",
+      "target_intensity": 0.25,
+      "pressure": {
+        "n": 200,
+        "mean": 0.4888,
+        "std": 0.0409,
+        "p10": 0.4575,
+        "p25": 0.4602,
+        "p50": 0.4719,
+        "p75": 0.5213,
+        "p90": 0.545
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 61.5435,
+        "std": 5.7953,
+        "p10": 57.1,
+        "p25": 57.5,
+        "p50": 59.2,
+        "p75": 66.1,
+        "p90": 69.55
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 129.677,
+        "std": 1.795,
+        "p10": 128.2571,
+        "p25": 128.7549,
+        "p50": 129.3698,
+        "p75": 130.0936,
+        "p90": 131.0181
+      }
+    },
+    "moderate": {
+      "profile": "moderate",
+      "target_intensity": 0.5,
+      "pressure": {
+        "n": 200,
+        "mean": 0.6427,
+        "std": 0.031,
+        "p10": 0.6093,
+        "p25": 0.6163,
+        "p50": 0.6296,
+        "p75": 0.666,
+        "p90": 0.6836
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 83.5255,
+        "std": 4.3698,
+        "p10": 78.8,
+        "p25": 79.8,
+        "p50": 81.7,
+        "p75": 86.7,
+        "p90": 89.23
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 147.9973,
+        "std": 20.7278,
+        "p10": 128.9666,
+        "p25": 131.9269,
+        "p50": 142.0426,
+        "p75": 157.6842,
+        "p90": 174.4175
+      }
+    },
+    "heavy": {
+      "profile": "heavy",
+      "target_intensity": 0.75,
+      "pressure": {
+        "n": 200,
+        "mean": 0.736,
+        "std": 0.013,
+        "p10": 0.7172,
+        "p25": 0.7281,
+        "p50": 0.74,
+        "p75": 0.7459,
+        "p90": 0.7521
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 96.87,
+        "std": 1.8351,
+        "p10": 94.2,
+        "p25": 95.8,
+        "p50": 97.5,
+        "p75": 98.3,
+        "p90": 99.2
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 255.8875,
+        "std": 74.9235,
+        "p10": 149.0709,
+        "p25": 203.4753,
+        "p50": 253.7769,
+        "p75": 306.6381,
+        "p90": 353.6456
+      }
+    }
+  },
+  "proposal": {
+    "valid": true,
+    "lo_thresh": 0.274,
+    "hi_thresh": 0.606,
+    "normal_p10": 0.284,
+    "light_p50": 0.472,
+    "heavy_p50": 0.74,
+    "light_p75": 0.521,
+    "heavy_p10": 0.717,
+    "separation": 0.268,
+    "tail_overlap": -0.196,
+    "target_behavior": "idle/light SMALL; heavy may enter NANO; VRU policies may retain a stronger tier after detection"
+  },
+  "applied": true,
+  "timestamp_utc": "2026-09-08T13:26:34.509959+00:00",
+  "config_path": "/home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/calibrated.yaml",
+  "config_snapshot_before": "/home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/calibration/calibration_snapshots/default_before_replay_calibration_20260908_132634.yaml"
+}

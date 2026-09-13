@@ -1,0 +1,132 @@
+13:34:05  INFO     Loaded 1500 frames from /data/kitti/images/val
+RAMS replay calibration
+Frames: /data/kitti/images/val (1500 available), backend: tensorrt
+The active YAML is unchanged unless --apply is supplied.
+
+[idle] fixed-SMALL real replay: 200 measured frames at target 0%
+13:34:05  INFO     [RAMS] Starting resource monitor ...
+13:34:05  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-13:34:08] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-13:34:08] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+13:34:09  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-13:34:09] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:09] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-13:34:09] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+13:34:09  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-13:34:09] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:09] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-13:34:09] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+13:34:09  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+13:34:09  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.144, CPU=8.3%, latency=8.4 ms
+   50/200: R=0.182, CPU=14.0%, latency=9.1 ms
+   75/200: R=0.157, CPU=9.8%, latency=7.9 ms
+  100/200: R=0.209, CPU=17.6%, latency=8.1 ms
+  125/200: R=0.141, CPU=7.6%, latency=7.9 ms
+  150/200: R=0.186, CPU=14.5%, latency=10.9 ms
+  175/200: R=0.147, CPU=8.4%, latency=8.1 ms
+  200/200: R=0.163, CPU=10.7%, latency=7.7 ms
+13:34:15  INFO     [RAMS] Controller stopped.
+
+[light] fixed-SMALL real replay: 200 measured frames at target 25%
+13:34:15  INFO     [RAMS] Starting resource monitor ...
+13:34:15  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-13:34:15] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-13:34:15] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+13:34:15  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-13:34:15] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:15] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-13:34:15] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+13:34:15  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-13:34:15] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:15] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-13:34:15] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+13:34:15  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+13:34:15  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.416, CPU=46.6%, latency=9.0 ms
+   50/200: R=0.452, CPU=51.7%, latency=9.7 ms
+   75/200: R=0.394, CPU=43.7%, latency=8.3 ms
+  100/200: R=0.422, CPU=47.5%, latency=8.5 ms
+  125/200: R=0.417, CPU=46.7%, latency=8.2 ms
+  150/200: R=0.423, CPU=47.5%, latency=9.8 ms
+  175/200: R=0.414, CPU=46.3%, latency=9.3 ms
+  200/200: R=0.404, CPU=45.1%, latency=8.7 ms
+13:34:21  INFO     [RAMS] Controller stopped.
+
+[moderate] fixed-SMALL real replay: 200 measured frames at target 50%
+13:34:21  INFO     [RAMS] Starting resource monitor ...
+13:34:21  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-13:34:21] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-13:34:21] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+13:34:21  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-13:34:21] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:21] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-13:34:21] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+13:34:21  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-13:34:21] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:21] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-13:34:21] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+13:34:21  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+13:34:21  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.501, CPU=60.3%, latency=9.0 ms
+   50/200: R=0.492, CPU=57.6%, latency=9.2 ms
+   75/200: R=0.497, CPU=58.3%, latency=7.9 ms
+  100/200: R=0.495, CPU=58.0%, latency=8.0 ms
+  125/200: R=0.495, CPU=58.3%, latency=7.9 ms
+  150/200: R=0.498, CPU=58.5%, latency=9.5 ms
+  175/200: R=0.503, CPU=59.5%, latency=8.2 ms
+  200/200: R=0.501, CPU=59.2%, latency=7.8 ms
+13:34:27  INFO     [RAMS] Controller stopped.
+
+[heavy] fixed-SMALL real replay: 200 measured frames at target 75%
+13:34:27  INFO     [RAMS] Starting resource monitor ...
+13:34:27  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-13:34:27] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-13:34:27] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+13:34:27  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-13:34:27] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:27] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-13:34:27] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+13:34:27  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-13:34:27] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-13:34:27] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-13:34:27] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+13:34:27  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+13:34:27  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.671, CPU=83.2%, latency=8.6 ms
+   50/200: R=0.720, CPU=90.2%, latency=9.0 ms
+   75/200: R=0.671, CPU=83.2%, latency=7.9 ms
+  100/200: R=0.642, CPU=82.4%, latency=8.2 ms
+  125/200: R=0.666, CPU=82.5%, latency=7.9 ms
+  150/200: R=0.671, CPU=83.2%, latency=10.1 ms
+  175/200: R=0.672, CPU=83.3%, latency=8.8 ms
+  200/200: R=0.674, CPU=83.6%, latency=7.8 ms
+13:34:33  INFO     [RAMS] Controller stopped.
+
+Applied common thresholds: lo=0.131, hi=0.537
+Previous configuration saved to: /home/soren/rams_trt_labels_20260909/results/full-20260909-trtlabels-v3/tensorrt/calibration/calibration_snapshots/default_before_replay_calibration_20260909_133433.yaml
+Calibration report: /home/soren/rams_trt_labels_20260909/results/full-20260909-trtlabels-v3/tensorrt/calibration/calibration_20260909_133433_replay.json

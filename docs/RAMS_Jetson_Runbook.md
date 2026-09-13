@@ -97,9 +97,12 @@ test -n "$FRAME"
 python3 scripts/verify_jetson_tensorrt.py --frame "$FRAME"
 ```
 
-Continue only if the report says `"status": "passed"` and every tier lists
-`"backend": "tensorrt"`. This is an on-device gate. WSL2 and GitHub-hosted
-Linux cannot replace it because they do not run the Jetson's TensorRT engines.
+Continue only if the report says `"status": "passed"`, every tier lists
+`"backend": "tensorrt"`, and every reported detection label is a canonical
+COCO label such as `person`, `car`, or `bus`. Placeholder labels such as
+`class2` indicate an incompatible engine-label mapping and must be fixed
+before a paper run. This is an on-device gate. WSL2 and GitHub-hosted Linux
+cannot replace it because they do not run the Jetson's TensorRT engines.
 
 ## 4. Prepare datasets
 

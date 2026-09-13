@@ -1,0 +1,76 @@
+22:08:44  INFO     Loaded 1500 frames from /data/kitti/images/val
+RAMS replay calibration
+Frames: /data/kitti/images/val (1500 available), backend: pytorch
+The active YAML is unchanged unless --apply is supplied.
+
+[idle] fixed-SMALL real replay: 200 measured frames at target 0%
+22:08:44  INFO     [RAMS] Starting resource monitor ...
+22:08:44  INFO     [RAMS] Loading model tiers ...
+22:08:48  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+22:08:49  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+22:08:50  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+22:08:50  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.236, CPU=22.7%, latency=20.8 ms
+   50/200: R=0.315, CPU=35.7%, latency=21.4 ms
+   75/200: R=0.193, CPU=18.2%, latency=21.3 ms
+  100/200: R=0.203, CPU=19.3%, latency=20.0 ms
+  125/200: R=0.253, CPU=23.3%, latency=20.5 ms
+  150/200: R=0.213, CPU=20.7%, latency=21.3 ms
+  175/200: R=0.184, CPU=14.3%, latency=19.9 ms
+  200/200: R=0.137, CPU=9.2%, latency=23.0 ms
+22:08:58  INFO     [RAMS] Controller stopped.
+
+[light] fixed-SMALL real replay: 200 measured frames at target 25%
+22:08:58  INFO     [RAMS] Starting resource monitor ...
+22:08:58  INFO     [RAMS] Loading model tiers ...
+22:08:58  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+22:08:59  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+22:08:59  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+22:08:59  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.304, CPU=33.6%, latency=20.1 ms
+   50/200: R=0.353, CPU=37.7%, latency=21.2 ms
+   75/200: R=0.320, CPU=33.9%, latency=21.2 ms
+  100/200: R=0.315, CPU=35.2%, latency=19.9 ms
+  125/200: R=0.334, CPU=36.1%, latency=20.4 ms
+  150/200: R=0.318, CPU=35.0%, latency=21.6 ms
+  175/200: R=0.309, CPU=35.2%, latency=20.1 ms
+  200/200: R=0.331, CPU=34.5%, latency=20.4 ms
+22:09:08  INFO     [RAMS] Controller stopped.
+
+[moderate] fixed-SMALL real replay: 200 measured frames at target 50%
+22:09:08  INFO     [RAMS] Starting resource monitor ...
+22:09:08  INFO     [RAMS] Loading model tiers ...
+22:09:08  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+22:09:08  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+22:09:09  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+22:09:09  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.495, CPU=58.8%, latency=21.1 ms
+   50/200: R=0.540, CPU=67.8%, latency=21.9 ms
+   75/200: R=0.560, CPU=68.9%, latency=20.8 ms
+  100/200: R=0.585, CPU=72.4%, latency=20.4 ms
+  125/200: R=0.556, CPU=68.0%, latency=21.7 ms
+  150/200: R=0.537, CPU=66.7%, latency=21.5 ms
+  175/200: R=0.577, CPU=69.7%, latency=22.2 ms
+  200/200: R=0.571, CPU=68.3%, latency=19.6 ms
+22:09:18  INFO     [RAMS] Controller stopped.
+
+[heavy] fixed-SMALL real replay: 200 measured frames at target 75%
+22:09:18  INFO     [RAMS] Starting resource monitor ...
+22:09:18  INFO     [RAMS] Loading model tiers ...
+22:09:18  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+22:09:18  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+22:09:19  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+22:09:19  INFO     [RAMS] Controller ready. Policy: fixed
+   25/200: R=0.649, CPU=83.2%, latency=20.4 ms
+   50/200: R=0.658, CPU=83.3%, latency=21.1 ms
+   75/200: R=0.680, CPU=83.9%, latency=20.1 ms
+  100/200: R=0.727, CPU=90.8%, latency=19.9 ms
+  125/200: R=0.651, CPU=83.2%, latency=22.1 ms
+  150/200: R=0.647, CPU=83.2%, latency=21.3 ms
+  175/200: R=0.667, CPU=83.5%, latency=20.1 ms
+  200/200: R=0.664, CPU=83.6%, latency=19.7 ms
+22:09:28  INFO     [RAMS] Controller stopped.
+
+Applied common thresholds: lo=0.145, hi=0.498
+Previous configuration saved to: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/calibration/calibration_snapshots/default_before_replay_calibration_20260908_220928.yaml
+Calibration report: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/calibration/calibration_20260908_220928_replay.json
