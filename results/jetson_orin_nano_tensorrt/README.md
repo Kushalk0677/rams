@@ -1,4 +1,4 @@
-# Jetson AGX Orin TensorRT Results
+# Jetson Orin Nano TensorRT Results
 
 Corrected RAMS evidence collected on 9 September 2026 on an NVIDIA Jetson AGX
 Orin 64 GB using TensorRT FP16 engines.

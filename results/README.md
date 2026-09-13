@@ -41,8 +41,8 @@ device- and protocol-labelled folder. Keep the manifest, raw records,
 calibration, and summary together for every reported result.
 
 
-`jetson_agx_orin_cpu_onnx/`, `jetson_agx_orin_pytorch/`, and
-`jetson_agx_orin_tensorrt/` contain corrected Jetson AGX Orin evidence. Each
+`jetson_orin_nano_cpu_onnx/`, `jetson_orin_nano_pytorch/`, and
+`jetson_orin_nano_tensorrt/` contain corrected Jetson Orin Nano evidence. Each
 route includes calibration, all five runtime profiles, fixed-tier baselines,
 policy accuracy, retention, and measured per-rail replay-window energy
 records. The rail records are not total board energy measurements. The

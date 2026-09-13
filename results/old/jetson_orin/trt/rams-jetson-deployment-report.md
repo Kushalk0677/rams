@@ -17,7 +17,7 @@
 **April 22, 2026 — Code Update & Deployment Start**
 - Received updated codebase snapshot (`rams_github_clean_20260422.zip`) with TensorRT backend
 - Analyzed new additions: 4-tier backend priority (TensorRT → ONNX → Ultralytics → Simulation), device calibration system, 10-experiment suite
-- Initiated deployment to Jetson AGX Orin (Temei/soren-edge)
+- Initiated deployment to Jetson Orin Nano (Temei/soren-edge)
 - Environment setup began: created Python venv, installed dependencies (ultralytics, psutil, opencv)
 - First blocker encountered: `pip install ultralytics` pulled PyTorch 2.11.0+cu130, incompatible with JetPack 6 CUDA 12.6
 - Completed 2,500 simulated inferences (Experiments 1-7) using Gaussian latency curves
@@ -54,7 +54,7 @@
 
 ## Code Modifications (Jetson-Specific)
 
-All modifications were necessary to adapt the framework for Jetson AGX Orin deployment. None require upstream merge, but all are worth documenting for future deployments.
+All modifications were necessary to adapt the framework for Jetson Orin Nano deployment. None require upstream merge, but all are worth documenting for future deployments.
 
 ### 1. CUDA Memory Contiguity (`rams/models.py`)
 ```python
@@ -171,7 +171,7 @@ KITTI_TO_COCO = {
 
 ## Final Performance Summary
 
-### TensorRT Direct Inference (Jetson AGX Orin, FP16)
+### TensorRT Direct Inference (Jetson Orin Nano, FP16)
 
 **trtexec (raw GPU, no overhead):**
 
