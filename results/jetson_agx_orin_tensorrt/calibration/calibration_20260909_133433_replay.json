@@ -1,0 +1,166 @@
+{
+  "host": "7b0aa8638130",
+  "platform": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+  "python": "3.10.12 (main, Feb  4 2025, 14:57:36) [GCC 11.4.0]",
+  "backend": "tensorrt",
+  "frames": "/data/kitti/images/val",
+  "n_per_profile": 200,
+  "warmup_frames": 20,
+  "steady_settle_s": 1.0,
+  "load_injector": "process_steady_v3",
+  "profiles": {
+    "idle": {
+      "profile": "idle",
+      "target_intensity": 0.0,
+      "pressure": {
+        "n": 200,
+        "mean": 0.1603,
+        "std": 0.0269,
+        "p10": 0.1414,
+        "p25": 0.1464,
+        "p50": 0.1517,
+        "p75": 0.1632,
+        "p90": 0.2009
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 10.799,
+        "std": 3.6349,
+        "p10": 8.3,
+        "p25": 8.4,
+        "p50": 9.8,
+        "p75": 10.7,
+        "p90": 16.1
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 8.5265,
+        "std": 0.9796,
+        "p10": 7.5076,
+        "p25": 7.8603,
+        "p50": 8.4232,
+        "p75": 9.1405,
+        "p90": 9.8064
+      }
+    },
+    "light": {
+      "profile": "light",
+      "target_intensity": 0.25,
+      "pressure": {
+        "n": 200,
+        "mean": 0.4122,
+        "std": 0.0235,
+        "p10": 0.3905,
+        "p25": 0.3959,
+        "p50": 0.4029,
+        "p75": 0.4227,
+        "p90": 0.4517
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 46.4,
+        "std": 3.4741,
+        "p10": 43.18,
+        "p25": 43.7,
+        "p50": 45.1,
+        "p75": 47.5,
+        "p90": 51.7
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 8.988,
+        "std": 1.0179,
+        "p10": 8.0141,
+        "p25": 8.3217,
+        "p50": 8.8962,
+        "p75": 9.6218,
+        "p90": 10.1965
+      }
+    },
+    "moderate": {
+      "profile": "moderate",
+      "target_intensity": 0.5,
+      "pressure": {
+        "n": 200,
+        "mean": 0.5055,
+        "std": 0.0228,
+        "p10": 0.4892,
+        "p25": 0.4948,
+        "p50": 0.5004,
+        "p75": 0.5032,
+        "p90": 0.514
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 60.0025,
+        "std": 3.272,
+        "p10": 58.0,
+        "p25": 58.5,
+        "p50": 59.2,
+        "p75": 59.5,
+        "p90": 61.21
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 8.5766,
+        "std": 1.0384,
+        "p10": 7.5313,
+        "p25": 7.9166,
+        "p50": 8.4292,
+        "p75": 9.1324,
+        "p90": 9.8305
+      }
+    },
+    "heavy": {
+      "profile": "heavy",
+      "target_intensity": 0.75,
+      "pressure": {
+        "n": 200,
+        "mean": 0.6738,
+        "std": 0.0181,
+        "p10": 0.6639,
+        "p25": 0.6663,
+        "p50": 0.6712,
+        "p75": 0.6719,
+        "p90": 0.694
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 83.9525,
+        "std": 2.5654,
+        "p10": 82.5,
+        "p25": 82.9,
+        "p50": 83.2,
+        "p75": 83.3,
+        "p90": 89.9
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 8.7083,
+        "std": 1.1021,
+        "p10": 7.6974,
+        "p25": 7.9903,
+        "p50": 8.5579,
+        "p75": 9.3517,
+        "p90": 9.9582
+      }
+    }
+  },
+  "proposal": {
+    "valid": true,
+    "lo_thresh": 0.131,
+    "hi_thresh": 0.537,
+    "normal_p10": 0.141,
+    "light_p50": 0.403,
+    "heavy_p50": 0.671,
+    "light_p75": 0.423,
+    "heavy_p10": 0.664,
+    "separation": 0.268,
+    "tail_overlap": -0.241,
+    "target_behavior": "idle/light SMALL; heavy may enter NANO; VRU policies may retain a stronger tier after detection"
+  },
+  "applied": true,
+  "timestamp_utc": "2026-09-09T13:34:33.602235+00:00",
+  "config_path": "/home/soren/rams_trt_labels_20260909/results/full-20260909-trtlabels-v3/tensorrt/calibrated.yaml",
+  "config_snapshot_before": "/home/soren/rams_trt_labels_20260909/results/full-20260909-trtlabels-v3/tensorrt/calibration/calibration_snapshots/default_before_replay_calibration_20260909_133433.yaml"
+}

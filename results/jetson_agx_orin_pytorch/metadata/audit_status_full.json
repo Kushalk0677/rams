@@ -1,0 +1,2407 @@
+{
+  "status": "passed",
+  "backend_root": "results/full-20260908-v1/pytorch",
+  "window_count": 400,
+  "checks": [
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 3.552713678800501e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 1.0658141036401503e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 2.4868995751603507e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 3.552713678800501e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 1.0658141036401503e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 1.0658141036401503e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 1.0658141036401503e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 3.552713678800501e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 3.552713678800501e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 3.552713678800501e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    }
+  ]
+}

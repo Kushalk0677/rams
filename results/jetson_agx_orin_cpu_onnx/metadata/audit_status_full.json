@@ -1,0 +1,2407 @@
+{
+  "status": "passed",
+  "backend_root": "results/full-20260908-v1/onnx",
+  "window_count": 400,
+  "checks": [
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 1.9895196601282805e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 1.4779288903810084e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 1.4779288903810084e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 1.8189894035458565e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 1.9895196601282805e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 2.5011104298755527e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 1.8189894035458565e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 1.1368683772161603e-12
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_idle",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 1.5916157281026244e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 7.958078640513122e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 2.2737367544323206e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 2.5011104298755527e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 1.1368683772161603e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 2.9558577807620168e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 1.2505552149377763e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 0.0
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 1.8189894035458565e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 2.0463630789890885e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 3.637978807091713e-12
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime1_light",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 1.1368683772161603e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 3.979039320256561e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 4.092726157978177e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 7.105427357601002e-15
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 3.183231456205249e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 6.366462912410498e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 3.637978807091713e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 3.694822225952521e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 3.183231456205249e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 2.8421709430404007e-12
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime2_moderate",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 2.9558577807620168e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 6.821210263296962e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 5.115907697472721e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 3.637978807091713e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 2.0463630789890885e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 2.0463630789890885e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 6.821210263296962e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 5.4569682106375694e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 7.105427357601002e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 5.115907697472721e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 6.821210263296962e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 6.821210263296962e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 1.1823431123048067e-11
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 1.2732925824820995e-11
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 6.821210263296962e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 1.4551915228366852e-11
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 2.7284841053187847e-12
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 7.958078640513122e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 2.8421709430404007e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 1.1823431123048067e-11
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 3.979039320256561e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 4.547473508864641e-13
+    },
+    {
+      "stage": "runtime3_heavy",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 0,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 0,
+      "maximum_rail_error_j": 3.552713678800501e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 0,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 0,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 0,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 0,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 0,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 0,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 1,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 1,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 1,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 1,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 1,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 1,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 2,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 2,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 2,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 2,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 2,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 3,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 3,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 3,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 3,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 3,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 3,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 4,
+      "maximum_rail_error_j": 3.552713678800501e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 4,
+      "maximum_rail_error_j": 1.3642420526593924e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 4,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 4,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 4,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 4,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 5,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 5,
+      "maximum_rail_error_j": 1.9895196601282805e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 5,
+      "maximum_rail_error_j": 4.263256414560601e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 5,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 5,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 5,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 5,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 6,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 6,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 6,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 6,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 7,
+      "maximum_rail_error_j": 1.4210854715202004e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 7,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 7,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 7,
+      "maximum_rail_error_j": 1.0231815394945443e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 7,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 7,
+      "maximum_rail_error_j": 9.094947017729282e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 7,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 7,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 8,
+      "maximum_rail_error_j": 2.842170943040401e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 8,
+      "maximum_rail_error_j": 8.526512829121202e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 8,
+      "maximum_rail_error_j": 2.1316282072803006e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 8,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 8,
+      "maximum_rail_error_j": 1.7053025658242404e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 8,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 8,
+      "maximum_rail_error_j": 5.684341886080801e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "threshold",
+      "block": 9,
+      "maximum_rail_error_j": 3.410605131648481e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "adaptive",
+      "block": 9,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_small",
+      "block": 9,
+      "maximum_rail_error_j": 1.1368683772161603e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_medium",
+      "block": 9,
+      "maximum_rail_error_j": 2.5011104298755527e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "fixed_nano",
+      "block": 9,
+      "maximum_rail_error_j": 1.4210854715202004e-14
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety2",
+      "block": 9,
+      "maximum_rail_error_j": 1.0231815394945443e-12
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "safety",
+      "block": 9,
+      "maximum_rail_error_j": 2.2737367544323206e-13
+    },
+    {
+      "stage": "runtime4_burst",
+      "policy": "predictive",
+      "block": 9,
+      "maximum_rail_error_j": 5.684341886080802e-14
+    }
+  ]
+}

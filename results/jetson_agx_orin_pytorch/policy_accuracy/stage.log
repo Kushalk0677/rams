@@ -1,0 +1,649 @@
+23:38:53  INFO     [RAMS] Starting resource monitor ...
+23:38:53  INFO     [RAMS] Loading model tiers ...
+23:38:58  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:38:58  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:38:59  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:38:59  INFO     [RAMS] Controller ready. Policy: threshold
+23:39:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.547)
+[threshold/moderate] 100/1500
+23:39:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.546)
+23:39:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:39:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:39:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:39:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.515)
+23:39:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.498)
+23:39:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.529)
+[threshold/moderate] 200/1500
+23:39:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.473)
+23:39:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:39:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+23:39:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.509)
+23:39:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.477)
+23:39:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:39:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.481)
+23:39:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:39:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:39:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.515)
+23:39:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.472)
+23:39:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.503)
+23:39:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.495)
+23:39:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:39:10  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:39:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.499)
+23:39:10  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.481)
+[threshold/moderate] 300/1500
+23:39:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.549)
+23:39:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:39:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.525)
+23:39:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+23:39:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.498)
+23:39:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:39:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:39:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.495)
+23:39:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.505)
+[threshold/moderate] 400/1500
+23:39:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:39:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:39:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.516)
+23:39:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+23:39:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:39:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+23:39:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.482)
+23:39:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.515)
+23:39:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:39:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+[threshold/moderate] 500/1500
+23:39:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:39:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.550)
+23:39:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.479)
+23:39:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.503)
+23:39:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:39:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.544)
+23:39:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.489)
+23:39:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.509)
+23:39:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:39:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.517)
+23:39:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:39:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+[threshold/moderate] 600/1500
+[threshold/moderate] 700/1500
+23:39:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.485)
+23:39:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+[threshold/moderate] 800/1500
+23:39:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+23:39:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:39:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.495)
+23:39:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.509)
+23:39:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.495)
+23:39:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:39:30  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+[threshold/moderate] 900/1500
+23:39:31  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:39:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.489)
+23:39:31  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.503)
+23:39:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:39:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:39:33  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:39:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.499)
+23:39:33  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+23:39:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:39:33  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:39:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+[threshold/moderate] 1000/1500
+23:39:34  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.493)
+23:39:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.499)
+23:39:34  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.473)
+23:39:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:39:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.555)
+23:39:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:39:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.515)
+23:39:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:39:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:39:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.477)
+23:39:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.511)
+23:39:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.475)
+23:39:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+23:39:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.497)
+23:39:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.507)
+23:39:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:39:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.551)
+23:39:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.505)
+[threshold/moderate] 1100/1500
+23:39:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.499)
+23:39:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.493)
+23:39:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.507)
+23:39:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:39:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:39:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.489)
+23:39:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.548)
+23:39:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:39:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+[threshold/moderate] 1200/1500
+23:39:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:39:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.557)
+23:39:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:39:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:39:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.474)
+23:39:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+23:39:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.489)
+23:39:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.498)
+[threshold/moderate] 1300/1500
+[threshold/moderate] 1400/1500
+23:39:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.498)
+23:39:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.565)
+23:39:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:39:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:39:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:39:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.509)
+[threshold/moderate] 1500/1500
+23:39:51  INFO     [RAMS] Controller stopped.
+23:39:51  INFO     [RAMS] Starting resource monitor ...
+23:39:51  INFO     [RAMS] Loading model tiers ...
+23:39:51  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:39:51  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:39:52  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:39:52  INFO     [RAMS] Controller ready. Policy: predictive
+23:39:54  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.577)
+23:39:54  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.475)
+23:39:54  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:39:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.479)
+23:39:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.556)
+23:39:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+23:39:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:39:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:39:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.570)
+23:39:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.475)
+23:39:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+23:39:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+[predictive/moderate] 100/1500
+23:39:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:39:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:39:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:39:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:39:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:39:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:39:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.519)
+23:39:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:39:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.590)
+23:39:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:39:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:40:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+[predictive/moderate] 200/1500
+23:40:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.509)
+23:40:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:40:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:40:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:40:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.574)
+23:40:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.482)
+23:40:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.501)
+23:40:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:40:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:40:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:40:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.568)
+23:40:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:40:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.501)
+23:40:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:40:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.574)
+[predictive/moderate] 300/1500
+23:40:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:40:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.565)
+[predictive/moderate] 400/1500
+[predictive/moderate] 500/1500
+23:40:10  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:40:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.624)
+23:40:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.495)
+23:40:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+23:40:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:40:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.513)
+23:40:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.481)
+23:40:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:40:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.485)
+23:40:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:40:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.480)
+[predictive/moderate] 600/1500
+23:40:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:40:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.497)
+23:40:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.558)
+23:40:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:40:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:40:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:40:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.578)
+23:40:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:40:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+[predictive/moderate] 700/1500
+23:40:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:40:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.555)
+23:40:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:40:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:40:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:40:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:40:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.578)
+23:40:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:40:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:40:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:40:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.582)
+23:40:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+23:40:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.503)
+23:40:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:40:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.580)
+[predictive/moderate] 800/1500
+23:40:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.519)
+23:40:21  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:40:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.580)
+23:40:21  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.480)
+23:40:22  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.509)
+23:40:22  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:40:22  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.498)
+23:40:22  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.485)
+23:40:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.558)
+23:40:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+[predictive/moderate] 900/1500
+23:40:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.507)
+23:40:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:40:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.554)
+23:40:24  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+[predictive/moderate] 1000/1500
+[predictive/moderate] 1100/1500
+23:40:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.475)
+23:40:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.507)
+23:40:32  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.493)
+23:40:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.580)
+23:40:33  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+[predictive/moderate] 1200/1500
+23:40:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:40:34  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.481)
+23:40:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:40:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.480)
+23:40:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+23:40:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.491)
+23:40:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.572)
+23:40:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+[predictive/moderate] 1300/1500
+23:40:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:40:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:40:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.566)
+23:40:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:40:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.503)
+23:40:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:40:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:40:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:40:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:40:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.575)
+[predictive/moderate] 1400/1500
+23:40:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.474)
+23:40:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+23:40:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.482)
+23:40:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.576)
+23:40:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:40:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.517)
+23:40:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.472)
+23:40:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:40:43  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.493)
+23:40:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.519)
+23:40:43  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.482)
+[predictive/moderate] 1500/1500
+23:40:43  INFO     [RAMS] Controller stopped.
+23:40:44  INFO     [RAMS] Starting resource monitor ...
+23:40:44  INFO     [RAMS] Loading model tiers ...
+23:40:44  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:40:44  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:40:45  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:40:45  INFO     [RAMS] Controller ready. Policy: safety
+[safety/moderate] 100/1500
+[safety/moderate] 200/1500
+[safety/moderate] 300/1500
+[safety/moderate] 400/1500
+[safety/moderate] 500/1500
+[safety/moderate] 600/1500
+[safety/moderate] 700/1500
+[safety/moderate] 800/1500
+[safety/moderate] 900/1500
+[safety/moderate] 1000/1500
+[safety/moderate] 1100/1500
+[safety/moderate] 1200/1500
+[safety/moderate] 1300/1500
+[safety/moderate] 1400/1500
+23:41:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:41:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.495)
+[safety/moderate] 1500/1500
+23:41:38  INFO     [RAMS] Controller stopped.
+23:41:38  INFO     [RAMS] Starting resource monitor ...
+23:41:38  INFO     [RAMS] Loading model tiers ...
+23:41:38  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:41:38  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:41:39  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:41:39  INFO     [RAMS] Controller ready. Policy: adaptive
+23:41:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.566)
+23:41:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:41:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.578)
+23:41:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:41:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.580)
+[adaptive/moderate] 100/1500
+23:41:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+23:41:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.548)
+23:41:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:41:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:41:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:41:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.602)
+23:41:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:41:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.578)
+23:41:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+[adaptive/moderate] 200/1500
+23:41:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.569)
+23:41:47  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:41:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:41:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:41:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+23:41:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.487)
+23:41:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.558)
+23:41:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:41:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.562)
+23:41:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.479)
+[adaptive/moderate] 300/1500
+23:41:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+[adaptive/moderate] 400/1500
+[adaptive/moderate] 500/1500
+23:41:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+23:41:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.519)
+23:41:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:41:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.516)
+23:41:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:41:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:42:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:42:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.513)
+23:42:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+[adaptive/moderate] 600/1500
+23:42:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:42:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:42:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.534)
+23:42:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.479)
+23:42:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.562)
+23:42:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.502)
+23:42:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:42:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+[adaptive/moderate] 700/1500
+23:42:04  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.539)
+23:42:04  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.485)
+23:42:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.547)
+23:42:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:42:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:42:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.508)
+23:42:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:42:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.564)
+[adaptive/moderate] 800/1500
+23:42:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:42:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.542)
+23:42:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+23:42:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:42:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:42:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.570)
+23:42:10  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.481)
+[adaptive/moderate] 900/1500
+23:42:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+23:42:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.551)
+23:42:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:42:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.545)
+[adaptive/moderate] 1000/1500
+[adaptive/moderate] 1100/1500
+23:42:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.472)
+23:42:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.513)
+23:42:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.546)
+23:42:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.504)
+23:42:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.480)
+23:42:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.554)
+23:42:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.471)
+[adaptive/moderate] 1200/1500
+23:42:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.515)
+23:42:21  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:42:22  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+23:42:22  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.488)
+23:42:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:42:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+[adaptive/moderate] 1300/1500
+23:42:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.568)
+23:42:24  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.475)
+23:42:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.584)
+23:42:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:42:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.513)
+23:42:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.479)
+23:42:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.512)
+23:42:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.477)
+23:42:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.562)
+[adaptive/moderate] 1400/1500
+23:42:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.480)
+23:42:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.514)
+23:42:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.477)
+23:42:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.576)
+23:42:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.476)
+23:42:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:42:30  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+[adaptive/moderate] 1500/1500
+23:42:30  INFO     [RAMS] Controller stopped.
+23:42:31  INFO     [RAMS] Starting resource monitor ...
+23:42:31  INFO     [RAMS] Loading model tiers ...
+23:42:31  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:42:31  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:42:32  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:42:32  INFO     [RAMS] Controller ready. Policy: safety2
+23:42:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.516)
+23:42:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.654)
+23:42:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.569)
+23:42:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.569)
+23:42:36  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.577)
+23:42:36  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.611)
+23:42:36  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.551)
+23:42:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.564)
+23:42:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.564)
+[safety2/moderate] 100/1500
+23:42:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.548)
+23:42:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.556)
+23:42:38  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.681)
+23:42:39  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.629)
+23:42:39  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.546)
+23:42:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.546)
+23:42:40  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.484)
+[safety2/moderate] 200/1500
+23:42:41  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.537)
+23:42:41  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.608)
+23:42:42  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.558)
+23:42:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:42:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.483)
+23:42:43  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.523)
+23:42:43  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.572)
+23:42:43  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.485)
+23:42:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.500)
+23:42:44  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.486)
+[safety2/moderate] 300/1500
+23:42:45  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.526)
+23:42:45  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.504)
+23:42:47  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.506)
+23:42:47  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.490)
+23:42:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.506)
+23:42:47  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.503)
+23:42:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.494)
+[safety2/moderate] 400/1500
+23:42:48  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.500)
+23:42:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.496)
+23:42:49  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.576)
+23:42:50  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.502)
+23:42:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.552)
+23:42:50  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.476)
+[safety2/moderate] 500/1500
+23:42:52  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.535)
+23:42:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+23:42:53  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.484)
+23:42:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.541)
+23:42:54  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.567)
+23:42:55  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.558)
+23:42:56  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.634)
+[safety2/moderate] 600/1500
+23:42:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.622)
+23:42:56  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.564)
+23:42:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.639)
+23:42:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.639)
+23:42:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.537)
+23:42:58  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.554)
+23:42:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.654)
+23:42:59  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.602)
+23:42:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.544)
+23:43:00  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.546)
+[safety2/moderate] 700/1500
+23:43:01  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.578)
+23:43:01  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.541)
+23:43:02  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.636)
+23:43:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.494)
+23:43:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.485)
+[safety2/moderate] 800/1500
+23:43:05  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.491)
+23:43:05  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.559)
+23:43:06  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.566)
+23:43:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.566)
+23:43:07  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.537)
+23:43:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.478)
+23:43:07  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.593)
+[safety2/moderate] 900/1500
+23:43:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.571)
+23:43:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.513)
+23:43:09  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.512)
+23:43:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.512)
+23:43:09  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.568)
+23:43:10  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.480)
+[safety2/moderate] 1000/1500
+23:43:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.495)
+23:43:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.491)
+23:43:12  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.509)
+23:43:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.496)
+23:43:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.480)
+23:43:13  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.496)
+23:43:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.555)
+23:43:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.502)
+23:43:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.594)
+23:43:14  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.510)
+23:43:15  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.533)
+23:43:15  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.529)
+[safety2/moderate] 1100/1500
+23:43:15  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.536)
+23:43:15  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.568)
+23:43:16  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.709)
+23:43:17  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.541)
+23:43:18  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.615)
+23:43:18  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.615)
+23:43:18  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.706)
+23:43:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.571)
+23:43:18  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.581)
+[safety2/moderate] 1200/1500
+23:43:19  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.630)
+23:43:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.557)
+23:43:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.557)
+23:43:21  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.570)
+23:43:21  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.572)
+23:43:22  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.521)
+23:43:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+23:43:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.482)
+[safety2/moderate] 1300/1500
+23:43:23  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.581)
+23:43:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.506)
+23:43:24  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.670)
+23:43:24  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.482)
+23:43:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.562)
+23:43:25  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.506)
+23:43:26  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.514)
+[safety2/moderate] 1400/1500
+23:43:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.484)
+23:43:27  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.499)
+23:43:27  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.540)
+23:43:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.510)
+23:43:28  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.576)
+23:43:29  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.485)
+23:43:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.513)
+[safety2/moderate] 1500/1500
+23:43:30  INFO     [RAMS] Controller stopped.
+23:43:30  INFO     [RAMS] Starting resource monitor ...
+23:43:30  INFO     [RAMS] Loading model tiers ...
+23:43:31  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:43:31  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:43:32  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:43:32  INFO     [RAMS] Controller ready. Policy: fixed
+23:43:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.421)
+[fixed_nano/moderate] 100/1500
+[fixed_nano/moderate] 200/1500
+[fixed_nano/moderate] 300/1500
+[fixed_nano/moderate] 400/1500
+[fixed_nano/moderate] 500/1500
+[fixed_nano/moderate] 600/1500
+[fixed_nano/moderate] 700/1500
+[fixed_nano/moderate] 800/1500
+[fixed_nano/moderate] 900/1500
+[fixed_nano/moderate] 1000/1500
+[fixed_nano/moderate] 1100/1500
+[fixed_nano/moderate] 1200/1500
+[fixed_nano/moderate] 1300/1500
+[fixed_nano/moderate] 1400/1500
+[fixed_nano/moderate] 1500/1500
+23:44:23  INFO     [RAMS] Controller stopped.
+23:44:23  INFO     [RAMS] Starting resource monitor ...
+23:44:23  INFO     [RAMS] Loading model tiers ...
+23:44:23  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:44:23  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:44:24  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:44:24  INFO     [RAMS] Controller ready. Policy: fixed
+[fixed_small/moderate] 100/1500
+[fixed_small/moderate] 200/1500
+[fixed_small/moderate] 300/1500
+[fixed_small/moderate] 400/1500
+[fixed_small/moderate] 500/1500
+[fixed_small/moderate] 600/1500
+[fixed_small/moderate] 700/1500
+[fixed_small/moderate] 800/1500
+[fixed_small/moderate] 900/1500
+[fixed_small/moderate] 1000/1500
+[fixed_small/moderate] 1100/1500
+[fixed_small/moderate] 1200/1500
+[fixed_small/moderate] 1300/1500
+[fixed_small/moderate] 1400/1500
+[fixed_small/moderate] 1500/1500
+23:45:16  INFO     [RAMS] Controller stopped.
+23:45:17  INFO     [RAMS] Starting resource monitor ...
+23:45:17  INFO     [RAMS] Loading model tiers ...
+23:45:17  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:45:17  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:45:18  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:45:18  INFO     [RAMS] Controller ready. Policy: fixed
+23:45:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.415)
+[fixed_medium/moderate] 100/1500
+[fixed_medium/moderate] 200/1500
+[fixed_medium/moderate] 300/1500
+[fixed_medium/moderate] 400/1500
+[fixed_medium/moderate] 500/1500
+[fixed_medium/moderate] 600/1500
+[fixed_medium/moderate] 700/1500
+[fixed_medium/moderate] 800/1500
+[fixed_medium/moderate] 900/1500
+[fixed_medium/moderate] 1000/1500
+[fixed_medium/moderate] 1100/1500
+[fixed_medium/moderate] 1200/1500
+[fixed_medium/moderate] 1300/1500
+[fixed_medium/moderate] 1400/1500
+[fixed_medium/moderate] 1500/1500
+23:46:19  INFO     [RAMS] Controller stopped.
+Raw records: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/policy_accuracy/exp11_policy_accuracy_20260908_234619.csv
+Summary: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/policy_accuracy/exp11_policy_accuracy_20260908_234619.json
+Replay manifest: /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/policy_accuracy/exp11_policy_accuracy_20260908_234619_manifest.json

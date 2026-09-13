@@ -1,0 +1,293 @@
+{
+  "NANO": {
+    "tier": "NANO",
+    "simulated": false,
+    "backend": "onnx",
+    "latency_ms": 34.11699179559946,
+    "inference_ms": 30.527062015607953,
+    "preprocess_ms": 2.4894268717616796,
+    "postprocess_ms": 1.0490769054740667,
+    "coords": "original",
+    "image_width": 1241,
+    "image_height": 376,
+    "detections": [
+      {
+        "class": "bus",
+        "conf": 0.8926059007644653,
+        "xyxy": [
+          83.79385676383973,
+          14.498054552078248,
+          483.5180281162262,
+          300.9887397289276
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.67242830991745,
+        "xyxy": [
+          628.6688807010652,
+          179.26484282016756,
+          696.8973937511445,
+          238.44098508358005
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.4745959937572479,
+        "xyxy": [
+          0.1678586781024933,
+          196.27892091274262,
+          98.74728891253473,
+          317.1200674295426
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      }
+    ],
+    "execution_providers": [
+      "CPUExecutionProvider"
+    ],
+    "coreml_provider_options": {},
+    "accuracy_proxy": 0.372
+  },
+  "SMALL": {
+    "tier": "SMALL",
+    "simulated": false,
+    "backend": "onnx",
+    "latency_ms": 132.38382013514638,
+    "inference_ms": 128.3531771041453,
+    "preprocess_ms": 2.3296799045056105,
+    "postprocess_ms": 1.6693780198693275,
+    "coords": "original",
+    "image_width": 1241,
+    "image_height": 376,
+    "detections": [
+      {
+        "class": "bus",
+        "conf": 0.9372035264968872,
+        "xyxy": [
+          87.79439764756422,
+          19.03957777756911,
+          479.98287971203143,
+          296.642732326801
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.8426193594932556,
+        "xyxy": [
+          1.0891334529106433,
+          203.2801030232356,
+          94.41253054371246,
+          303.92869193737323
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.8050515055656433,
+        "xyxy": [
+          624.2078907673175,
+          181.97633438843945,
+          698.5707264313331,
+          239.55463369076068
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "bus",
+        "conf": 0.5534138083457947,
+        "xyxy": [
+          493.2451997903677,
+          137.86735558509827,
+          547.5540987161489,
+          206.6623692695911
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.42913731932640076,
+        "xyxy": [
+          690.0780419936547,
+          183.9385481614333,
+          725.1168518433204,
+          209.02567907480093
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.3288046717643738,
+        "xyxy": [
+          763.0130413312178,
+          187.5780457166525,
+          796.2447682343997,
+          204.50819930663476
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      }
+    ],
+    "execution_providers": [
+      "CPUExecutionProvider"
+    ],
+    "coreml_provider_options": {},
+    "accuracy_proxy": 0.448
+  },
+  "MEDIUM": {
+    "tier": "MEDIUM",
+    "simulated": false,
+    "backend": "onnx",
+    "latency_ms": 723.653350956738,
+    "inference_ms": 713.4263888001442,
+    "preprocess_ms": 7.581628859043121,
+    "postprocess_ms": 2.6092370972037315,
+    "coords": "original",
+    "image_width": 1241,
+    "image_height": 376,
+    "detections": [
+      {
+        "class": "bus",
+        "conf": 0.9501299858093262,
+        "xyxy": [
+          87.45106486082078,
+          19.898498654365543,
+          479.9578678250313,
+          296.71168315410614
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.8840048313140869,
+        "xyxy": [
+          625.417128276825,
+          179.86804819107059,
+          700.1668988227844,
+          246.15560512542726
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.8653395175933838,
+        "xyxy": [
+          0.16508482694625856,
+          204.04878127574923,
+          91.35530844330789,
+          304.09495003223424
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.8074758052825928,
+        "xyxy": [
+          694.1461772203446,
+          183.68534078598023,
+          725.8270191907883,
+          208.07807006835938
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "bus",
+        "conf": 0.7490812540054321,
+        "xyxy": [
+          491.37126674652103,
+          139.43482558727266,
+          549.557343864441,
+          201.3977784395218
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.7045007348060608,
+        "xyxy": [
+          763.6344477176667,
+          185.19120910167695,
+          793.7979709148408,
+          202.96332523822787
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.5664666295051575,
+        "xyxy": [
+          478.19050301313405,
+          178.9839959383011,
+          497.5224555134774,
+          215.99512946605685
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.529103696346283,
+        "xyxy": [
+          480.28537458181387,
+          178.8636921644211,
+          510.915466940403,
+          212.7447972536087
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      },
+      {
+        "class": "car",
+        "conf": 0.4144720137119293,
+        "xyxy": [
+          475.60953437089927,
+          178.24285249710084,
+          493.81555479764944,
+          221.5003733634949
+        ],
+        "image_width": 1241,
+        "image_height": 376,
+        "coords": "original"
+      }
+    ],
+    "execution_providers": [
+      "CPUExecutionProvider"
+    ],
+    "coreml_provider_options": {},
+    "accuracy_proxy": 0.503
+  }
+}

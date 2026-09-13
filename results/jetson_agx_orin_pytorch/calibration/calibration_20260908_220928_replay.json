@@ -1,0 +1,166 @@
+{
+  "host": "9f7850578d66",
+  "platform": "Linux-5.15.148-tegra-aarch64-with-glibc2.35",
+  "python": "3.10.12 (main, Feb  4 2025, 14:57:36) [GCC 11.4.0]",
+  "backend": "pytorch",
+  "frames": "/data/kitti/images/val",
+  "n_per_profile": 200,
+  "warmup_frames": 20,
+  "steady_settle_s": 1.0,
+  "load_injector": "process_steady_v3",
+  "profiles": {
+    "idle": {
+      "profile": "idle",
+      "target_intensity": 0.0,
+      "pressure": {
+        "n": 200,
+        "mean": 0.2174,
+        "std": 0.0418,
+        "p10": 0.1547,
+        "p25": 0.1967,
+        "p50": 0.2182,
+        "p75": 0.2426,
+        "p90": 0.2709
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 19.5205,
+        "std": 5.7362,
+        "p10": 10.0,
+        "p25": 17.5,
+        "p50": 19.8,
+        "p75": 22.7,
+        "p90": 27.0
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 20.7852,
+        "std": 1.2006,
+        "p10": 19.6274,
+        "p25": 20.0732,
+        "p50": 20.658,
+        "p75": 21.4979,
+        "p90": 22.2616
+      }
+    },
+    "light": {
+      "profile": "light",
+      "target_intensity": 0.25,
+      "pressure": {
+        "n": 200,
+        "mean": 0.3329,
+        "std": 0.0289,
+        "p10": 0.308,
+        "p25": 0.3146,
+        "p50": 0.3278,
+        "p75": 0.3364,
+        "p90": 0.3871
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 35.861,
+        "std": 3.6562,
+        "p10": 33.6,
+        "p25": 33.9,
+        "p50": 34.7,
+        "p75": 35.8,
+        "p90": 44.4
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 20.6486,
+        "std": 1.1087,
+        "p10": 19.5408,
+        "p25": 19.8975,
+        "p50": 20.49,
+        "p75": 21.4459,
+        "p90": 22.1288
+      }
+    },
+    "moderate": {
+      "profile": "moderate",
+      "target_intensity": 0.5,
+      "pressure": {
+        "n": 200,
+        "mean": 0.5578,
+        "std": 0.0397,
+        "p10": 0.4949,
+        "p25": 0.5408,
+        "p50": 0.557,
+        "p75": 0.5766,
+        "p90": 0.6025
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 68.142,
+        "std": 5.3014,
+        "p10": 58.8,
+        "p25": 66.7,
+        "p50": 67.8,
+        "p75": 69.4,
+        "p90": 75.0
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 21.2404,
+        "std": 1.4006,
+        "p10": 19.7528,
+        "p25": 20.2754,
+        "p50": 21.0783,
+        "p75": 22.1925,
+        "p90": 22.863
+      }
+    },
+    "heavy": {
+      "profile": "heavy",
+      "target_intensity": 0.75,
+      "pressure": {
+        "n": 200,
+        "mean": 0.6711,
+        "std": 0.0197,
+        "p10": 0.6474,
+        "p25": 0.6598,
+        "p50": 0.6675,
+        "p75": 0.6789,
+        "p90": 0.694
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 84.069,
+        "std": 1.9983,
+        "p10": 82.6,
+        "p25": 83.2,
+        "p50": 83.5,
+        "p75": 84.0,
+        "p90": 88.1
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 20.8567,
+        "std": 1.6781,
+        "p10": 19.4967,
+        "p25": 19.9511,
+        "p50": 20.5532,
+        "p75": 21.264,
+        "p90": 22.5334
+      }
+    }
+  },
+  "proposal": {
+    "valid": true,
+    "lo_thresh": 0.145,
+    "hi_thresh": 0.498,
+    "normal_p10": 0.155,
+    "light_p50": 0.328,
+    "heavy_p50": 0.667,
+    "light_p75": 0.336,
+    "heavy_p10": 0.647,
+    "separation": 0.34,
+    "tail_overlap": -0.311,
+    "target_behavior": "idle/light SMALL; heavy may enter NANO; VRU policies may retain a stronger tier after detection"
+  },
+  "applied": true,
+  "timestamp_utc": "2026-09-08T22:09:28.121559+00:00",
+  "config_path": "/home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/calibrated.yaml",
+  "config_snapshot_before": "/home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/calibration/calibration_snapshots/default_before_replay_calibration_20260908_220928.yaml"
+}

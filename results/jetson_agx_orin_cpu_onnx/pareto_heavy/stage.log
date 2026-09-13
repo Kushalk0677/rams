@@ -1,0 +1,1513 @@
+
+══════════════════════════════════════════════════════════════
+  Experiment 5 — Accuracy–Latency Pareto Frontier
+  N=200  simulate=False
+══════════════════════════════════════════════════════════════
+
+  ── Load scenario: heavy (intensity=0.75) ──
+    block=1/10 method=FIXED_SMALL ...
+18:43:07  INFO     [RAMS] Starting resource monitor ...
+18:43:07  INFO     [RAMS] Loading model tiers ...
+[0;93m2026-09-08 18:43:07.906510945 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+18:43:07  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:43:08  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:43:09  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:43:09  INFO     [RAMS] Controller ready. Policy: fixed
+18:44:01  INFO     [RAMS] Controller stopped.
+    block=1/10 method=FIXED_NANO ...
+18:44:01  INFO     [RAMS] Starting resource monitor ...
+18:44:01  INFO     [RAMS] Loading model tiers ...
+18:44:02  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:44:02  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:44:03  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:44:03  INFO     [RAMS] Controller ready. Policy: fixed
+18:44:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.590)
+18:44:19  INFO     [RAMS] Controller stopped.
+    block=1/10 method=threshold ...
+18:44:20  INFO     [RAMS] Starting resource monitor ...
+18:44:20  INFO     [RAMS] Loading model tiers ...
+18:44:20  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:44:20  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:44:21  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:44:21  INFO     [RAMS] Controller ready. Policy: threshold
+18:44:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:44:39  INFO     [RAMS] Controller stopped.
+    block=1/10 method=predictive ...
+18:44:39  INFO     [RAMS] Starting resource monitor ...
+18:44:39  INFO     [RAMS] Loading model tiers ...
+18:44:39  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:44:39  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:44:41  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:44:41  INFO     [RAMS] Controller ready. Policy: predictive
+18:44:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+18:44:58  INFO     [RAMS] Controller stopped.
+    block=1/10 method=adaptive ...
+18:44:58  INFO     [RAMS] Starting resource monitor ...
+18:44:58  INFO     [RAMS] Loading model tiers ...
+18:44:59  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:44:59  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:45:00  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:45:00  INFO     [RAMS] Controller ready. Policy: adaptive
+18:45:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.718)
+18:45:17  INFO     [RAMS] Controller stopped.
+    block=1/10 method=FIXED_MEDIUM ...
+18:45:17  INFO     [RAMS] Starting resource monitor ...
+18:45:17  INFO     [RAMS] Loading model tiers ...
+18:45:18  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:45:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:45:19  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:45:19  INFO     [RAMS] Controller ready. Policy: fixed
+18:45:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.590)
+18:49:20  INFO     [RAMS] Controller stopped.
+    block=1/10 method=safety2 ...
+18:49:20  INFO     [RAMS] Starting resource monitor ...
+18:49:20  INFO     [RAMS] Loading model tiers ...
+18:49:20  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:49:20  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:49:22  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:49:22  INFO     [RAMS] Controller ready. Policy: safety2
+18:49:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+18:49:24  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+18:49:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.718)
+18:49:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+18:49:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+18:49:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:49:30  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+18:49:31  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+18:49:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.700)
+18:49:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:49:32  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.724)
+18:49:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.731)
+18:49:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+18:49:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.742)
+18:49:39  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.725)
+18:49:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+18:49:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.738)
+18:49:42  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.733)
+18:49:46  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.713)
+18:49:47  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.748)
+18:49:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+18:49:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+18:49:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:49:51  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.724)
+18:49:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+18:49:54  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+18:49:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.726)
+18:49:56  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+18:49:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+18:49:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+18:49:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.754)
+18:49:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.754)
+18:50:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+18:50:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:50:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+18:50:08  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.724)
+18:50:11  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.731)
+18:50:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+18:50:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+18:50:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:50:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.742)
+18:50:15  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.730)
+18:50:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.706)
+18:50:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.730)
+18:50:32  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+18:50:32  INFO     [RAMS] Controller stopped.
+    block=1/10 method=safety ...
+18:50:32  INFO     [RAMS] Starting resource monitor ...
+18:50:32  INFO     [RAMS] Loading model tiers ...
+18:50:32  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:50:32  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:50:33  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:50:33  INFO     [RAMS] Controller ready. Policy: safety
+18:50:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:50:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:50:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.735)
+18:50:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.735)
+18:50:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.735)
+18:50:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:50:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+18:50:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.747)
+18:50:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+18:50:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:50:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+18:50:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:50:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:50:43  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:50:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:50:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.720)
+18:50:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.732)
+18:50:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+18:50:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+18:50:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.708)
+18:50:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.735)
+18:50:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+18:50:54  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:50:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+18:50:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:50:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+18:50:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+18:50:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+18:50:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+18:51:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:51:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.735)
+18:51:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+18:51:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+18:51:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:51:09  INFO     [RAMS] Controller stopped.
+    block=2/10 method=predictive ...
+18:51:09  INFO     [RAMS] Starting resource monitor ...
+18:51:09  INFO     [RAMS] Loading model tiers ...
+18:51:09  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:51:10  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:51:11  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:51:11  INFO     [RAMS] Controller ready. Policy: predictive
+18:51:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+18:51:27  INFO     [RAMS] Controller stopped.
+    block=2/10 method=FIXED_NANO ...
+18:51:27  INFO     [RAMS] Starting resource monitor ...
+18:51:27  INFO     [RAMS] Loading model tiers ...
+18:51:27  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:51:28  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:51:29  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:51:29  INFO     [RAMS] Controller ready. Policy: fixed
+18:51:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.643)
+18:51:45  INFO     [RAMS] Controller stopped.
+    block=2/10 method=safety ...
+18:51:45  INFO     [RAMS] Starting resource monitor ...
+18:51:45  INFO     [RAMS] Loading model tiers ...
+18:51:45  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:51:45  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:51:46  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:51:46  INFO     [RAMS] Controller ready. Policy: safety
+18:51:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.729)
+18:51:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+18:51:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+18:51:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:51:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+18:51:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.735)
+18:52:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+18:52:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:52:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+18:52:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+18:52:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.712)
+18:52:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:52:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:52:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:52:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:52:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+18:52:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+18:52:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+18:52:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+18:52:10  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+18:52:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:52:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.754)
+18:52:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+18:52:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:52:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+18:52:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+18:52:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+18:52:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.726)
+18:52:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+18:52:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+18:52:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.708)
+18:52:21  INFO     [RAMS] Controller stopped.
+    block=2/10 method=FIXED_MEDIUM ...
+18:52:21  INFO     [RAMS] Starting resource monitor ...
+18:52:21  INFO     [RAMS] Loading model tiers ...
+18:52:21  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:52:21  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:52:22  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:52:22  INFO     [RAMS] Controller ready. Policy: fixed
+18:52:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.591)
+18:56:21  INFO     [RAMS] Controller stopped.
+    block=2/10 method=adaptive ...
+18:56:21  INFO     [RAMS] Starting resource monitor ...
+18:56:21  INFO     [RAMS] Loading model tiers ...
+18:56:21  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:56:21  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:56:22  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:56:22  INFO     [RAMS] Controller ready. Policy: adaptive
+18:56:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:56:39  INFO     [RAMS] Controller stopped.
+    block=2/10 method=threshold ...
+18:56:39  INFO     [RAMS] Starting resource monitor ...
+18:56:39  INFO     [RAMS] Loading model tiers ...
+18:56:40  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:56:40  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:56:41  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:56:41  INFO     [RAMS] Controller ready. Policy: threshold
+18:56:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+18:56:57  INFO     [RAMS] Controller stopped.
+    block=2/10 method=safety2 ...
+18:56:57  INFO     [RAMS] Starting resource monitor ...
+18:56:57  INFO     [RAMS] Loading model tiers ...
+18:56:57  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:56:57  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:56:59  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:56:59  INFO     [RAMS] Controller ready. Policy: safety2
+18:57:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+18:57:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+18:57:01  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.755)
+18:57:04  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.730)
+18:57:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+18:57:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.754)
+18:57:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.730)
+18:57:10  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.742)
+18:57:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+18:57:11  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+18:57:14  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+18:57:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.706)
+18:57:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.724)
+18:57:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+18:57:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+18:57:29  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.707)
+18:57:30  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.736)
+18:57:33  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+18:57:34  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.742)
+18:57:37  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.759)
+18:57:38  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.724)
+18:57:41  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+18:57:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.754)
+18:57:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.743)
+18:57:43  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.721)
+18:57:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+18:57:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+18:57:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.761)
+18:57:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.738)
+18:57:47  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.738)
+18:57:51  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.701)
+18:57:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:57:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+18:57:52  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.706)
+18:57:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:57:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.707)
+18:57:56  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.712)
+18:57:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+18:57:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:57:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+18:58:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+18:58:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.721)
+18:58:01  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+18:58:03  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+18:58:04  INFO     [RAMS] Controller stopped.
+    block=2/10 method=FIXED_SMALL ...
+18:58:04  INFO     [RAMS] Starting resource monitor ...
+18:58:04  INFO     [RAMS] Loading model tiers ...
+18:58:04  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:58:05  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:58:07  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:58:07  INFO     [RAMS] Controller ready. Policy: fixed
+18:59:01  INFO     [RAMS] Controller stopped.
+    block=3/10 method=threshold ...
+18:59:01  INFO     [RAMS] Starting resource monitor ...
+18:59:01  INFO     [RAMS] Loading model tiers ...
+18:59:01  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:59:01  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:59:02  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:59:02  INFO     [RAMS] Controller ready. Policy: threshold
+18:59:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+18:59:20  INFO     [RAMS] Controller stopped.
+    block=3/10 method=safety2 ...
+18:59:20  INFO     [RAMS] Starting resource monitor ...
+18:59:20  INFO     [RAMS] Loading model tiers ...
+18:59:20  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+18:59:20  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+18:59:21  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+18:59:21  INFO     [RAMS] Controller ready. Policy: safety2
+18:59:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.712)
+18:59:24  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+18:59:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+18:59:24  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+18:59:28  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+18:59:28  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.719)
+18:59:31  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.737)
+18:59:32  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+18:59:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.744)
+18:59:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+18:59:38  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.736)
+18:59:42  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.737)
+18:59:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.719)
+18:59:45  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+18:59:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+18:59:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+18:59:47  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.742)
+18:59:48  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.720)
+18:59:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.742)
+18:59:50  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.731)
+18:59:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+18:59:53  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.720)
+18:59:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+18:59:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.737)
+18:59:56  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.749)
+18:59:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+18:59:58  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.737)
+19:00:01  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.724)
+19:00:02  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+19:00:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+19:00:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:00:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:00:08  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:00:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:00:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.724)
+19:00:13  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:00:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.753)
+19:00:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:00:16  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.748)
+19:00:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.740)
+19:00:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.727)
+19:00:25  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+19:00:25  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+19:00:28  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.724)
+19:00:29  INFO     [RAMS] Controller stopped.
+    block=3/10 method=FIXED_NANO ...
+19:00:29  INFO     [RAMS] Starting resource monitor ...
+19:00:29  INFO     [RAMS] Loading model tiers ...
+19:00:29  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:00:29  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:00:30  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:00:30  INFO     [RAMS] Controller ready. Policy: fixed
+19:00:31  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.583)
+19:00:48  INFO     [RAMS] Controller stopped.
+    block=3/10 method=FIXED_SMALL ...
+19:00:48  INFO     [RAMS] Starting resource monitor ...
+19:00:48  INFO     [RAMS] Loading model tiers ...
+19:00:48  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:00:48  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:00:50  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:00:50  INFO     [RAMS] Controller ready. Policy: fixed
+19:01:43  INFO     [RAMS] Controller stopped.
+    block=3/10 method=predictive ...
+19:01:43  INFO     [RAMS] Starting resource monitor ...
+19:01:43  INFO     [RAMS] Loading model tiers ...
+19:01:43  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:01:44  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:01:45  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:01:45  INFO     [RAMS] Controller ready. Policy: predictive
+19:01:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+19:02:01  INFO     [RAMS] Controller stopped.
+    block=3/10 method=adaptive ...
+19:02:01  INFO     [RAMS] Starting resource monitor ...
+19:02:01  INFO     [RAMS] Loading model tiers ...
+19:02:02  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:02:02  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:02:03  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:02:03  INFO     [RAMS] Controller ready. Policy: adaptive
+19:02:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:02:20  INFO     [RAMS] Controller stopped.
+    block=3/10 method=FIXED_MEDIUM ...
+19:02:20  INFO     [RAMS] Starting resource monitor ...
+19:02:20  INFO     [RAMS] Loading model tiers ...
+19:02:20  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:02:20  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:02:21  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:02:21  INFO     [RAMS] Controller ready. Policy: fixed
+19:02:22  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.587)
+19:06:22  INFO     [RAMS] Controller stopped.
+    block=3/10 method=safety ...
+19:06:22  INFO     [RAMS] Starting resource monitor ...
+19:06:22  INFO     [RAMS] Loading model tiers ...
+19:06:22  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:06:23  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:06:24  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:06:24  INFO     [RAMS] Controller ready. Policy: safety
+19:06:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:06:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:06:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+19:06:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.706)
+19:06:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.700)
+19:06:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.759)
+19:06:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:06:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:06:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:06:34  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.714)
+19:06:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.732)
+19:06:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.735)
+19:06:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:06:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:06:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.707)
+19:06:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:06:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:06:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.735)
+19:06:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:06:47  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:06:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+19:06:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:06:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:06:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:06:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+19:06:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.735)
+19:06:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:06:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:06:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.714)
+19:06:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:06:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+19:06:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.720)
+19:06:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:06:58  INFO     [RAMS] Controller stopped.
+    block=4/10 method=predictive ...
+19:06:58  INFO     [RAMS] Starting resource monitor ...
+19:06:58  INFO     [RAMS] Loading model tiers ...
+19:06:59  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:06:59  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:07:00  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:07:00  INFO     [RAMS] Controller ready. Policy: predictive
+19:07:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.654)
+19:07:15  INFO     [RAMS] Controller stopped.
+    block=4/10 method=FIXED_NANO ...
+19:07:15  INFO     [RAMS] Starting resource monitor ...
+19:07:15  INFO     [RAMS] Loading model tiers ...
+19:07:15  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:07:16  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:07:17  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:07:17  INFO     [RAMS] Controller ready. Policy: fixed
+19:07:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.638)
+19:07:32  INFO     [RAMS] Controller stopped.
+    block=4/10 method=FIXED_SMALL ...
+19:07:32  INFO     [RAMS] Starting resource monitor ...
+19:07:32  INFO     [RAMS] Loading model tiers ...
+19:07:33  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:07:33  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:07:34  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:07:34  INFO     [RAMS] Controller ready. Policy: fixed
+19:08:26  INFO     [RAMS] Controller stopped.
+    block=4/10 method=adaptive ...
+19:08:26  INFO     [RAMS] Starting resource monitor ...
+19:08:26  INFO     [RAMS] Loading model tiers ...
+19:08:26  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:08:26  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:08:27  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:08:27  INFO     [RAMS] Controller ready. Policy: adaptive
+19:08:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+19:08:44  INFO     [RAMS] Controller stopped.
+    block=4/10 method=threshold ...
+19:08:44  INFO     [RAMS] Starting resource monitor ...
+19:08:44  INFO     [RAMS] Loading model tiers ...
+19:08:45  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:08:45  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:08:46  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:08:46  INFO     [RAMS] Controller ready. Policy: threshold
+19:08:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:09:02  INFO     [RAMS] Controller stopped.
+    block=4/10 method=FIXED_MEDIUM ...
+19:09:03  INFO     [RAMS] Starting resource monitor ...
+19:09:03  INFO     [RAMS] Loading model tiers ...
+19:09:03  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:09:03  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:09:05  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:09:05  INFO     [RAMS] Controller ready. Policy: fixed
+19:09:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.666)
+19:13:08  INFO     [RAMS] Controller stopped.
+    block=4/10 method=safety ...
+19:13:08  INFO     [RAMS] Starting resource monitor ...
+19:13:08  INFO     [RAMS] Loading model tiers ...
+19:13:09  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:13:09  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:13:10  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:13:10  INFO     [RAMS] Controller ready. Policy: safety
+19:13:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+19:13:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:13:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:13:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:13:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+19:13:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:13:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:13:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+19:13:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.712)
+19:13:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+19:13:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:13:21  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+19:13:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.707)
+19:13:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.695)
+19:13:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:13:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.701)
+19:13:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:13:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.726)
+19:13:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:13:30  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.720)
+19:13:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:13:30  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:13:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:13:32  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:13:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.691)
+19:13:34  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:13:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.741)
+19:13:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:13:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.747)
+19:13:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+19:13:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.713)
+19:13:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:13:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:13:43  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:13:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:13:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:13:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:13:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:13:46  INFO     [RAMS] Controller stopped.
+    block=4/10 method=safety2 ...
+19:13:46  INFO     [RAMS] Starting resource monitor ...
+19:13:46  INFO     [RAMS] Loading model tiers ...
+19:13:47  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:13:47  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:13:48  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:13:48  INFO     [RAMS] Controller ready. Policy: safety2
+19:13:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.734)
+19:13:52  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+19:13:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.733)
+19:13:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.725)
+19:13:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:13:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.743)
+19:14:02  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+19:14:02  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.726)
+19:14:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+19:14:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:14:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:14:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:14:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.737)
+19:14:09  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.730)
+19:14:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:14:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.737)
+19:14:12  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.737)
+19:14:13  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+19:14:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+19:14:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+19:14:24  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.754)
+19:14:24  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:14:27  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.754)
+19:14:27  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:14:31  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+19:14:31  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.707)
+19:14:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.743)
+19:14:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+19:14:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+19:14:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:14:37  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.733)
+19:14:41  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:14:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:14:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.736)
+19:14:43  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+19:14:43  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+19:14:46  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+19:14:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:14:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:14:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+19:14:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:14:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:14:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:14:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.742)
+19:14:53  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.725)
+19:14:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.683)
+19:14:57  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.737)
+19:14:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.731)
+19:15:04  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:15:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:15:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:15:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:15:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:15:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+19:15:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.754)
+19:15:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.754)
+19:15:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.719)
+19:15:15  INFO     [RAMS] Controller stopped.
+    block=5/10 method=adaptive ...
+19:15:15  INFO     [RAMS] Starting resource monitor ...
+19:15:15  INFO     [RAMS] Loading model tiers ...
+19:15:16  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:15:16  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:15:17  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:15:17  INFO     [RAMS] Controller ready. Policy: adaptive
+19:15:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.644)
+19:15:33  INFO     [RAMS] Controller stopped.
+    block=5/10 method=FIXED_MEDIUM ...
+19:15:33  INFO     [RAMS] Starting resource monitor ...
+19:15:33  INFO     [RAMS] Loading model tiers ...
+19:15:34  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:15:34  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:15:35  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:15:35  INFO     [RAMS] Controller ready. Policy: fixed
+19:15:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.645)
+19:19:35  INFO     [RAMS] Controller stopped.
+    block=5/10 method=safety2 ...
+19:19:35  INFO     [RAMS] Starting resource monitor ...
+19:19:35  INFO     [RAMS] Loading model tiers ...
+19:19:35  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:19:36  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:19:37  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:19:37  INFO     [RAMS] Controller ready. Policy: safety2
+19:19:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:19:39  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.736)
+19:19:42  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.732)
+19:19:43  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:19:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.750)
+19:19:48  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.736)
+19:19:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.736)
+19:19:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+19:19:50  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.701)
+19:19:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:19:54  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.736)
+19:19:58  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+19:19:58  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+19:20:02  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:20:03  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.709)
+19:20:07  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.743)
+19:20:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.761)
+19:20:11  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:20:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:20:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:20:13  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.732)
+19:20:16  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:20:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:20:17  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.730)
+19:20:21  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.725)
+19:20:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+19:20:24  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+19:20:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:20:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:20:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:20:27  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+19:20:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:20:35  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.748)
+19:20:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+19:20:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:20:41  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.701)
+19:20:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:20:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.721)
+19:20:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:20:43  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:20:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:20:45  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+19:20:48  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.743)
+19:20:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.754)
+19:20:51  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.726)
+19:20:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.732)
+19:20:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.756)
+19:20:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.744)
+19:20:56  INFO     [RAMS] Controller stopped.
+    block=5/10 method=FIXED_NANO ...
+19:20:56  INFO     [RAMS] Starting resource monitor ...
+19:20:56  INFO     [RAMS] Loading model tiers ...
+19:20:56  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:20:56  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:20:58  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:20:58  INFO     [RAMS] Controller ready. Policy: fixed
+19:20:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.598)
+19:21:14  INFO     [RAMS] Controller stopped.
+    block=5/10 method=FIXED_SMALL ...
+19:21:14  INFO     [RAMS] Starting resource monitor ...
+19:21:14  INFO     [RAMS] Loading model tiers ...
+19:21:14  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:21:15  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:21:16  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:21:16  INFO     [RAMS] Controller ready. Policy: fixed
+19:22:10  INFO     [RAMS] Controller stopped.
+    block=5/10 method=safety ...
+19:22:10  INFO     [RAMS] Starting resource monitor ...
+19:22:10  INFO     [RAMS] Loading model tiers ...
+19:22:10  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:22:10  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:22:12  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:22:12  INFO     [RAMS] Controller ready. Policy: safety
+19:22:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:22:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:22:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:22:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.690)
+19:22:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+19:22:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:22:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+19:22:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.732)
+19:22:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.732)
+19:22:22  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+19:22:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:22:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:22:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:22:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:22:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:22:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:22:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:22:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:22:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:22:31  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:22:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+19:22:32  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:22:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:22:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:22:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:22:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:22:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:22:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:22:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.749)
+19:22:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:22:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.744)
+19:22:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.744)
+19:22:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.720)
+19:22:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.679)
+19:22:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:22:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+19:22:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:22:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.723)
+19:22:47  INFO     [RAMS] Controller stopped.
+    block=5/10 method=threshold ...
+19:22:47  INFO     [RAMS] Starting resource monitor ...
+19:22:47  INFO     [RAMS] Loading model tiers ...
+19:22:47  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:22:47  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:22:48  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:22:48  INFO     [RAMS] Controller ready. Policy: threshold
+19:22:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:23:05  INFO     [RAMS] Controller stopped.
+    block=5/10 method=predictive ...
+19:23:05  INFO     [RAMS] Starting resource monitor ...
+19:23:05  INFO     [RAMS] Loading model tiers ...
+19:23:06  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:23:06  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:23:07  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:23:07  INFO     [RAMS] Controller ready. Policy: predictive
+19:23:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:23:23  INFO     [RAMS] Controller stopped.
+    block=6/10 method=adaptive ...
+19:23:23  INFO     [RAMS] Starting resource monitor ...
+19:23:23  INFO     [RAMS] Loading model tiers ...
+19:23:23  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:23:23  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:23:25  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:23:25  INFO     [RAMS] Controller ready. Policy: adaptive
+19:23:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.643)
+19:23:40  INFO     [RAMS] Controller stopped.
+    block=6/10 method=safety ...
+19:23:40  INFO     [RAMS] Starting resource monitor ...
+19:23:40  INFO     [RAMS] Loading model tiers ...
+19:23:41  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:23:41  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:23:42  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:23:42  INFO     [RAMS] Controller ready. Policy: safety
+19:23:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:23:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.714)
+19:23:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+19:23:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+19:23:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:23:52  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:23:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:23:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:23:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:23:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:23:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:23:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:23:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:23:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:24:00  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:24:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:24:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:24:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:24:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:24:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:24:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+19:24:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:24:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+19:24:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.744)
+19:24:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:24:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.726)
+19:24:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.713)
+19:24:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.701)
+19:24:17  INFO     [RAMS] Controller stopped.
+    block=6/10 method=FIXED_NANO ...
+19:24:17  INFO     [RAMS] Starting resource monitor ...
+19:24:17  INFO     [RAMS] Loading model tiers ...
+19:24:18  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:24:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:24:19  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:24:19  INFO     [RAMS] Controller ready. Policy: fixed
+19:24:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.588)
+19:24:36  INFO     [RAMS] Controller stopped.
+    block=6/10 method=FIXED_SMALL ...
+19:24:36  INFO     [RAMS] Starting resource monitor ...
+19:24:36  INFO     [RAMS] Loading model tiers ...
+19:24:37  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:24:37  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:24:38  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:24:38  INFO     [RAMS] Controller ready. Policy: fixed
+19:25:31  INFO     [RAMS] Controller stopped.
+    block=6/10 method=safety2 ...
+19:25:31  INFO     [RAMS] Starting resource monitor ...
+19:25:31  INFO     [RAMS] Loading model tiers ...
+19:25:31  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:25:31  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:25:32  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:25:32  INFO     [RAMS] Controller ready. Policy: safety2
+19:25:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:25:38  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.744)
+19:25:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:25:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.738)
+19:25:40  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.718)
+19:25:43  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.725)
+19:25:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:25:45  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.736)
+19:25:48  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:25:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.754)
+19:25:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.730)
+19:25:50  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.730)
+19:25:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:25:52  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+19:25:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:25:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+19:25:57  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.749)
+19:25:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:25:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.703)
+19:25:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.738)
+19:26:00  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.756)
+19:26:03  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:26:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.718)
+19:26:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.737)
+19:26:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:26:09  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.730)
+19:26:13  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.724)
+19:26:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:26:18  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+19:26:18  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.737)
+19:26:22  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.761)
+19:26:22  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:26:23  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.738)
+19:26:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.725)
+19:26:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:26:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+19:26:29  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.730)
+19:26:32  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.760)
+19:26:33  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.742)
+19:26:36  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:26:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:26:37  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:26:38  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:26:38  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.718)
+19:26:40  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.744)
+19:26:40  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+19:26:44  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.739)
+19:26:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.726)
+19:26:45  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.720)
+19:26:47  INFO     [RAMS] Controller stopped.
+    block=6/10 method=threshold ...
+19:26:47  INFO     [RAMS] Starting resource monitor ...
+19:26:47  INFO     [RAMS] Loading model tiers ...
+19:26:47  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:26:48  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:26:49  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:26:49  INFO     [RAMS] Controller ready. Policy: threshold
+19:26:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:27:06  INFO     [RAMS] Controller stopped.
+    block=6/10 method=FIXED_MEDIUM ...
+19:27:06  INFO     [RAMS] Starting resource monitor ...
+19:27:06  INFO     [RAMS] Loading model tiers ...
+19:27:06  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:27:06  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:27:08  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:27:08  INFO     [RAMS] Controller ready. Policy: fixed
+19:27:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.602)
+19:31:07  INFO     [RAMS] Controller stopped.
+    block=6/10 method=predictive ...
+19:31:07  INFO     [RAMS] Starting resource monitor ...
+19:31:07  INFO     [RAMS] Loading model tiers ...
+19:31:07  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:31:07  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:31:09  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:31:09  INFO     [RAMS] Controller ready. Policy: predictive
+19:31:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.641)
+19:31:24  INFO     [RAMS] Controller stopped.
+    block=7/10 method=adaptive ...
+19:31:24  INFO     [RAMS] Starting resource monitor ...
+19:31:24  INFO     [RAMS] Loading model tiers ...
+19:31:25  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:31:25  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:31:26  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:31:26  INFO     [RAMS] Controller ready. Policy: adaptive
+19:31:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.642)
+19:31:43  INFO     [RAMS] Controller stopped.
+    block=7/10 method=FIXED_SMALL ...
+19:31:43  INFO     [RAMS] Starting resource monitor ...
+19:31:43  INFO     [RAMS] Loading model tiers ...
+19:31:43  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:31:43  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:31:44  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:31:44  INFO     [RAMS] Controller ready. Policy: fixed
+19:32:37  INFO     [RAMS] Controller stopped.
+    block=7/10 method=FIXED_NANO ...
+19:32:37  INFO     [RAMS] Starting resource monitor ...
+19:32:37  INFO     [RAMS] Loading model tiers ...
+19:32:37  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:32:37  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:32:38  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:32:38  INFO     [RAMS] Controller ready. Policy: fixed
+19:32:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+19:32:54  INFO     [RAMS] Controller stopped.
+    block=7/10 method=FIXED_MEDIUM ...
+19:32:54  INFO     [RAMS] Starting resource monitor ...
+19:32:54  INFO     [RAMS] Loading model tiers ...
+19:32:55  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:32:55  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:32:56  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:32:56  INFO     [RAMS] Controller ready. Policy: fixed
+19:32:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.644)
+19:36:54  INFO     [RAMS] Controller stopped.
+    block=7/10 method=safety ...
+19:36:54  INFO     [RAMS] Starting resource monitor ...
+19:36:54  INFO     [RAMS] Loading model tiers ...
+19:36:54  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:36:54  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:36:55  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:36:55  INFO     [RAMS] Controller ready. Policy: safety
+19:36:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.732)
+19:36:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.732)
+19:36:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.760)
+19:37:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.738)
+19:37:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:37:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:37:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:37:04  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.692)
+19:37:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.724)
+19:37:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:37:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:37:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:37:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:37:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:37:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:37:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:37:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.718)
+19:37:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+19:37:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+19:37:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:37:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:37:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:37:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:37:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:37:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+19:37:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.702)
+19:37:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+19:37:24  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+19:37:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.706)
+19:37:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:37:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:37:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:37:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+19:37:28  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:37:30  INFO     [RAMS] Controller stopped.
+    block=7/10 method=threshold ...
+19:37:30  INFO     [RAMS] Starting resource monitor ...
+19:37:30  INFO     [RAMS] Loading model tiers ...
+19:37:31  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:37:31  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:37:32  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:37:32  INFO     [RAMS] Controller ready. Policy: threshold
+19:37:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:37:49  INFO     [RAMS] Controller stopped.
+    block=7/10 method=predictive ...
+19:37:49  INFO     [RAMS] Starting resource monitor ...
+19:37:49  INFO     [RAMS] Loading model tiers ...
+19:37:50  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:37:50  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:37:51  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:37:51  INFO     [RAMS] Controller ready. Policy: predictive
+19:37:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+19:38:08  INFO     [RAMS] Controller stopped.
+    block=7/10 method=safety2 ...
+19:38:08  INFO     [RAMS] Starting resource monitor ...
+19:38:08  INFO     [RAMS] Loading model tiers ...
+19:38:08  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:38:09  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:38:10  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:38:10  INFO     [RAMS] Controller ready. Policy: safety2
+19:38:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.759)
+19:38:12  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.695)
+19:38:15  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.737)
+19:38:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:38:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.719)
+19:38:18  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+19:38:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:38:23  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+19:38:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.760)
+19:38:24  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:38:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+19:38:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:38:25  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.737)
+19:38:32  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+19:38:33  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.708)
+19:38:37  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+19:38:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.724)
+19:38:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.731)
+19:38:43  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:38:43  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.724)
+19:38:47  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+19:38:48  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.738)
+19:38:52  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.760)
+19:38:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+19:38:56  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.725)
+19:38:57  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+19:39:00  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+19:39:01  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.696)
+19:39:04  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.724)
+19:39:05  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.724)
+19:39:08  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.749)
+19:39:08  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+19:39:12  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.726)
+19:39:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.721)
+19:39:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:39:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+19:39:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.707)
+19:39:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:39:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:39:17  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.743)
+19:39:20  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.748)
+19:39:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:39:21  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:39:22  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.736)
+19:39:24  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.708)
+19:39:24  INFO     [RAMS] Controller stopped.
+    block=8/10 method=adaptive ...
+19:39:24  INFO     [RAMS] Starting resource monitor ...
+19:39:24  INFO     [RAMS] Loading model tiers ...
+19:39:24  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:39:24  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:39:26  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:39:26  INFO     [RAMS] Controller ready. Policy: adaptive
+19:39:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.706)
+19:39:42  INFO     [RAMS] Controller stopped.
+    block=8/10 method=FIXED_SMALL ...
+19:39:42  INFO     [RAMS] Starting resource monitor ...
+19:39:42  INFO     [RAMS] Loading model tiers ...
+19:39:43  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:39:43  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:39:44  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:39:44  INFO     [RAMS] Controller ready. Policy: fixed
+19:40:36  INFO     [RAMS] Controller stopped.
+    block=8/10 method=threshold ...
+19:40:36  INFO     [RAMS] Starting resource monitor ...
+19:40:36  INFO     [RAMS] Loading model tiers ...
+19:40:36  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:40:36  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:40:38  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:40:38  INFO     [RAMS] Controller ready. Policy: threshold
+19:40:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+19:40:54  INFO     [RAMS] Controller stopped.
+    block=8/10 method=FIXED_MEDIUM ...
+19:40:54  INFO     [RAMS] Starting resource monitor ...
+19:40:54  INFO     [RAMS] Loading model tiers ...
+19:40:54  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:40:54  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:40:55  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:40:55  INFO     [RAMS] Controller ready. Policy: fixed
+19:40:56  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.594)
+19:44:53  INFO     [RAMS] Controller stopped.
+    block=8/10 method=safety2 ...
+19:44:53  INFO     [RAMS] Starting resource monitor ...
+19:44:53  INFO     [RAMS] Loading model tiers ...
+19:44:53  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:44:53  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:44:55  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:44:55  INFO     [RAMS] Controller ready. Policy: safety2
+19:44:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.695)
+19:44:57  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.726)
+19:45:00  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.749)
+19:45:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.749)
+19:45:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.744)
+19:45:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.744)
+19:45:13  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.731)
+19:45:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.705)
+19:45:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.731)
+19:45:16  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.760)
+19:45:16  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+19:45:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.721)
+19:45:20  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.719)
+19:45:24  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.755)
+19:45:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+19:45:25  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.732)
+19:45:29  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+19:45:29  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+19:45:36  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.760)
+19:45:36  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+19:45:40  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:45:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:45:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:45:43  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.737)
+19:45:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.748)
+19:45:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.702)
+19:45:55  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.743)
+19:45:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+19:45:57  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.710)
+19:46:00  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.760)
+19:46:01  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.725)
+19:46:04  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.743)
+19:46:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:46:05  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.743)
+19:46:10  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.732)
+19:46:10  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.727)
+19:46:17  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+19:46:17  INFO     [RAMS] Controller stopped.
+    block=8/10 method=predictive ...
+19:46:17  INFO     [RAMS] Starting resource monitor ...
+19:46:17  INFO     [RAMS] Loading model tiers ...
+19:46:17  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:46:18  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:46:19  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:46:19  INFO     [RAMS] Controller ready. Policy: predictive
+19:46:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.630)
+19:46:36  INFO     [RAMS] Controller stopped.
+    block=8/10 method=safety ...
+19:46:36  INFO     [RAMS] Starting resource monitor ...
+19:46:36  INFO     [RAMS] Loading model tiers ...
+19:46:36  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:46:37  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:46:37  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:46:37  INFO     [RAMS] Controller ready. Policy: safety
+19:46:39  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+19:46:40  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.695)
+19:46:41  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:46:44  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:46:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.721)
+19:46:47  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:46:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:46:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:46:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:46:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:46:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:46:52  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.720)
+19:46:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:46:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:46:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:47:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:47:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:47:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:47:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:47:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:47:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:47:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:47:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:47:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:47:10  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:47:10  INFO     [RAMS] Controller stopped.
+    block=8/10 method=FIXED_NANO ...
+19:47:10  INFO     [RAMS] Starting resource monitor ...
+19:47:10  INFO     [RAMS] Loading model tiers ...
+19:47:10  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:47:11  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:47:12  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:47:12  INFO     [RAMS] Controller ready. Policy: fixed
+19:47:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.654)
+19:47:29  INFO     [RAMS] Controller stopped.
+    block=9/10 method=predictive ...
+19:47:29  INFO     [RAMS] Starting resource monitor ...
+19:47:29  INFO     [RAMS] Loading model tiers ...
+19:47:29  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:47:30  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:47:31  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:47:31  INFO     [RAMS] Controller ready. Policy: predictive
+19:47:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:47:47  INFO     [RAMS] Controller stopped.
+    block=9/10 method=FIXED_SMALL ...
+19:47:48  INFO     [RAMS] Starting resource monitor ...
+19:47:48  INFO     [RAMS] Loading model tiers ...
+19:47:48  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:47:48  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:47:49  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:47:49  INFO     [RAMS] Controller ready. Policy: fixed
+19:48:41  INFO     [RAMS] Controller stopped.
+    block=9/10 method=FIXED_MEDIUM ...
+19:48:41  INFO     [RAMS] Starting resource monitor ...
+19:48:41  INFO     [RAMS] Loading model tiers ...
+19:48:41  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:48:41  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:48:43  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:48:43  INFO     [RAMS] Controller ready. Policy: fixed
+19:48:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.644)
+19:52:40  INFO     [RAMS] Controller stopped.
+    block=9/10 method=safety2 ...
+19:52:40  INFO     [RAMS] Starting resource monitor ...
+19:52:40  INFO     [RAMS] Loading model tiers ...
+19:52:40  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:52:41  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:52:42  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:52:42  INFO     [RAMS] Controller ready. Policy: safety2
+19:52:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+19:52:46  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.726)
+19:52:49  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.731)
+19:52:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:52:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:52:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:52:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:52:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:52:52  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:52:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+19:52:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.719)
+19:52:56  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.724)
+19:52:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.714)
+19:52:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.737)
+19:52:59  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+19:53:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+19:53:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:53:01  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.743)
+19:53:06  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.750)
+19:53:07  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.750)
+19:53:11  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+19:53:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+19:53:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+19:53:12  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.713)
+19:53:15  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:53:15  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.721)
+19:53:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.731)
+19:53:18  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.732)
+19:53:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+19:53:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+19:53:20  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.743)
+19:53:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.731)
+19:53:26  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+19:53:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:53:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.732)
+19:53:30  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.750)
+19:53:34  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+19:53:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+19:53:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:53:36  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:53:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.696)
+19:53:38  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:53:39  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:53:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+19:53:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.754)
+19:53:54  INFO     [RAMS] Controller stopped.
+    block=9/10 method=safety ...
+19:53:54  INFO     [RAMS] Starting resource monitor ...
+19:53:54  INFO     [RAMS] Loading model tiers ...
+19:53:55  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:53:55  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:53:56  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:53:56  INFO     [RAMS] Controller ready. Policy: safety
+19:53:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.707)
+19:53:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:54:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:54:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:54:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:54:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.701)
+19:54:03  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.708)
+19:54:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:54:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:54:04  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:54:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:54:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+19:54:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:54:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.742)
+19:54:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:54:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.748)
+19:54:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:54:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.714)
+19:54:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+19:54:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+19:54:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:54:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.714)
+19:54:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+19:54:17  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+19:54:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.720)
+19:54:18  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:54:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.725)
+19:54:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.697)
+19:54:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:54:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:54:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:54:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:54:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:54:27  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:54:31  INFO     [RAMS] Controller stopped.
+    block=9/10 method=adaptive ...
+19:54:31  INFO     [RAMS] Starting resource monitor ...
+19:54:31  INFO     [RAMS] Loading model tiers ...
+19:54:31  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:54:32  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:54:33  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:54:33  INFO     [RAMS] Controller ready. Policy: adaptive
+19:54:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.642)
+19:54:49  INFO     [RAMS] Controller stopped.
+    block=9/10 method=threshold ...
+19:54:49  INFO     [RAMS] Starting resource monitor ...
+19:54:49  INFO     [RAMS] Loading model tiers ...
+19:54:50  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:54:50  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:54:51  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:54:51  INFO     [RAMS] Controller ready. Policy: threshold
+19:54:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.719)
+19:55:09  INFO     [RAMS] Controller stopped.
+    block=9/10 method=FIXED_NANO ...
+19:55:09  INFO     [RAMS] Starting resource monitor ...
+19:55:09  INFO     [RAMS] Loading model tiers ...
+19:55:09  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:55:09  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:55:10  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:55:10  INFO     [RAMS] Controller ready. Policy: fixed
+19:55:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.605)
+19:55:27  INFO     [RAMS] Controller stopped.
+    block=10/10 method=threshold ...
+19:55:27  INFO     [RAMS] Starting resource monitor ...
+19:55:27  INFO     [RAMS] Loading model tiers ...
+19:55:28  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:55:28  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:55:29  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:55:29  INFO     [RAMS] Controller ready. Policy: threshold
+19:55:31  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:55:46  INFO     [RAMS] Controller stopped.
+    block=10/10 method=adaptive ...
+19:55:46  INFO     [RAMS] Starting resource monitor ...
+19:55:46  INFO     [RAMS] Loading model tiers ...
+19:55:46  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:55:47  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:55:48  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:55:48  INFO     [RAMS] Controller ready. Policy: adaptive
+19:55:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:56:05  INFO     [RAMS] Controller stopped.
+    block=10/10 method=FIXED_NANO ...
+19:56:05  INFO     [RAMS] Starting resource monitor ...
+19:56:05  INFO     [RAMS] Loading model tiers ...
+19:56:06  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:56:06  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:56:07  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:56:07  INFO     [RAMS] Controller ready. Policy: fixed
+19:56:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+19:56:23  INFO     [RAMS] Controller stopped.
+    block=10/10 method=predictive ...
+19:56:23  INFO     [RAMS] Starting resource monitor ...
+19:56:23  INFO     [RAMS] Loading model tiers ...
+19:56:24  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:56:24  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:56:26  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:56:26  INFO     [RAMS] Controller ready. Policy: predictive
+19:56:27  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.663)
+19:56:41  INFO     [RAMS] Controller stopped.
+    block=10/10 method=safety ...
+19:56:41  INFO     [RAMS] Starting resource monitor ...
+19:56:41  INFO     [RAMS] Loading model tiers ...
+19:56:41  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:56:41  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:56:43  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:56:43  INFO     [RAMS] Controller ready. Policy: safety
+19:56:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+19:56:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.744)
+19:56:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.750)
+19:56:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.744)
+19:56:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:56:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:56:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.760)
+19:56:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.708)
+19:56:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:56:51  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.736)
+19:56:52  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.702)
+19:56:52  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:56:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.736)
+19:56:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:56:54  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:56:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+19:56:56  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:56:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:56:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:56:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.718)
+19:56:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:56:58  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:57:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.742)
+19:57:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.695)
+19:57:02  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.730)
+19:57:02  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.730)
+19:57:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+19:57:08  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.726)
+19:57:09  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+19:57:10  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.720)
+19:57:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.754)
+19:57:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:57:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.713)
+19:57:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+19:57:16  INFO     [RAMS] Controller stopped.
+    block=10/10 method=FIXED_SMALL ...
+19:57:16  INFO     [RAMS] Starting resource monitor ...
+19:57:16  INFO     [RAMS] Loading model tiers ...
+19:57:16  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:57:17  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:57:18  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:57:18  INFO     [RAMS] Controller ready. Policy: fixed
+19:58:10  INFO     [RAMS] Controller stopped.
+    block=10/10 method=FIXED_MEDIUM ...
+19:58:10  INFO     [RAMS] Starting resource monitor ...
+19:58:10  INFO     [RAMS] Loading model tiers ...
+19:58:10  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+19:58:10  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+19:58:11  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+19:58:11  INFO     [RAMS] Controller ready. Policy: fixed
+19:58:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.653)
+20:02:13  INFO     [RAMS] Controller stopped.
+    block=10/10 method=safety2 ...
+20:02:13  INFO     [RAMS] Starting resource monitor ...
+20:02:13  INFO     [RAMS] Loading model tiers ...
+20:02:13  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+20:02:14  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+20:02:16  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+20:02:16  INFO     [RAMS] Controller ready. Policy: safety2
+20:02:18  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.726)
+20:02:19  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.706)
+20:02:22  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.754)
+20:02:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+20:02:23  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.713)
+20:02:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+20:02:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.712)
+20:02:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.748)
+20:02:25  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+20:02:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+20:02:26  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.731)
+20:02:29  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.719)
+20:02:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.696)
+20:02:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.719)
+20:02:31  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.731)
+20:02:32  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+20:02:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.731)
+20:02:33  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.748)
+20:02:37  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.749)
+20:02:38  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.750)
+20:02:42  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.749)
+20:02:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+20:02:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+20:02:43  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.719)
+20:02:46  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.755)
+20:02:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.731)
+20:02:47  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.743)
+20:02:49  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.690)
+20:02:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+20:02:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.737)
+20:02:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.719)
+20:02:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.743)
+20:02:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.755)
+20:02:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+20:02:58  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.755)
+20:03:01  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.715)
+20:03:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.743)
+20:03:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.725)
+20:03:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.743)
+20:03:07  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.737)
+20:03:07  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+20:03:09  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.760)
+20:03:09  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.695)
+20:03:10  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.748)
+20:03:23  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.750)
+20:03:23  INFO     [RAMS] Controller stopped.
+      threshold: latency=67.0 ms  acc_proxy=0.373
+      predictive: latency=63.0 ms  acc_proxy=0.372
+      safety: latency=155.5 ms  acc_proxy=0.410
+      adaptive: latency=65.3 ms  acc_proxy=0.372
+      safety2: latency=352.1 ms  acc_proxy=0.417
+      FIXED_NANO: latency=64.0 ms  acc_proxy=0.372
+      FIXED_SMALL: latency=244.7 ms  acc_proxy=0.448
+      FIXED_MEDIUM: latency=1179.6 ms  acc_proxy=0.503
+  Chart saved → exp5_pareto_heavy.png
+
+═════════════════════════════════════════════════════════════════════════════════════════
+  Experiment 5: Accuracy–Latency Pareto (mean latency, tier dist)
+═════════════════════════════════════════════════════════════════════════════════════════
+Label           Group           N      Mean ms   ±Std     P95 ms   Tier dist             
+──────────────  ──────────────  ─────  ────────  ───────  ───────  ──────────────────────
+threshold       heavy           2000   67.0      30.5     108.0    NANO:99%  SMALL:1%    
+predictive      heavy           2000   63.0      22.5     100.7    NANO:100%  SMALL:0%   
+safety          heavy           2000   155.5     105.7    342.0    NANO:50%  SMALL:50%   
+adaptive        heavy           2000   65.3      26.1     104.8    NANO:99%  SMALL:1%    
+safety2         heavy           2000   352.1     467.5    1378.2   MEDIUM:22%  NANO:57%  SMALL:21%
+FIXED_NANO      heavy           2000   64.0      20.6     102.5    NANO:100%             
+FIXED_SMALL     heavy           2000   244.7     88.5     369.9    SMALL:100%            
+FIXED_MEDIUM    heavy           2000   1179.6    240.2    1614.5   MEDIUM:100%           
+═════════════════════════════════════════════════════════════════════════════════════════
+
+  LaTeX table → /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/onnx/pareto_heavy/exp5_latex_heavy.tex
+

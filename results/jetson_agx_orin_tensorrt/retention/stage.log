@@ -1,0 +1,310 @@
+14:35:12  INFO     [RAMS] Starting resource monitor ...
+14:35:12  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-14:35:14] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-14:35:14] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+14:35:16  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-14:35:16] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:35:16] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-14:35:16] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+14:35:16  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-14:35:16] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:35:16] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-14:35:16] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+14:35:16  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+14:35:16  INFO     [RAMS] Controller ready. Policy: safety
+[safety, conf=0.25] 100/1500
+[safety, conf=0.25] 200/1500
+[safety, conf=0.25] 300/1500
+[safety, conf=0.25] 400/1500
+[safety, conf=0.25] 500/1500
+[safety, conf=0.25] 600/1500
+[safety, conf=0.25] 700/1500
+[safety, conf=0.25] 800/1500
+[safety, conf=0.25] 900/1500
+[safety, conf=0.25] 1000/1500
+[safety, conf=0.25] 1100/1500
+[safety, conf=0.25] 1200/1500
+[safety, conf=0.25] 1300/1500
+[safety, conf=0.25] 1400/1500
+[safety, conf=0.25] 1500/1500
+14:35:50  INFO     [RAMS] Controller stopped.
+14:35:50  INFO     [RAMS] Starting resource monitor ...
+14:35:50  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-14:35:50] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-14:35:50] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+14:35:50  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-14:35:50] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:35:50] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-14:35:50] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+14:35:50  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-14:35:50] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:35:50] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-14:35:50] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+14:35:50  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+14:35:50  INFO     [RAMS] Controller ready. Policy: safety
+[safety, conf=0.40] 100/1500
+[safety, conf=0.40] 200/1500
+[safety, conf=0.40] 300/1500
+[safety, conf=0.40] 400/1500
+[safety, conf=0.40] 500/1500
+[safety, conf=0.40] 600/1500
+[safety, conf=0.40] 700/1500
+[safety, conf=0.40] 800/1500
+[safety, conf=0.40] 900/1500
+[safety, conf=0.40] 1000/1500
+[safety, conf=0.40] 1100/1500
+[safety, conf=0.40] 1200/1500
+[safety, conf=0.40] 1300/1500
+[safety, conf=0.40] 1400/1500
+[safety, conf=0.40] 1500/1500
+14:36:24  INFO     [RAMS] Controller stopped.
+14:36:24  INFO     [RAMS] Starting resource monitor ...
+14:36:24  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-14:36:24] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-14:36:24] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+14:36:24  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-14:36:24] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:36:24] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-14:36:24] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+14:36:24  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-14:36:24] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:36:24] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-14:36:25] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+14:36:25  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+14:36:25  INFO     [RAMS] Controller ready. Policy: safety2
+14:36:26  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.480)
+14:36:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.481)
+14:36:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.481)
+[safety2, conf=0.25] 100/1500
+14:36:29  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.541)
+14:36:29  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.541)
+14:36:29  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.491)
+14:36:29  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.470)
+14:36:31  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.469)
+14:36:31  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.499)
+[safety2, conf=0.25] 200/1500
+14:36:31  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.538)
+14:36:32  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.538)
+14:36:32  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.539)
+14:36:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.591)
+[safety2, conf=0.25] 300/1500
+14:36:34  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.537)
+14:36:34  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.554)
+14:36:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.477)
+14:36:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.552)
+14:36:35  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.485)
+14:36:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.541)
+[safety2, conf=0.25] 400/1500
+14:36:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.472)
+14:36:37  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.491)
+14:36:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.581)
+14:36:38  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.550)
+14:36:38  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.572)
+14:36:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.564)
+14:36:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.568)
+[safety2, conf=0.25] 500/1500
+14:36:39  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.645)
+14:36:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.529)
+14:36:40  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.607)
+14:36:40  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.594)
+14:36:41  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.617)
+14:36:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.561)
+14:36:42  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.527)
+14:36:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.625)
+[safety2, conf=0.25] 600/1500
+14:36:42  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.560)
+14:36:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.552)
+14:36:43  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.528)
+14:36:43  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.562)
+14:36:44  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.614)
+14:36:44  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.582)
+[safety2, conf=0.25] 700/1500
+14:36:45  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.547)
+14:36:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.499)
+14:36:45  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.496)
+14:36:46  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.533)
+14:36:46  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.501)
+14:36:47  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.465)
+14:36:47  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.545)
+14:36:47  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.545)
+[safety2, conf=0.25] 800/1500
+14:36:48  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.507)
+14:36:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.544)
+14:36:48  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.544)
+14:36:48  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.504)
+14:36:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.547)
+14:36:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.486)
+14:36:50  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.498)
+[safety2, conf=0.25] 900/1500
+14:36:51  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.463)
+14:36:51  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.546)
+14:36:51  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.550)
+14:36:51  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.550)
+14:36:52  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.468)
+[safety2, conf=0.25] 1000/1500
+14:36:53  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.501)
+14:36:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.544)
+14:36:54  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.544)
+14:36:55  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.550)
+14:36:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.493)
+14:36:55  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.501)
+[safety2, conf=0.25] 1100/1500
+14:36:56  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.544)
+14:36:56  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.470)
+14:36:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.472)
+14:36:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.547)
+14:36:57  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.548)
+14:36:58  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.509)
+14:36:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.509)
+[safety2, conf=0.25] 1200/1500
+14:36:59  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.549)
+14:36:59  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.472)
+14:36:59  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.641)
+14:37:00  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.573)
+14:37:00  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.612)
+14:37:00  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.590)
+[safety2, conf=0.25] 1300/1500
+14:37:01  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.611)
+14:37:01  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.527)
+14:37:02  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.635)
+14:37:02  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.635)
+14:37:03  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.613)
+14:37:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.608)
+14:37:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.552)
+[safety2, conf=0.25] 1400/1500
+14:37:06  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.543)
+14:37:06  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.509)
+14:37:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.508)
+[safety2, conf=0.25] 1500/1500
+14:37:07  INFO     [RAMS] Controller stopped.
+14:37:07  INFO     [RAMS] Starting resource monitor ...
+14:37:07  INFO     [RAMS] Loading model tiers ...
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/09/2026-14:37:07] [TRT] [I] Loaded engine size: 7 MiB
+[09/09/2026-14:37:07] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+14:37:07  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/09/2026-14:37:07] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:37:07] [TRT] [I] Loaded engine size: 23 MiB
+[09/09/2026-14:37:07] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+14:37:07  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/09/2026-14:37:07] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/09/2026-14:37:07] [TRT] [I] Loaded engine size: 52 MiB
+[09/09/2026-14:37:07] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 1, GPU 117 (MiB)
+14:37:07  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+14:37:07  INFO     [RAMS] Controller ready. Policy: safety2
+14:37:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.476)
+[safety2, conf=0.40] 100/1500
+14:37:11  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.570)
+14:37:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.470)
+14:37:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.500)
+14:37:13  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.508)
+14:37:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.500)
+[safety2, conf=0.40] 200/1500
+14:37:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.547)
+14:37:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.481)
+14:37:15  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.477)
+14:37:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.537)
+[safety2, conf=0.40] 300/1500
+14:37:16  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.544)
+14:37:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.483)
+14:37:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.492)
+14:37:17  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.544)
+14:37:17  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.523)
+14:37:18  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.513)
+[safety2, conf=0.40] 400/1500
+14:37:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.508)
+14:37:19  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.567)
+14:37:20  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.499)
+14:37:20  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.525)
+14:37:20  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.545)
+14:37:21  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.565)
+14:37:21  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.554)
+[safety2, conf=0.40] 500/1500
+14:37:21  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.571)
+14:37:22  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.588)
+14:37:22  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.599)
+14:37:23  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.631)
+14:37:23  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.610)
+14:37:24  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.563)
+[safety2, conf=0.40] 600/1500
+14:37:24  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.602)
+14:37:24  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.623)
+14:37:24  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.580)
+14:37:25  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.596)
+14:37:25  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.535)
+14:37:26  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.530)
+14:37:26  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.530)
+[safety2, conf=0.40] 700/1500
+14:37:27  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.525)
+14:37:27  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.486)
+14:37:28  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.505)
+14:37:28  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.495)
+14:37:29  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.537)
+14:37:29  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.492)
+[safety2, conf=0.40] 800/1500
+14:37:29  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.521)
+14:37:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.571)
+14:37:30  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.507)
+14:37:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.487)
+14:37:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.497)
+14:37:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.497)
+14:37:31  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.519)
+14:37:31  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.519)
+14:37:32  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.531)
+14:37:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.499)
+[safety2, conf=0.40] 900/1500
+14:37:32  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.602)
+14:37:33  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.569)
+14:37:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.569)
+14:37:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.557)
+[safety2, conf=0.40] 1000/1500
+14:37:35  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.503)
+14:37:36  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.499)
+14:37:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.544)
+14:37:37  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.552)
+14:37:37  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.492)
+14:37:37  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.504)
+[safety2, conf=0.40] 1100/1500
+14:37:38  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.510)
+14:37:39  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.522)
+14:37:40  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.485)
+14:37:40  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.493)
+[safety2, conf=0.40] 1200/1500
+14:37:41  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.521)
+14:37:41  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.550)
+14:37:42  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.565)
+14:37:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.607)
+14:37:42  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.593)
+[safety2, conf=0.40] 1300/1500
+14:37:44  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.535)
+14:37:44  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.605)
+[safety2, conf=0.40] 1400/1500
+14:37:48  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.544)
+14:37:48  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.539)
+[safety2, conf=0.40] 1500/1500
+14:37:49  INFO     [RAMS] Controller stopped.
+Raw records: /home/soren/rams_trt_labels_20260909/results/full-20260909-trtlabels-v3/tensorrt/retention/exp12_retention_sensitivity_20260909_143749.csv
+Summary: /home/soren/rams_trt_labels_20260909/results/full-20260909-trtlabels-v3/tensorrt/retention/exp12_retention_sensitivity_20260909_143749.json

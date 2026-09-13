@@ -1,0 +1,48 @@
+test_blank_preflight_writes_blocked_before_any_stage (tests.test_corrected_contract.CorrectedContract) ... TelemetryUnavailable: blank samples
+/tmp/tmpu_k1te26/test-gate/onnx/paper_all_test-gate_onnx.json
+ok
+test_fixed_baselines_never_switch (tests.test_corrected_contract.CorrectedContract) ... ok
+test_flat_original_box_scores_and_retains_near_vru (tests.test_corrected_contract.CorrectedContract) ... ok
+test_malformed_boxes_fail (tests.test_corrected_contract.CorrectedContract) ... ok
+test_measured_rail_integration_and_gap (tests.test_corrected_contract.CorrectedContract) ... ok
+test_onnx_input_is_rgb_nchw (tests.test_corrected_contract.CorrectedContract) ... ok
+test_onnx_nms_suppresses_only_same_class (tests.test_corrected_contract.CorrectedContract) ... ok
+test_real_lowercase_temp_and_missing_clock (tests.test_corrected_contract.CorrectedContract) ... ok
+test_retention_uses_saved_kwargs (tests.test_corrected_contract.CorrectedContract) ... ok
+test_run_and_backend_paths_cannot_overwrite (tests.test_corrected_contract.CorrectedContract) ... /tmp/tmp2v3uws1s/a/onnx/paper_all_a_onnx.json
+/tmp/tmp2v3uws1s/a/pytorch/paper_all_a_pytorch.json
+/tmp/tmp2v3uws1s/b/onnx/paper_all_b_onnx.json
+ok
+test_stale_sample_fails (tests.test_corrected_contract.CorrectedContract) ... ok
+test_engine_class_ids_become_canonical_coco_labels (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_engine_metadata_names_kept_verbatim (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_known_trt_detection_convert_to_canonical_before_policy (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_out_of_range_placeholder_falls_back_to_str_id (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_pytorch_path_labels_untouched (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_vru_bicycle_id_and_conf_gate (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.972s
+
+OK
+test_blank_preflight_writes_blocked_before_any_stage (tests.test_corrected_contract.CorrectedContract) ... TelemetryUnavailable: blank samples
+/tmp/tmp_ez4gqv2/test-gate/onnx/paper_all_test-gate_onnx.json
+ok
+test_fixed_baselines_never_switch (tests.test_corrected_contract.CorrectedContract) ... ok
+test_flat_original_box_scores_and_retains_near_vru (tests.test_corrected_contract.CorrectedContract) ... ok
+test_malformed_boxes_fail (tests.test_corrected_contract.CorrectedContract) ... ok
+test_measured_rail_integration_and_gap (tests.test_corrected_contract.CorrectedContract) ... ok
+test_onnx_input_is_rgb_nchw (tests.test_corrected_contract.CorrectedContract) ... ok
+test_onnx_nms_suppresses_only_same_class (tests.test_corrected_contract.CorrectedContract) ... ok
+test_real_lowercase_temp_and_missing_clock (tests.test_corrected_contract.CorrectedContract) ... ok
+test_retention_uses_saved_kwargs (tests.test_corrected_contract.CorrectedContract) ... ok
+test_run_and_backend_paths_cannot_overwrite (tests.test_corrected_contract.CorrectedContract) ... /tmp/tmp9regw9up/a/onnx/paper_all_a_onnx.json
+/tmp/tmp9regw9up/a/pytorch/paper_all_a_pytorch.json
+/tmp/tmp9regw9up/b/onnx/paper_all_b_onnx.json
+ok
+test_stale_sample_fails (tests.test_corrected_contract.CorrectedContract) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.199s
+
+OK

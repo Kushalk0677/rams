@@ -1,0 +1,59 @@
+test_engine_class_ids_become_canonical_coco_labels (tests.test_trt_class_labels.TrtClassLabelPreflight) ... FAIL
+test_engine_metadata_names_kept_verbatim (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_known_trt_detection_convert_to_canonical_before_policy (tests.test_trt_class_labels.TrtClassLabelPreflight) ... FAIL
+test_out_of_range_placeholder_falls_back_to_str_id (tests.test_trt_class_labels.TrtClassLabelPreflight) ... FAIL
+test_pytorch_path_labels_untouched (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_vru_bicycle_id_and_conf_gate (tests.test_trt_class_labels.TrtClassLabelPreflight) ... FAIL
+
+======================================================================
+FAIL: test_engine_class_ids_become_canonical_coco_labels (tests.test_trt_class_labels.TrtClassLabelPreflight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/pre/tests/test_trt_class_labels.py", line 67, in test_engine_class_ids_become_canonical_coco_labels
+    self.assertEqual([d['class'] for d in dets], ['bus', 'car'])
+AssertionError: Lists differ: ['class5', 'class2'] != ['bus', 'car']
+
+First differing element 0:
+'class5'
+'bus'
+
+- ['class5', 'class2']
++ ['bus', 'car']
+
+======================================================================
+FAIL: test_known_trt_detection_convert_to_canonical_before_policy (tests.test_trt_class_labels.TrtClassLabelPreflight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/pre/tests/test_trt_class_labels.py", line 72, in test_known_trt_detection_convert_to_canonical_before_policy
+    self.assertEqual(dets[0]['class'], 'person')
+AssertionError: 'class0' != 'person'
+- class0
++ person
+
+
+======================================================================
+FAIL: test_out_of_range_placeholder_falls_back_to_str_id (tests.test_trt_class_labels.TrtClassLabelPreflight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/pre/tests/test_trt_class_labels.py", line 102, in test_out_of_range_placeholder_falls_back_to_str_id
+    self.assertEqual(dets[0]['class'], '99')
+AssertionError: 'class99' != '99'
+- class99
++ 99
+
+
+======================================================================
+FAIL: test_vru_bicycle_id_and_conf_gate (tests.test_trt_class_labels.TrtClassLabelPreflight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/pre/tests/test_trt_class_labels.py", line 82, in test_vru_bicycle_id_and_conf_gate
+    self.assertEqual(dets[0]['class'], 'bicycle')
+AssertionError: 'class1' != 'bicycle'
+- class1
++ bicycle
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.883s
+
+FAILED (failures=4)

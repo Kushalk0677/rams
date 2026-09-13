@@ -25,6 +25,8 @@ To export ONNX models:
 from __future__ import annotations
 
 import time
+import math
+import re
 import random
 import logging
 import os
@@ -87,6 +89,17 @@ COCO_NAMES = [
 ]
 
 
+_TRT_PLACEHOLDER_RE = re.compile(r"class\d+")
+
+
+def _canonical_trt_class_name(names, cls_id: int, backend: str) -> str:
+    """Return canonical COCO labels for placeholder TensorRT metadata only."""
+    raw = str(names[cls_id] if isinstance(names, dict) else names[cls_id])
+    if backend == "tensorrt" and _TRT_PLACEHOLDER_RE.fullmatch(raw):
+        return COCO_NAMES[cls_id] if 0 <= cls_id < len(COCO_NAMES) else str(cls_id)
+    return raw
+
+
 def _parse_onnx_output(outputs, conf_thresh: float = 0.25) -> list[dict]:
     """Parse a YOLOv8 ONNX Runtime output array into detection dicts.
 
@@ -114,7 +127,33 @@ def _parse_onnx_output(outputs, conf_thresh: float = 0.25) -> list[dict]:
             "conf":  float(conf),
             "xyxy":  [float(cx-w/2), float(cy-h/2), float(cx+w/2), float(cy+h/2)],
         })
-    return detections
+    return _class_aware_nms(detections)
+
+
+def _class_aware_nms(detections: list[dict], iou_threshold: float = 0.7,
+                     max_det: int = 300) -> list[dict]:
+    """Apply class-aware NMS to raw YOLO ONNX candidates."""
+    pending = sorted(detections, key=lambda detection: detection["conf"], reverse=True)
+    kept: list[dict] = []
+    while pending and len(kept) < max_det:
+        best = pending.pop(0)
+        kept.append(best)
+        x1, y1, x2, y2 = best["xyxy"]
+        remaining: list[dict] = []
+        for candidate in pending:
+            a1, b1, a2, b2 = candidate["xyxy"]
+            intersection = max(0.0, min(x2, a2) - max(x1, a1)) * max(0.0, min(y2, b2) - max(y1, b1))
+            union = (x2 - x1) * (y2 - y1) + (a2 - a1) * (b2 - b1) - intersection
+            overlap = intersection / union if union > 0 else 0.0
+            if candidate["class"] != best["class"] or overlap <= iou_threshold:
+                remaining.append(candidate)
+        pending = remaining
+    return kept
+
+
+def _onnx_input(image):
+    """Convert OpenCV BGR letterbox output into normalized RGB NCHW."""
+    return (image[:, :, ::-1].astype("float32") / 255.0).transpose(2, 0, 1)[None]
 
 
 def _letterbox_image(frame, size: int):
@@ -172,6 +211,19 @@ def _attach_coordinate_metadata(detections: list[dict], width: int, height: int,
     annotated = []
     for detection in detections:
         item = dict(detection)
+        box = item.get("xyxy")
+        if hasattr(box, "tolist"):
+            box = box.tolist()
+        if isinstance(box, (list, tuple)) and len(box) == 1:
+            box = box[0]
+        if not isinstance(box, (list, tuple)) or len(box) != 4:
+            raise ValueError(f"Detection requires one flat xyxy box: {box!r}")
+        box = [float(value) for value in box]
+        if not all(math.isfinite(value) for value in box):
+            raise ValueError("Non-finite detection coordinates")
+        if box[2] < box[0] or box[3] < box[1]:
+            raise ValueError("Inverted detection coordinates")
+        item["xyxy"] = box
         item["image_width"] = int(width)
         item["image_height"] = int(height)
         item["coords"] = coords
@@ -410,7 +462,7 @@ class ModelWrapper:
             else:
                 img, scale, pad_x, pad_y, orig_w, orig_h = _letterbox_image(frame, self.imgsz)
                 letterbox_meta = (scale, pad_x, pad_y, orig_w, orig_h)
-            inp  = (img.astype("float32") / 255.0).transpose(2, 0, 1)[None]
+            inp = _onnx_input(img)
             preprocess_ms = (time.perf_counter() - preprocess_started) * 1000.0
             name = self._model.get_inputs()[0].name
             inference_started = time.perf_counter()
@@ -450,7 +502,7 @@ class ModelWrapper:
         inference_ms = (time.perf_counter() - inference_started) * 1000.0
         postprocess_started = time.perf_counter()
         dets = [
-            {"class": r.names[int(b.cls)], "conf": float(b.conf),
+            {"class": _canonical_trt_class_name(r.names, int(b.cls), self._backend), "conf": float(b.conf),
              "xyxy":  b.xyxy.tolist()}
             for r in res for b in r.boxes
         ]

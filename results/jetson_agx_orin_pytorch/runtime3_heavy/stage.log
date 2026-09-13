@@ -1,0 +1,1771 @@
+23:00:23  INFO     Loaded 1500 frames from /data/kitti/images/val
+23:00:23  INFO     Real inference mode: 1500 frames available
+23:00:23  INFO     === RAMS Benchmark  run_id=rams_20260908_230023_9f7850578d66 ===
+23:00:23  INFO     Policies: ['threshold', 'predictive', 'safety', 'adaptive', 'safety2', 'fixed_nano', 'fixed_small', 'fixed_medium']  |  Profiles: ['heavy']  |  N/block=200  |  blocks=10  |  simulate=False  |  frames=/data/kitti/images/val
+23:00:23  INFO     
+--- Block 1/10  Policy: fixed_small  Load: heavy (75%) ---
+23:00:23  INFO     [RAMS] Starting resource monitor ...
+23:00:23  INFO     [RAMS] Loading model tiers ...
+23:00:27  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:00:28  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:00:29  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:00:29  INFO     [RAMS] Controller ready. Policy: fixed
+23:00:31  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=18.1 ms  R=0.659  target=0.75  dets=0  vru=False  backend=ultralytics
+23:00:31  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=19.5 ms  R=0.708  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:32  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=19.4 ms  R=0.653  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:33  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=23.5 ms  R=0.664  target=0.75  dets=4  vru=False  backend=ultralytics
+23:00:33  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=22.3 ms  R=0.705  target=0.75  dets=13  vru=True  backend=ultralytics
+23:00:34  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=21.5 ms  R=0.705  target=0.75  dets=4  vru=False  backend=ultralytics
+23:00:35  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=21.0 ms  R=0.690  target=0.75  dets=5  vru=False  backend=ultralytics
+23:00:35  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=22.1 ms  R=0.697  target=0.75  dets=2  vru=False  backend=ultralytics
+23:00:36  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=43.4 ms  R=0.722  target=0.75  dets=2  vru=False  backend=ultralytics
+23:00:37  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=25.3 ms  R=0.716  target=0.75  dets=7  vru=False  backend=ultralytics
+23:00:37  INFO     [RAMS] Controller stopped.
+23:00:37  INFO     
+--- Block 1/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:00:37  INFO     [RAMS] Starting resource monitor ...
+23:00:37  INFO     [RAMS] Loading model tiers ...
+23:00:37  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:00:38  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:00:39  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:00:39  INFO     [RAMS] Controller ready. Policy: fixed
+23:00:40  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.652)
+23:00:40  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=17.3 ms  R=0.648  target=0.75  dets=0  vru=False  backend=ultralytics
+23:00:41  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=19.4 ms  R=0.662  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:42  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=18.9 ms  R=0.662  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:42  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=22.5 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:43  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=21.0 ms  R=0.667  target=0.75  dets=12  vru=False  backend=ultralytics
+23:00:44  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=19.3 ms  R=0.650  target=0.75  dets=4  vru=False  backend=ultralytics
+23:00:44  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=19.5 ms  R=0.665  target=0.75  dets=4  vru=False  backend=ultralytics
+23:00:45  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=17.2 ms  R=0.658  target=0.75  dets=0  vru=False  backend=ultralytics
+23:00:46  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=19.4 ms  R=0.666  target=0.75  dets=3  vru=False  backend=ultralytics
+23:00:46  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=23.8 ms  R=0.727  target=0.75  dets=6  vru=False  backend=ultralytics
+23:00:46  INFO     [RAMS] Controller stopped.
+23:00:46  INFO     
+--- Block 1/10  Policy: threshold  Load: heavy (75%) ---
+23:00:46  INFO     [RAMS] Starting resource monitor ...
+23:00:46  INFO     [RAMS] Loading model tiers ...
+23:00:47  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:00:47  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:00:48  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:00:48  INFO     [RAMS] Controller ready. Policy: threshold
+23:00:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.605)
+23:00:50  INFO       [threshold / heavy] 20/200  tier=NANO    latency=17.2 ms  R=0.646  target=0.75  dets=0  vru=False  backend=ultralytics
+23:00:50  INFO       [threshold / heavy] 40/200  tier=NANO    latency=19.3 ms  R=0.724  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:51  INFO       [threshold / heavy] 60/200  tier=NANO    latency=19.7 ms  R=0.663  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:52  INFO       [threshold / heavy] 80/200  tier=NANO    latency=19.9 ms  R=0.665  target=0.75  dets=1  vru=False  backend=ultralytics
+23:00:52  INFO       [threshold / heavy] 100/200  tier=NANO    latency=21.5 ms  R=0.697  target=0.75  dets=12  vru=False  backend=ultralytics
+23:00:53  INFO       [threshold / heavy] 120/200  tier=NANO    latency=23.4 ms  R=0.654  target=0.75  dets=4  vru=False  backend=ultralytics
+23:00:54  INFO       [threshold / heavy] 140/200  tier=NANO    latency=19.8 ms  R=0.641  target=0.75  dets=4  vru=False  backend=ultralytics
+23:00:54  INFO       [threshold / heavy] 160/200  tier=NANO    latency=17.4 ms  R=0.721  target=0.75  dets=0  vru=False  backend=ultralytics
+23:00:55  INFO       [threshold / heavy] 180/200  tier=NANO    latency=23.1 ms  R=0.648  target=0.75  dets=3  vru=False  backend=ultralytics
+23:00:56  INFO       [threshold / heavy] 200/200  tier=NANO    latency=23.1 ms  R=0.694  target=0.75  dets=6  vru=False  backend=ultralytics
+23:00:56  INFO     [RAMS] Controller stopped.
+23:00:56  INFO     
+--- Block 1/10  Policy: predictive  Load: heavy (75%) ---
+23:00:56  INFO     [RAMS] Starting resource monitor ...
+23:00:56  INFO     [RAMS] Loading model tiers ...
+23:00:56  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:00:57  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:00:58  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:00:58  INFO     [RAMS] Controller ready. Policy: predictive
+23:00:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.653)
+23:00:59  INFO       [predictive / heavy] 20/200  tier=NANO    latency=18.5 ms  R=0.688  target=0.75  dets=0  vru=False  backend=ultralytics
+23:01:00  INFO       [predictive / heavy] 40/200  tier=NANO    latency=33.1 ms  R=0.689  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:01  INFO       [predictive / heavy] 60/200  tier=NANO    latency=20.7 ms  R=0.694  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:02  INFO       [predictive / heavy] 80/200  tier=NANO    latency=19.3 ms  R=0.698  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:02  INFO       [predictive / heavy] 100/200  tier=NANO    latency=21.5 ms  R=0.722  target=0.75  dets=12  vru=False  backend=ultralytics
+23:01:03  INFO       [predictive / heavy] 120/200  tier=NANO    latency=19.5 ms  R=0.658  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:04  INFO       [predictive / heavy] 140/200  tier=NANO    latency=19.6 ms  R=0.644  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:04  INFO       [predictive / heavy] 160/200  tier=NANO    latency=18.1 ms  R=0.674  target=0.75  dets=0  vru=False  backend=ultralytics
+23:01:05  INFO       [predictive / heavy] 180/200  tier=NANO    latency=19.4 ms  R=0.649  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:05  INFO       [predictive / heavy] 200/200  tier=NANO    latency=21.0 ms  R=0.666  target=0.75  dets=6  vru=False  backend=ultralytics
+23:01:06  INFO     [RAMS] Controller stopped.
+23:01:06  INFO     
+--- Block 1/10  Policy: adaptive  Load: heavy (75%) ---
+23:01:06  INFO     [RAMS] Starting resource monitor ...
+23:01:06  INFO     [RAMS] Loading model tiers ...
+23:01:06  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:01:06  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:01:07  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:01:07  INFO     [RAMS] Controller ready. Policy: adaptive
+23:01:08  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.600)
+23:01:09  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=17.2 ms  R=0.663  target=0.75  dets=0  vru=False  backend=ultralytics
+23:01:09  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=19.1 ms  R=0.666  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:10  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=22.2 ms  R=0.648  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:11  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=19.0 ms  R=0.662  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:11  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=24.9 ms  R=0.677  target=0.75  dets=12  vru=False  backend=ultralytics
+23:01:12  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=19.8 ms  R=0.648  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:13  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=20.2 ms  R=0.669  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:13  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=17.5 ms  R=0.673  target=0.75  dets=0  vru=False  backend=ultralytics
+23:01:14  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=20.0 ms  R=0.660  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:15  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=20.1 ms  R=0.652  target=0.75  dets=6  vru=False  backend=ultralytics
+23:01:15  INFO     [RAMS] Controller stopped.
+23:01:15  INFO     
+--- Block 1/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:01:15  INFO     [RAMS] Starting resource monitor ...
+23:01:15  INFO     [RAMS] Loading model tiers ...
+23:01:15  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:01:15  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:01:16  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:01:16  INFO     [RAMS] Controller ready. Policy: fixed
+23:01:17  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.714)
+23:01:18  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=28.1 ms  R=0.668  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:19  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=25.5 ms  R=0.735  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:20  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=26.7 ms  R=0.706  target=0.75  dets=6  vru=False  backend=ultralytics
+23:01:21  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=33.6 ms  R=0.775  target=0.75  dets=5  vru=False  backend=ultralytics
+23:01:22  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=29.5 ms  R=0.692  target=0.75  dets=16  vru=False  backend=ultralytics
+23:01:23  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=25.7 ms  R=0.783  target=0.75  dets=5  vru=False  backend=ultralytics
+23:01:23  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=28.1 ms  R=0.649  target=0.75  dets=14  vru=False  backend=ultralytics
+23:01:24  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=39.9 ms  R=0.723  target=0.75  dets=6  vru=False  backend=ultralytics
+23:01:25  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=25.1 ms  R=0.674  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:26  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=27.2 ms  R=0.708  target=0.75  dets=12  vru=False  backend=ultralytics
+23:01:26  INFO     [RAMS] Controller stopped.
+23:01:26  INFO     
+--- Block 1/10  Policy: safety2  Load: heavy (75%) ---
+23:01:26  INFO     [RAMS] Starting resource monitor ...
+23:01:26  INFO     [RAMS] Loading model tiers ...
+23:01:26  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:01:27  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:01:27  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:01:27  INFO     [RAMS] Controller ready. Policy: safety2
+23:01:29  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.657)
+23:01:29  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=40.2 ms  R=0.690  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:29  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.699)
+23:01:30  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.659)
+23:01:30  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=25.9 ms  R=0.747  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:31  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.671)
+23:01:31  INFO       [safety2 / heavy] 60/200  tier=NANO    latency=19.0 ms  R=0.750  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:31  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.655)
+23:01:31  INFO       [safety2 / heavy] 80/200  tier=MEDIUM  latency=25.7 ms  R=0.665  target=0.75  dets=5  vru=False  backend=ultralytics
+23:01:32  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.701)
+23:01:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.701)
+23:01:32  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=29.8 ms  R=0.701  target=0.75  dets=16  vru=False  backend=ultralytics
+23:01:33  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.700)
+23:01:33  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.700)
+23:01:33  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=25.9 ms  R=0.727  target=0.75  dets=5  vru=False  backend=ultralytics
+23:01:33  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.790)
+23:01:34  INFO       [safety2 / heavy] 140/200  tier=NANO    latency=19.6 ms  R=0.651  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:34  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.701)
+23:01:34  INFO       [safety2 / heavy] 160/200  tier=MEDIUM  latency=26.7 ms  R=0.701  target=0.75  dets=6  vru=False  backend=ultralytics
+23:01:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.669)
+23:01:35  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.653)
+23:01:35  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=25.1 ms  R=0.654  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:36  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=27.5 ms  R=0.694  target=0.75  dets=12  vru=False  backend=ultralytics
+23:01:36  INFO     [RAMS] Controller stopped.
+23:01:36  INFO     
+--- Block 1/10  Policy: safety  Load: heavy (75%) ---
+23:01:36  INFO     [RAMS] Starting resource monitor ...
+23:01:36  INFO     [RAMS] Loading model tiers ...
+23:01:36  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:01:37  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:01:37  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:01:37  INFO     [RAMS] Controller ready. Policy: safety
+23:01:39  INFO       [safety / heavy] 20/200  tier=SMALL   latency=19.9 ms  R=0.695  target=0.75  dets=0  vru=False  backend=ultralytics
+23:01:40  INFO       [safety / heavy] 40/200  tier=SMALL   latency=20.0 ms  R=0.710  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:41  INFO       [safety / heavy] 60/200  tier=SMALL   latency=21.1 ms  R=0.692  target=0.75  dets=1  vru=False  backend=ultralytics
+23:01:41  INFO       [safety / heavy] 80/200  tier=SMALL   latency=27.7 ms  R=0.741  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:42  INFO       [safety / heavy] 100/200  tier=SMALL   latency=27.8 ms  R=0.691  target=0.75  dets=13  vru=True  backend=ultralytics
+23:01:43  INFO       [safety / heavy] 120/200  tier=SMALL   latency=21.7 ms  R=0.694  target=0.75  dets=4  vru=False  backend=ultralytics
+23:01:43  INFO       [safety / heavy] 140/200  tier=SMALL   latency=20.9 ms  R=0.721  target=0.75  dets=5  vru=False  backend=ultralytics
+23:01:44  INFO       [safety / heavy] 160/200  tier=SMALL   latency=21.9 ms  R=0.696  target=0.75  dets=2  vru=False  backend=ultralytics
+23:01:45  INFO       [safety / heavy] 180/200  tier=SMALL   latency=21.2 ms  R=0.679  target=0.75  dets=2  vru=False  backend=ultralytics
+23:01:46  INFO       [safety / heavy] 200/200  tier=SMALL   latency=21.2 ms  R=0.653  target=0.75  dets=7  vru=False  backend=ultralytics
+23:01:46  INFO     [RAMS] Controller stopped.
+23:01:46  INFO     
+--- Block 2/10  Policy: safety2  Load: heavy (75%) ---
+23:01:46  INFO     [RAMS] Starting resource monitor ...
+23:01:46  INFO     [RAMS] Loading model tiers ...
+23:01:46  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:01:46  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:01:47  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:01:47  INFO     [RAMS] Controller ready. Policy: safety2
+23:01:49  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.586)
+23:01:49  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.586)
+23:01:49  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.666)
+23:01:49  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=31.0 ms  R=0.706  target=0.75  dets=19  vru=False  backend=ultralytics
+23:01:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.731)
+23:01:50  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.650)
+23:01:50  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=30.9 ms  R=0.650  target=0.75  dets=12  vru=False  backend=ultralytics
+23:01:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.676)
+23:01:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.644)
+23:01:50  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.644)
+23:01:51  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=29.7 ms  R=0.704  target=0.75  dets=8  vru=False  backend=ultralytics
+23:01:51  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.736)
+23:01:51  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.704)
+23:01:52  INFO       [safety2 / heavy] 80/200  tier=MEDIUM  latency=26.2 ms  R=0.726  target=0.75  dets=8  vru=False  backend=ultralytics
+23:01:52  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.716)
+23:01:52  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.734)
+23:01:52  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=26.5 ms  R=0.663  target=0.75  dets=2  vru=False  backend=ultralytics
+23:01:52  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.678)
+23:01:53  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.670)
+23:01:53  INFO       [safety2 / heavy] 120/200  tier=SMALL   latency=23.3 ms  R=0.648  target=0.75  dets=8  vru=False  backend=ultralytics
+23:01:53  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.648)
+23:01:53  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.683)
+23:01:54  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.684)
+23:01:54  INFO       [safety2 / heavy] 140/200  tier=NANO    latency=19.5 ms  R=0.670  target=0.75  dets=2  vru=False  backend=ultralytics
+23:01:54  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.661)
+23:01:54  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.645)
+23:01:55  INFO       [safety2 / heavy] 160/200  tier=MEDIUM  latency=26.5 ms  R=0.670  target=0.75  dets=6  vru=False  backend=ultralytics
+23:01:55  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.691)
+23:01:55  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.656)
+23:01:55  INFO       [safety2 / heavy] 180/200  tier=SMALL   latency=25.2 ms  R=0.666  target=0.75  dets=3  vru=False  backend=ultralytics
+23:01:56  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.681)
+23:01:56  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=26.8 ms  R=0.646  target=0.75  dets=5  vru=False  backend=ultralytics
+23:01:56  INFO     [RAMS] Controller stopped.
+23:01:56  INFO     
+--- Block 2/10  Policy: threshold  Load: heavy (75%) ---
+23:01:56  INFO     [RAMS] Starting resource monitor ...
+23:01:56  INFO     [RAMS] Loading model tiers ...
+23:01:56  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:01:57  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:01:58  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:01:58  INFO     [RAMS] Controller ready. Policy: threshold
+23:01:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.627)
+23:01:59  INFO       [threshold / heavy] 20/200  tier=NANO    latency=23.2 ms  R=0.665  target=0.75  dets=14  vru=False  backend=ultralytics
+23:02:00  INFO       [threshold / heavy] 40/200  tier=NANO    latency=29.1 ms  R=0.675  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:01  INFO       [threshold / heavy] 60/200  tier=NANO    latency=20.9 ms  R=0.698  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:01  INFO       [threshold / heavy] 80/200  tier=NANO    latency=21.0 ms  R=0.697  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:02  INFO       [threshold / heavy] 100/200  tier=NANO    latency=22.6 ms  R=0.738  target=0.75  dets=1  vru=False  backend=ultralytics
+23:02:03  INFO       [threshold / heavy] 120/200  tier=NANO    latency=21.9 ms  R=0.714  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:04  INFO       [threshold / heavy] 140/200  tier=NANO    latency=30.2 ms  R=0.686  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:04  INFO       [threshold / heavy] 160/200  tier=NANO    latency=19.0 ms  R=0.735  target=0.75  dets=0  vru=False  backend=ultralytics
+23:02:05  INFO       [threshold / heavy] 180/200  tier=NANO    latency=20.6 ms  R=0.685  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:06  INFO       [threshold / heavy] 200/200  tier=NANO    latency=21.5 ms  R=0.708  target=0.75  dets=5  vru=False  backend=ultralytics
+23:02:06  INFO     [RAMS] Controller stopped.
+23:02:06  INFO     
+--- Block 2/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:02:06  INFO     [RAMS] Starting resource monitor ...
+23:02:06  INFO     [RAMS] Loading model tiers ...
+23:02:06  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:02:07  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:02:07  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:02:07  INFO     [RAMS] Controller ready. Policy: fixed
+23:02:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.598)
+23:02:09  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=37.4 ms  R=0.706  target=0.75  dets=19  vru=False  backend=ultralytics
+23:02:10  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=27.4 ms  R=0.684  target=0.75  dets=12  vru=False  backend=ultralytics
+23:02:11  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=27.0 ms  R=0.646  target=0.75  dets=8  vru=False  backend=ultralytics
+23:02:12  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=26.8 ms  R=0.675  target=0.75  dets=8  vru=False  backend=ultralytics
+23:02:13  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=26.1 ms  R=0.676  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:13  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=27.2 ms  R=0.706  target=0.75  dets=11  vru=False  backend=ultralytics
+23:02:14  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=26.3 ms  R=0.737  target=0.75  dets=7  vru=False  backend=ultralytics
+23:02:15  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=26.6 ms  R=0.748  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:16  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=25.7 ms  R=0.661  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:17  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=25.9 ms  R=0.651  target=0.75  dets=5  vru=False  backend=ultralytics
+23:02:17  INFO     [RAMS] Controller stopped.
+23:02:17  INFO     
+--- Block 2/10  Policy: fixed_small  Load: heavy (75%) ---
+23:02:17  INFO     [RAMS] Starting resource monitor ...
+23:02:17  INFO     [RAMS] Loading model tiers ...
+23:02:17  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:02:17  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:02:18  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:02:18  INFO     [RAMS] Controller ready. Policy: fixed
+23:02:20  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=23.2 ms  R=0.670  target=0.75  dets=16  vru=False  backend=ultralytics
+23:02:21  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=20.7 ms  R=0.662  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:21  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=22.4 ms  R=0.681  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:22  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=22.2 ms  R=0.687  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:23  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=20.5 ms  R=0.690  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:23  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=25.2 ms  R=0.741  target=0.75  dets=8  vru=False  backend=ultralytics
+23:02:24  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=30.7 ms  R=0.716  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:25  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=20.2 ms  R=0.710  target=0.75  dets=0  vru=False  backend=ultralytics
+23:02:26  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=22.3 ms  R=0.691  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:26  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=25.1 ms  R=0.715  target=0.75  dets=5  vru=False  backend=ultralytics
+23:02:26  INFO     [RAMS] Controller stopped.
+23:02:26  INFO     
+--- Block 2/10  Policy: safety  Load: heavy (75%) ---
+23:02:27  INFO     [RAMS] Starting resource monitor ...
+23:02:27  INFO     [RAMS] Loading model tiers ...
+23:02:27  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:02:27  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:02:28  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:02:28  INFO     [RAMS] Controller ready. Policy: safety
+23:02:29  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.599)
+23:02:29  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.672)
+23:02:30  INFO       [safety / heavy] 20/200  tier=SMALL   latency=22.8 ms  R=0.648  target=0.75  dets=16  vru=False  backend=ultralytics
+23:02:30  INFO       [safety / heavy] 40/200  tier=SMALL   latency=22.0 ms  R=0.661  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:31  INFO       [safety / heavy] 60/200  tier=SMALL   latency=20.7 ms  R=0.681  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:32  INFO       [safety / heavy] 80/200  tier=SMALL   latency=20.8 ms  R=0.680  target=0.75  dets=6  vru=False  backend=ultralytics
+23:02:32  INFO       [safety / heavy] 100/200  tier=SMALL   latency=21.3 ms  R=0.654  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:33  INFO       [safety / heavy] 120/200  tier=SMALL   latency=24.5 ms  R=0.678  target=0.75  dets=8  vru=False  backend=ultralytics
+23:02:34  INFO       [safety / heavy] 140/200  tier=SMALL   latency=20.1 ms  R=0.674  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:34  INFO       [safety / heavy] 160/200  tier=SMALL   latency=19.7 ms  R=0.681  target=0.75  dets=0  vru=False  backend=ultralytics
+23:02:34  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.665)
+23:02:35  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.660)
+23:02:35  INFO       [safety / heavy] 180/200  tier=SMALL   latency=20.1 ms  R=0.675  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:36  INFO       [safety / heavy] 200/200  tier=SMALL   latency=20.5 ms  R=0.666  target=0.75  dets=5  vru=False  backend=ultralytics
+23:02:36  INFO     [RAMS] Controller stopped.
+23:02:36  INFO     
+--- Block 2/10  Policy: adaptive  Load: heavy (75%) ---
+23:02:36  INFO     [RAMS] Starting resource monitor ...
+23:02:36  INFO     [RAMS] Loading model tiers ...
+23:02:36  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:02:37  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:02:37  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:02:37  INFO     [RAMS] Controller ready. Policy: adaptive
+23:02:38  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.629)
+23:02:39  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=22.1 ms  R=0.663  target=0.75  dets=14  vru=False  backend=ultralytics
+23:02:40  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=20.0 ms  R=0.653  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:40  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=19.8 ms  R=0.673  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:41  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=19.9 ms  R=0.652  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:42  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=22.5 ms  R=0.648  target=0.75  dets=1  vru=False  backend=ultralytics
+23:02:42  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=20.3 ms  R=0.670  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:43  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=19.4 ms  R=0.665  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:44  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=20.3 ms  R=0.678  target=0.75  dets=0  vru=False  backend=ultralytics
+23:02:44  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=20.9 ms  R=0.725  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:45  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=22.2 ms  R=0.712  target=0.75  dets=5  vru=False  backend=ultralytics
+23:02:45  INFO     [RAMS] Controller stopped.
+23:02:45  INFO     
+--- Block 2/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:02:45  INFO     [RAMS] Starting resource monitor ...
+23:02:45  INFO     [RAMS] Loading model tiers ...
+23:02:46  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:02:46  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:02:47  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:02:47  INFO     [RAMS] Controller ready. Policy: fixed
+23:02:48  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+23:02:48  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=24.3 ms  R=0.740  target=0.75  dets=14  vru=False  backend=ultralytics
+23:02:49  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=22.4 ms  R=0.697  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:50  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=19.3 ms  R=0.677  target=0.75  dets=3  vru=False  backend=ultralytics
+23:02:51  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=19.7 ms  R=0.651  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:51  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=24.8 ms  R=0.660  target=0.75  dets=1  vru=False  backend=ultralytics
+23:02:52  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=19.8 ms  R=0.650  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:53  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=23.1 ms  R=0.649  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:53  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=18.2 ms  R=0.668  target=0.75  dets=0  vru=False  backend=ultralytics
+23:02:54  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=22.7 ms  R=0.663  target=0.75  dets=2  vru=False  backend=ultralytics
+23:02:55  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=19.7 ms  R=0.651  target=0.75  dets=5  vru=False  backend=ultralytics
+23:02:55  INFO     [RAMS] Controller stopped.
+23:02:55  INFO     
+--- Block 2/10  Policy: predictive  Load: heavy (75%) ---
+23:02:55  INFO     [RAMS] Starting resource monitor ...
+23:02:55  INFO     [RAMS] Loading model tiers ...
+23:02:55  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:02:55  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:02:56  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:02:56  INFO     [RAMS] Controller ready. Policy: predictive
+23:02:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:02:58  INFO       [predictive / heavy] 20/200  tier=NANO    latency=21.7 ms  R=0.659  target=0.75  dets=14  vru=False  backend=ultralytics
+23:02:58  INFO       [predictive / heavy] 40/200  tier=NANO    latency=19.7 ms  R=0.697  target=0.75  dets=4  vru=False  backend=ultralytics
+23:02:59  INFO       [predictive / heavy] 60/200  tier=NANO    latency=19.4 ms  R=0.658  target=0.75  dets=3  vru=False  backend=ultralytics
+23:03:00  INFO       [predictive / heavy] 80/200  tier=NANO    latency=19.7 ms  R=0.666  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:00  INFO       [predictive / heavy] 100/200  tier=NANO    latency=19.5 ms  R=0.659  target=0.75  dets=1  vru=False  backend=ultralytics
+23:03:01  INFO       [predictive / heavy] 120/200  tier=NANO    latency=19.8 ms  R=0.669  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:02  INFO       [predictive / heavy] 140/200  tier=NANO    latency=19.3 ms  R=0.653  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:02  INFO       [predictive / heavy] 160/200  tier=NANO    latency=18.5 ms  R=0.645  target=0.75  dets=0  vru=False  backend=ultralytics
+23:03:03  INFO       [predictive / heavy] 180/200  tier=NANO    latency=19.2 ms  R=0.667  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:04  INFO       [predictive / heavy] 200/200  tier=NANO    latency=21.7 ms  R=0.653  target=0.75  dets=5  vru=False  backend=ultralytics
+23:03:04  INFO     [RAMS] Controller stopped.
+23:03:04  INFO     
+--- Block 3/10  Policy: threshold  Load: heavy (75%) ---
+23:03:04  INFO     [RAMS] Starting resource monitor ...
+23:03:04  INFO     [RAMS] Loading model tiers ...
+23:03:04  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:03:04  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:03:05  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:03:05  INFO     [RAMS] Controller ready. Policy: threshold
+23:03:06  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.683)
+23:03:07  INFO       [threshold / heavy] 20/200  tier=NANO    latency=21.9 ms  R=0.713  target=0.75  dets=6  vru=False  backend=ultralytics
+23:03:08  INFO       [threshold / heavy] 40/200  tier=NANO    latency=19.7 ms  R=0.698  target=0.75  dets=1  vru=False  backend=ultralytics
+23:03:08  INFO       [threshold / heavy] 60/200  tier=NANO    latency=23.3 ms  R=0.703  target=0.75  dets=9  vru=False  backend=ultralytics
+23:03:09  INFO       [threshold / heavy] 80/200  tier=NANO    latency=21.2 ms  R=0.676  target=0.75  dets=8  vru=False  backend=ultralytics
+23:03:10  INFO       [threshold / heavy] 100/200  tier=NANO    latency=20.2 ms  R=0.691  target=0.75  dets=0  vru=False  backend=ultralytics
+23:03:10  INFO       [threshold / heavy] 120/200  tier=NANO    latency=20.4 ms  R=0.736  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:11  INFO       [threshold / heavy] 140/200  tier=NANO    latency=20.8 ms  R=0.695  target=0.75  dets=4  vru=True  backend=ultralytics
+23:03:12  INFO       [threshold / heavy] 160/200  tier=NANO    latency=19.4 ms  R=0.659  target=0.75  dets=3  vru=False  backend=ultralytics
+23:03:12  INFO       [threshold / heavy] 180/200  tier=NANO    latency=20.3 ms  R=0.696  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:13  INFO       [threshold / heavy] 200/200  tier=NANO    latency=19.4 ms  R=0.658  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:13  INFO     [RAMS] Controller stopped.
+23:03:13  INFO     
+--- Block 3/10  Policy: adaptive  Load: heavy (75%) ---
+23:03:13  INFO     [RAMS] Starting resource monitor ...
+23:03:13  INFO     [RAMS] Loading model tiers ...
+23:03:13  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:03:14  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:03:14  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:03:14  INFO     [RAMS] Controller ready. Policy: adaptive
+23:03:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.594)
+23:03:16  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=25.3 ms  R=0.650  target=0.75  dets=6  vru=False  backend=ultralytics
+23:03:17  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=20.2 ms  R=0.659  target=0.75  dets=1  vru=False  backend=ultralytics
+23:03:17  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=20.9 ms  R=0.653  target=0.75  dets=9  vru=False  backend=ultralytics
+23:03:18  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=22.0 ms  R=0.667  target=0.75  dets=8  vru=False  backend=ultralytics
+23:03:19  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=17.5 ms  R=0.658  target=0.75  dets=0  vru=False  backend=ultralytics
+23:03:19  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=21.0 ms  R=0.711  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:20  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=19.7 ms  R=0.665  target=0.75  dets=4  vru=True  backend=ultralytics
+23:03:21  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=22.9 ms  R=0.660  target=0.75  dets=3  vru=False  backend=ultralytics
+23:03:21  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=19.8 ms  R=0.711  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:22  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=20.1 ms  R=0.658  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:22  INFO     [RAMS] Controller stopped.
+23:03:22  INFO     
+--- Block 3/10  Policy: predictive  Load: heavy (75%) ---
+23:03:22  INFO     [RAMS] Starting resource monitor ...
+23:03:22  INFO     [RAMS] Loading model tiers ...
+23:03:23  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:03:23  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:03:24  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:03:24  INFO     [RAMS] Controller ready. Policy: predictive
+23:03:25  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:03:25  INFO       [predictive / heavy] 20/200  tier=NANO    latency=20.3 ms  R=0.667  target=0.75  dets=6  vru=False  backend=ultralytics
+23:03:26  INFO       [predictive / heavy] 40/200  tier=NANO    latency=19.1 ms  R=0.652  target=0.75  dets=1  vru=False  backend=ultralytics
+23:03:27  INFO       [predictive / heavy] 60/200  tier=NANO    latency=22.3 ms  R=0.712  target=0.75  dets=9  vru=False  backend=ultralytics
+23:03:27  INFO       [predictive / heavy] 80/200  tier=NANO    latency=21.2 ms  R=0.670  target=0.75  dets=8  vru=False  backend=ultralytics
+23:03:28  INFO       [predictive / heavy] 100/200  tier=NANO    latency=19.8 ms  R=0.710  target=0.75  dets=0  vru=False  backend=ultralytics
+23:03:29  INFO       [predictive / heavy] 120/200  tier=NANO    latency=21.4 ms  R=0.694  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:30  INFO       [predictive / heavy] 140/200  tier=NANO    latency=20.8 ms  R=0.700  target=0.75  dets=4  vru=True  backend=ultralytics
+23:03:30  INFO       [predictive / heavy] 160/200  tier=NANO    latency=22.3 ms  R=0.697  target=0.75  dets=3  vru=False  backend=ultralytics
+23:03:31  INFO       [predictive / heavy] 180/200  tier=NANO    latency=20.4 ms  R=0.692  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:32  INFO       [predictive / heavy] 200/200  tier=NANO    latency=21.2 ms  R=0.691  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:32  INFO     [RAMS] Controller stopped.
+23:03:32  INFO     
+--- Block 3/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:03:32  INFO     [RAMS] Starting resource monitor ...
+23:03:32  INFO     [RAMS] Loading model tiers ...
+23:03:32  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:03:33  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:03:33  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:03:33  INFO     [RAMS] Controller ready. Policy: fixed
+23:03:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.640)
+23:03:35  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=26.5 ms  R=0.739  target=0.75  dets=7  vru=False  backend=ultralytics
+23:03:36  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=28.1 ms  R=0.706  target=0.75  dets=11  vru=True  backend=ultralytics
+23:03:37  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=28.9 ms  R=0.662  target=0.75  dets=14  vru=False  backend=ultralytics
+23:03:38  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=29.4 ms  R=0.714  target=0.75  dets=18  vru=True  backend=ultralytics
+23:03:38  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=32.8 ms  R=0.721  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:39  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=28.5 ms  R=0.738  target=0.75  dets=11  vru=False  backend=ultralytics
+23:03:40  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=27.2 ms  R=0.712  target=0.75  dets=6  vru=True  backend=ultralytics
+23:03:41  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=26.6 ms  R=0.674  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:42  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=26.8 ms  R=0.734  target=0.75  dets=10  vru=False  backend=ultralytics
+23:03:42  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=26.3 ms  R=0.685  target=0.75  dets=6  vru=True  backend=ultralytics
+23:03:42  INFO     [RAMS] Controller stopped.
+23:03:42  INFO     
+--- Block 3/10  Policy: safety2  Load: heavy (75%) ---
+23:03:42  INFO     [RAMS] Starting resource monitor ...
+23:03:42  INFO     [RAMS] Loading model tiers ...
+23:03:43  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:03:43  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:03:44  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:03:44  INFO     [RAMS] Controller ready. Policy: safety2
+23:03:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.588)
+23:03:45  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.647)
+23:03:45  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.687)
+23:03:45  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.687)
+23:03:46  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=29.9 ms  R=0.680  target=0.75  dets=7  vru=False  backend=ultralytics
+23:03:46  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.667)
+23:03:46  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.692)
+23:03:46  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=27.4 ms  R=0.692  target=0.75  dets=11  vru=True  backend=ultralytics
+23:03:47  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.724)
+23:03:47  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.704)
+23:03:47  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=28.1 ms  R=0.702  target=0.75  dets=14  vru=False  backend=ultralytics
+23:03:48  INFO       [safety2 / heavy] 80/200  tier=MEDIUM  latency=29.1 ms  R=0.684  target=0.75  dets=18  vru=True  backend=ultralytics
+23:03:49  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=29.6 ms  R=0.789  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:50  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.728)
+23:03:50  INFO       [safety2 / heavy] 120/200  tier=NANO    latency=38.3 ms  R=0.728  target=0.75  dets=4  vru=False  backend=ultralytics
+23:03:50  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.701)
+23:03:50  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.690)
+23:03:51  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=28.3 ms  R=0.721  target=0.75  dets=6  vru=True  backend=ultralytics
+23:03:51  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.739)
+23:03:51  INFO       [safety2 / heavy] 160/200  tier=NANO    latency=31.9 ms  R=0.701  target=0.75  dets=3  vru=False  backend=ultralytics
+23:03:52  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.696)
+23:03:52  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=29.2 ms  R=0.732  target=0.75  dets=10  vru=False  backend=ultralytics
+23:03:53  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.771)
+23:03:53  INFO       [safety2 / heavy] 200/200  tier=NANO    latency=20.1 ms  R=0.712  target=0.75  dets=2  vru=False  backend=ultralytics
+23:03:53  INFO     [RAMS] Controller stopped.
+23:03:53  INFO     
+--- Block 3/10  Policy: fixed_small  Load: heavy (75%) ---
+23:03:53  INFO     [RAMS] Starting resource monitor ...
+23:03:53  INFO     [RAMS] Loading model tiers ...
+23:03:53  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:03:54  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:03:55  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:03:55  INFO     [RAMS] Controller ready. Policy: fixed
+23:03:56  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=21.5 ms  R=0.698  target=0.75  dets=7  vru=False  backend=ultralytics
+23:03:57  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=20.9 ms  R=0.666  target=0.75  dets=6  vru=False  backend=ultralytics
+23:03:58  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=23.4 ms  R=0.655  target=0.75  dets=13  vru=False  backend=ultralytics
+23:03:59  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=26.4 ms  R=0.710  target=0.75  dets=15  vru=True  backend=ultralytics
+23:03:59  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=20.0 ms  R=0.668  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:00  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=21.1 ms  R=0.671  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:01  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=20.9 ms  R=0.653  target=0.75  dets=5  vru=True  backend=ultralytics
+23:04:01  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=20.4 ms  R=0.665  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:02  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=20.9 ms  R=0.682  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:03  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=20.3 ms  R=0.657  target=0.75  dets=4  vru=False  backend=ultralytics
+23:04:03  INFO     [RAMS] Controller stopped.
+23:04:03  INFO     
+--- Block 3/10  Policy: safety  Load: heavy (75%) ---
+23:04:03  INFO     [RAMS] Starting resource monitor ...
+23:04:03  INFO     [RAMS] Loading model tiers ...
+23:04:03  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:04:03  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:04:04  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:04:04  INFO     [RAMS] Controller ready. Policy: safety
+23:04:05  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.652)
+23:04:05  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.652)
+23:04:06  INFO       [safety / heavy] 20/200  tier=SMALL   latency=22.0 ms  R=0.682  target=0.75  dets=7  vru=False  backend=ultralytics
+23:04:07  INFO       [safety / heavy] 40/200  tier=SMALL   latency=20.8 ms  R=0.668  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:07  INFO       [safety / heavy] 60/200  tier=SMALL   latency=22.2 ms  R=0.674  target=0.75  dets=13  vru=False  backend=ultralytics
+23:04:08  INFO       [safety / heavy] 80/200  tier=SMALL   latency=22.5 ms  R=0.666  target=0.75  dets=15  vru=True  backend=ultralytics
+23:04:09  INFO       [safety / heavy] 100/200  tier=SMALL   latency=23.1 ms  R=0.663  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:09  INFO       [safety / heavy] 120/200  tier=SMALL   latency=25.2 ms  R=0.653  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:10  INFO       [safety / heavy] 140/200  tier=SMALL   latency=20.6 ms  R=0.658  target=0.75  dets=5  vru=True  backend=ultralytics
+23:04:11  INFO       [safety / heavy] 160/200  tier=SMALL   latency=22.0 ms  R=0.722  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.709)
+23:04:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.704)
+23:04:11  INFO       [safety / heavy] 180/200  tier=SMALL   latency=21.6 ms  R=0.722  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:12  INFO       [safety / heavy] 200/200  tier=SMALL   latency=20.7 ms  R=0.746  target=0.75  dets=4  vru=False  backend=ultralytics
+23:04:12  INFO     [RAMS] Controller stopped.
+23:04:12  INFO     
+--- Block 3/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:04:12  INFO     [RAMS] Starting resource monitor ...
+23:04:12  INFO     [RAMS] Loading model tiers ...
+23:04:13  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:04:13  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:04:14  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:04:14  INFO     [RAMS] Controller ready. Policy: fixed
+23:04:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.663)
+23:04:16  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=22.8 ms  R=0.705  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:17  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=33.8 ms  R=0.709  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:17  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=20.8 ms  R=0.654  target=0.75  dets=9  vru=False  backend=ultralytics
+23:04:18  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=20.7 ms  R=0.651  target=0.75  dets=8  vru=False  backend=ultralytics
+23:04:18  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=17.5 ms  R=0.703  target=0.75  dets=0  vru=False  backend=ultralytics
+23:04:19  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=20.1 ms  R=0.653  target=0.75  dets=4  vru=False  backend=ultralytics
+23:04:20  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=19.7 ms  R=0.661  target=0.75  dets=4  vru=True  backend=ultralytics
+23:04:20  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=21.3 ms  R=0.686  target=0.75  dets=3  vru=False  backend=ultralytics
+23:04:21  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=19.7 ms  R=0.655  target=0.75  dets=4  vru=False  backend=ultralytics
+23:04:22  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=19.6 ms  R=0.659  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:22  INFO     [RAMS] Controller stopped.
+23:04:22  INFO     
+--- Block 4/10  Policy: adaptive  Load: heavy (75%) ---
+23:04:22  INFO     [RAMS] Starting resource monitor ...
+23:04:22  INFO     [RAMS] Loading model tiers ...
+23:04:22  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:04:22  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:04:23  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:04:23  INFO     [RAMS] Controller ready. Policy: adaptive
+23:04:24  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.594)
+23:04:25  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=17.5 ms  R=0.648  target=0.75  dets=0  vru=False  backend=ultralytics
+23:04:26  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=19.1 ms  R=0.652  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:26  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=19.2 ms  R=0.649  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:27  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=19.1 ms  R=0.654  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:28  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=21.4 ms  R=0.705  target=0.75  dets=9  vru=False  backend=ultralytics
+23:04:28  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=20.3 ms  R=0.659  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:29  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=20.2 ms  R=0.652  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:30  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=19.3 ms  R=0.683  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:30  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=19.4 ms  R=0.655  target=0.75  dets=2  vru=True  backend=ultralytics
+23:04:31  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=19.3 ms  R=0.671  target=0.75  dets=1  vru=True  backend=ultralytics
+23:04:31  INFO     [RAMS] Controller stopped.
+23:04:31  INFO     
+--- Block 4/10  Policy: predictive  Load: heavy (75%) ---
+23:04:31  INFO     [RAMS] Starting resource monitor ...
+23:04:31  INFO     [RAMS] Loading model tiers ...
+23:04:31  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:04:32  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:04:32  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:04:32  INFO     [RAMS] Controller ready. Policy: predictive
+23:04:33  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.666)
+23:04:34  INFO       [predictive / heavy] 20/200  tier=NANO    latency=18.3 ms  R=0.695  target=0.75  dets=0  vru=False  backend=ultralytics
+23:04:35  INFO       [predictive / heavy] 40/200  tier=NANO    latency=19.7 ms  R=0.684  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:35  INFO       [predictive / heavy] 60/200  tier=NANO    latency=19.9 ms  R=0.729  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:36  INFO       [predictive / heavy] 80/200  tier=NANO    latency=24.4 ms  R=0.694  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:37  INFO       [predictive / heavy] 100/200  tier=NANO    latency=25.7 ms  R=0.693  target=0.75  dets=9  vru=False  backend=ultralytics
+23:04:38  INFO       [predictive / heavy] 120/200  tier=NANO    latency=20.8 ms  R=0.685  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:38  INFO       [predictive / heavy] 140/200  tier=NANO    latency=20.9 ms  R=0.692  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:39  INFO       [predictive / heavy] 160/200  tier=NANO    latency=19.0 ms  R=0.666  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:40  INFO       [predictive / heavy] 180/200  tier=NANO    latency=19.6 ms  R=0.647  target=0.75  dets=2  vru=True  backend=ultralytics
+23:04:40  INFO       [predictive / heavy] 200/200  tier=NANO    latency=19.3 ms  R=0.650  target=0.75  dets=1  vru=True  backend=ultralytics
+23:04:40  INFO     [RAMS] Controller stopped.
+23:04:40  INFO     
+--- Block 4/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:04:40  INFO     [RAMS] Starting resource monitor ...
+23:04:40  INFO     [RAMS] Loading model tiers ...
+23:04:41  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:04:41  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:04:42  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:04:42  INFO     [RAMS] Controller ready. Policy: fixed
+23:04:43  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.587)
+23:04:43  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=17.8 ms  R=0.693  target=0.75  dets=0  vru=False  backend=ultralytics
+23:04:44  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=19.2 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:45  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=19.5 ms  R=0.657  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:45  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=19.7 ms  R=0.682  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:46  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=24.2 ms  R=0.662  target=0.75  dets=9  vru=False  backend=ultralytics
+23:04:47  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=20.2 ms  R=0.661  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:47  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=22.1 ms  R=0.690  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:48  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=18.9 ms  R=0.661  target=0.75  dets=1  vru=False  backend=ultralytics
+23:04:49  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=19.4 ms  R=0.648  target=0.75  dets=2  vru=True  backend=ultralytics
+23:04:49  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=20.5 ms  R=0.660  target=0.75  dets=1  vru=True  backend=ultralytics
+23:04:50  INFO     [RAMS] Controller stopped.
+23:04:50  INFO     
+--- Block 4/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:04:50  INFO     [RAMS] Starting resource monitor ...
+23:04:50  INFO     [RAMS] Loading model tiers ...
+23:04:50  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:04:50  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:04:51  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:04:51  INFO     [RAMS] Controller ready. Policy: fixed
+23:04:52  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.592)
+23:04:53  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=25.7 ms  R=0.753  target=0.75  dets=2  vru=False  backend=ultralytics
+23:04:54  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=26.5 ms  R=0.719  target=0.75  dets=5  vru=False  backend=ultralytics
+23:04:54  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=27.1 ms  R=0.802  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:55  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=27.1 ms  R=0.727  target=0.75  dets=6  vru=False  backend=ultralytics
+23:04:56  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=29.4 ms  R=0.721  target=0.75  dets=17  vru=True  backend=ultralytics
+23:04:57  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=28.4 ms  R=0.698  target=0.75  dets=8  vru=False  backend=ultralytics
+23:04:58  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=29.0 ms  R=0.698  target=0.75  dets=10  vru=False  backend=ultralytics
+23:04:59  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=29.8 ms  R=0.739  target=0.75  dets=3  vru=False  backend=ultralytics
+23:04:59  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=30.4 ms  R=0.710  target=0.75  dets=16  vru=True  backend=ultralytics
+23:05:00  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=27.6 ms  R=0.665  target=0.75  dets=9  vru=True  backend=ultralytics
+23:05:00  INFO     [RAMS] Controller stopped.
+23:05:00  INFO     
+--- Block 4/10  Policy: fixed_small  Load: heavy (75%) ---
+23:05:01  INFO     [RAMS] Starting resource monitor ...
+23:05:01  INFO     [RAMS] Loading model tiers ...
+23:05:01  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:01  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:02  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:02  INFO     [RAMS] Controller ready. Policy: fixed
+23:05:04  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=20.6 ms  R=0.670  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:05  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=21.0 ms  R=0.675  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:05  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=20.5 ms  R=0.684  target=0.75  dets=3  vru=False  backend=ultralytics
+23:05:06  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=20.3 ms  R=0.674  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:07  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=28.7 ms  R=0.681  target=0.75  dets=12  vru=False  backend=ultralytics
+23:05:07  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=21.0 ms  R=0.661  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:08  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=21.3 ms  R=0.668  target=0.75  dets=8  vru=False  backend=ultralytics
+23:05:09  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=22.6 ms  R=0.669  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:09  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=19.8 ms  R=0.685  target=0.75  dets=1  vru=True  backend=ultralytics
+23:05:10  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=19.9 ms  R=0.670  target=0.75  dets=1  vru=True  backend=ultralytics
+23:05:10  INFO     [RAMS] Controller stopped.
+23:05:10  INFO     
+--- Block 4/10  Policy: safety2  Load: heavy (75%) ---
+23:05:10  INFO     [RAMS] Starting resource monitor ...
+23:05:10  INFO     [RAMS] Loading model tiers ...
+23:05:10  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:11  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:11  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:11  INFO     [RAMS] Controller ready. Policy: safety2
+23:05:13  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.627)
+23:05:13  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=26.5 ms  R=0.682  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.706)
+23:05:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.706)
+23:05:14  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=26.1 ms  R=0.646  target=0.75  dets=5  vru=False  backend=ultralytics
+23:05:14  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.777)
+23:05:15  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.654)
+23:05:15  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=26.4 ms  R=0.649  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:16  INFO       [safety2 / heavy] 80/200  tier=MEDIUM  latency=26.9 ms  R=0.727  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:16  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.727)
+23:05:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.728)
+23:05:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.683)
+23:05:16  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=30.7 ms  R=0.682  target=0.75  dets=17  vru=True  backend=ultralytics
+23:05:17  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.805)
+23:05:17  INFO       [safety2 / heavy] 120/200  tier=SMALL   latency=21.5 ms  R=0.805  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:18  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.720)
+23:05:18  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=30.0 ms  R=0.730  target=0.75  dets=10  vru=False  backend=ultralytics
+23:05:19  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.708)
+23:05:19  INFO       [safety2 / heavy] 160/200  tier=NANO    latency=19.9 ms  R=0.703  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:19  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.696)
+23:05:19  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.714)
+23:05:19  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=30.2 ms  R=0.714  target=0.75  dets=16  vru=True  backend=ultralytics
+23:05:20  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.733)
+23:05:20  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.697)
+23:05:20  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=34.2 ms  R=0.764  target=0.75  dets=9  vru=True  backend=ultralytics
+23:05:20  INFO     [RAMS] Controller stopped.
+23:05:21  INFO     
+--- Block 4/10  Policy: safety  Load: heavy (75%) ---
+23:05:21  INFO     [RAMS] Starting resource monitor ...
+23:05:21  INFO     [RAMS] Loading model tiers ...
+23:05:21  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:21  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:22  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:22  INFO     [RAMS] Controller ready. Policy: safety
+23:05:24  INFO       [safety / heavy] 20/200  tier=SMALL   latency=20.8 ms  R=0.665  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:24  INFO       [safety / heavy] 40/200  tier=SMALL   latency=20.4 ms  R=0.662  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:25  INFO       [safety / heavy] 60/200  tier=SMALL   latency=20.3 ms  R=0.669  target=0.75  dets=3  vru=False  backend=ultralytics
+23:05:26  INFO       [safety / heavy] 80/200  tier=SMALL   latency=20.0 ms  R=0.663  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:26  INFO       [safety / heavy] 100/200  tier=SMALL   latency=23.4 ms  R=0.652  target=0.75  dets=12  vru=False  backend=ultralytics
+23:05:27  INFO       [safety / heavy] 120/200  tier=SMALL   latency=20.9 ms  R=0.687  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:28  INFO       [safety / heavy] 140/200  tier=SMALL   latency=21.8 ms  R=0.667  target=0.75  dets=8  vru=False  backend=ultralytics
+23:05:28  INFO       [safety / heavy] 160/200  tier=SMALL   latency=20.6 ms  R=0.660  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:29  INFO       [safety / heavy] 180/200  tier=SMALL   latency=20.0 ms  R=0.646  target=0.75  dets=1  vru=True  backend=ultralytics
+23:05:30  INFO       [safety / heavy] 200/200  tier=SMALL   latency=19.8 ms  R=0.666  target=0.75  dets=1  vru=True  backend=ultralytics
+23:05:30  INFO     [RAMS] Controller stopped.
+23:05:30  INFO     
+--- Block 4/10  Policy: threshold  Load: heavy (75%) ---
+23:05:30  INFO     [RAMS] Starting resource monitor ...
+23:05:30  INFO     [RAMS] Loading model tiers ...
+23:05:30  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:31  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:31  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:31  INFO     [RAMS] Controller ready. Policy: threshold
+23:05:32  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.687)
+23:05:33  INFO       [threshold / heavy] 20/200  tier=NANO    latency=18.6 ms  R=0.665  target=0.75  dets=0  vru=False  backend=ultralytics
+23:05:34  INFO       [threshold / heavy] 40/200  tier=NANO    latency=19.1 ms  R=0.655  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:34  INFO       [threshold / heavy] 60/200  tier=NANO    latency=19.1 ms  R=0.657  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:35  INFO       [threshold / heavy] 80/200  tier=NANO    latency=19.1 ms  R=0.667  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:36  INFO       [threshold / heavy] 100/200  tier=NANO    latency=20.5 ms  R=0.655  target=0.75  dets=9  vru=False  backend=ultralytics
+23:05:36  INFO       [threshold / heavy] 120/200  tier=NANO    latency=20.1 ms  R=0.653  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:37  INFO       [threshold / heavy] 140/200  tier=NANO    latency=20.9 ms  R=0.678  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:38  INFO       [threshold / heavy] 160/200  tier=NANO    latency=19.7 ms  R=0.702  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:38  INFO       [threshold / heavy] 180/200  tier=NANO    latency=21.3 ms  R=0.701  target=0.75  dets=2  vru=True  backend=ultralytics
+23:05:39  INFO       [threshold / heavy] 200/200  tier=NANO    latency=20.2 ms  R=0.685  target=0.75  dets=1  vru=True  backend=ultralytics
+23:05:39  INFO     [RAMS] Controller stopped.
+23:05:39  INFO     
+--- Block 5/10  Policy: safety  Load: heavy (75%) ---
+23:05:39  INFO     [RAMS] Starting resource monitor ...
+23:05:39  INFO     [RAMS] Loading model tiers ...
+23:05:39  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:40  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:41  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:41  INFO     [RAMS] Controller ready. Policy: safety
+23:05:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.651)
+23:05:42  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.707)
+23:05:42  INFO       [safety / heavy] 20/200  tier=SMALL   latency=22.3 ms  R=0.707  target=0.75  dets=11  vru=True  backend=ultralytics
+23:05:43  INFO       [safety / heavy] 40/200  tier=SMALL   latency=23.3 ms  R=0.701  target=0.75  dets=14  vru=False  backend=ultralytics
+23:05:44  INFO       [safety / heavy] 60/200  tier=SMALL   latency=20.1 ms  R=0.680  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:44  INFO       [safety / heavy] 80/200  tier=SMALL   latency=22.0 ms  R=0.653  target=0.75  dets=10  vru=False  backend=ultralytics
+23:05:45  INFO       [safety / heavy] 100/200  tier=SMALL   latency=21.1 ms  R=0.648  target=0.75  dets=7  vru=False  backend=ultralytics
+23:05:46  INFO       [safety / heavy] 120/200  tier=SMALL   latency=20.2 ms  R=0.678  target=0.75  dets=3  vru=False  backend=ultralytics
+23:05:46  INFO       [safety / heavy] 140/200  tier=SMALL   latency=22.6 ms  R=0.675  target=0.75  dets=9  vru=True  backend=ultralytics
+23:05:47  INFO       [safety / heavy] 160/200  tier=SMALL   latency=26.5 ms  R=0.647  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:48  INFO       [safety / heavy] 180/200  tier=SMALL   latency=20.5 ms  R=0.662  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:48  INFO       [safety / heavy] 200/200  tier=SMALL   latency=20.2 ms  R=0.669  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:49  INFO     [RAMS] Controller stopped.
+23:05:49  INFO     
+--- Block 5/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:05:49  INFO     [RAMS] Starting resource monitor ...
+23:05:49  INFO     [RAMS] Loading model tiers ...
+23:05:49  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:49  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:50  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:50  INFO     [RAMS] Controller ready. Policy: fixed
+23:05:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.585)
+23:05:52  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=20.4 ms  R=0.657  target=0.75  dets=7  vru=False  backend=ultralytics
+23:05:53  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=22.5 ms  R=0.680  target=0.75  dets=11  vru=False  backend=ultralytics
+23:05:53  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=19.5 ms  R=0.659  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:54  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=20.1 ms  R=0.655  target=0.75  dets=6  vru=False  backend=ultralytics
+23:05:54  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=20.5 ms  R=0.667  target=0.75  dets=3  vru=False  backend=ultralytics
+23:05:55  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=19.8 ms  R=0.654  target=0.75  dets=2  vru=False  backend=ultralytics
+23:05:56  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=19.3 ms  R=0.669  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:56  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=20.8 ms  R=0.656  target=0.75  dets=0  vru=False  backend=ultralytics
+23:05:57  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=19.7 ms  R=0.662  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:58  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=24.2 ms  R=0.648  target=0.75  dets=1  vru=False  backend=ultralytics
+23:05:58  INFO     [RAMS] Controller stopped.
+23:05:58  INFO     
+--- Block 5/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:05:58  INFO     [RAMS] Starting resource monitor ...
+23:05:58  INFO     [RAMS] Loading model tiers ...
+23:05:58  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:05:58  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:05:59  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:05:59  INFO     [RAMS] Controller ready. Policy: fixed
+23:06:00  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.645)
+23:06:01  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=29.1 ms  R=0.692  target=0.75  dets=17  vru=True  backend=ultralytics
+23:06:02  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=35.2 ms  R=0.708  target=0.75  dets=16  vru=False  backend=ultralytics
+23:06:03  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=27.4 ms  R=0.683  target=0.75  dets=3  vru=True  backend=ultralytics
+23:06:04  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=27.9 ms  R=0.787  target=0.75  dets=11  vru=False  backend=ultralytics
+23:06:05  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=27.6 ms  R=0.716  target=0.75  dets=9  vru=True  backend=ultralytics
+23:06:05  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=26.4 ms  R=0.689  target=0.75  dets=5  vru=False  backend=ultralytics
+23:06:06  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=29.1 ms  R=0.679  target=0.75  dets=19  vru=True  backend=ultralytics
+23:06:07  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=25.3 ms  R=0.683  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:08  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=26.0 ms  R=0.661  target=0.75  dets=3  vru=False  backend=ultralytics
+23:06:09  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=26.0 ms  R=0.744  target=0.75  dets=5  vru=False  backend=ultralytics
+23:06:09  INFO     [RAMS] Controller stopped.
+23:06:09  INFO     
+--- Block 5/10  Policy: adaptive  Load: heavy (75%) ---
+23:06:09  INFO     [RAMS] Starting resource monitor ...
+23:06:09  INFO     [RAMS] Loading model tiers ...
+23:06:09  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:06:09  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:06:10  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:06:10  INFO     [RAMS] Controller ready. Policy: adaptive
+23:06:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.585)
+23:06:12  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=20.5 ms  R=0.671  target=0.75  dets=7  vru=False  backend=ultralytics
+23:06:12  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=21.9 ms  R=0.654  target=0.75  dets=11  vru=False  backend=ultralytics
+23:06:13  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=23.1 ms  R=0.655  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:14  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=20.2 ms  R=0.667  target=0.75  dets=6  vru=False  backend=ultralytics
+23:06:14  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=20.7 ms  R=0.669  target=0.75  dets=3  vru=False  backend=ultralytics
+23:06:15  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=19.8 ms  R=0.669  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:16  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=19.2 ms  R=0.655  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:16  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=17.8 ms  R=0.665  target=0.75  dets=0  vru=False  backend=ultralytics
+23:06:17  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=19.2 ms  R=0.666  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:18  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=23.8 ms  R=0.649  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:18  INFO     [RAMS] Controller stopped.
+23:06:18  INFO     
+--- Block 5/10  Policy: predictive  Load: heavy (75%) ---
+23:06:18  INFO     [RAMS] Starting resource monitor ...
+23:06:18  INFO     [RAMS] Loading model tiers ...
+23:06:18  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:06:18  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:06:19  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:06:19  INFO     [RAMS] Controller ready. Policy: predictive
+23:06:20  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.669)
+23:06:21  INFO       [predictive / heavy] 20/200  tier=NANO    latency=20.9 ms  R=0.706  target=0.75  dets=7  vru=False  backend=ultralytics
+23:06:22  INFO       [predictive / heavy] 40/200  tier=NANO    latency=22.1 ms  R=0.735  target=0.75  dets=11  vru=False  backend=ultralytics
+23:06:22  INFO       [predictive / heavy] 60/200  tier=NANO    latency=21.0 ms  R=0.701  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:23  INFO       [predictive / heavy] 80/200  tier=NANO    latency=21.6 ms  R=0.695  target=0.75  dets=6  vru=False  backend=ultralytics
+23:06:24  INFO       [predictive / heavy] 100/200  tier=NANO    latency=21.3 ms  R=0.699  target=0.75  dets=3  vru=False  backend=ultralytics
+23:06:24  INFO       [predictive / heavy] 120/200  tier=NANO    latency=21.1 ms  R=0.701  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:25  INFO       [predictive / heavy] 140/200  tier=NANO    latency=19.7 ms  R=0.699  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:26  INFO       [predictive / heavy] 160/200  tier=NANO    latency=18.5 ms  R=0.712  target=0.75  dets=0  vru=False  backend=ultralytics
+23:06:26  INFO       [predictive / heavy] 180/200  tier=NANO    latency=20.2 ms  R=0.678  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:27  INFO       [predictive / heavy] 200/200  tier=NANO    latency=19.1 ms  R=0.651  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:27  INFO     [RAMS] Controller stopped.
+23:06:27  INFO     
+--- Block 5/10  Policy: safety2  Load: heavy (75%) ---
+23:06:27  INFO     [RAMS] Starting resource monitor ...
+23:06:27  INFO     [RAMS] Loading model tiers ...
+23:06:27  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:06:28  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:06:29  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:06:29  INFO     [RAMS] Controller ready. Policy: safety2
+23:06:30  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.629)
+23:06:30  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.666)
+23:06:30  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=28.4 ms  R=0.684  target=0.75  dets=17  vru=True  backend=ultralytics
+23:06:30  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.714)
+23:06:30  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.714)
+23:06:31  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=28.0 ms  R=0.735  target=0.75  dets=16  vru=False  backend=ultralytics
+23:06:32  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=25.2 ms  R=0.691  target=0.75  dets=3  vru=True  backend=ultralytics
+23:06:32  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.693)
+23:06:32  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.742)
+23:06:33  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.745)
+23:06:33  INFO       [safety2 / heavy] 80/200  tier=NANO    latency=20.6 ms  R=0.680  target=0.75  dets=6  vru=False  backend=ultralytics
+23:06:33  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.658)
+23:06:33  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=27.5 ms  R=0.708  target=0.75  dets=9  vru=True  backend=ultralytics
+23:06:34  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.763)
+23:06:34  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.662)
+23:06:34  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=25.7 ms  R=0.721  target=0.75  dets=5  vru=False  backend=ultralytics
+23:06:35  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.740)
+23:06:35  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.653)
+23:06:35  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=28.7 ms  R=0.681  target=0.75  dets=19  vru=True  backend=ultralytics
+23:06:35  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.652)
+23:06:36  INFO       [safety2 / heavy] 160/200  tier=SMALL   latency=19.8 ms  R=0.678  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:36  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.649)
+23:06:36  INFO       [safety2 / heavy] 180/200  tier=NANO    latency=21.3 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:37  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.658)
+23:06:37  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=26.6 ms  R=0.745  target=0.75  dets=5  vru=False  backend=ultralytics
+23:06:37  INFO     [RAMS] Controller stopped.
+23:06:37  INFO     
+--- Block 5/10  Policy: fixed_small  Load: heavy (75%) ---
+23:06:37  INFO     [RAMS] Starting resource monitor ...
+23:06:37  INFO     [RAMS] Loading model tiers ...
+23:06:38  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:06:38  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:06:39  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:06:39  INFO     [RAMS] Controller ready. Policy: fixed
+23:06:41  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=22.1 ms  R=0.658  target=0.75  dets=11  vru=True  backend=ultralytics
+23:06:41  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=23.4 ms  R=0.670  target=0.75  dets=14  vru=False  backend=ultralytics
+23:06:42  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=21.9 ms  R=0.714  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:43  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=23.5 ms  R=0.721  target=0.75  dets=10  vru=False  backend=ultralytics
+23:06:44  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=26.9 ms  R=0.690  target=0.75  dets=7  vru=False  backend=ultralytics
+23:06:44  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=21.3 ms  R=0.682  target=0.75  dets=3  vru=False  backend=ultralytics
+23:06:45  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=39.4 ms  R=0.682  target=0.75  dets=9  vru=True  backend=ultralytics
+23:06:46  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=21.8 ms  R=0.729  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:47  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=23.5 ms  R=0.717  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:47  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=21.7 ms  R=0.716  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:48  INFO     [RAMS] Controller stopped.
+23:06:48  INFO     
+--- Block 5/10  Policy: threshold  Load: heavy (75%) ---
+23:06:48  INFO     [RAMS] Starting resource monitor ...
+23:06:48  INFO     [RAMS] Loading model tiers ...
+23:06:48  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:06:48  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:06:49  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:06:49  INFO     [RAMS] Controller ready. Policy: threshold
+23:06:50  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.620)
+23:06:51  INFO       [threshold / heavy] 20/200  tier=NANO    latency=20.6 ms  R=0.640  target=0.75  dets=7  vru=False  backend=ultralytics
+23:06:51  INFO       [threshold / heavy] 40/200  tier=NANO    latency=21.5 ms  R=0.658  target=0.75  dets=11  vru=False  backend=ultralytics
+23:06:52  INFO       [threshold / heavy] 60/200  tier=NANO    latency=20.2 ms  R=0.652  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:53  INFO       [threshold / heavy] 80/200  tier=NANO    latency=20.3 ms  R=0.660  target=0.75  dets=6  vru=False  backend=ultralytics
+23:06:53  INFO       [threshold / heavy] 100/200  tier=NANO    latency=19.7 ms  R=0.651  target=0.75  dets=3  vru=False  backend=ultralytics
+23:06:54  INFO       [threshold / heavy] 120/200  tier=NANO    latency=20.6 ms  R=0.670  target=0.75  dets=2  vru=False  backend=ultralytics
+23:06:55  INFO       [threshold / heavy] 140/200  tier=NANO    latency=19.2 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:55  INFO       [threshold / heavy] 160/200  tier=NANO    latency=17.5 ms  R=0.668  target=0.75  dets=0  vru=False  backend=ultralytics
+23:06:56  INFO       [threshold / heavy] 180/200  tier=NANO    latency=19.1 ms  R=0.660  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:57  INFO       [threshold / heavy] 200/200  tier=NANO    latency=19.4 ms  R=0.688  target=0.75  dets=1  vru=False  backend=ultralytics
+23:06:57  INFO     [RAMS] Controller stopped.
+23:06:57  INFO     
+--- Block 6/10  Policy: adaptive  Load: heavy (75%) ---
+23:06:57  INFO     [RAMS] Starting resource monitor ...
+23:06:57  INFO     [RAMS] Loading model tiers ...
+23:06:57  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:06:57  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:06:58  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:06:58  INFO     [RAMS] Controller ready. Policy: adaptive
+23:06:59  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.585)
+23:07:00  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=19.3 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:01  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=19.3 ms  R=0.700  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:01  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=20.0 ms  R=0.651  target=0.75  dets=5  vru=False  backend=ultralytics
+23:07:02  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=23.5 ms  R=0.647  target=0.75  dets=4  vru=True  backend=ultralytics
+23:07:03  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=20.0 ms  R=0.705  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:03  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=19.7 ms  R=0.668  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:04  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=23.8 ms  R=0.722  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:05  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=20.5 ms  R=0.719  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:05  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=21.0 ms  R=0.718  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:06  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=18.2 ms  R=0.692  target=0.75  dets=0  vru=False  backend=ultralytics
+23:07:06  INFO     [RAMS] Controller stopped.
+23:07:06  INFO     
+--- Block 6/10  Policy: safety2  Load: heavy (75%) ---
+23:07:06  INFO     [RAMS] Starting resource monitor ...
+23:07:06  INFO     [RAMS] Loading model tiers ...
+23:07:07  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:07:07  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:07:08  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:07:08  INFO     [RAMS] Controller ready. Policy: safety2
+23:07:09  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.654)
+23:07:09  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.794)
+23:07:10  INFO       [safety2 / heavy] 20/200  tier=NANO    latency=30.3 ms  R=0.732  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:10  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.663)
+23:07:10  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=25.9 ms  R=0.662  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:11  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.689)
+23:07:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.671)
+23:07:11  INFO       [safety2 / heavy] 60/200  tier=SMALL   latency=20.4 ms  R=0.656  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.666)
+23:07:12  INFO       [safety2 / heavy] 80/200  tier=NANO    latency=19.9 ms  R=0.666  target=0.75  dets=4  vru=True  backend=ultralytics
+23:07:12  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.656)
+23:07:12  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.689)
+23:07:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.662)
+23:07:12  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=27.2 ms  R=0.672  target=0.75  dets=4  vru=True  backend=ultralytics
+23:07:13  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.648)
+23:07:13  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.716)
+23:07:13  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=27.1 ms  R=0.725  target=0.75  dets=11  vru=True  backend=ultralytics
+23:07:14  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.694)
+23:07:14  INFO       [safety2 / heavy] 140/200  tier=NANO    latency=20.8 ms  R=0.694  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:14  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.668)
+23:07:14  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.650)
+23:07:15  INFO       [safety2 / heavy] 160/200  tier=MEDIUM  latency=25.0 ms  R=0.675  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:15  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.669)
+23:07:15  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.669)
+23:07:16  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=27.4 ms  R=0.742  target=0.75  dets=10  vru=False  backend=ultralytics
+23:07:16  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.742)
+23:07:16  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.650)
+23:07:16  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.663)
+23:07:16  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=27.2 ms  R=0.716  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:17  INFO     [RAMS] Controller stopped.
+23:07:17  INFO     
+--- Block 6/10  Policy: threshold  Load: heavy (75%) ---
+23:07:17  INFO     [RAMS] Starting resource monitor ...
+23:07:17  INFO     [RAMS] Loading model tiers ...
+23:07:17  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:07:17  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:07:18  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:07:18  INFO     [RAMS] Controller ready. Policy: threshold
+23:07:19  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.647)
+23:07:20  INFO       [threshold / heavy] 20/200  tier=NANO    latency=20.6 ms  R=0.702  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:20  INFO       [threshold / heavy] 40/200  tier=NANO    latency=19.1 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:21  INFO       [threshold / heavy] 60/200  tier=NANO    latency=23.3 ms  R=0.655  target=0.75  dets=5  vru=False  backend=ultralytics
+23:07:22  INFO       [threshold / heavy] 80/200  tier=NANO    latency=20.2 ms  R=0.707  target=0.75  dets=4  vru=True  backend=ultralytics
+23:07:22  INFO       [threshold / heavy] 100/200  tier=NANO    latency=19.5 ms  R=0.649  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:23  INFO       [threshold / heavy] 120/200  tier=NANO    latency=20.9 ms  R=0.659  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:23  INFO       [threshold / heavy] 140/200  tier=NANO    latency=20.4 ms  R=0.650  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:24  INFO       [threshold / heavy] 160/200  tier=NANO    latency=19.0 ms  R=0.652  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:25  INFO       [threshold / heavy] 180/200  tier=NANO    latency=19.6 ms  R=0.663  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:25  INFO       [threshold / heavy] 200/200  tier=NANO    latency=18.2 ms  R=0.695  target=0.75  dets=0  vru=False  backend=ultralytics
+23:07:26  INFO     [RAMS] Controller stopped.
+23:07:26  INFO     
+--- Block 6/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:07:26  INFO     [RAMS] Starting resource monitor ...
+23:07:26  INFO     [RAMS] Loading model tiers ...
+23:07:26  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:07:26  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:07:27  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:07:27  INFO     [RAMS] Controller ready. Policy: fixed
+23:07:28  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.650)
+23:07:29  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=20.9 ms  R=0.705  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:30  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=20.9 ms  R=0.698  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:30  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=21.8 ms  R=0.694  target=0.75  dets=5  vru=False  backend=ultralytics
+23:07:31  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=20.4 ms  R=0.710  target=0.75  dets=4  vru=True  backend=ultralytics
+23:07:32  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=19.9 ms  R=0.660  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:32  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=19.9 ms  R=0.650  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:33  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=19.8 ms  R=0.654  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:34  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=19.3 ms  R=0.657  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:34  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=20.6 ms  R=0.653  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:35  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=17.7 ms  R=0.651  target=0.75  dets=0  vru=False  backend=ultralytics
+23:07:35  INFO     [RAMS] Controller stopped.
+23:07:35  INFO     
+--- Block 6/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:07:35  INFO     [RAMS] Starting resource monitor ...
+23:07:35  INFO     [RAMS] Loading model tiers ...
+23:07:35  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:07:36  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:07:37  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:07:37  INFO     [RAMS] Controller ready. Policy: fixed
+23:07:38  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.592)
+23:07:38  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=26.6 ms  R=0.696  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:39  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=25.6 ms  R=0.709  target=0.75  dets=3  vru=False  backend=ultralytics
+23:07:40  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=26.4 ms  R=0.706  target=0.75  dets=7  vru=False  backend=ultralytics
+23:07:41  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=26.7 ms  R=0.676  target=0.75  dets=7  vru=True  backend=ultralytics
+23:07:42  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=26.1 ms  R=0.734  target=0.75  dets=4  vru=True  backend=ultralytics
+23:07:43  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=29.0 ms  R=0.644  target=0.75  dets=11  vru=True  backend=ultralytics
+23:07:43  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=29.0 ms  R=0.732  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:44  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=28.7 ms  R=0.671  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:45  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=30.5 ms  R=0.648  target=0.75  dets=10  vru=False  backend=ultralytics
+23:07:46  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=26.8 ms  R=0.713  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:46  INFO     [RAMS] Controller stopped.
+23:07:46  INFO     
+--- Block 6/10  Policy: fixed_small  Load: heavy (75%) ---
+23:07:46  INFO     [RAMS] Starting resource monitor ...
+23:07:46  INFO     [RAMS] Loading model tiers ...
+23:07:46  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:07:47  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:07:47  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:07:47  INFO     [RAMS] Controller ready. Policy: fixed
+23:07:49  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=20.5 ms  R=0.677  target=0.75  dets=2  vru=False  backend=ultralytics
+23:07:50  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=21.8 ms  R=0.714  target=0.75  dets=2  vru=False  backend=ultralytics
+23:07:51  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=22.8 ms  R=0.734  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:51  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=21.2 ms  R=0.707  target=0.75  dets=3  vru=True  backend=ultralytics
+23:07:52  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=20.9 ms  R=0.703  target=0.75  dets=2  vru=False  backend=ultralytics
+23:07:53  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=21.8 ms  R=0.770  target=0.75  dets=6  vru=False  backend=ultralytics
+23:07:53  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=20.8 ms  R=0.681  target=0.75  dets=4  vru=False  backend=ultralytics
+23:07:54  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=19.8 ms  R=0.675  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:55  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=20.9 ms  R=0.657  target=0.75  dets=6  vru=False  backend=ultralytics
+23:07:55  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=20.5 ms  R=0.669  target=0.75  dets=1  vru=False  backend=ultralytics
+23:07:55  INFO     [RAMS] Controller stopped.
+23:07:56  INFO     
+--- Block 6/10  Policy: safety  Load: heavy (75%) ---
+23:07:56  INFO     [RAMS] Starting resource monitor ...
+23:07:56  INFO     [RAMS] Loading model tiers ...
+23:07:56  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:07:56  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:07:57  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:07:57  INFO     [RAMS] Controller ready. Policy: safety
+23:07:59  INFO       [safety / heavy] 20/200  tier=SMALL   latency=20.5 ms  R=0.709  target=0.75  dets=2  vru=False  backend=ultralytics
+23:07:59  INFO       [safety / heavy] 40/200  tier=SMALL   latency=24.0 ms  R=0.681  target=0.75  dets=2  vru=False  backend=ultralytics
+23:08:00  INFO       [safety / heavy] 60/200  tier=SMALL   latency=20.2 ms  R=0.648  target=0.75  dets=4  vru=False  backend=ultralytics
+23:08:01  INFO       [safety / heavy] 80/200  tier=SMALL   latency=20.3 ms  R=0.682  target=0.75  dets=3  vru=True  backend=ultralytics
+23:08:01  INFO       [safety / heavy] 100/200  tier=SMALL   latency=20.2 ms  R=0.666  target=0.75  dets=2  vru=False  backend=ultralytics
+23:08:02  INFO       [safety / heavy] 120/200  tier=SMALL   latency=21.1 ms  R=0.653  target=0.75  dets=6  vru=False  backend=ultralytics
+23:08:03  INFO       [safety / heavy] 140/200  tier=SMALL   latency=23.6 ms  R=0.689  target=0.75  dets=4  vru=False  backend=ultralytics
+23:08:03  INFO       [safety / heavy] 160/200  tier=SMALL   latency=19.8 ms  R=0.651  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:04  INFO       [safety / heavy] 180/200  tier=SMALL   latency=22.3 ms  R=0.650  target=0.75  dets=6  vru=False  backend=ultralytics
+23:08:05  INFO       [safety / heavy] 200/200  tier=SMALL   latency=19.8 ms  R=0.647  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:05  INFO     [RAMS] Controller stopped.
+23:08:05  INFO     
+--- Block 6/10  Policy: predictive  Load: heavy (75%) ---
+23:08:05  INFO     [RAMS] Starting resource monitor ...
+23:08:05  INFO     [RAMS] Loading model tiers ...
+23:08:05  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:08:06  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:08:06  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:08:06  INFO     [RAMS] Controller ready. Policy: predictive
+23:08:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.594)
+23:08:08  INFO       [predictive / heavy] 20/200  tier=NANO    latency=22.7 ms  R=0.666  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:09  INFO       [predictive / heavy] 40/200  tier=NANO    latency=19.8 ms  R=0.695  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:09  INFO       [predictive / heavy] 60/200  tier=NANO    latency=20.2 ms  R=0.688  target=0.75  dets=5  vru=False  backend=ultralytics
+23:08:10  INFO       [predictive / heavy] 80/200  tier=NANO    latency=20.2 ms  R=0.692  target=0.75  dets=4  vru=True  backend=ultralytics
+23:08:11  INFO       [predictive / heavy] 100/200  tier=NANO    latency=20.7 ms  R=0.697  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:11  INFO       [predictive / heavy] 120/200  tier=NANO    latency=21.4 ms  R=0.698  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:12  INFO       [predictive / heavy] 140/200  tier=NANO    latency=22.5 ms  R=0.708  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:13  INFO       [predictive / heavy] 160/200  tier=NANO    latency=19.8 ms  R=0.689  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:14  INFO       [predictive / heavy] 180/200  tier=NANO    latency=21.3 ms  R=0.731  target=0.75  dets=4  vru=False  backend=ultralytics
+23:08:14  INFO       [predictive / heavy] 200/200  tier=NANO    latency=18.0 ms  R=0.699  target=0.75  dets=0  vru=False  backend=ultralytics
+23:08:14  INFO     [RAMS] Controller stopped.
+23:08:14  INFO     
+--- Block 7/10  Policy: adaptive  Load: heavy (75%) ---
+23:08:15  INFO     [RAMS] Starting resource monitor ...
+23:08:15  INFO     [RAMS] Loading model tiers ...
+23:08:15  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:08:15  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:08:16  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:08:16  INFO     [RAMS] Controller ready. Policy: adaptive
+23:08:17  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:08:18  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=19.3 ms  R=0.665  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:18  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=18.6 ms  R=0.650  target=0.75  dets=0  vru=False  backend=ultralytics
+23:08:19  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=22.8 ms  R=0.661  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:20  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=19.6 ms  R=0.660  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:20  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=22.9 ms  R=0.669  target=0.75  dets=12  vru=False  backend=ultralytics
+23:08:21  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=19.1 ms  R=0.651  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:22  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=19.4 ms  R=0.669  target=0.75  dets=2  vru=False  backend=ultralytics
+23:08:22  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=17.9 ms  R=0.663  target=0.75  dets=0  vru=False  backend=ultralytics
+23:08:23  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=19.7 ms  R=0.657  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:24  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=20.1 ms  R=0.659  target=0.75  dets=5  vru=False  backend=ultralytics
+23:08:24  INFO     [RAMS] Controller stopped.
+23:08:24  INFO     
+--- Block 7/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:08:24  INFO     [RAMS] Starting resource monitor ...
+23:08:24  INFO     [RAMS] Loading model tiers ...
+23:08:24  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:08:25  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:08:25  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:08:25  INFO     [RAMS] Controller ready. Policy: fixed
+23:08:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.594)
+23:08:27  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=22.8 ms  R=0.671  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:28  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=18.0 ms  R=0.702  target=0.75  dets=0  vru=False  backend=ultralytics
+23:08:28  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=19.7 ms  R=0.667  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:29  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=19.9 ms  R=0.662  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:30  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=21.8 ms  R=0.734  target=0.75  dets=12  vru=False  backend=ultralytics
+23:08:30  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=21.3 ms  R=0.649  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:31  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=21.0 ms  R=0.724  target=0.75  dets=2  vru=False  backend=ultralytics
+23:08:32  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=20.7 ms  R=0.704  target=0.75  dets=0  vru=False  backend=ultralytics
+23:08:32  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=20.9 ms  R=0.689  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:33  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=22.1 ms  R=0.703  target=0.75  dets=5  vru=False  backend=ultralytics
+23:08:33  INFO     [RAMS] Controller stopped.
+23:08:33  INFO     
+--- Block 7/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:08:33  INFO     [RAMS] Starting resource monitor ...
+23:08:33  INFO     [RAMS] Loading model tiers ...
+23:08:34  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:08:34  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:08:35  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:08:35  INFO     [RAMS] Controller ready. Policy: fixed
+23:08:36  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.651)
+23:08:37  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=25.3 ms  R=0.754  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:38  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=26.6 ms  R=0.776  target=0.75  dets=6  vru=False  backend=ultralytics
+23:08:38  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=26.2 ms  R=0.676  target=0.75  dets=4  vru=True  backend=ultralytics
+23:08:39  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=25.9 ms  R=0.749  target=0.75  dets=5  vru=True  backend=ultralytics
+23:08:40  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=28.7 ms  R=0.703  target=0.75  dets=17  vru=False  backend=ultralytics
+23:08:41  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=26.6 ms  R=0.650  target=0.75  dets=3  vru=True  backend=ultralytics
+23:08:42  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=31.2 ms  R=0.745  target=0.75  dets=10  vru=True  backend=ultralytics
+23:08:42  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=28.2 ms  R=0.685  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:43  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=27.7 ms  R=0.710  target=0.75  dets=7  vru=False  backend=ultralytics
+23:08:44  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=27.1 ms  R=0.675  target=0.75  dets=7  vru=True  backend=ultralytics
+23:08:44  INFO     [RAMS] Controller stopped.
+23:08:44  INFO     
+--- Block 7/10  Policy: fixed_small  Load: heavy (75%) ---
+23:08:44  INFO     [RAMS] Starting resource monitor ...
+23:08:44  INFO     [RAMS] Loading model tiers ...
+23:08:44  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:08:45  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:08:45  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:08:45  INFO     [RAMS] Controller ready. Policy: fixed
+23:08:47  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=20.1 ms  R=0.670  target=0.75  dets=2  vru=False  backend=ultralytics
+23:08:48  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=21.8 ms  R=0.665  target=0.75  dets=6  vru=False  backend=ultralytics
+23:08:49  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=21.5 ms  R=0.648  target=0.75  dets=3  vru=False  backend=ultralytics
+23:08:49  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=20.6 ms  R=0.649  target=0.75  dets=5  vru=False  backend=ultralytics
+23:08:50  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=21.3 ms  R=0.639  target=0.75  dets=8  vru=False  backend=ultralytics
+23:08:51  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=21.5 ms  R=0.653  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:51  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=20.7 ms  R=0.655  target=0.75  dets=4  vru=True  backend=ultralytics
+23:08:52  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=37.4 ms  R=0.690  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:53  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=37.4 ms  R=0.707  target=0.75  dets=4  vru=False  backend=ultralytics
+23:08:54  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=42.9 ms  R=0.721  target=0.75  dets=7  vru=True  backend=ultralytics
+23:08:54  INFO     [RAMS] Controller stopped.
+23:08:54  INFO     
+--- Block 7/10  Policy: safety2  Load: heavy (75%) ---
+23:08:54  INFO     [RAMS] Starting resource monitor ...
+23:08:54  INFO     [RAMS] Loading model tiers ...
+23:08:54  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:08:55  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:08:55  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:08:55  INFO     [RAMS] Controller ready. Policy: safety2
+23:08:57  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.705)
+23:08:57  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.693)
+23:08:57  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=26.4 ms  R=0.781  target=0.75  dets=1  vru=False  backend=ultralytics
+23:08:57  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.781)
+23:08:57  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.685)
+23:08:57  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.685)
+23:08:58  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=26.1 ms  R=0.765  target=0.75  dets=6  vru=False  backend=ultralytics
+23:08:58  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.775)
+23:08:58  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.775)
+23:08:59  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=25.5 ms  R=0.701  target=0.75  dets=4  vru=True  backend=ultralytics
+23:09:00  INFO       [safety2 / heavy] 80/200  tier=MEDIUM  latency=26.8 ms  R=0.738  target=0.75  dets=5  vru=True  backend=ultralytics
+23:09:00  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.730)
+23:09:00  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.670)
+23:09:00  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=28.4 ms  R=0.721  target=0.75  dets=17  vru=False  backend=ultralytics
+23:09:01  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.685)
+23:09:01  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.660)
+23:09:01  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=28.8 ms  R=0.660  target=0.75  dets=3  vru=True  backend=ultralytics
+23:09:02  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.720)
+23:09:02  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.667)
+23:09:02  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=26.9 ms  R=0.667  target=0.75  dets=10  vru=True  backend=ultralytics
+23:09:03  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.733)
+23:09:03  INFO       [safety2 / heavy] 160/200  tier=NANO    latency=17.8 ms  R=0.700  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.662)
+23:09:03  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.660)
+23:09:03  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=26.1 ms  R=0.731  target=0.75  dets=7  vru=False  backend=ultralytics
+23:09:04  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=28.2 ms  R=0.679  target=0.75  dets=7  vru=True  backend=ultralytics
+23:09:04  INFO     [RAMS] Controller stopped.
+23:09:04  INFO     
+--- Block 7/10  Policy: threshold  Load: heavy (75%) ---
+23:09:04  INFO     [RAMS] Starting resource monitor ...
+23:09:04  INFO     [RAMS] Loading model tiers ...
+23:09:05  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:09:05  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:09:06  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:09:06  INFO     [RAMS] Controller ready. Policy: threshold
+23:09:07  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.592)
+23:09:08  INFO       [threshold / heavy] 20/200  tier=NANO    latency=19.3 ms  R=0.680  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:08  INFO       [threshold / heavy] 40/200  tier=NANO    latency=18.8 ms  R=0.658  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:09  INFO       [threshold / heavy] 60/200  tier=NANO    latency=19.6 ms  R=0.663  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:10  INFO       [threshold / heavy] 80/200  tier=NANO    latency=19.9 ms  R=0.691  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:10  INFO       [threshold / heavy] 100/200  tier=NANO    latency=21.4 ms  R=0.656  target=0.75  dets=12  vru=False  backend=ultralytics
+23:09:11  INFO       [threshold / heavy] 120/200  tier=NANO    latency=18.8 ms  R=0.653  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:12  INFO       [threshold / heavy] 140/200  tier=NANO    latency=20.3 ms  R=0.672  target=0.75  dets=2  vru=False  backend=ultralytics
+23:09:12  INFO       [threshold / heavy] 160/200  tier=NANO    latency=17.9 ms  R=0.654  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:13  INFO       [threshold / heavy] 180/200  tier=NANO    latency=21.3 ms  R=0.652  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:14  INFO       [threshold / heavy] 200/200  tier=NANO    latency=23.2 ms  R=0.721  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:14  INFO     [RAMS] Controller stopped.
+23:09:14  INFO     
+--- Block 7/10  Policy: predictive  Load: heavy (75%) ---
+23:09:14  INFO     [RAMS] Starting resource monitor ...
+23:09:14  INFO     [RAMS] Loading model tiers ...
+23:09:14  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:09:14  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:09:15  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:09:15  INFO     [RAMS] Controller ready. Policy: predictive
+23:09:16  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+23:09:17  INFO       [predictive / heavy] 20/200  tier=NANO    latency=24.7 ms  R=0.700  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:18  INFO       [predictive / heavy] 40/200  tier=NANO    latency=18.2 ms  R=0.680  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:18  INFO       [predictive / heavy] 60/200  tier=NANO    latency=20.7 ms  R=0.708  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:19  INFO       [predictive / heavy] 80/200  tier=NANO    latency=20.2 ms  R=0.700  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:20  INFO       [predictive / heavy] 100/200  tier=NANO    latency=22.3 ms  R=0.685  target=0.75  dets=12  vru=False  backend=ultralytics
+23:09:20  INFO       [predictive / heavy] 120/200  tier=NANO    latency=19.2 ms  R=0.655  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:21  INFO       [predictive / heavy] 140/200  tier=NANO    latency=19.6 ms  R=0.665  target=0.75  dets=2  vru=False  backend=ultralytics
+23:09:22  INFO       [predictive / heavy] 160/200  tier=NANO    latency=17.8 ms  R=0.699  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:22  INFO       [predictive / heavy] 180/200  tier=NANO    latency=19.8 ms  R=0.665  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:23  INFO       [predictive / heavy] 200/200  tier=NANO    latency=22.1 ms  R=0.660  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:23  INFO     [RAMS] Controller stopped.
+23:09:23  INFO     
+--- Block 7/10  Policy: safety  Load: heavy (75%) ---
+23:09:23  INFO     [RAMS] Starting resource monitor ...
+23:09:23  INFO     [RAMS] Loading model tiers ...
+23:09:23  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:09:24  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:09:25  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:09:25  INFO     [RAMS] Controller ready. Policy: safety
+23:09:26  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.629)
+23:09:26  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.665)
+23:09:26  INFO       [safety / heavy] 20/200  tier=SMALL   latency=20.3 ms  R=0.649  target=0.75  dets=2  vru=False  backend=ultralytics
+23:09:27  INFO       [safety / heavy] 40/200  tier=SMALL   latency=25.5 ms  R=0.657  target=0.75  dets=6  vru=False  backend=ultralytics
+23:09:28  INFO       [safety / heavy] 60/200  tier=SMALL   latency=20.5 ms  R=0.711  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:28  INFO       [safety / heavy] 80/200  tier=SMALL   latency=20.8 ms  R=0.657  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:29  INFO       [safety / heavy] 100/200  tier=SMALL   latency=21.8 ms  R=0.676  target=0.75  dets=8  vru=False  backend=ultralytics
+23:09:30  INFO       [safety / heavy] 120/200  tier=SMALL   latency=20.8 ms  R=0.706  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:30  INFO       [safety / heavy] 140/200  tier=SMALL   latency=20.6 ms  R=0.653  target=0.75  dets=4  vru=True  backend=ultralytics
+23:09:31  INFO       [safety / heavy] 160/200  tier=SMALL   latency=19.9 ms  R=0.649  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:32  INFO       [safety / heavy] 180/200  tier=SMALL   latency=20.6 ms  R=0.654  target=0.75  dets=4  vru=False  backend=ultralytics
+23:09:32  INFO       [safety / heavy] 200/200  tier=SMALL   latency=23.1 ms  R=0.650  target=0.75  dets=7  vru=True  backend=ultralytics
+23:09:33  INFO     [RAMS] Controller stopped.
+23:09:33  INFO     
+--- Block 8/10  Policy: fixed_small  Load: heavy (75%) ---
+23:09:33  INFO     [RAMS] Starting resource monitor ...
+23:09:33  INFO     [RAMS] Loading model tiers ...
+23:09:33  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:09:33  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:09:34  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:09:34  INFO     [RAMS] Controller ready. Policy: fixed
+23:09:36  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=21.0 ms  R=0.693  target=0.75  dets=2  vru=False  backend=ultralytics
+23:09:37  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=26.7 ms  R=0.686  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:37  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=31.6 ms  R=0.687  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:38  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=21.7 ms  R=0.710  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:39  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=23.5 ms  R=0.684  target=0.75  dets=10  vru=False  backend=ultralytics
+23:09:40  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=19.6 ms  R=0.709  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:40  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=20.7 ms  R=0.700  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:41  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=21.9 ms  R=0.704  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:42  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=20.9 ms  R=0.707  target=0.75  dets=4  vru=False  backend=ultralytics
+23:09:42  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=22.2 ms  R=0.652  target=0.75  dets=13  vru=True  backend=ultralytics
+23:09:42  INFO     [RAMS] Controller stopped.
+23:09:42  INFO     
+--- Block 8/10  Policy: safety  Load: heavy (75%) ---
+23:09:42  INFO     [RAMS] Starting resource monitor ...
+23:09:42  INFO     [RAMS] Loading model tiers ...
+23:09:43  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:09:43  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:09:44  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:09:44  INFO     [RAMS] Controller ready. Policy: safety
+23:09:45  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.601)
+23:09:45  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.659)
+23:09:46  INFO       [safety / heavy] 20/200  tier=SMALL   latency=20.8 ms  R=0.647  target=0.75  dets=2  vru=False  backend=ultralytics
+23:09:46  INFO       [safety / heavy] 40/200  tier=SMALL   latency=21.9 ms  R=0.667  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:46  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.661)
+23:09:46  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.647)
+23:09:47  INFO       [safety / heavy] 60/200  tier=SMALL   latency=20.5 ms  R=0.671  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:48  INFO       [safety / heavy] 80/200  tier=SMALL   latency=21.7 ms  R=0.664  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:48  INFO       [safety / heavy] 100/200  tier=SMALL   latency=21.4 ms  R=0.660  target=0.75  dets=10  vru=False  backend=ultralytics
+23:09:49  INFO       [safety / heavy] 120/200  tier=SMALL   latency=19.0 ms  R=0.642  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:50  INFO       [safety / heavy] 140/200  tier=SMALL   latency=21.8 ms  R=0.665  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:50  INFO       [safety / heavy] 160/200  tier=SMALL   latency=19.6 ms  R=0.680  target=0.75  dets=1  vru=False  backend=ultralytics
+23:09:51  INFO       [safety / heavy] 180/200  tier=SMALL   latency=21.5 ms  R=0.685  target=0.75  dets=4  vru=False  backend=ultralytics
+23:09:52  INFO       [safety / heavy] 200/200  tier=SMALL   latency=23.5 ms  R=0.648  target=0.75  dets=13  vru=True  backend=ultralytics
+23:09:52  INFO     [RAMS] Controller stopped.
+23:09:52  INFO     
+--- Block 8/10  Policy: threshold  Load: heavy (75%) ---
+23:09:52  INFO     [RAMS] Starting resource monitor ...
+23:09:52  INFO     [RAMS] Loading model tiers ...
+23:09:52  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:09:53  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:09:53  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:09:53  INFO     [RAMS] Controller ready. Policy: threshold
+23:09:55  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.616)
+23:09:55  INFO       [threshold / heavy] 20/200  tier=NANO    latency=17.8 ms  R=0.655  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:56  INFO       [threshold / heavy] 40/200  tier=NANO    latency=19.9 ms  R=0.662  target=0.75  dets=3  vru=False  backend=ultralytics
+23:09:56  INFO       [threshold / heavy] 60/200  tier=NANO    latency=22.8 ms  R=0.664  target=0.75  dets=2  vru=False  backend=ultralytics
+23:09:57  INFO       [threshold / heavy] 80/200  tier=NANO    latency=20.9 ms  R=0.733  target=0.75  dets=5  vru=False  backend=ultralytics
+23:09:58  INFO       [threshold / heavy] 100/200  tier=NANO    latency=22.7 ms  R=0.703  target=0.75  dets=7  vru=False  backend=ultralytics
+23:09:59  INFO       [threshold / heavy] 120/200  tier=NANO    latency=21.4 ms  R=0.691  target=0.75  dets=0  vru=False  backend=ultralytics
+23:09:59  INFO       [threshold / heavy] 140/200  tier=NANO    latency=19.8 ms  R=0.691  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:00  INFO       [threshold / heavy] 160/200  tier=NANO    latency=26.9 ms  R=0.707  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:01  INFO       [threshold / heavy] 180/200  tier=NANO    latency=19.7 ms  R=0.707  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:02  INFO       [threshold / heavy] 200/200  tier=NANO    latency=23.5 ms  R=0.714  target=0.75  dets=12  vru=False  backend=ultralytics
+23:10:02  INFO     [RAMS] Controller stopped.
+23:10:02  INFO     
+--- Block 8/10  Policy: safety2  Load: heavy (75%) ---
+23:10:02  INFO     [RAMS] Starting resource monitor ...
+23:10:02  INFO     [RAMS] Loading model tiers ...
+23:10:02  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:10:02  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:10:03  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:10:03  INFO     [RAMS] Controller ready. Policy: safety2
+23:10:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.639)
+23:10:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.653)
+23:10:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.746)
+23:10:05  INFO       [safety2 / heavy] 20/200  tier=NANO    latency=18.2 ms  R=0.746  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:06  INFO       [safety2 / heavy] 40/200  tier=NANO    latency=20.9 ms  R=0.709  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:06  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.671)
+23:10:06  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=27.4 ms  R=0.696  target=0.75  dets=11  vru=True  backend=ultralytics
+23:10:07  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.717)
+23:10:07  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.717)
+23:10:07  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.698)
+23:10:07  INFO       [safety2 / heavy] 80/200  tier=NANO    latency=20.4 ms  R=0.646  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:07  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.654)
+23:10:08  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=27.9 ms  R=0.675  target=0.75  dets=10  vru=False  backend=ultralytics
+23:10:08  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.723)
+23:10:08  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.647)
+23:10:09  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=27.0 ms  R=0.745  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:09  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.686)
+23:10:09  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.664)
+23:10:10  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=26.7 ms  R=0.741  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:10  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.679)
+23:10:10  INFO       [safety2 / heavy] 160/200  tier=NANO    latency=19.3 ms  R=0.673  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:11  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.695)
+23:10:11  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=29.7 ms  R=0.668  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:12  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.726)
+23:10:12  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.662)
+23:10:12  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.662)
+23:10:12  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=31.8 ms  R=0.662  target=0.75  dets=16  vru=False  backend=ultralytics
+23:10:12  INFO     [RAMS] Controller stopped.
+23:10:12  INFO     
+--- Block 8/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:10:12  INFO     [RAMS] Starting resource monitor ...
+23:10:12  INFO     [RAMS] Loading model tiers ...
+23:10:12  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:10:13  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:10:14  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:10:14  INFO     [RAMS] Controller ready. Policy: fixed
+23:10:15  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.589)
+23:10:15  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=18.2 ms  R=0.658  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:16  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=19.7 ms  R=0.666  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:17  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=20.5 ms  R=0.666  target=0.75  dets=2  vru=False  backend=ultralytics
+23:10:17  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=21.3 ms  R=0.657  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:18  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=20.5 ms  R=0.669  target=0.75  dets=7  vru=False  backend=ultralytics
+23:10:19  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=20.2 ms  R=0.696  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:19  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=19.6 ms  R=0.697  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:20  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=21.2 ms  R=0.697  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:21  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=20.5 ms  R=0.737  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:21  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=22.9 ms  R=0.686  target=0.75  dets=12  vru=False  backend=ultralytics
+23:10:22  INFO     [RAMS] Controller stopped.
+23:10:22  INFO     
+--- Block 8/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:10:22  INFO     [RAMS] Starting resource monitor ...
+23:10:22  INFO     [RAMS] Loading model tiers ...
+23:10:22  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:10:22  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:10:23  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:10:23  INFO     [RAMS] Controller ready. Policy: fixed
+23:10:24  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.651)
+23:10:25  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=25.5 ms  R=0.718  target=0.75  dets=4  vru=True  backend=ultralytics
+23:10:26  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=26.7 ms  R=0.748  target=0.75  dets=8  vru=False  backend=ultralytics
+23:10:27  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=28.6 ms  R=0.665  target=0.75  dets=11  vru=True  backend=ultralytics
+23:10:27  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=25.9 ms  R=0.700  target=0.75  dets=6  vru=False  backend=ultralytics
+23:10:28  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=26.6 ms  R=0.674  target=0.75  dets=10  vru=False  backend=ultralytics
+23:10:29  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=25.4 ms  R=0.673  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:30  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=26.2 ms  R=0.722  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:31  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=27.2 ms  R=0.659  target=0.75  dets=6  vru=False  backend=ultralytics
+23:10:31  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=25.7 ms  R=0.706  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:32  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=28.0 ms  R=0.645  target=0.75  dets=16  vru=False  backend=ultralytics
+23:10:32  INFO     [RAMS] Controller stopped.
+23:10:32  INFO     
+--- Block 8/10  Policy: predictive  Load: heavy (75%) ---
+23:10:32  INFO     [RAMS] Starting resource monitor ...
+23:10:32  INFO     [RAMS] Loading model tiers ...
+23:10:33  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:10:33  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:10:34  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:10:34  INFO     [RAMS] Controller ready. Policy: predictive
+23:10:35  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.638)
+23:10:35  INFO       [predictive / heavy] 20/200  tier=NANO    latency=17.4 ms  R=0.657  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:36  INFO       [predictive / heavy] 40/200  tier=NANO    latency=22.8 ms  R=0.661  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:37  INFO       [predictive / heavy] 60/200  tier=NANO    latency=19.6 ms  R=0.679  target=0.75  dets=2  vru=False  backend=ultralytics
+23:10:37  INFO       [predictive / heavy] 80/200  tier=NANO    latency=20.5 ms  R=0.650  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:38  INFO       [predictive / heavy] 100/200  tier=NANO    latency=23.3 ms  R=0.679  target=0.75  dets=7  vru=False  backend=ultralytics
+23:10:39  INFO       [predictive / heavy] 120/200  tier=NANO    latency=18.0 ms  R=0.686  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:39  INFO       [predictive / heavy] 140/200  tier=NANO    latency=20.4 ms  R=0.648  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:40  INFO       [predictive / heavy] 160/200  tier=NANO    latency=19.1 ms  R=0.665  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:41  INFO       [predictive / heavy] 180/200  tier=NANO    latency=24.0 ms  R=0.712  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:41  INFO       [predictive / heavy] 200/200  tier=NANO    latency=22.3 ms  R=0.698  target=0.75  dets=12  vru=False  backend=ultralytics
+23:10:41  INFO     [RAMS] Controller stopped.
+23:10:41  INFO     
+--- Block 8/10  Policy: adaptive  Load: heavy (75%) ---
+23:10:41  INFO     [RAMS] Starting resource monitor ...
+23:10:41  INFO     [RAMS] Loading model tiers ...
+23:10:42  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:10:42  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:10:43  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:10:43  INFO     [RAMS] Controller ready. Policy: adaptive
+23:10:44  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.649)
+23:10:45  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=18.3 ms  R=0.685  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:46  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=21.0 ms  R=0.708  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:46  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=19.6 ms  R=0.689  target=0.75  dets=2  vru=False  backend=ultralytics
+23:10:47  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=20.4 ms  R=0.654  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:48  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=23.0 ms  R=0.660  target=0.75  dets=7  vru=False  backend=ultralytics
+23:10:48  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=17.7 ms  R=0.666  target=0.75  dets=0  vru=False  backend=ultralytics
+23:10:49  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=19.8 ms  R=0.665  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:50  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=21.6 ms  R=0.658  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:50  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=19.4 ms  R=0.662  target=0.75  dets=1  vru=False  backend=ultralytics
+23:10:51  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=21.6 ms  R=0.648  target=0.75  dets=12  vru=False  backend=ultralytics
+23:10:51  INFO     [RAMS] Controller stopped.
+23:10:51  INFO     
+--- Block 9/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:10:51  INFO     [RAMS] Starting resource monitor ...
+23:10:51  INFO     [RAMS] Loading model tiers ...
+23:10:51  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:10:52  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:10:52  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:10:52  INFO     [RAMS] Controller ready. Policy: fixed
+23:10:53  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.591)
+23:10:54  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=31.2 ms  R=0.694  target=0.75  dets=5  vru=False  backend=ultralytics
+23:10:55  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=28.0 ms  R=0.705  target=0.75  dets=14  vru=False  backend=ultralytics
+23:10:56  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=26.7 ms  R=0.681  target=0.75  dets=6  vru=False  backend=ultralytics
+23:10:57  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=26.0 ms  R=0.755  target=0.75  dets=3  vru=False  backend=ultralytics
+23:10:58  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=28.4 ms  R=0.744  target=0.75  dets=12  vru=False  backend=ultralytics
+23:10:58  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=29.3 ms  R=0.751  target=0.75  dets=19  vru=False  backend=ultralytics
+23:10:59  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=27.6 ms  R=0.731  target=0.75  dets=12  vru=False  backend=ultralytics
+23:11:00  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=30.3 ms  R=0.724  target=0.75  dets=8  vru=False  backend=ultralytics
+23:11:01  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=29.6 ms  R=0.663  target=0.75  dets=8  vru=False  backend=ultralytics
+23:11:02  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=30.2 ms  R=0.689  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:02  INFO     [RAMS] Controller stopped.
+23:11:02  INFO     
+--- Block 9/10  Policy: adaptive  Load: heavy (75%) ---
+23:11:02  INFO     [RAMS] Starting resource monitor ...
+23:11:02  INFO     [RAMS] Loading model tiers ...
+23:11:02  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:02  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:11:03  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:11:03  INFO     [RAMS] Controller ready. Policy: adaptive
+23:11:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.685)
+23:11:05  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=22.6 ms  R=0.689  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:06  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=20.7 ms  R=0.704  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:06  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=18.0 ms  R=0.727  target=0.75  dets=0  vru=False  backend=ultralytics
+23:11:07  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=21.2 ms  R=0.693  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:08  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=25.7 ms  R=0.703  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:09  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=22.1 ms  R=0.672  target=0.75  dets=14  vru=False  backend=ultralytics
+23:11:09  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=19.9 ms  R=0.651  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:10  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=23.3 ms  R=0.666  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:11  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=19.9 ms  R=0.661  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:11  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=19.3 ms  R=0.659  target=0.75  dets=1  vru=False  backend=ultralytics
+23:11:11  INFO     [RAMS] Controller stopped.
+23:11:11  INFO     
+--- Block 9/10  Policy: threshold  Load: heavy (75%) ---
+23:11:11  INFO     [RAMS] Starting resource monitor ...
+23:11:11  INFO     [RAMS] Loading model tiers ...
+23:11:12  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:12  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:11:13  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:11:13  INFO     [RAMS] Controller ready. Policy: threshold
+23:11:14  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.594)
+23:11:15  INFO       [threshold / heavy] 20/200  tier=NANO    latency=19.9 ms  R=0.666  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:15  INFO       [threshold / heavy] 40/200  tier=NANO    latency=24.0 ms  R=0.657  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:16  INFO       [threshold / heavy] 60/200  tier=NANO    latency=17.6 ms  R=0.649  target=0.75  dets=0  vru=False  backend=ultralytics
+23:11:16  INFO       [threshold / heavy] 80/200  tier=NANO    latency=20.5 ms  R=0.667  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:17  INFO       [threshold / heavy] 100/200  tier=NANO    latency=20.5 ms  R=0.659  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:18  INFO       [threshold / heavy] 120/200  tier=NANO    latency=22.1 ms  R=0.654  target=0.75  dets=14  vru=False  backend=ultralytics
+23:11:18  INFO       [threshold / heavy] 140/200  tier=NANO    latency=19.8 ms  R=0.647  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:19  INFO       [threshold / heavy] 160/200  tier=NANO    latency=19.8 ms  R=0.669  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:20  INFO       [threshold / heavy] 180/200  tier=NANO    latency=23.4 ms  R=0.716  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:20  INFO       [threshold / heavy] 200/200  tier=NANO    latency=19.3 ms  R=0.650  target=0.75  dets=1  vru=False  backend=ultralytics
+23:11:21  INFO     [RAMS] Controller stopped.
+23:11:21  INFO     
+--- Block 9/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:11:21  INFO     [RAMS] Starting resource monitor ...
+23:11:21  INFO     [RAMS] Loading model tiers ...
+23:11:21  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:21  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:11:22  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:11:22  INFO     [RAMS] Controller ready. Policy: fixed
+23:11:23  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.596)
+23:11:24  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=21.5 ms  R=0.725  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:24  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=21.8 ms  R=0.699  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:25  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=20.2 ms  R=0.673  target=0.75  dets=0  vru=False  backend=ultralytics
+23:11:26  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=20.5 ms  R=0.693  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:26  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=22.4 ms  R=0.713  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:27  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=25.0 ms  R=0.686  target=0.75  dets=14  vru=False  backend=ultralytics
+23:11:28  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=21.8 ms  R=0.689  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:29  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=23.8 ms  R=0.719  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:29  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=21.7 ms  R=0.682  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:30  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=19.6 ms  R=0.702  target=0.75  dets=1  vru=False  backend=ultralytics
+23:11:30  INFO     [RAMS] Controller stopped.
+23:11:30  INFO     
+--- Block 9/10  Policy: safety  Load: heavy (75%) ---
+23:11:30  INFO     [RAMS] Starting resource monitor ...
+23:11:30  INFO     [RAMS] Loading model tiers ...
+23:11:31  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:31  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:11:32  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:11:32  INFO     [RAMS] Controller ready. Policy: safety
+23:11:34  INFO       [safety / heavy] 20/200  tier=SMALL   latency=21.6 ms  R=0.658  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:34  INFO       [safety / heavy] 40/200  tier=SMALL   latency=20.7 ms  R=0.673  target=0.75  dets=5  vru=False  backend=ultralytics
+23:11:35  INFO       [safety / heavy] 60/200  tier=SMALL   latency=19.6 ms  R=0.655  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:36  INFO       [safety / heavy] 80/200  tier=SMALL   latency=22.5 ms  R=0.675  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:36  INFO       [safety / heavy] 100/200  tier=SMALL   latency=21.3 ms  R=0.671  target=0.75  dets=7  vru=False  backend=ultralytics
+23:11:37  INFO       [safety / heavy] 120/200  tier=SMALL   latency=26.3 ms  R=0.671  target=0.75  dets=16  vru=False  backend=ultralytics
+23:11:38  INFO       [safety / heavy] 140/200  tier=SMALL   latency=22.5 ms  R=0.671  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:38  INFO       [safety / heavy] 160/200  tier=SMALL   latency=20.9 ms  R=0.677  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:39  INFO       [safety / heavy] 180/200  tier=SMALL   latency=20.8 ms  R=0.670  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:40  INFO       [safety / heavy] 200/200  tier=SMALL   latency=20.6 ms  R=0.649  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:40  INFO     [RAMS] Controller stopped.
+23:11:40  INFO     
+--- Block 9/10  Policy: predictive  Load: heavy (75%) ---
+23:11:40  INFO     [RAMS] Starting resource monitor ...
+23:11:40  INFO     [RAMS] Loading model tiers ...
+23:11:40  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:40  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:11:41  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:11:41  INFO     [RAMS] Controller ready. Policy: predictive
+23:11:42  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.589)
+23:11:43  INFO       [predictive / heavy] 20/200  tier=NANO    latency=20.1 ms  R=0.669  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:44  INFO       [predictive / heavy] 40/200  tier=NANO    latency=19.9 ms  R=0.649  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:44  INFO       [predictive / heavy] 60/200  tier=NANO    latency=17.5 ms  R=0.666  target=0.75  dets=0  vru=False  backend=ultralytics
+23:11:45  INFO       [predictive / heavy] 80/200  tier=NANO    latency=19.8 ms  R=0.650  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:45  INFO       [predictive / heavy] 100/200  tier=NANO    latency=20.2 ms  R=0.659  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:46  INFO       [predictive / heavy] 120/200  tier=NANO    latency=27.3 ms  R=0.703  target=0.75  dets=14  vru=False  backend=ultralytics
+23:11:47  INFO       [predictive / heavy] 140/200  tier=NANO    latency=20.4 ms  R=0.692  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:48  INFO       [predictive / heavy] 160/200  tier=NANO    latency=22.1 ms  R=0.701  target=0.75  dets=3  vru=False  backend=ultralytics
+23:11:48  INFO       [predictive / heavy] 180/200  tier=NANO    latency=20.3 ms  R=0.701  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:49  INFO       [predictive / heavy] 200/200  tier=NANO    latency=22.7 ms  R=0.695  target=0.75  dets=1  vru=False  backend=ultralytics
+23:11:49  INFO     [RAMS] Controller stopped.
+23:11:49  INFO     
+--- Block 9/10  Policy: fixed_small  Load: heavy (75%) ---
+23:11:49  INFO     [RAMS] Starting resource monitor ...
+23:11:49  INFO     [RAMS] Loading model tiers ...
+23:11:50  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:50  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:11:51  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:11:51  INFO     [RAMS] Controller ready. Policy: fixed
+23:11:53  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=20.9 ms  R=0.705  target=0.75  dets=4  vru=False  backend=ultralytics
+23:11:53  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=20.8 ms  R=0.675  target=0.75  dets=5  vru=False  backend=ultralytics
+23:11:54  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=20.1 ms  R=0.679  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:55  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=20.8 ms  R=0.740  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:55  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=21.6 ms  R=0.662  target=0.75  dets=7  vru=False  backend=ultralytics
+23:11:56  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=23.0 ms  R=0.678  target=0.75  dets=16  vru=False  backend=ultralytics
+23:11:57  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=22.2 ms  R=0.653  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:57  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=21.3 ms  R=0.656  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:58  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=20.8 ms  R=0.677  target=0.75  dets=6  vru=False  backend=ultralytics
+23:11:59  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=20.7 ms  R=0.681  target=0.75  dets=2  vru=False  backend=ultralytics
+23:11:59  INFO     [RAMS] Controller stopped.
+23:11:59  INFO     
+--- Block 9/10  Policy: safety2  Load: heavy (75%) ---
+23:11:59  INFO     [RAMS] Starting resource monitor ...
+23:11:59  INFO     [RAMS] Loading model tiers ...
+23:11:59  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:11:59  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:00  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:00  INFO     [RAMS] Controller ready. Policy: safety2
+23:12:02  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.700)
+23:12:02  INFO       [safety2 / heavy] 20/200  tier=MEDIUM  latency=26.1 ms  R=0.670  target=0.75  dets=5  vru=False  backend=ultralytics
+23:12:02  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.705)
+23:12:03  INFO       [safety2 / heavy] 40/200  tier=NANO    latency=20.7 ms  R=0.673  target=0.75  dets=4  vru=False  backend=ultralytics
+23:12:03  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.659)
+23:12:03  INFO       [safety2 / heavy] 60/200  tier=MEDIUM  latency=26.2 ms  R=0.748  target=0.75  dets=6  vru=False  backend=ultralytics
+23:12:04  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.728)
+23:12:04  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.689)
+23:12:04  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.640)
+23:12:04  INFO       [safety2 / heavy] 80/200  tier=MEDIUM  latency=25.7 ms  R=0.649  target=0.75  dets=3  vru=False  backend=ultralytics
+23:12:05  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=30.7 ms  R=0.716  target=0.75  dets=12  vru=False  backend=ultralytics
+23:12:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.683)
+23:12:05  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.640)
+23:12:06  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=29.6 ms  R=0.791  target=0.75  dets=19  vru=False  backend=ultralytics
+23:12:06  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.683)
+23:12:06  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.662)
+23:12:06  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=27.3 ms  R=0.703  target=0.75  dets=12  vru=False  backend=ultralytics
+23:12:07  INFO       [safety2 / heavy] 160/200  tier=MEDIUM  latency=26.8 ms  R=0.689  target=0.75  dets=8  vru=False  backend=ultralytics
+23:12:08  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.762)
+23:12:08  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.732)
+23:12:08  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=29.9 ms  R=0.755  target=0.75  dets=8  vru=False  backend=ultralytics
+23:12:09  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=27.4 ms  R=0.740  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:09  INFO     [RAMS] Controller stopped.
+23:12:09  INFO     
+--- Block 10/10  Policy: threshold  Load: heavy (75%) ---
+23:12:09  INFO     [RAMS] Starting resource monitor ...
+23:12:09  INFO     [RAMS] Loading model tiers ...
+23:12:09  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:12:10  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:11  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:11  INFO     [RAMS] Controller ready. Policy: threshold
+23:12:12  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.682)
+23:12:12  INFO       [threshold / heavy] 20/200  tier=NANO    latency=40.2 ms  R=0.695  target=0.75  dets=4  vru=False  backend=ultralytics
+23:12:13  INFO       [threshold / heavy] 40/200  tier=NANO    latency=21.2 ms  R=0.700  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:14  INFO       [threshold / heavy] 60/200  tier=NANO    latency=25.5 ms  R=0.692  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:15  INFO       [threshold / heavy] 80/200  tier=NANO    latency=19.2 ms  R=0.650  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:15  INFO       [threshold / heavy] 100/200  tier=NANO    latency=20.0 ms  R=0.652  target=0.75  dets=5  vru=False  backend=ultralytics
+23:12:16  INFO       [threshold / heavy] 120/200  tier=NANO    latency=20.2 ms  R=0.671  target=0.75  dets=6  vru=False  backend=ultralytics
+23:12:17  INFO       [threshold / heavy] 140/200  tier=NANO    latency=19.0 ms  R=0.656  target=0.75  dets=1  vru=False  backend=ultralytics
+23:12:17  INFO       [threshold / heavy] 160/200  tier=NANO    latency=21.0 ms  R=0.653  target=0.75  dets=9  vru=False  backend=ultralytics
+23:12:18  INFO       [threshold / heavy] 180/200  tier=NANO    latency=20.7 ms  R=0.682  target=0.75  dets=8  vru=False  backend=ultralytics
+23:12:18  INFO       [threshold / heavy] 200/200  tier=NANO    latency=19.0 ms  R=0.656  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:19  INFO     [RAMS] Controller stopped.
+23:12:19  INFO     
+--- Block 10/10  Policy: adaptive  Load: heavy (75%) ---
+23:12:19  INFO     [RAMS] Starting resource monitor ...
+23:12:19  INFO     [RAMS] Loading model tiers ...
+23:12:19  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:12:19  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:20  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:20  INFO     [RAMS] Controller ready. Policy: adaptive
+23:12:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.585)
+23:12:22  INFO       [adaptive / heavy] 20/200  tier=NANO    latency=20.3 ms  R=0.659  target=0.75  dets=4  vru=False  backend=ultralytics
+23:12:23  INFO       [adaptive / heavy] 40/200  tier=NANO    latency=19.8 ms  R=0.669  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:23  INFO       [adaptive / heavy] 60/200  tier=NANO    latency=17.7 ms  R=0.659  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:24  INFO       [adaptive / heavy] 80/200  tier=NANO    latency=20.2 ms  R=0.664  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:24  INFO       [adaptive / heavy] 100/200  tier=NANO    latency=20.9 ms  R=0.659  target=0.75  dets=5  vru=False  backend=ultralytics
+23:12:25  INFO       [adaptive / heavy] 120/200  tier=NANO    latency=20.1 ms  R=0.647  target=0.75  dets=6  vru=False  backend=ultralytics
+23:12:26  INFO       [adaptive / heavy] 140/200  tier=NANO    latency=21.1 ms  R=0.706  target=0.75  dets=1  vru=False  backend=ultralytics
+23:12:26  INFO       [adaptive / heavy] 160/200  tier=NANO    latency=21.0 ms  R=0.662  target=0.75  dets=9  vru=False  backend=ultralytics
+23:12:27  INFO       [adaptive / heavy] 180/200  tier=NANO    latency=21.2 ms  R=0.651  target=0.75  dets=8  vru=False  backend=ultralytics
+23:12:28  INFO       [adaptive / heavy] 200/200  tier=NANO    latency=17.9 ms  R=0.711  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:28  INFO     [RAMS] Controller stopped.
+23:12:28  INFO     
+--- Block 10/10  Policy: fixed_small  Load: heavy (75%) ---
+23:12:28  INFO     [RAMS] Starting resource monitor ...
+23:12:28  INFO     [RAMS] Loading model tiers ...
+23:12:28  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:12:29  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:29  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:29  INFO     [RAMS] Controller ready. Policy: fixed
+23:12:31  INFO       [fixed_small / heavy] 20/200  tier=SMALL   latency=22.1 ms  R=0.697  target=0.75  dets=8  vru=False  backend=ultralytics
+23:12:32  INFO       [fixed_small / heavy] 40/200  tier=SMALL   latency=21.0 ms  R=0.706  target=0.75  dets=3  vru=False  backend=ultralytics
+23:12:33  INFO       [fixed_small / heavy] 60/200  tier=SMALL   latency=19.4 ms  R=0.716  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:33  INFO       [fixed_small / heavy] 80/200  tier=SMALL   latency=21.3 ms  R=0.720  target=0.75  dets=3  vru=False  backend=ultralytics
+23:12:34  INFO       [fixed_small / heavy] 100/200  tier=SMALL   latency=21.6 ms  R=0.692  target=0.75  dets=5  vru=False  backend=ultralytics
+23:12:35  INFO       [fixed_small / heavy] 120/200  tier=SMALL   latency=22.0 ms  R=0.723  target=0.75  dets=7  vru=False  backend=ultralytics
+23:12:35  INFO       [fixed_small / heavy] 140/200  tier=SMALL   latency=21.1 ms  R=0.716  target=0.75  dets=6  vru=False  backend=ultralytics
+23:12:36  INFO       [fixed_small / heavy] 160/200  tier=SMALL   latency=23.0 ms  R=0.671  target=0.75  dets=13  vru=False  backend=ultralytics
+23:12:37  INFO       [fixed_small / heavy] 180/200  tier=SMALL   latency=23.6 ms  R=0.723  target=0.75  dets=15  vru=True  backend=ultralytics
+23:12:37  INFO       [fixed_small / heavy] 200/200  tier=SMALL   latency=20.2 ms  R=0.672  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:37  INFO     [RAMS] Controller stopped.
+23:12:38  INFO     
+--- Block 10/10  Policy: fixed_medium  Load: heavy (75%) ---
+23:12:38  INFO     [RAMS] Starting resource monitor ...
+23:12:38  INFO     [RAMS] Loading model tiers ...
+23:12:38  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:12:38  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:39  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:39  INFO     [RAMS] Controller ready. Policy: fixed
+23:12:40  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.592)
+23:12:41  INFO       [fixed_medium / heavy] 20/200  tier=MEDIUM  latency=28.2 ms  R=0.682  target=0.75  dets=11  vru=False  backend=ultralytics
+23:12:42  INFO       [fixed_medium / heavy] 40/200  tier=MEDIUM  latency=26.4 ms  R=0.751  target=0.75  dets=7  vru=False  backend=ultralytics
+23:12:42  INFO       [fixed_medium / heavy] 60/200  tier=MEDIUM  latency=26.4 ms  R=0.721  target=0.75  dets=6  vru=False  backend=ultralytics
+23:12:43  INFO       [fixed_medium / heavy] 80/200  tier=MEDIUM  latency=25.9 ms  R=0.725  target=0.75  dets=4  vru=False  backend=ultralytics
+23:12:44  INFO       [fixed_medium / heavy] 100/200  tier=MEDIUM  latency=26.1 ms  R=0.717  target=0.75  dets=5  vru=False  backend=ultralytics
+23:12:45  INFO       [fixed_medium / heavy] 120/200  tier=MEDIUM  latency=26.5 ms  R=0.712  target=0.75  dets=7  vru=False  backend=ultralytics
+23:12:46  INFO       [fixed_medium / heavy] 140/200  tier=MEDIUM  latency=27.5 ms  R=0.718  target=0.75  dets=11  vru=True  backend=ultralytics
+23:12:46  INFO       [fixed_medium / heavy] 160/200  tier=MEDIUM  latency=27.8 ms  R=0.711  target=0.75  dets=14  vru=False  backend=ultralytics
+23:12:47  INFO       [fixed_medium / heavy] 180/200  tier=MEDIUM  latency=28.8 ms  R=0.733  target=0.75  dets=18  vru=True  backend=ultralytics
+23:12:48  INFO       [fixed_medium / heavy] 200/200  tier=MEDIUM  latency=25.6 ms  R=0.733  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:48  INFO     [RAMS] Controller stopped.
+23:12:48  INFO     
+--- Block 10/10  Policy: fixed_nano  Load: heavy (75%) ---
+23:12:48  INFO     [RAMS] Starting resource monitor ...
+23:12:48  INFO     [RAMS] Loading model tiers ...
+23:12:48  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:12:49  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:50  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:50  INFO     [RAMS] Controller ready. Policy: fixed
+23:12:51  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.591)
+23:12:51  INFO       [fixed_nano / heavy] 20/200  tier=NANO    latency=20.6 ms  R=0.726  target=0.75  dets=4  vru=False  backend=ultralytics
+23:12:52  INFO       [fixed_nano / heavy] 40/200  tier=NANO    latency=29.3 ms  R=0.711  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:53  INFO       [fixed_nano / heavy] 60/200  tier=NANO    latency=22.3 ms  R=0.720  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:54  INFO       [fixed_nano / heavy] 80/200  tier=NANO    latency=34.9 ms  R=0.704  target=0.75  dets=2  vru=False  backend=ultralytics
+23:12:54  INFO       [fixed_nano / heavy] 100/200  tier=NANO    latency=20.6 ms  R=0.700  target=0.75  dets=5  vru=False  backend=ultralytics
+23:12:55  INFO       [fixed_nano / heavy] 120/200  tier=NANO    latency=20.7 ms  R=0.699  target=0.75  dets=6  vru=False  backend=ultralytics
+23:12:56  INFO       [fixed_nano / heavy] 140/200  tier=NANO    latency=24.2 ms  R=0.731  target=0.75  dets=1  vru=False  backend=ultralytics
+23:12:57  INFO       [fixed_nano / heavy] 160/200  tier=NANO    latency=22.7 ms  R=0.670  target=0.75  dets=9  vru=False  backend=ultralytics
+23:12:57  INFO       [fixed_nano / heavy] 180/200  tier=NANO    latency=21.0 ms  R=0.692  target=0.75  dets=8  vru=False  backend=ultralytics
+23:12:58  INFO       [fixed_nano / heavy] 200/200  tier=NANO    latency=17.7 ms  R=0.660  target=0.75  dets=0  vru=False  backend=ultralytics
+23:12:58  INFO     [RAMS] Controller stopped.
+23:12:58  INFO     
+--- Block 10/10  Policy: safety2  Load: heavy (75%) ---
+23:12:58  INFO     [RAMS] Starting resource monitor ...
+23:12:58  INFO     [RAMS] Loading model tiers ...
+23:12:58  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:12:59  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:12:59  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:12:59  INFO     [RAMS] Controller ready. Policy: safety2
+23:13:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.637)
+23:13:01  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.647)
+23:13:01  INFO       [safety2 / heavy] 20/200  tier=SMALL   latency=24.3 ms  R=0.648  target=0.75  dets=8  vru=False  backend=ultralytics
+23:13:01  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.645)
+23:13:01  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.647)
+23:13:02  INFO       [safety2 / heavy] 40/200  tier=MEDIUM  latency=26.2 ms  R=0.653  target=0.75  dets=7  vru=False  backend=ultralytics
+23:13:03  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.707)
+23:13:03  INFO       [safety2 / heavy] 60/200  tier=NANO    latency=24.1 ms  R=0.707  target=0.75  dets=0  vru=False  backend=ultralytics
+23:13:03  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.658)
+23:13:03  INFO       [safety2 / heavy] 80/200  tier=SMALL   latency=20.8 ms  R=0.652  target=0.75  dets=3  vru=False  backend=ultralytics
+23:13:04  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.674)
+23:13:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.728)
+23:13:04  INFO       [safety2 / heavy] 100/200  tier=MEDIUM  latency=26.8 ms  R=0.664  target=0.75  dets=5  vru=False  backend=ultralytics
+23:13:04  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.682)
+23:13:04  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.682)
+23:13:05  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.764)
+23:13:05  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.764)
+23:13:05  INFO       [safety2 / heavy] 120/200  tier=MEDIUM  latency=30.2 ms  R=0.731  target=0.75  dets=7  vru=False  backend=ultralytics
+23:13:05  INFO     [RAMS] Tier switch: MEDIUM → SMALL  (R=0.647)
+23:13:06  INFO     [RAMS] Tier switch: SMALL → MEDIUM  (R=0.691)
+23:13:06  INFO       [safety2 / heavy] 140/200  tier=MEDIUM  latency=28.6 ms  R=0.675  target=0.75  dets=11  vru=True  backend=ultralytics
+23:13:06  INFO     [RAMS] Tier switch: MEDIUM → NANO  (R=0.685)
+23:13:06  INFO     [RAMS] Tier switch: NANO → MEDIUM  (R=0.686)
+23:13:06  INFO       [safety2 / heavy] 160/200  tier=MEDIUM  latency=27.7 ms  R=0.669  target=0.75  dets=14  vru=False  backend=ultralytics
+23:13:07  INFO       [safety2 / heavy] 180/200  tier=MEDIUM  latency=28.7 ms  R=0.684  target=0.75  dets=18  vru=True  backend=ultralytics
+23:13:08  INFO       [safety2 / heavy] 200/200  tier=MEDIUM  latency=25.3 ms  R=0.713  target=0.75  dets=2  vru=False  backend=ultralytics
+23:13:08  INFO     [RAMS] Controller stopped.
+23:13:08  INFO     
+--- Block 10/10  Policy: safety  Load: heavy (75%) ---
+23:13:08  INFO     [RAMS] Starting resource monitor ...
+23:13:08  INFO     [RAMS] Loading model tiers ...
+23:13:09  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:13:09  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:13:10  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:13:10  INFO     [RAMS] Controller ready. Policy: safety
+23:13:11  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.613)
+23:13:11  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.671)
+23:13:12  INFO       [safety / heavy] 20/200  tier=SMALL   latency=27.8 ms  R=0.655  target=0.75  dets=8  vru=False  backend=ultralytics
+23:13:12  INFO       [safety / heavy] 40/200  tier=SMALL   latency=20.4 ms  R=0.670  target=0.75  dets=3  vru=False  backend=ultralytics
+23:13:13  INFO       [safety / heavy] 60/200  tier=SMALL   latency=18.9 ms  R=0.744  target=0.75  dets=0  vru=False  backend=ultralytics
+23:13:13  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.707)
+23:13:13  INFO     [RAMS] Tier switch: NANO → SMALL  (R=0.696)
+23:13:14  INFO       [safety / heavy] 80/200  tier=SMALL   latency=20.8 ms  R=0.721  target=0.75  dets=3  vru=False  backend=ultralytics
+23:13:14  INFO       [safety / heavy] 100/200  tier=SMALL   latency=21.5 ms  R=0.719  target=0.75  dets=5  vru=False  backend=ultralytics
+23:13:15  INFO       [safety / heavy] 120/200  tier=SMALL   latency=23.6 ms  R=0.694  target=0.75  dets=7  vru=False  backend=ultralytics
+23:13:16  INFO       [safety / heavy] 140/200  tier=SMALL   latency=21.9 ms  R=0.718  target=0.75  dets=6  vru=False  backend=ultralytics
+23:13:17  INFO       [safety / heavy] 160/200  tier=SMALL   latency=23.2 ms  R=0.699  target=0.75  dets=13  vru=False  backend=ultralytics
+23:13:17  INFO       [safety / heavy] 180/200  tier=SMALL   latency=32.4 ms  R=0.723  target=0.75  dets=15  vru=True  backend=ultralytics
+23:13:18  INFO       [safety / heavy] 200/200  tier=SMALL   latency=20.8 ms  R=0.713  target=0.75  dets=2  vru=False  backend=ultralytics
+23:13:18  INFO     [RAMS] Controller stopped.
+23:13:18  INFO     
+--- Block 10/10  Policy: predictive  Load: heavy (75%) ---
+23:13:18  INFO     [RAMS] Starting resource monitor ...
+23:13:18  INFO     [RAMS] Loading model tiers ...
+23:13:19  INFO     [RAMS] YOLOv8-nano ready — Ultralytics (imgsz=320).
+23:13:19  INFO     [RAMS] YOLOv8-small ready — Ultralytics (imgsz=416).
+23:13:20  INFO     [RAMS] YOLOv8-medium ready — Ultralytics (imgsz=640).
+23:13:20  INFO     [RAMS] Controller ready. Policy: predictive
+23:13:21  INFO     [RAMS] Tier switch: SMALL → NANO  (R=0.647)
+23:13:21  INFO       [predictive / heavy] 20/200  tier=NANO    latency=20.2 ms  R=0.665  target=0.75  dets=4  vru=False  backend=ultralytics
+23:13:22  INFO       [predictive / heavy] 40/200  tier=NANO    latency=19.5 ms  R=0.660  target=0.75  dets=2  vru=False  backend=ultralytics
+23:13:23  INFO       [predictive / heavy] 60/200  tier=NANO    latency=25.4 ms  R=0.646  target=0.75  dets=0  vru=False  backend=ultralytics
+23:13:23  INFO       [predictive / heavy] 80/200  tier=NANO    latency=19.4 ms  R=0.659  target=0.75  dets=2  vru=False  backend=ultralytics
+23:13:24  INFO       [predictive / heavy] 100/200  tier=NANO    latency=20.1 ms  R=0.666  target=0.75  dets=5  vru=False  backend=ultralytics
+23:13:25  INFO       [predictive / heavy] 120/200  tier=NANO    latency=21.1 ms  R=0.659  target=0.75  dets=6  vru=False  backend=ultralytics
+23:13:25  INFO       [predictive / heavy] 140/200  tier=NANO    latency=19.1 ms  R=0.651  target=0.75  dets=1  vru=False  backend=ultralytics
+23:13:26  INFO       [predictive / heavy] 160/200  tier=NANO    latency=21.8 ms  R=0.652  target=0.75  dets=9  vru=False  backend=ultralytics
+23:13:27  INFO       [predictive / heavy] 180/200  tier=NANO    latency=22.4 ms  R=0.652  target=0.75  dets=8  vru=False  backend=ultralytics
+23:13:27  INFO       [predictive / heavy] 200/200  tier=NANO    latency=17.5 ms  R=0.644  target=0.75  dets=0  vru=False  backend=ultralytics
+23:13:27  INFO     [RAMS] Controller stopped.
+23:13:29  INFO     Results -> /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/runtime3_heavy/rams_20260908_230023_9f7850578d66.csv
+23:13:29  INFO     Summary -> /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/runtime3_heavy/rams_20260908_230023_9f7850578d66.json
+23:13:29  INFO     Replay manifest -> /home/soren/rams_sep2026/corrected-20260908/results/full-20260908-v1/pytorch/runtime3_heavy/rams_20260908_230023_9f7850578d66_manifest.json
+
+================================================================================
+Policy         Profile        N   Mean ms    P95 ms    VRU%  Tiers
+--------------------------------------------------------------------------------
+adaptive       heavy       2000      20.5      24.0   15.4%  NANO:2000
+fixed_medium   heavy       2000      28.0      32.1   33.1%  MEDIUM:2000
+fixed_nano     heavy       2000      21.2      26.5   15.4%  NANO:2000
+fixed_small    heavy       2000      22.4      28.0   24.4%  SMALL:2000
+predictive     heavy       2000      21.1      25.5   15.4%  NANO:2000
+safety         heavy       2000      21.7      25.1   24.3%  NANO:44, SMALL:1956
+safety2        heavy       2000      25.6      31.5   28.8%  MEDIUM:1357, NANO:376, SMALL:267
+threshold      heavy       2000      20.9      25.3   15.7%  NANO:1980, SMALL:20
+================================================================================
+
+Backends used: {'ultralytics'}

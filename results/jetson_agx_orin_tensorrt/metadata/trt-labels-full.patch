@@ -1,0 +1,197 @@
+diff --git a/rams/models.py b/rams/models.py
+index a62c80a..a5b1e28 100644
+--- a/rams/models.py
++++ b/rams/models.py
+@@ -26,6 +26,7 @@ from __future__ import annotations
+ 
+ import time
+ import math
++import re
+ import random
+ import logging
+ import os
+@@ -88,6 +89,32 @@ COCO_NAMES = [
+ ]
+ 
+ 
++_TRT_PLACEHOLDER_RE = re.compile(r"class\d+")
++
++
++def _canonical_trt_class_name(names, cls_id: int, backend: str) -> str:
++    """Map TensorRT engine class ids onto the canonical COCO labels.
++
++    TensorRT engines built from the YOLOv8 ONNX exports carry placeholder
++    names (class0...classN) instead of COCO names, so ultralytics returns
++    class2/class5. Engine outputs are COCO-class-ordered; verified on this
++    Jetson against the ONNX path on the same frame (identical boxes with
++    canonical labels in results/full-20260908-v1 preflights). The canonical
++    label list is the single source of truth shared with the ONNX parser:
++    COCO_NAMES defined above in this module (same list the ONNX/PyTorch
++    paths use). Out-of-range ids degrade to str(cls_id) exactly like the
++    ONNX parser. Non-placeholder engine metadata names are kept verbatim,
++    and the remap fires only when backend == 'tensorrt' so ONNX/PyTorch
++    behaviour is byte-for-byte unchanged.
++    """
++    raw = str(names[cls_id] if isinstance(names, dict) else names[cls_id])
++    if backend == "tensorrt" and _TRT_PLACEHOLDER_RE.fullmatch(raw):
++        if 0 <= cls_id < len(COCO_NAMES):
++            return COCO_NAMES[cls_id]
++        return str(cls_id)
++    return raw
++
++
+ def _parse_onnx_output(outputs, conf_thresh: float = 0.25) -> list[dict]:
+     """Parse a YOLOv8 ONNX Runtime output array into detection dicts.
+ 
+@@ -489,7 +516,8 @@ class ModelWrapper:
+         inference_ms = (time.perf_counter() - inference_started) * 1000.0
+         postprocess_started = time.perf_counter()
+         dets = [
+-            {"class": r.names[int(b.cls)], "conf": float(b.conf),
++            {"class": _canonical_trt_class_name(r.names, int(b.cls), self._backend),
++             "conf": float(b.conf),
+              "xyxy":  b.xyxy.tolist()}
+             for r in res for b in r.boxes
+         ]
+diff --git a/scripts/run_corrected_suite.py b/scripts/run_corrected_suite.py
+index 01367a2..8ff26ec 100644
+--- a/scripts/run_corrected_suite.py
++++ b/scripts/run_corrected_suite.py
+@@ -69,6 +69,20 @@ def main():
+                 for det in result['detections']:
+                     assert len(det['xyxy']) == 4 and all(isinstance(x, float) for x in det['xyxy'])
+                 evidence[tier.name] = result
++            if args.backend == 'tensorrt':
++                from rams.models import COCO_NAMES as _coco
++                _coco_set = set(_coco)
++                for tier in Tier:
++                    labels = [d['class'] for d in evidence[tier.name]['detections']]
++                    for label in labels:
++                        if label not in _coco_set:
++                            raise RuntimeError(
++                                f'TensorRT canonical-label gate failed for {tier.name}: {label!r} is not a canonical COCO label')
++                    evidence[tier.name]['trt_class_label_map'] = {
++                        'source': 'COCO_NAMES in rams/models.py — single source of truth shared with the ONNX parser',
++                        'engine_id_space': 'engine class id -> canonical label',
++                        'mapping': {str(i): n for i, n in enumerate(_coco)},
++                        'labels_seen': labels}
+             (out/'backend_preflight.json').write_text(json.dumps(evidence, indent=2)+'\n')
+         finally:
+             library.unload_all()
+diff --git a/tests/test_trt_class_labels.py b/tests/test_trt_class_labels.py
+new file mode 100644
+index 0000000..bfa3ee5
+--- /dev/null
++++ b/tests/test_trt_class_labels.py
+@@ -0,0 +1,111 @@
++"""Preflight: known TensorRT engine detections must convert to canonical
++labels BEFORE any policy/scorer handling. Fails without the TRT class-label
++patch (labels arrive as class0/class2/class5 placeholders)."""
++import unittest
++
++import numpy as np
++
++from rams.models import COCO_NAMES, ModelWrapper, Tier
++from rams.policy import make_policy
++
++
++class _Arr:
++    def __init__(self, values):
++        self._values = list(values)
++
++    def tolist(self):
++        return list(self._values)
++
++
++class _Box:
++    def __init__(self, cls, conf, xyxy):
++        self.cls = cls
++        self.conf = conf
++        self.xyxy = _Arr(xyxy)
++
++
++class _Result:
++    def __init__(self, boxes, names):
++        self.boxes = boxes
++        self.names = names  # real ultralytics Results carries model metadata
++
++
++class _FakeEngine:
++    """Stands in for ultralytics YOLO(engine) — returns placeholder-named
++    detections exactly like the Jetson TRT engines (names dict class0..N)."""
++
++    def __init__(self, names, boxes):
++        self.names = names
++        self._boxes = boxes
++
++    def __call__(self, frame, verbose=False, imgsz=None):
++        return [_Result(self._boxes, self.names)]
++
++
++PLACEHOLDER_NAMES = {i: f'class{i}' for i in range(999)}
++PERSON_BOX = [100.0, 60.0, 240.0, 300.0]   # near VRU (area fraction > 0.02)
++CAR_BOX = [620.0, 179.0, 700.0, 238.0]
++
++
++def _wrapper(tier, names, boxes, backend='tensorrt'):
++    wrapper = ModelWrapper(tier)
++    wrapper._backend = backend
++    wrapper._loaded = True
++    wrapper._model = _FakeEngine(names, boxes)
++    return wrapper
++
++
++def _infer(tier, names, boxes, backend='tensorrt'):
++    frame = np.zeros((376, 1241, 3), dtype='uint8')  # KITTI-shaped frame
++    return _wrapper(tier, names, boxes, backend).infer(frame)['detections']
++
++
++class TrtClassLabelPreflight(unittest.TestCase):
++    def test_engine_class_ids_become_canonical_coco_labels(self):
++        dets = _infer(Tier.NANO, PLACEHOLDER_NAMES,
++                      [_Box(5, 0.9, CAR_BOX), _Box(2, 0.7, CAR_BOX)])
++        self.assertEqual([d['class'] for d in dets], ['bus', 'car'])
++        self.assertTrue(all(d['class'] in set(COCO_NAMES) for d in dets))
++
++    def test_known_trt_detection_convert_to_canonical_before_policy(self):
++        dets = _infer(Tier.MEDIUM, PLACEHOLDER_NAMES, [_Box(0, 0.9, PERSON_BOX)])
++        self.assertEqual(dets[0]['class'], 'person')
++        policy = make_policy('safety2')
++        policy.observe(dets)
++        # Low pressure: without a canonical VRU label the two-level policy
++        # stays NANO; only a canonical 'person' triggers the near-VRU MEDIUM
++        # lock. This assertion is what fails on unpatched code.
++        self.assertEqual(policy.select_tier(0.1, Tier.NANO), Tier.MEDIUM)
++
++    def test_vru_bicycle_id_and_conf_gate(self):
++        dets = _infer(Tier.SMALL, PLACEHOLDER_NAMES, [_Box(1, 0.9, PERSON_BOX)])
++        self.assertEqual(dets[0]['class'], 'bicycle')
++        policy = make_policy('safety')
++        policy.observe(dets)
++        self.assertEqual(policy.select_tier(0.1, Tier.NANO), Tier.SMALL)
++        low = _infer(Tier.SMALL, PLACEHOLDER_NAMES, [_Box(1, 0.05, PERSON_BOX)])
++        policy2 = make_policy('safety')
++        policy2.observe(low)
++        self.assertEqual(policy2.select_tier(0.1, Tier.NANO), Tier.NANO)
++
++    def test_pytorch_path_labels_untouched(self):
++        dets = _infer(Tier.SMALL, {0: 'person', 2: 'car'},
++                      [_Box(0, 0.9, PERSON_BOX)], backend='ultralytics')
++        self.assertEqual(dets[0]['class'], 'person')
++        # TRT-only: a placeholder reaching the pytorch path stays verbatim.
++        dets2 = _infer(Tier.SMALL, PLACEHOLDER_NAMES, [_Box(2, 0.9, CAR_BOX)],
++                       backend='ultralytics')
++        self.assertEqual(dets2[0]['class'], 'class2')
++
++    def test_out_of_range_placeholder_falls_back_to_str_id(self):
++        dets = _infer(Tier.NANO, PLACEHOLDER_NAMES, [_Box(99, 0.9, CAR_BOX)])
++        self.assertEqual(dets[0]['class'], '99')
++
++    def test_engine_metadata_names_kept_verbatim(self):
++        dets = _infer(Tier.NANO, {2: 'car', 5: 'bus'},
++                      [_Box(2, 0.9, CAR_BOX)], backend='tensorrt')
++        self.assertEqual(dets[0]['class'], 'car')
++
++
++if __name__ == '__main__':
++    unittest.main()

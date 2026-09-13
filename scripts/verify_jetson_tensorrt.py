@@ -48,7 +48,7 @@ def main() -> int:
     except ImportError as error:
         raise RuntimeError("OpenCV is unavailable in this environment.") from error
 
-    from rams.models import PROFILES, ModelLibrary, Tier
+    from rams.models import COCO_NAMES, PROFILES, ModelLibrary, Tier
 
     engine_paths: dict[str, str] = {}
     for tier, profile in PROFILES.items():
@@ -75,10 +75,17 @@ def main() -> int:
         result = library.infer(tier, frame)
         if result.get("backend") != "tensorrt" or result.get("simulated"):
             raise RuntimeError(f"{tier.name} did not execute TensorRT: {result.get('backend')!r}")
+        labels = [str(detection.get("class")) for detection in result.get("detections", [])]
+        noncanonical = [label for label in labels if label not in COCO_NAMES]
+        if noncanonical:
+            raise RuntimeError(
+                f"{tier.name} TensorRT detections have noncanonical labels: {noncanonical!r}"
+            )
         inferences[tier.name] = {
             "backend": result["backend"],
             "latency_ms": result.get("latency_ms"),
             "detections": len(result.get("detections", [])),
+            "labels": labels,
         }
     library.unload_all()
 

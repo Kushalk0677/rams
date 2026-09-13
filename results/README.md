@@ -39,3 +39,13 @@ explicitly excluded smoke and invalid-map artifacts and is not paper evidence.
 New runs created by the current workflow should be stored in a separate
 device- and protocol-labelled folder. Keep the manifest, raw records,
 calibration, and summary together for every reported result.
+
+
+`jetson_agx_orin_cpu_onnx/`, `jetson_agx_orin_pytorch/`, and
+`jetson_agx_orin_tensorrt/` contain corrected Jetson AGX Orin evidence. Each
+route includes calibration, all five runtime profiles, fixed-tier baselines,
+policy accuracy, retention, and measured per-rail replay-window energy
+records. The rail records are not total board energy measurements. The
+PyTorch route also preserves the matching 5,000-image COCO tier-accuracy
+context. TensorRT maps engine class IDs to canonical COCO labels and includes
+its tested source patch and provenance receipt.

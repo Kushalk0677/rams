@@ -1,0 +1,301 @@
+{
+  "groups": [
+    {
+      "policy": "adaptive",
+      "policy_label": "Variance-adaptive EWMA",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 314,
+        "fp": 266,
+        "fn": 853,
+        "precision": 0.5414,
+        "recall": 0.2691,
+        "f1": 0.3595,
+        "false_negative_rate": 0.7309,
+        "recall_ci95": [
+          0.2444,
+          0.2952
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2947,
+        "fp": 1201,
+        "fn": 3655,
+        "precision": 0.7105,
+        "recall": 0.4464,
+        "f1": 0.5483,
+        "false_negative_rate": 0.5536,
+        "recall_ci95": [
+          0.4344,
+          0.4584
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1396,
+        "SMALL": 104,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "fixed_medium",
+      "policy_label": "fixed_medium",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 706,
+        "fp": 1766,
+        "fn": 461,
+        "precision": 0.2856,
+        "recall": 0.605,
+        "f1": 0.388,
+        "false_negative_rate": 0.395,
+        "recall_ci95": [
+          0.5766,
+          0.6326
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 5285,
+        "fp": 2933,
+        "fn": 1317,
+        "precision": 0.6431,
+        "recall": 0.8005,
+        "f1": 0.7132,
+        "false_negative_rate": 0.1995,
+        "recall_ci95": [
+          0.7907,
+          0.81
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 0,
+        "MEDIUM": 1500
+      }
+    },
+    {
+      "policy": "fixed_nano",
+      "policy_label": "fixed_nano",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 294,
+        "fp": 240,
+        "fn": 873,
+        "precision": 0.5506,
+        "recall": 0.2519,
+        "f1": 0.3457,
+        "false_negative_rate": 0.7481,
+        "recall_ci95": [
+          0.2279,
+          0.2776
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2851,
+        "fp": 1189,
+        "fn": 3751,
+        "precision": 0.7057,
+        "recall": 0.4318,
+        "f1": 0.5358,
+        "false_negative_rate": 0.5682,
+        "recall_ci95": [
+          0.4199,
+          0.4438
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1500,
+        "SMALL": 0,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "fixed_small",
+      "policy_label": "fixed_small",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 498,
+        "fp": 541,
+        "fn": 669,
+        "precision": 0.4793,
+        "recall": 0.4267,
+        "f1": 0.4515,
+        "false_negative_rate": 0.5733,
+        "recall_ci95": [
+          0.3986,
+          0.4553
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 4174,
+        "fp": 1540,
+        "fn": 2428,
+        "precision": 0.7305,
+        "recall": 0.6322,
+        "f1": 0.6778,
+        "false_negative_rate": 0.3678,
+        "recall_ci95": [
+          0.6205,
+          0.6438
+        ]
+      },
+      "tier_counts": {
+        "NANO": 0,
+        "SMALL": 1500,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "predictive",
+      "policy_label": "EWMA-smoothed",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 311,
+        "fp": 254,
+        "fn": 856,
+        "precision": 0.5504,
+        "recall": 0.2665,
+        "f1": 0.3591,
+        "false_negative_rate": 0.7335,
+        "recall_ci95": [
+          0.2419,
+          0.2926
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2991,
+        "fp": 1223,
+        "fn": 3611,
+        "precision": 0.7098,
+        "recall": 0.453,
+        "f1": 0.5531,
+        "false_negative_rate": 0.547,
+        "recall_ci95": [
+          0.4411,
+          0.4651
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1341,
+        "SMALL": 159,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 448,
+        "fp": 461,
+        "fn": 719,
+        "precision": 0.4928,
+        "recall": 0.3839,
+        "f1": 0.4316,
+        "false_negative_rate": 0.6161,
+        "recall_ci95": [
+          0.3564,
+          0.4121
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3768,
+        "fp": 1402,
+        "fn": 2834,
+        "precision": 0.7288,
+        "recall": 0.5707,
+        "f1": 0.6402,
+        "false_negative_rate": 0.4293,
+        "recall_ci95": [
+          0.5588,
+          0.5826
+        ]
+      },
+      "tier_counts": {
+        "NANO": 451,
+        "SMALL": 1049,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 473,
+        "fp": 701,
+        "fn": 694,
+        "precision": 0.4029,
+        "recall": 0.4053,
+        "f1": 0.4041,
+        "false_negative_rate": 0.5947,
+        "recall_ci95": [
+          0.3775,
+          0.4337
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3837,
+        "fp": 1665,
+        "fn": 2765,
+        "precision": 0.6974,
+        "recall": 0.5812,
+        "f1": 0.634,
+        "false_negative_rate": 0.4188,
+        "recall_ci95": [
+          0.5692,
+          0.593
+        ]
+      },
+      "tier_counts": {
+        "NANO": 634,
+        "SMALL": 547,
+        "MEDIUM": 319
+      }
+    },
+    {
+      "policy": "threshold",
+      "policy_label": "Threshold",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 330,
+        "fp": 303,
+        "fn": 837,
+        "precision": 0.5213,
+        "recall": 0.2828,
+        "f1": 0.3667,
+        "false_negative_rate": 0.7172,
+        "recall_ci95": [
+          0.2577,
+          0.3093
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3110,
+        "fp": 1230,
+        "fn": 3492,
+        "precision": 0.7166,
+        "recall": 0.4711,
+        "f1": 0.5685,
+        "false_negative_rate": 0.5289,
+        "recall_ci95": [
+          0.459,
+          0.4831
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1220,
+        "SMALL": 280,
+        "MEDIUM": 0
+      }
+    }
+  ],
+  "simulated": false
+}
