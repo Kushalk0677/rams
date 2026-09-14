@@ -1,6 +1,6 @@
-# Jetson Orin Nano TensorRT Results
+# Jetson AGX Orin 64GB TensorRT Results
 
-Corrected RAMS evidence collected on an NVIDIA Jetson Orin Nano using TensorRT
+Corrected RAMS evidence collected on an NVIDIA Jetson AGX Orin 64GB using TensorRT
 FP16 engines.
 
 The retained evidence covers calibration, all five runtime profiles, moderate

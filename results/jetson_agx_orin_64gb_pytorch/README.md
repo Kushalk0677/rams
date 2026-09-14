@@ -1,7 +1,6 @@
-# Jetson Orin Nano PyTorch Results
+# Jetson AGX Orin 64GB PyTorch Results
 
-Corrected RAMS evidence collected on 8 September 2026 on an NVIDIA Jetson Orin
-Nano using Ultralytics YOLOv8 `.pt` models.
+Corrected RAMS evidence collected on 8 September 2026 on an NVIDIA Jetson AGX Orin 64GB using Ultralytics YOLOv8 `.pt` models.
 
 The run completed calibration, all five runtime profiles, moderate and heavy
 Pareto runs, policy-level KITTI accuracy, and VRU-retention sensitivity. Every

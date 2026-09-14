@@ -50,8 +50,8 @@ device- and protocol-labelled folder. Keep the manifest, raw records,
 calibration, and summary together for every reported result.
 
 
-`jetson_orin_nano_cpu_onnx/`, `jetson_orin_nano_pytorch/`, and
-`jetson_orin_nano_tensorrt/` contain corrected Jetson Orin Nano evidence. Each
+`jetson_agx_orin_64gb_cpu_onnx/`, `jetson_agx_orin_64gb_pytorch/`, and
+`jetson_agx_orin_64gb_tensorrt/` contain corrected Jetson AGX Orin 64GB evidence. Each
 route includes calibration, all five runtime profiles, fixed-tier baselines,
 policy accuracy, retention, and measured per-rail replay-window energy
 records. The rail records are not total board energy measurements. CPU ONNX
@@ -60,3 +60,14 @@ matrix over 1,500 KITTI and 5,000 COCO validation images. TensorRT maps engine
 class IDs to canonical COCO labels and its preflight passed before the
 evaluation. The mapped KITTI values are COCO-style AP under the documented
 mapping, not official KITTI difficulty-stratified AP.
+
+Hardware identification: all three September Jetson routes record 62,841 MB
+of RAM, twelve CPU entries, and the AGX Orin power rails in
+`metadata/telemetry_preflight.json`. These identify an AGX Orin 64GB; the
+previous `jetson_orin_nano_*` directory names were incorrect. Raw evidence
+has been preserved unchanged. NVIDIA documents the rail mapping in its
+[Jetson power-monitor guide](https://docs.nvidia.com/jetson/archives/r36.5/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html#software-based-power-consumption-modeling).
+
+The April results under `old/jetson_orin/` have an unresolved hardware
+identity. Their supplied report says Orin Nano but also describes twelve
+CPU cores. See the [historical hardware note](old/jetson_orin/README.md).

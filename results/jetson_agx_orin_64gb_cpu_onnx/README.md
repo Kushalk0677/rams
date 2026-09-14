@@ -1,6 +1,6 @@
-# Jetson Orin Nano CPU ONNX Results
+# Jetson AGX Orin 64GB CPU ONNX Results
 
-Corrected RAMS evidence collected on an NVIDIA Jetson Orin Nano. This route
+Corrected RAMS evidence collected on an NVIDIA Jetson AGX Orin 64GB. This route
 uses ONNX Runtime with `CPUExecutionProvider`; it is not CUDA ONNX.
 
 The retained evidence covers calibration, all five runtime profiles, moderate
