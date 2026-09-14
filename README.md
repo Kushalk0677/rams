@@ -254,6 +254,7 @@ Current revised-protocol evidence is organized by processor family:
 | Directory | Device and backend | Scope |
 |---|---|---|
 | [`results/m4_air`](results/m4_air) | Apple M4 MacBook Air, 16 GB unified memory, CPU ONNX | Real KITTI replay, calibration, raw records, figures, and provenance. |
+| [`results/i7_1165G7`](results/i7_1165G7) | Intel Core i7-1165G7, Windows CPU ONNX | Complete revised-protocol suite: calibration, runtime, Pareto, fresh COCO tier evaluation, policy-level KITTI metrics, and retention sensitivity. |
 | [`results/jetson_orin_nano_cpu_onnx`](results/jetson_orin_nano_cpu_onnx) | NVIDIA Jetson Orin Nano, CPU ONNXRuntime | Corrected on-device runtime, policy-accuracy, retention, calibration, and per-rail energy records. |
 | [`results/jetson_orin_nano_pytorch`](results/jetson_orin_nano_pytorch) | NVIDIA Jetson Orin Nano, PyTorch | Corrected on-device runtime, policy-accuracy, retention, calibration, per-rail energy records, and COCO tier-accuracy context. |
 | [`results/jetson_orin_nano_tensorrt`](results/jetson_orin_nano_tensorrt) | NVIDIA Jetson Orin Nano, TensorRT | Corrected on-device runtime, policy-accuracy, retention, calibration, per-rail energy records, and canonical COCO-label verification. |

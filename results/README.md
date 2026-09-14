@@ -12,6 +12,15 @@ fields are TDP-based estimates, not physical power
 measurements. Its provenance records the historical execution context for that
 evidence; it is not a setup guide. Use the current macOS package for a new run.
 
+`i7_1165G7/` contains the complete revised-protocol Intel Core i7-1165G7
+Windows CPU-ONNX suite collected on 13-14 September 2026. It uses
+`process_steady_v3` for steady profiles and `process_isolated_burst_v2` for
+the burst profile. It includes calibration, all runtime and Pareto stages,
+COCO tier evaluation, policy-level KITTI metrics, retention sensitivity, raw
+records, manifests, figures, model checksums, and the TDP-profile provenance.
+The COCO mAP fields are fresh `ultralytics_val` results; the KITTI tier mAP
+fields are cached-profile context and are not new mAP evidence.
+
 `i7_11800H/` contains the completed Intel Core i7-11800H Windows CPU-ONNX
 evidence received on 20 August 2026. It uses the revised
 `process_steady_v3` load protocol on a 16-logical-core laptop with an RTX 3050

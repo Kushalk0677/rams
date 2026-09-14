@@ -1,0 +1,312 @@
+[
+  {
+    "label": "preflight",
+    "ok": true,
+    "platform_target": "windows",
+    "device": "i7_1165G7_cpu_onnx_process_v3",
+    "backend": "onnx",
+    "data_root": "D:\\data",
+    "frames": "D:\\data\\kitti\\images\\val",
+    "kitti_images": "D:\\data\\kitti\\images\\val",
+    "kitti_labels": "D:\\data\\kitti\\labels\\val",
+    "coco_images": "D:\\data\\coco\\images\\val2017",
+    "coco_labels": "D:\\data\\coco\\labels\\val2017",
+    "n_per_block": 200,
+    "blocks": 10,
+    "smoke": false,
+    "simulated": false,
+    "phase": "all",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "os": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "energy_profile": "configs\\energy_profile_windows_i7_1165g7_tdp_up_28w.json",
+    "requested_backend_env": "onnx",
+    "load_protocol": {
+      "steady_profiles": {
+        "injector": "process_steady_v3",
+        "reserved_logical_cpus": 1
+      },
+      "burst_profile": {
+        "injector": "process_isolated_burst_v2",
+        "reserved_logical_cpus": 1,
+        "burst_peak_intensity": 0.85,
+        "burst_on_frames": 20,
+        "burst_off_frames": 80,
+        "burst_settle_s": 0.2
+      }
+    }
+  },
+  {
+    "label": "calibration_config_before",
+    "path": "C:\\rams\\paper_runs\\i7_1165G7_cpu_onnx_process_v3_20260913\\calibration_snapshots\\default_before_calibration_20260913_234154.yaml",
+    "ok": true
+  },
+  {
+    "label": "calibration",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "scripts/calibrate.py",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--n",
+      "200",
+      "--warmup",
+      "20",
+      "--apply"
+    ],
+    "returncode": 0,
+    "elapsed_s": 88.74,
+    "ok": true
+  },
+  {
+    "label": "calibration_config_after",
+    "path": "C:\\rams\\paper_runs\\i7_1165G7_cpu_onnx_process_v3_20260913\\calibration_snapshots\\default_after_calibration_20260913_234154.yaml",
+    "calibration_records": [
+      "C:\\rams\\paper_runs\\i7_1165G7_cpu_onnx_process_v3_20260913\\calibration_20260913_181322_replay.json"
+    ],
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime1_idle",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--policy",
+      "all",
+      "--profile",
+      "idle",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs\\energy_profile_windows_i7_1165g7_tdp_up_28w.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1168.25,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime1_light",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--policy",
+      "all",
+      "--profile",
+      "light",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs\\energy_profile_windows_i7_1165g7_tdp_up_28w.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1274.56,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime2_moderate",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--policy",
+      "all",
+      "--profile",
+      "moderate",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs\\energy_profile_windows_i7_1165g7_tdp_up_28w.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1069.22,
+    "ok": true
+  },
+  {
+    "label": "pareto_runtime2",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "experiments/exp5_pareto.py",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--scenarios",
+      "moderate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 2452.83,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime3_heavy",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--policy",
+      "all",
+      "--profile",
+      "heavy",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs\\energy_profile_windows_i7_1165g7_tdp_up_28w.json"
+    ],
+    "returncode": 0,
+    "elapsed_s": 961.28,
+    "ok": true
+  },
+  {
+    "label": "pareto_runtime3",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "experiments/exp5_pareto.py",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--scenarios",
+      "heavy"
+    ],
+    "returncode": 0,
+    "elapsed_s": 2441.33,
+    "ok": true
+  },
+  {
+    "label": "paired_runtime_runtime4_burst",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "-m",
+      "benchmark.run",
+      "--no-simulate",
+      "--frames",
+      "D:\\data\\kitti\\images\\val",
+      "--policy",
+      "all",
+      "--profile",
+      "burst",
+      "--n",
+      "200",
+      "--blocks",
+      "10",
+      "--seed",
+      "20260710",
+      "--paper-mode",
+      "--energy-profile",
+      "configs\\energy_profile_windows_i7_1165g7_tdp_up_28w.json",
+      "--burst-peak-intensity",
+      "0.85",
+      "--burst-on-frames",
+      "20",
+      "--burst-off-frames",
+      "80",
+      "--burst-settle-s",
+      "0.2",
+      "--load-reserve-logical-cpus",
+      "1"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1158.12,
+    "ok": true
+  },
+  {
+    "label": "tier_accuracy_context",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "experiments/exp8_accuracy_per_tier.py",
+      "--dataset",
+      "kitti",
+      "--images",
+      "D:\\data\\kitti\\images\\val",
+      "--labels",
+      "D:\\data\\kitti\\labels\\val",
+      "--also-coco",
+      "--coco-images",
+      "D:\\data\\coco\\images\\val2017",
+      "--coco-labels",
+      "D:\\data\\coco\\labels\\val2017",
+      "--require-coco-ultralytics-map"
+    ],
+    "returncode": 0,
+    "elapsed_s": 4586.38,
+    "ok": true
+  },
+  {
+    "label": "policy_level_kitti_accuracy",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "experiments/exp11_policy_accuracy.py",
+      "--images",
+      "D:\\data\\kitti\\images\\val",
+      "--labels",
+      "D:\\data\\kitti\\labels\\val",
+      "--profiles",
+      "moderate",
+      "--seed",
+      "20260710"
+    ],
+    "returncode": 0,
+    "elapsed_s": 727.3,
+    "ok": true
+  },
+  {
+    "label": "vru_retention_sensitivity",
+    "command": [
+      "C:\\rams\\rams_v2\\.venv\\Scripts\\python.exe",
+      "experiments/exp12_retention_sensitivity.py",
+      "--images",
+      "D:\\data\\kitti\\images\\val",
+      "--labels",
+      "D:\\data\\kitti\\labels\\val",
+      "--profile",
+      "moderate"
+    ],
+    "returncode": 0,
+    "elapsed_s": 878.06,
+    "ok": true
+  }
+]

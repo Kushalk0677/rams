@@ -1,0 +1,190 @@
+{
+  "groups": [
+    {
+      "policy": "adaptive",
+      "policy_label": "Variance-adaptive EWMA",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 306,
+        "fp": 258,
+        "fn": 861,
+        "precision": 0.5426,
+        "recall": 0.2622,
+        "f1": 0.3536,
+        "false_negative_rate": 0.7378,
+        "recall_ci95": [
+          0.2378,
+          0.2882
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2909,
+        "fp": 1195,
+        "fn": 3693,
+        "precision": 0.7088,
+        "recall": 0.4406,
+        "f1": 0.5434,
+        "false_negative_rate": 0.5594,
+        "recall_ci95": [
+          0.4287,
+          0.4526
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1422,
+        "SMALL": 78,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "predictive",
+      "policy_label": "EWMA-smoothed",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 306,
+        "fp": 260,
+        "fn": 861,
+        "precision": 0.5406,
+        "recall": 0.2622,
+        "f1": 0.3531,
+        "false_negative_rate": 0.7378,
+        "recall_ci95": [
+          0.2378,
+          0.2882
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 2938,
+        "fp": 1216,
+        "fn": 3664,
+        "precision": 0.7073,
+        "recall": 0.445,
+        "f1": 0.5463,
+        "false_negative_rate": 0.555,
+        "recall_ci95": [
+          0.4331,
+          0.457
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1407,
+        "SMALL": 93,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety",
+      "policy_label": "VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 458,
+        "fp": 483,
+        "fn": 709,
+        "precision": 0.4867,
+        "recall": 0.3925,
+        "f1": 0.4345,
+        "false_negative_rate": 0.6075,
+        "recall_ci95": [
+          0.3648,
+          0.4208
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3876,
+        "fp": 1453,
+        "fn": 2726,
+        "precision": 0.7273,
+        "recall": 0.5871,
+        "f1": 0.6497,
+        "false_negative_rate": 0.4129,
+        "recall_ci95": [
+          0.5752,
+          0.5989
+        ]
+      },
+      "tier_counts": {
+        "NANO": 317,
+        "SMALL": 1183,
+        "MEDIUM": 0
+      }
+    },
+    {
+      "policy": "safety2",
+      "policy_label": "Two-level VRU-retention",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 519,
+        "fp": 943,
+        "fn": 648,
+        "precision": 0.355,
+        "recall": 0.4447,
+        "f1": 0.3948,
+        "false_negative_rate": 0.5553,
+        "recall_ci95": [
+          0.4164,
+          0.4734
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 4232,
+        "fp": 1993,
+        "fn": 2370,
+        "precision": 0.6798,
+        "recall": 0.641,
+        "f1": 0.6599,
+        "false_negative_rate": 0.359,
+        "recall_ci95": [
+          0.6294,
+          0.6525
+        ]
+      },
+      "tier_counts": {
+        "NANO": 373,
+        "SMALL": 552,
+        "MEDIUM": 575
+      }
+    },
+    {
+      "policy": "threshold",
+      "policy_label": "Threshold",
+      "load_profile": "moderate",
+      "n_frames": 1500,
+      "vru": {
+        "tp": 322,
+        "fp": 268,
+        "fn": 845,
+        "precision": 0.5458,
+        "recall": 0.2759,
+        "f1": 0.3665,
+        "false_negative_rate": 0.7241,
+        "recall_ci95": [
+          0.251,
+          0.3023
+        ]
+      },
+      "non_vru_obstacle": {
+        "tp": 3045,
+        "fp": 1256,
+        "fn": 3557,
+        "precision": 0.708,
+        "recall": 0.4612,
+        "f1": 0.5586,
+        "false_negative_rate": 0.5388,
+        "recall_ci95": [
+          0.4492,
+          0.4733
+        ]
+      },
+      "tier_counts": {
+        "NANO": 1285,
+        "SMALL": 215,
+        "MEDIUM": 0
+      }
+    }
+  ],
+  "simulated": false
+}

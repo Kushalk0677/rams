@@ -1,0 +1,166 @@
+{
+  "host": "Kushals-Spectre-x360-AW2002TU",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "backend": "onnx",
+  "frames": "D:\\data\\kitti\\images\\val",
+  "n_per_profile": 200,
+  "warmup_frames": 20,
+  "steady_settle_s": 1.0,
+  "load_injector": "process_steady_v3",
+  "profiles": {
+    "idle": {
+      "profile": "idle",
+      "target_intensity": 0.0,
+      "pressure": {
+        "n": 200,
+        "mean": 0.5008,
+        "std": 0.0317,
+        "p10": 0.4682,
+        "p25": 0.483,
+        "p50": 0.49,
+        "p75": 0.5148,
+        "p90": 0.5398
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 52.35,
+        "std": 4.226,
+        "p10": 48.0,
+        "p25": 50.0,
+        "p50": 50.9,
+        "p75": 54.2,
+        "p90": 57.54
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 49.9439,
+        "std": 7.6822,
+        "p10": 39.7838,
+        "p25": 44.2865,
+        "p50": 48.8796,
+        "p75": 55.967,
+        "p90": 60.9514
+      }
+    },
+    "light": {
+      "profile": "light",
+      "target_intensity": 0.25,
+      "pressure": {
+        "n": 200,
+        "mean": 0.6633,
+        "std": 0.0482,
+        "p10": 0.6242,
+        "p25": 0.6439,
+        "p50": 0.6602,
+        "p75": 0.6747,
+        "p90": 0.7061
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 73.536,
+        "std": 6.4229,
+        "p10": 68.6,
+        "p25": 70.8,
+        "p50": 73.05,
+        "p75": 75.0,
+        "p90": 79.24
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 67.0486,
+        "std": 8.6911,
+        "p10": 54.331,
+        "p25": 62.343,
+        "p50": 69.37,
+        "p75": 73.38,
+        "p90": 75.1155
+      }
+    },
+    "moderate": {
+      "profile": "moderate",
+      "target_intensity": 0.5,
+      "pressure": {
+        "n": 200,
+        "mean": 0.7957,
+        "std": 0.0519,
+        "p10": 0.703,
+        "p25": 0.7996,
+        "p50": 0.8169,
+        "p75": 0.8218,
+        "p90": 0.8331
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 91.2295,
+        "std": 6.9176,
+        "p10": 78.87,
+        "p25": 91.775,
+        "p50": 94.05,
+        "p75": 94.7,
+        "p90": 96.22
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 78.6739,
+        "std": 6.7752,
+        "p10": 69.0736,
+        "p25": 76.4503,
+        "p50": 80.4111,
+        "p75": 82.3273,
+        "p90": 84.9656
+      }
+    },
+    "heavy": {
+      "profile": "heavy",
+      "target_intensity": 0.75,
+      "pressure": {
+        "n": 200,
+        "mean": 0.856,
+        "std": 0.0158,
+        "p10": 0.8463,
+        "p25": 0.8615,
+        "p50": 0.862,
+        "p75": 0.862,
+        "p90": 0.8622
+      },
+      "cpu_percent": {
+        "n": 200,
+        "mean": 99.2095,
+        "std": 2.089,
+        "p10": 97.9,
+        "p25": 100.0,
+        "p50": 100.0,
+        "p75": 100.0,
+        "p90": 100.0
+      },
+      "end_to_end_ms": {
+        "n": 200,
+        "mean": 94.8924,
+        "std": 11.9626,
+        "p10": 85.8047,
+        "p25": 87.9262,
+        "p50": 92.6661,
+        "p75": 98.3402,
+        "p90": 106.2707
+      }
+    }
+  },
+  "proposal": {
+    "valid": true,
+    "lo_thresh": 0.458,
+    "hi_thresh": 0.761,
+    "normal_p10": 0.468,
+    "light_p50": 0.66,
+    "heavy_p50": 0.862,
+    "light_p75": 0.675,
+    "heavy_p10": 0.846,
+    "separation": 0.202,
+    "tail_overlap": -0.172,
+    "target_behavior": "idle/light SMALL; heavy may enter NANO; VRU policies may retain a stronger tier after detection"
+  },
+  "applied": true,
+  "timestamp_utc": "2026-09-13T18:13:22.909676+00:00",
+  "config_path": "C:\\rams\\rams_v2\\configs\\default.yaml",
+  "config_snapshot_before": "C:\\rams\\paper_runs\\i7_1165G7_cpu_onnx_process_v3_20260913\\calibration_snapshots\\default_before_replay_calibration_20260913_181322.yaml"
+}
