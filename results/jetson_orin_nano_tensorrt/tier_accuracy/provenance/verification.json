@@ -1,0 +1,1242 @@
+{
+  "status": "passed",
+  "simulated": false,
+  "started_at_ns": 1789331743870222130,
+  "checks": [
+    {
+      "name": "driver terminal success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no blocked receipt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "summary passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "12 metrics JSON",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "12 metrics CSV",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "12 per-image CSV",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "12 prediction JSONL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete matrix",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real TRT label preflight passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TRT preflight log before first TRT metric file",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM CPU provider only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 5000,
+        "n_gt": 36335,
+        "n_predictions": 34470
+      }
+    },
+    {
+      "name": "onnx/coco/MEDIUM label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/MEDIUM metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO CPU provider only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 5000,
+        "n_gt": 36335,
+        "n_predictions": 18444
+      }
+    },
+    {
+      "name": "onnx/coco/NANO label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/NANO metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL CPU provider only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 5000,
+        "n_gt": 36335,
+        "n_predictions": 27172
+      }
+    },
+    {
+      "name": "onnx/coco/SMALL label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/coco/SMALL metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM CPU provider only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 1500,
+        "n_gt": 7818,
+        "n_predictions": 11791
+      }
+    },
+    {
+      "name": "onnx/kitti/MEDIUM label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/MEDIUM metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO CPU provider only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 1500,
+        "n_gt": 7818,
+        "n_predictions": 4648
+      }
+    },
+    {
+      "name": "onnx/kitti/NANO label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/NANO metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL CPU provider only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 1500,
+        "n_gt": 7818,
+        "n_predictions": 7163
+      }
+    },
+    {
+      "name": "onnx/kitti/SMALL label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "onnx/kitti/SMALL metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM start after preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 5000,
+        "n_gt": 36335,
+        "n_predictions": 34467
+      }
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/MEDIUM metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO start after preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 5000,
+        "n_gt": 36335,
+        "n_predictions": 18437
+      }
+    },
+    {
+      "name": "tensorrt/coco/NANO label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/NANO metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL start after preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 5000,
+        "n_gt": 36335,
+        "n_predictions": 27176
+      }
+    },
+    {
+      "name": "tensorrt/coco/SMALL label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/coco/SMALL metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM start after preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 1500,
+        "n_gt": 7818,
+        "n_predictions": 11795
+      }
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/MEDIUM metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO start after preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 1500,
+        "n_gt": 7818,
+        "n_predictions": 4648
+      }
+    },
+    {
+      "name": "tensorrt/kitti/NANO label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/NANO metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL passed real",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL finite nonzero headline metrics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL start after preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL per-image count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL exact ordered image list",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL raw counts agree",
+      "passed": true,
+      "detail": {
+        "n_images": 1500,
+        "n_gt": 7818,
+        "n_predictions": 7159
+      }
+    },
+    {
+      "name": "tensorrt/kitti/SMALL label histogram agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL vru recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL person recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL cyclist recall recomputation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL mAP recomputation from per-class AP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tensorrt/kitti/SMALL metrics CSV agrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "39000 evaluated frames",
+      "passed": true,
+      "detail": 39000
+    },
+    {
+      "name": "zero placeholder label leaks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prior result file set unchanged",
+      "passed": true,
+      "detail": {
+        "before_count": 836,
+        "after_count": 836
+      }
+    },
+    {
+      "name": "prior 836 results byte-identical",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "accepted source unchanged .gitignore",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged AI_OPERATOR_INSTRUCTIONS.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged benchmark/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged benchmark/load_injector.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged benchmark/run.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged configs/default.yaml",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged configs/energy_profile.example.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged configs/energy_profile_jetson.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/complete_runall.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/complete_runall_jetson.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp10_safety_pareto.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp11_policy_accuracy.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp12_retention_sensitivity.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp1_policy_comparison.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp2_load_sweep.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp3_hysteresis.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp4_safety_override.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp5_pareto.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp6_transient.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp7_swas.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp8_accuracy_per_tier.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp9_aggregate.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/exp9_multidevice.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/run_all.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged experiments/utils.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/config.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/controller.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/energy.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/jetson_telemetry.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/models.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/monitor.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged rams/policy.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/aggregate.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/calibrate.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/live_demo.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/prepare_kitti_validation.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/run_corrected_suite.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/run_paper_suite.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/run_phase2d_then_phase3.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/verify_jetson_tensorrt.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged scripts/verify_process_load.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged setup.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/__init__.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/conftest.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_benchmark.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_config.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_controller.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_corrected_contract.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_models.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_monitor.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_policy.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_trt_class_labels.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted source unchanged tests/test_windows_protocol.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "execution source unchanged accuracy.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "execution source unchanged run_container.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "execution source unchanged provenance/scoring-protocol.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "four figure files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "home restoration passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "home restored before CPU leg",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "prior_results_manifest_sha256": "84d8a43a6343fd3f76d30e4c04f17bf0da686fe2125b89b55d07363fbbaa033e",
+  "evaluations": 12,
+  "evaluated_frames": 39000,
+  "zero_per_class_recalls": [
+    {
+      "evaluation": "onnx/kitti/NANO",
+      "metric": "cyclist_recall",
+      "value": 0,
+      "n_gt": 294
+    },
+    {
+      "evaluation": "tensorrt/kitti/NANO",
+      "metric": "cyclist_recall",
+      "value": 0,
+      "n_gt": 294
+    }
+  ],
+  "zero_per_class_qualification": "Measured zeros retained. Nonzero headline mAP and pooled VRU checks are separate from per-class detection performance.",
+  "finished_at_ns": 1789331747303764968
+}

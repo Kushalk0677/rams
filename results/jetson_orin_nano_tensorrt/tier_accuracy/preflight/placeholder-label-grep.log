@@ -1,0 +1,1 @@
+{"command": ["grep", "-R", "-n", "-E", "class[0-9]+", "/home/soren/rams_tier_acc_20260913/results", "/home/soren/rams_tier_acc_20260913/preflight/tensorrt-canonical-label-preflight.json"], "returncode": 1}

@@ -1,0 +1,56 @@
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/13/2026-18:46:16] [TRT] [I] Loaded engine size: 23 MiB
+[09/13/2026-18:46:16] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 28 (MiB)
+18:46:17  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+{"time_ns": 1789325179159890215, "event": "tensorrt/coco/SMALL 100/5000"}
+{"time_ns": 1789325180683639454, "event": "tensorrt/coco/SMALL 200/5000"}
+{"time_ns": 1789325182200225052, "event": "tensorrt/coco/SMALL 300/5000"}
+{"time_ns": 1789325183692494814, "event": "tensorrt/coco/SMALL 400/5000"}
+{"time_ns": 1789325185186804379, "event": "tensorrt/coco/SMALL 500/5000"}
+{"time_ns": 1789325186708578214, "event": "tensorrt/coco/SMALL 600/5000"}
+{"time_ns": 1789325188228111171, "event": "tensorrt/coco/SMALL 700/5000"}
+{"time_ns": 1789325189799179551, "event": "tensorrt/coco/SMALL 800/5000"}
+{"time_ns": 1789325191326321399, "event": "tensorrt/coco/SMALL 900/5000"}
+{"time_ns": 1789325192862507063, "event": "tensorrt/coco/SMALL 1000/5000"}
+{"time_ns": 1789325194406877982, "event": "tensorrt/coco/SMALL 1100/5000"}
+{"time_ns": 1789325195900896662, "event": "tensorrt/coco/SMALL 1200/5000"}
+{"time_ns": 1789325197439488477, "event": "tensorrt/coco/SMALL 1300/5000"}
+{"time_ns": 1789325198946481884, "event": "tensorrt/coco/SMALL 1400/5000"}
+{"time_ns": 1789325200473449240, "event": "tensorrt/coco/SMALL 1500/5000"}
+{"time_ns": 1789325202026330047, "event": "tensorrt/coco/SMALL 1600/5000"}
+{"time_ns": 1789325203542055345, "event": "tensorrt/coco/SMALL 1700/5000"}
+{"time_ns": 1789325205042622429, "event": "tensorrt/coco/SMALL 1800/5000"}
+{"time_ns": 1789325206555988183, "event": "tensorrt/coco/SMALL 1900/5000"}
+{"time_ns": 1789325208041388339, "event": "tensorrt/coco/SMALL 2000/5000"}
+{"time_ns": 1789325209584152308, "event": "tensorrt/coco/SMALL 2100/5000"}
+{"time_ns": 1789325211122555748, "event": "tensorrt/coco/SMALL 2200/5000"}
+{"time_ns": 1789325212656885121, "event": "tensorrt/coco/SMALL 2300/5000"}
+{"time_ns": 1789325214199802470, "event": "tensorrt/coco/SMALL 2400/5000"}
+{"time_ns": 1789325215741224606, "event": "tensorrt/coco/SMALL 2500/5000"}
+{"time_ns": 1789325217255898042, "event": "tensorrt/coco/SMALL 2600/5000"}
+{"time_ns": 1789325218763404926, "event": "tensorrt/coco/SMALL 2700/5000"}
+{"time_ns": 1789325220283938162, "event": "tensorrt/coco/SMALL 2800/5000"}
+{"time_ns": 1789325221775450662, "event": "tensorrt/coco/SMALL 2900/5000"}
+{"time_ns": 1789325223288473369, "event": "tensorrt/coco/SMALL 3000/5000"}
+{"time_ns": 1789325224748338367, "event": "tensorrt/coco/SMALL 3100/5000"}
+{"time_ns": 1789325226258364890, "event": "tensorrt/coco/SMALL 3200/5000"}
+{"time_ns": 1789325227796798210, "event": "tensorrt/coco/SMALL 3300/5000"}
+{"time_ns": 1789325229315392316, "event": "tensorrt/coco/SMALL 3400/5000"}
+{"time_ns": 1789325230842199835, "event": "tensorrt/coco/SMALL 3500/5000"}
+{"time_ns": 1789325232404913396, "event": "tensorrt/coco/SMALL 3600/5000"}
+{"time_ns": 1789325233949801891, "event": "tensorrt/coco/SMALL 3700/5000"}
+{"time_ns": 1789325235532779086, "event": "tensorrt/coco/SMALL 3800/5000"}
+{"time_ns": 1789325237019776223, "event": "tensorrt/coco/SMALL 3900/5000"}
+{"time_ns": 1789325238544414796, "event": "tensorrt/coco/SMALL 4000/5000"}
+{"time_ns": 1789325240083949260, "event": "tensorrt/coco/SMALL 4100/5000"}
+{"time_ns": 1789325241614909875, "event": "tensorrt/coco/SMALL 4200/5000"}
+{"time_ns": 1789325243101974209, "event": "tensorrt/coco/SMALL 4300/5000"}
+{"time_ns": 1789325244579949654, "event": "tensorrt/coco/SMALL 4400/5000"}
+{"time_ns": 1789325246101395538, "event": "tensorrt/coco/SMALL 4500/5000"}
+{"time_ns": 1789325247594208976, "event": "tensorrt/coco/SMALL 4600/5000"}
+{"time_ns": 1789325249106234250, "event": "tensorrt/coco/SMALL 4700/5000"}
+{"time_ns": 1789325250585607327, "event": "tensorrt/coco/SMALL 4800/5000"}
+{"time_ns": 1789325252141480245, "event": "tensorrt/coco/SMALL 4900/5000"}
+{"time_ns": 1789325253700995112, "event": "tensorrt/coco/SMALL 5000/5000"}
+{"time_ns": 1789325254432901817, "event": "PASSED tensorrt/coco/SMALL: mAP50=0.465527 mAP50-95=0.348303 VRU=0.650978"}

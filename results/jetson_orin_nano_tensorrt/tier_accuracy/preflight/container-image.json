@@ -1,0 +1,12 @@
+{
+  "Id": "sha256:54ae772e9be3a5cc6efd26e39e12530da82be493e5d183470bad27eac4c76f8a",
+  "RepoTags": [
+    "rams:sep2026"
+  ],
+  "RepoDigests": [
+    "rams@sha256:54ae772e9be3a5cc6efd26e39e12530da82be493e5d183470bad27eac4c76f8a"
+  ],
+  "Created": "2026-09-05T21:47:36.462648787-04:00",
+  "Architecture": "arm64",
+  "Os": "linux"
+}

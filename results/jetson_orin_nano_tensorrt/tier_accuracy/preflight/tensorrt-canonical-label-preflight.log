@@ -1,0 +1,463 @@
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/home/soren/rams_tier_acc_20260913/cache/ultralytics/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/13/2026-18:40:24] [TRT] [I] Loaded engine size: 7 MiB
+[09/13/2026-18:40:24] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/13/2026-18:40:26] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/13/2026-18:40:26] [TRT] [I] Loaded engine size: 23 MiB
+[09/13/2026-18:40:26] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +7, now: CPU 1, GPU 38 (MiB)
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/13/2026-18:40:26] [TRT] [I] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[09/13/2026-18:40:26] [TRT] [I] Loaded engine size: 52 MiB
+[09/13/2026-18:40:26] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +29, now: CPU 1, GPU 88 (MiB)
+{
+  "status": "passed",
+  "simulated": false,
+  "started_at_ns": 1789324820793932175,
+  "backend": "tensorrt",
+  "tiers": {
+    "NANO": {
+      "tier": "NANO",
+      "simulated": false,
+      "backend": "tensorrt",
+      "latency_ms": 22.161758970469236,
+      "inference_ms": 20.079574082046747,
+      "preprocess_ms": 0.0,
+      "postprocess_ms": 2.075464930385351,
+      "coords": "original",
+      "image_width": 1241,
+      "image_height": 376,
+      "detections": [
+        {
+          "class": "bus",
+          "conf": 0.8947906494140625,
+          "xyxy": [
+            83.73885345458984,
+            14.499533653259277,
+            483.5103454589844,
+            300.95306396484375
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.6706076860427856,
+          "xyxy": [
+            628.6558227539062,
+            179.2362823486328,
+            696.9346313476562,
+            238.37698364257812
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.47657960653305054,
+          "xyxy": [
+            0.04338303208351135,
+            196.39659118652344,
+            98.73161315917969,
+            317.0809631347656
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        }
+      ]
+    },
+    "SMALL": {
+      "tier": "SMALL",
+      "simulated": false,
+      "backend": "tensorrt",
+      "latency_ms": 8.074978133663535,
+      "inference_ms": 6.595964077860117,
+      "preprocess_ms": 0.0,
+      "postprocess_ms": 1.4729660470038652,
+      "coords": "original",
+      "image_width": 1241,
+      "image_height": 376,
+      "detections": [
+        {
+          "class": "bus",
+          "conf": 0.937671422958374,
+          "xyxy": [
+            87.8171615600586,
+            19.017728805541992,
+            479.91796875,
+            296.6392822265625
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.8428651094436646,
+          "xyxy": [
+            1.0720778703689575,
+            203.298583984375,
+            94.38946533203125,
+            303.9573669433594
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.8056327104568481,
+          "xyxy": [
+            624.263916015625,
+            181.95025634765625,
+            698.5752563476562,
+            239.5394744873047
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "bus",
+          "conf": 0.5525398850440979,
+          "xyxy": [
+            493.2723388671875,
+            137.855224609375,
+            547.52294921875,
+            206.6546630859375
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.43014732003211975,
+          "xyxy": [
+            690.0802001953125,
+            183.9312744140625,
+            725.1091918945312,
+            209.04934692382812
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.32595008611679077,
+          "xyxy": [
+            763.0397338867188,
+            187.62527465820312,
+            796.274169921875,
+            204.52215576171875
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        }
+      ]
+    },
+    "MEDIUM": {
+      "tier": "MEDIUM",
+      "simulated": false,
+      "backend": "tensorrt",
+      "latency_ms": 15.750691061839461,
+      "inference_ms": 13.669402105733752,
+      "preprocess_ms": 0.0,
+      "postprocess_ms": 2.074792981147766,
+      "coords": "original",
+      "image_width": 1241,
+      "image_height": 376,
+      "detections": [
+        {
+          "class": "bus",
+          "conf": 0.9501953125,
+          "xyxy": [
+            87.2578125,
+            19.99658203125,
+            480.0391540527344,
+            296.7977600097656
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.88427734375,
+          "xyxy": [
+            625.4082641601562,
+            179.8783416748047,
+            700.1530151367188,
+            246.1094512939453
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.865234375,
+          "xyxy": [
+            0.1514892578125,
+            204.08631896972656,
+            91.25712585449219,
+            304.0692443847656
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.8056640625,
+          "xyxy": [
+            694.16162109375,
+            183.68072509765625,
+            725.8456420898438,
+            208.0932159423828
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "bus",
+          "conf": 0.7490234375,
+          "xyxy": [
+            491.143310546875,
+            139.40040588378906,
+            549.5424194335938,
+            201.4201202392578
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.70556640625,
+          "xyxy": [
+            763.6270141601562,
+            185.2107696533203,
+            793.796142578125,
+            202.9993896484375
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.56982421875,
+          "xyxy": [
+            478.1455383300781,
+            178.98455810546875,
+            497.483154296875,
+            216.05397033691406
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.52734375,
+          "xyxy": [
+            480.2815246582031,
+            178.87850952148438,
+            510.90130615234375,
+            212.72120666503906
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        },
+        {
+          "class": "car",
+          "conf": 0.4130859375,
+          "xyxy": [
+            475.61566162109375,
+            178.2422637939453,
+            493.8852844238281,
+            221.5378875732422
+          ],
+          "image_width": 1241,
+          "image_height": 376,
+          "coords": "original"
+        }
+      ]
+    }
+  },
+  "telemetry": {
+    "status": "passed",
+    "samples": [
+      {
+        "gpu_util_pct": 0.0,
+        "gpu_temp": 46.406,
+        "gpu_clock_mhz": null,
+        "rails_w": {
+          "VDD_GPU_SOC": 5.195,
+          "VDD_CPU_CV": 2.797,
+          "VIN_SYS_5V0": 4.73
+        },
+        "raw": "09-13-2026 18:40:21 RAM 15361/62841MB (lfb 1495x4MB) SWAP 1386/31420MB (cached 17MB) CPU [9%@2201,0%@2201,0%@2201,0%@2201,9%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,16%@2201,0%@2201] GR3D_FREQ 0% cpu@51.75C soc2@47.687C soc0@48.187C gpu@46.406C tj@51.75C soc1@48.718C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 2797mW/2797mW VIN_SYS_5V0 4730mW/4780mW",
+        "monotonic_s": 1556591.456465934,
+        "timestamp_ns": 1789324821022088718
+      },
+      {
+        "gpu_util_pct": 0.0,
+        "gpu_temp": 46.625,
+        "gpu_clock_mhz": null,
+        "rails_w": {
+          "VDD_GPU_SOC": 5.195,
+          "VDD_CPU_CV": 2.398,
+          "VIN_SYS_5V0": 4.629
+        },
+        "raw": "09-13-2026 18:40:21 RAM 15361/62841MB (lfb 1495x4MB) SWAP 1386/31420MB (cached 17MB) CPU [0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@51.593C soc2@47.5C soc0@48.25C gpu@46.625C tj@51.593C soc1@48.843C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 2398mW/2664mW VIN_SYS_5V0 4629mW/4730mW",
+        "monotonic_s": 1556591.561878391,
+        "timestamp_ns": 1789324821127500375
+      },
+      {
+        "gpu_util_pct": 0.0,
+        "gpu_temp": 46.593,
+        "gpu_clock_mhz": null,
+        "rails_w": {
+          "VDD_GPU_SOC": 5.195,
+          "VDD_CPU_CV": 2.398,
+          "VIN_SYS_5V0": 4.629
+        },
+        "raw": "09-13-2026 18:40:21 RAM 15361/62841MB (lfb 1495x4MB) SWAP 1386/31420MB (cached 17MB) CPU [0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,9%@2201,0%@2201,0%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@51.562C soc2@47.531C soc0@48.312C gpu@46.593C tj@51.562C soc1@48.843C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 2398mW/2598mW VIN_SYS_5V0 4629mW/4705mW",
+        "monotonic_s": 1556591.667442433,
+        "timestamp_ns": 1789324821233064577
+      },
+      {
+        "gpu_util_pct": 0.0,
+        "gpu_temp": 46.5,
+        "gpu_clock_mhz": null,
+        "rails_w": {
+          "VDD_GPU_SOC": 5.195,
+          "VDD_CPU_CV": 1.999,
+          "VIN_SYS_5V0": 4.528
+        },
+        "raw": "09-13-2026 18:40:21 RAM 15361/62841MB (lfb 1495x4MB) SWAP 1386/31420MB (cached 17MB) CPU [8%@2201,0%@2201,0%@2201,8%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@51.5C soc2@47.593C soc0@48.343C gpu@46.5C tj@51.5C soc1@48.937C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 1999mW/2478mW VIN_SYS_5V0 4528mW/4669mW",
+        "monotonic_s": 1556591.772962122,
+        "timestamp_ns": 1789324821338584266
+      },
+      {
+        "gpu_util_pct": 0.0,
+        "gpu_temp": 46.687,
+        "gpu_clock_mhz": null,
+        "rails_w": {
+          "VDD_GPU_SOC": 5.195,
+          "VDD_CPU_CV": 1.999,
+          "VIN_SYS_5V0": 4.528
+        },
+        "raw": "09-13-2026 18:40:21 RAM 15361/62841MB (lfb 1495x4MB) SWAP 1386/31420MB (cached 17MB) CPU [0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,0%@2201,9%@2201,0%@2201,0%@2201] GR3D_FREQ 0% cpu@51.468C soc2@47.468C soc0@48.312C gpu@46.687C tj@51.468C soc1@48.875C VDD_GPU_SOC 5195mW/5195mW VDD_CPU_CV 1999mW/2398mW VIN_SYS_5V0 4528mW/4646mW",
+        "monotonic_s": 1556591.878523668,
+        "timestamp_ns": 1789324821444145748
+      }
+    ],
+    "raw_path": "/home/soren/rams_tier_acc_20260913/preflight/telemetry_raw_1_1789324820797006332.jsonl",
+    "optional_fields": [
+      "gpu_clock_mhz"
+    ],
+    "qualification": "VDD_GPU_SOC is a shared GPU/SOC rail, not GPU-only or total board power"
+  },
+  "canonical_map": {
+    "0": "person",
+    "1": "bicycle",
+    "2": "car",
+    "3": "motorcycle",
+    "4": "airplane",
+    "5": "bus",
+    "6": "train",
+    "7": "truck",
+    "8": "boat",
+    "9": "traffic light",
+    "10": "fire hydrant",
+    "11": "stop sign",
+    "12": "parking meter",
+    "13": "bench",
+    "14": "bird",
+    "15": "cat",
+    "16": "dog",
+    "17": "horse",
+    "18": "sheep",
+    "19": "cow",
+    "20": "elephant",
+    "21": "bear",
+    "22": "zebra",
+    "23": "giraffe",
+    "24": "backpack",
+    "25": "umbrella",
+    "26": "handbag",
+    "27": "tie",
+    "28": "suitcase",
+    "29": "frisbee",
+    "30": "skis",
+    "31": "snowboard",
+    "32": "sports ball",
+    "33": "kite",
+    "34": "baseball bat",
+    "35": "baseball glove",
+    "36": "skateboard",
+    "37": "surfboard",
+    "38": "tennis racket",
+    "39": "bottle",
+    "40": "wine glass",
+    "41": "cup",
+    "42": "fork",
+    "43": "knife",
+    "44": "spoon",
+    "45": "bowl",
+    "46": "banana",
+    "47": "apple",
+    "48": "sandwich",
+    "49": "orange",
+    "50": "broccoli",
+    "51": "carrot",
+    "52": "hot dog",
+    "53": "pizza",
+    "54": "donut",
+    "55": "cake",
+    "56": "chair",
+    "57": "couch",
+    "58": "potted plant",
+    "59": "bed",
+    "60": "dining table",
+    "61": "toilet",
+    "62": "tv",
+    "63": "laptop",
+    "64": "mouse",
+    "65": "remote",
+    "66": "keyboard",
+    "67": "cell phone",
+    "68": "microwave",
+    "69": "oven",
+    "70": "toaster",
+    "71": "sink",
+    "72": "refrigerator",
+    "73": "book",
+    "74": "clock",
+    "75": "vase",
+    "76": "scissors",
+    "77": "teddy bear",
+    "78": "hair drier",
+    "79": "toothbrush"
+  },
+  "mapping_source": "source/rams/models.py::COCO_NAMES and _canonical_trt_class_name (unchanged accepted v3)",
+  "mapping_source_sha256": "227f90e92b96db573766e460360fc3762d7c6ef736454421056ad09d41733d15",
+  "frame_path": "/data/kitti/images/val/005981.png",
+  "frame_sha256": "2613688c0721e1d0294521cac7bb4235efea1023cd79aee8157d06a8cbcb798d",
+  "finished_at_ns": 1789324826327514820
+}

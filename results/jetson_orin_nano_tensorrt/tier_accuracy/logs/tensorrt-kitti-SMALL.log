@@ -1,0 +1,21 @@
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8s.engine for TensorRT inference...
+[09/13/2026-18:45:33] [TRT] [I] Loaded engine size: 23 MiB
+[09/13/2026-18:45:33] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +7, now: CPU 0, GPU 28 (MiB)
+18:45:35  INFO     [RAMS] YOLOv8-small ready — TensorRT yolov8s.engine (imgsz=416).
+{"time_ns": 1789325137481616156, "event": "tensorrt/kitti/SMALL 100/1500"}
+{"time_ns": 1789325139890703874, "event": "tensorrt/kitti/SMALL 200/1500"}
+{"time_ns": 1789325142289437173, "event": "tensorrt/kitti/SMALL 300/1500"}
+{"time_ns": 1789325144686770537, "event": "tensorrt/kitti/SMALL 400/1500"}
+{"time_ns": 1789325147107043767, "event": "tensorrt/kitti/SMALL 500/1500"}
+{"time_ns": 1789325149526362118, "event": "tensorrt/kitti/SMALL 600/1500"}
+{"time_ns": 1789325151934306113, "event": "tensorrt/kitti/SMALL 700/1500"}
+{"time_ns": 1789325154309354618, "event": "tensorrt/kitti/SMALL 800/1500"}
+{"time_ns": 1789325156684359801, "event": "tensorrt/kitti/SMALL 900/1500"}
+{"time_ns": 1789325159067916785, "event": "tensorrt/kitti/SMALL 1000/1500"}
+{"time_ns": 1789325161460739874, "event": "tensorrt/kitti/SMALL 1100/1500"}
+{"time_ns": 1789325163846470059, "event": "tensorrt/kitti/SMALL 1200/1500"}
+{"time_ns": 1789325166217156762, "event": "tensorrt/kitti/SMALL 1300/1500"}
+{"time_ns": 1789325168612783813, "event": "tensorrt/kitti/SMALL 1400/1500"}
+{"time_ns": 1789325171034470350, "event": "tensorrt/kitti/SMALL 1500/1500"}
+{"time_ns": 1789325171393685572, "event": "PASSED tensorrt/kitti/SMALL: mAP50=0.240078 mAP50-95=0.123971 VRU=0.362664"}

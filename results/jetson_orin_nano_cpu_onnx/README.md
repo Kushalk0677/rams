@@ -1,13 +1,20 @@
 # Jetson Orin Nano CPU ONNX Results
 
-Corrected RAMS evidence collected on 8 September 2026 on an NVIDIA Jetson AGX
-Orin 64 GB. This route uses ONNX Runtime with `CPUExecutionProvider`; it is
-not CUDA ONNX.
+Corrected RAMS evidence collected on an NVIDIA Jetson Orin Nano. This route
+uses ONNX Runtime with `CPUExecutionProvider`; it is not CUDA ONNX.
 
-The run completed calibration, all five runtime profiles, moderate and heavy
-Pareto runs, policy-level KITTI accuracy, and VRU-retention sensitivity. Every
-runtime profile has 8 controller policies, including fixed NANO, SMALL, and
-MEDIUM baselines, over 10 blocks of 200 real KITTI replay frames.
+The retained evidence covers calibration, all five runtime profiles, moderate
+and heavy Pareto runs, policy-level KITTI accuracy, VRU-retention sensitivity,
+and fresh per-tier accuracy evaluation. Every runtime profile has 8 controller
+policies, including fixed NANO, SMALL, and MEDIUM baselines, over 10 blocks of
+200 real KITTI replay frames.
+
+`tier_accuracy/` contains the missing fresh detector evaluation collected on
+13 September 2026: all three tiers over 1,500 KITTI and 5,000 COCO validation
+images. It preserves predictions, per-image scores, metric files, figures,
+preflight logs, and source and dataset provenance. The mapped KITTI scores are
+COCO-style AP under the documented class mapping, not official KITTI
+difficulty-stratified AP. See [`tier_accuracy/README.md`](tier_accuracy/README.md).
 
 `calibration/` preserves the applied calibration and snapshots. Each
 `runtime*` directory contains raw frame records, manifests, summaries, and
@@ -20,9 +27,3 @@ Energy is measured by integrating the recorded Jetson rails over each replay
 window. `VDD_GPU_SOC` is a shared GPU and SoC rail, and none of the retained
 rails is a whole-board measurement. Do not describe these values as total
 device energy consumption.
-
-This corrected bundle does not include a new COCO mAP run. CPU ONNX accuracy
-must not be presented as directly equivalent to the PyTorch route without a
-matched detector-evaluation protocol.
-
-Source archive SHA-256: `9dbbb4c2bcda488e1d36d5c51760aee34b5ad0f4161c54c2153ea8268cd31d02`.

@@ -1,0 +1,21 @@
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/13/2026-18:43:42] [TRT] [I] Loaded engine size: 7 MiB
+[09/13/2026-18:43:42] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+18:43:43  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+{"time_ns": 1789325026110946893, "event": "tensorrt/kitti/NANO 100/1500"}
+{"time_ns": 1789325028342651810, "event": "tensorrt/kitti/NANO 200/1500"}
+{"time_ns": 1789325030525172175, "event": "tensorrt/kitti/NANO 300/1500"}
+{"time_ns": 1789325032727743480, "event": "tensorrt/kitti/NANO 400/1500"}
+{"time_ns": 1789325034901949686, "event": "tensorrt/kitti/NANO 500/1500"}
+{"time_ns": 1789325037077541277, "event": "tensorrt/kitti/NANO 600/1500"}
+{"time_ns": 1789325039268301778, "event": "tensorrt/kitti/NANO 700/1500"}
+{"time_ns": 1789325041475026743, "event": "tensorrt/kitti/NANO 800/1500"}
+{"time_ns": 1789325043705710691, "event": "tensorrt/kitti/NANO 900/1500"}
+{"time_ns": 1789325045926713177, "event": "tensorrt/kitti/NANO 1000/1500"}
+{"time_ns": 1789325048122117740, "event": "tensorrt/kitti/NANO 1100/1500"}
+{"time_ns": 1789325050302686267, "event": "tensorrt/kitti/NANO 1200/1500"}
+{"time_ns": 1789325052476524030, "event": "tensorrt/kitti/NANO 1300/1500"}
+{"time_ns": 1789325054624137184, "event": "tensorrt/kitti/NANO 1400/1500"}
+{"time_ns": 1789325056800838519, "event": "tensorrt/kitti/NANO 1500/1500"}
+{"time_ns": 1789325057153314279, "event": "PASSED tensorrt/kitti/NANO: mAP50=0.159050 mAP50-95=0.078535 VRU=0.230263"}

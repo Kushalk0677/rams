@@ -54,7 +54,9 @@ calibration, and summary together for every reported result.
 `jetson_orin_nano_tensorrt/` contain corrected Jetson Orin Nano evidence. Each
 route includes calibration, all five runtime profiles, fixed-tier baselines,
 policy accuracy, retention, and measured per-rail replay-window energy
-records. The rail records are not total board energy measurements. The
-PyTorch route also preserves the matching 5,000-image COCO tier-accuracy
-context. TensorRT maps engine class IDs to canonical COCO labels and includes
-its tested source patch and provenance receipt.
+records. The rail records are not total board energy measurements. CPU ONNX
+and TensorRT now also contain a fresh 13 September 2026 per-tier detector
+matrix over 1,500 KITTI and 5,000 COCO validation images. TensorRT maps engine
+class IDs to canonical COCO labels and its preflight passed before the
+evaluation. The mapped KITTI values are COCO-style AP under the documented
+mapping, not official KITTI difficulty-stratified AP.

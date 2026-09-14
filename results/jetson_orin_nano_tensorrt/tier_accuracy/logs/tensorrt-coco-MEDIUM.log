@@ -1,0 +1,56 @@
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8m.engine for TensorRT inference...
+[09/13/2026-18:48:32] [TRT] [I] Loaded engine size: 52 MiB
+[09/13/2026-18:48:32] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +29, now: CPU 0, GPU 78 (MiB)
+18:48:33  INFO     [RAMS] YOLOv8-medium ready — TensorRT yolov8m.engine (imgsz=640).
+{"time_ns": 1789325315696318335, "event": "tensorrt/coco/MEDIUM 100/5000"}
+{"time_ns": 1789325317731340283, "event": "tensorrt/coco/MEDIUM 200/5000"}
+{"time_ns": 1789325319742219341, "event": "tensorrt/coco/MEDIUM 300/5000"}
+{"time_ns": 1789325321711801883, "event": "tensorrt/coco/MEDIUM 400/5000"}
+{"time_ns": 1789325323684613907, "event": "tensorrt/coco/MEDIUM 500/5000"}
+{"time_ns": 1789325325698754034, "event": "tensorrt/coco/MEDIUM 600/5000"}
+{"time_ns": 1789325327673830214, "event": "tensorrt/coco/MEDIUM 700/5000"}
+{"time_ns": 1789325329656521811, "event": "tensorrt/coco/MEDIUM 800/5000"}
+{"time_ns": 1789325331638128849, "event": "tensorrt/coco/MEDIUM 900/5000"}
+{"time_ns": 1789325333595579260, "event": "tensorrt/coco/MEDIUM 1000/5000"}
+{"time_ns": 1789325335604107331, "event": "tensorrt/coco/MEDIUM 1100/5000"}
+{"time_ns": 1789325337603499263, "event": "tensorrt/coco/MEDIUM 1200/5000"}
+{"time_ns": 1789325339641341008, "event": "tensorrt/coco/MEDIUM 1300/5000"}
+{"time_ns": 1789325341635910576, "event": "tensorrt/coco/MEDIUM 1400/5000"}
+{"time_ns": 1789325343618774484, "event": "tensorrt/coco/MEDIUM 1500/5000"}
+{"time_ns": 1789325345641246686, "event": "tensorrt/coco/MEDIUM 1600/5000"}
+{"time_ns": 1789325347623895707, "event": "tensorrt/coco/MEDIUM 1700/5000"}
+{"time_ns": 1789325349578798207, "event": "tensorrt/coco/MEDIUM 1800/5000"}
+{"time_ns": 1789325351551020618, "event": "tensorrt/coco/MEDIUM 1900/5000"}
+{"time_ns": 1789325353516763205, "event": "tensorrt/coco/MEDIUM 2000/5000"}
+{"time_ns": 1789325355501987294, "event": "tensorrt/coco/MEDIUM 2100/5000"}
+{"time_ns": 1789325357516077112, "event": "tensorrt/coco/MEDIUM 2200/5000"}
+{"time_ns": 1789325359543552342, "event": "tensorrt/coco/MEDIUM 2300/5000"}
+{"time_ns": 1789325361565680408, "event": "tensorrt/coco/MEDIUM 2400/5000"}
+{"time_ns": 1789325363556800112, "event": "tensorrt/coco/MEDIUM 2500/5000"}
+{"time_ns": 1789325365554506145, "event": "tensorrt/coco/MEDIUM 2600/5000"}
+{"time_ns": 1789325367527483797, "event": "tensorrt/coco/MEDIUM 2700/5000"}
+{"time_ns": 1789325369518570120, "event": "tensorrt/coco/MEDIUM 2800/5000"}
+{"time_ns": 1789325371480839208, "event": "tensorrt/coco/MEDIUM 2900/5000"}
+{"time_ns": 1789325373464100613, "event": "tensorrt/coco/MEDIUM 3000/5000"}
+{"time_ns": 1789325375397930973, "event": "tensorrt/coco/MEDIUM 3100/5000"}
+{"time_ns": 1789325377371706616, "event": "tensorrt/coco/MEDIUM 3200/5000"}
+{"time_ns": 1789325379423322349, "event": "tensorrt/coco/MEDIUM 3300/5000"}
+{"time_ns": 1789325381451980149, "event": "tensorrt/coco/MEDIUM 3400/5000"}
+{"time_ns": 1789325383471848067, "event": "tensorrt/coco/MEDIUM 3500/5000"}
+{"time_ns": 1789325385481481319, "event": "tensorrt/coco/MEDIUM 3600/5000"}
+{"time_ns": 1789325387453430492, "event": "tensorrt/coco/MEDIUM 3700/5000"}
+{"time_ns": 1789325389487424317, "event": "tensorrt/coco/MEDIUM 3800/5000"}
+{"time_ns": 1789325391425456374, "event": "tensorrt/coco/MEDIUM 3900/5000"}
+{"time_ns": 1789325393408301128, "event": "tensorrt/coco/MEDIUM 4000/5000"}
+{"time_ns": 1789325395435081567, "event": "tensorrt/coco/MEDIUM 4100/5000"}
+{"time_ns": 1789325397429811014, "event": "tensorrt/coco/MEDIUM 4200/5000"}
+{"time_ns": 1789325399415531936, "event": "tensorrt/coco/MEDIUM 4300/5000"}
+{"time_ns": 1789325401425715645, "event": "tensorrt/coco/MEDIUM 4400/5000"}
+{"time_ns": 1789325403426829843, "event": "tensorrt/coco/MEDIUM 4500/5000"}
+{"time_ns": 1789325405398118881, "event": "tensorrt/coco/MEDIUM 4600/5000"}
+{"time_ns": 1789325407381746101, "event": "tensorrt/coco/MEDIUM 4700/5000"}
+{"time_ns": 1789325409330944381, "event": "tensorrt/coco/MEDIUM 4800/5000"}
+{"time_ns": 1789325411307460707, "event": "tensorrt/coco/MEDIUM 4900/5000"}
+{"time_ns": 1789325413288950677, "event": "tensorrt/coco/MEDIUM 5000/5000"}
+{"time_ns": 1789325414068638550, "event": "PASSED tensorrt/coco/MEDIUM: mAP50=0.580645 mAP50-95=0.445635 VRU=0.772248"}

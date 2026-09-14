@@ -1,0 +1,56 @@
+WARNING ⚠️ Unable to automatically guess model task, assuming 'task=detect'. Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify', 'pose', 'obb' or 'semantic'.
+Loading yolov8n.engine for TensorRT inference...
+[09/13/2026-18:44:21] [TRT] [I] Loaded engine size: 7 MiB
+[09/13/2026-18:44:21] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 9 (MiB)
+18:44:23  INFO     [RAMS] YOLOv8-nano ready — TensorRT yolov8n.engine (imgsz=320).
+{"time_ns": 1789325064724024538, "event": "tensorrt/coco/NANO 100/5000"}
+{"time_ns": 1789325066068887438, "event": "tensorrt/coco/NANO 200/5000"}
+{"time_ns": 1789325067398821617, "event": "tensorrt/coco/NANO 300/5000"}
+{"time_ns": 1789325068684936473, "event": "tensorrt/coco/NANO 400/5000"}
+{"time_ns": 1789325069967563950, "event": "tensorrt/coco/NANO 500/5000"}
+{"time_ns": 1789325071276492287, "event": "tensorrt/coco/NANO 600/5000"}
+{"time_ns": 1789325072564135727, "event": "tensorrt/coco/NANO 700/5000"}
+{"time_ns": 1789325073874521329, "event": "tensorrt/coco/NANO 800/5000"}
+{"time_ns": 1789325075145130884, "event": "tensorrt/coco/NANO 900/5000"}
+{"time_ns": 1789325076426317704, "event": "tensorrt/coco/NANO 1000/5000"}
+{"time_ns": 1789325077718312256, "event": "tensorrt/coco/NANO 1100/5000"}
+{"time_ns": 1789325078995364010, "event": "tensorrt/coco/NANO 1200/5000"}
+{"time_ns": 1789325080297249449, "event": "tensorrt/coco/NANO 1300/5000"}
+{"time_ns": 1789325081560539741, "event": "tensorrt/coco/NANO 1400/5000"}
+{"time_ns": 1789325082860843303, "event": "tensorrt/coco/NANO 1500/5000"}
+{"time_ns": 1789325084226453165, "event": "tensorrt/coco/NANO 1600/5000"}
+{"time_ns": 1789325085579949931, "event": "tensorrt/coco/NANO 1700/5000"}
+{"time_ns": 1789325086900328748, "event": "tensorrt/coco/NANO 1800/5000"}
+{"time_ns": 1789325088238512049, "event": "tensorrt/coco/NANO 1900/5000"}
+{"time_ns": 1789325089515054961, "event": "tensorrt/coco/NANO 2000/5000"}
+{"time_ns": 1789325090809511223, "event": "tensorrt/coco/NANO 2100/5000"}
+{"time_ns": 1789325092101198444, "event": "tensorrt/coco/NANO 2200/5000"}
+{"time_ns": 1789325093367971675, "event": "tensorrt/coco/NANO 2300/5000"}
+{"time_ns": 1789325094649959591, "event": "tensorrt/coco/NANO 2400/5000"}
+{"time_ns": 1789325095949260503, "event": "tensorrt/coco/NANO 2500/5000"}
+{"time_ns": 1789325097239896679, "event": "tensorrt/coco/NANO 2600/5000"}
+{"time_ns": 1789325098517581551, "event": "tensorrt/coco/NANO 2700/5000"}
+{"time_ns": 1789325099800231804, "event": "tensorrt/coco/NANO 2800/5000"}
+{"time_ns": 1789325101070152769, "event": "tensorrt/coco/NANO 2900/5000"}
+{"time_ns": 1789325102355580450, "event": "tensorrt/coco/NANO 3000/5000"}
+{"time_ns": 1789325103605267237, "event": "tensorrt/coco/NANO 3100/5000"}
+{"time_ns": 1789325104931117594, "event": "tensorrt/coco/NANO 3200/5000"}
+{"time_ns": 1789325106280804286, "event": "tensorrt/coco/NANO 3300/5000"}
+{"time_ns": 1789325107613846289, "event": "tensorrt/coco/NANO 3400/5000"}
+{"time_ns": 1789325108927084844, "event": "tensorrt/coco/NANO 3500/5000"}
+{"time_ns": 1789325110251905818, "event": "tensorrt/coco/NANO 3600/5000"}
+{"time_ns": 1789325111522795326, "event": "tensorrt/coco/NANO 3700/5000"}
+{"time_ns": 1789325112828570606, "event": "tensorrt/coco/NANO 3800/5000"}
+{"time_ns": 1789325114091854448, "event": "tensorrt/coco/NANO 3900/5000"}
+{"time_ns": 1789325115394299334, "event": "tensorrt/coco/NANO 4000/5000"}
+{"time_ns": 1789325116693458189, "event": "tensorrt/coco/NANO 4100/5000"}
+{"time_ns": 1789325117984882425, "event": "tensorrt/coco/NANO 4200/5000"}
+{"time_ns": 1789325119235700925, "event": "tensorrt/coco/NANO 4300/5000"}
+{"time_ns": 1789325120480383851, "event": "tensorrt/coco/NANO 4400/5000"}
+{"time_ns": 1789325121752140401, "event": "tensorrt/coco/NANO 4500/5000"}
+{"time_ns": 1789325122997034609, "event": "tensorrt/coco/NANO 4600/5000"}
+{"time_ns": 1789325124265855200, "event": "tensorrt/coco/NANO 4700/5000"}
+{"time_ns": 1789325125543923933, "event": "tensorrt/coco/NANO 4800/5000"}
+{"time_ns": 1789325126860782573, "event": "tensorrt/coco/NANO 4900/5000"}
+{"time_ns": 1789325128162268912, "event": "tensorrt/coco/NANO 5000/5000"}
+{"time_ns": 1789325128810223272, "event": "PASSED tensorrt/coco/NANO: mAP50=0.314090 mAP50-95=0.228906 VRU=0.502209"}

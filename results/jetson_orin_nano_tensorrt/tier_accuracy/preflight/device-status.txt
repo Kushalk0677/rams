@@ -1,0 +1,4 @@
+LIVE STACK:   nemotron  (RAM available 15.5 GiB of 61)
+CLAIM:          FREE
+QUEUE:          empty
+DEFAULT/HOME: nemotron

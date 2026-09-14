@@ -1,0 +1,11 @@
+test_duplicate_is_false_positive (__main__.AccuracyScorerTests) ... ok
+test_empty_prediction_is_not_dropped (__main__.AccuracyScorerTests) ... ok
+test_ignore_does_not_remove_true_positive (__main__.AccuracyScorerTests) ... ok
+test_native_kitti_mappings_are_explicit (__main__.AccuracyScorerTests) ... ok
+test_perfect_detection_and_unmatched_ground_truth (__main__.AccuracyScorerTests) ... ok
+test_wrong_class_never_matches (__main__.AccuracyScorerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.024s
+
+OK

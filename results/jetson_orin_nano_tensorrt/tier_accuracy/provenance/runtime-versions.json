@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "simulated": false,
+  "versions": {
+    "ultralytics": "8.4.92",
+    "onnxruntime": "1.23.2",
+    "numpy": "1.26.4",
+    "torch": "2.7.0",
+    "tensorrt": "10.3.0",
+    "opencv-python": null
+  }
+}

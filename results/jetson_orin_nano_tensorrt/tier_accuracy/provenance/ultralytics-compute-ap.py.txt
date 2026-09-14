@@ -1,0 +1,30 @@
+def compute_ap(recall: list[float], precision: list[float]) -> tuple[float, np.ndarray, np.ndarray]:
+    """Compute the average precision (AP) given the recall and precision curves.
+
+    Args:
+        recall (list[float]): The recall curve.
+        precision (list[float]): The precision curve.
+
+    Returns:
+        ap (float): Average precision.
+        mpre (np.ndarray): Precision envelope curve.
+        mrec (np.ndarray): Modified recall curve with sentinel values added at the beginning and end.
+    """
+    # Append sentinel values to beginning and end
+    mrec = np.concatenate(([0.0], recall, [recall[-1] if len(recall) else 1.0], [1.0]))
+    mpre = np.concatenate(([1.0], precision, [0.0], [0.0]))
+
+    # Compute the precision envelope
+    mpre = np.flip(np.maximum.accumulate(np.flip(mpre)))
+
+    # Integrate area under curve
+    method = "interp"  # methods: 'continuous', 'interp'
+    if method == "interp":
+        x = np.linspace(0, 1, 101)  # 101-point interp (COCO)
+        func = np.trapezoid if checks.check_version(np.__version__, ">=2.0") else np.trapz  # np.trapz deprecated
+        ap = func(np.interp(x, mrec, mpre), x)  # integrate
+    else:  # 'continuous'
+        i = np.where(mrec[1:] != mrec[:-1])[0]  # points where x-axis (recall) changes
+        ap = np.sum((mrec[i + 1] - mrec[i]) * mpre[i + 1])  # area under curve
+
+    return ap, mpre, mrec

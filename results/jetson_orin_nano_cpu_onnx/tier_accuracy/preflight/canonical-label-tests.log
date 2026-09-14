@@ -1,0 +1,11 @@
+test_engine_class_ids_become_canonical_coco_labels (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_engine_metadata_names_kept_verbatim (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_known_trt_detection_convert_to_canonical_before_policy (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_out_of_range_placeholder_falls_back_to_str_id (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_pytorch_path_labels_untouched (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+test_vru_bicycle_id_and_conf_gate (tests.test_trt_class_labels.TrtClassLabelPreflight) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.176s
+
+OK

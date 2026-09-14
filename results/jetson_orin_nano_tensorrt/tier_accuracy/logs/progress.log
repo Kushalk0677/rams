@@ -1,0 +1,144 @@
+2026-09-13T18:37:32.318037+00:00 mission read; beginning scoped authority and soren preflight checks; no compute launched
+2026-09-13T18:37:48.854917+00:00 soren reachable; accepted TRT bundle and dated tree found; ledger current=null; no evaluation launched
+2026-09-13T18:38:38.397121+00:00 dataset counts match accepted KITTI/COCO paths; 836 prior result files hashed; unchanged v3 telemetry preflight launched in isolated mission directory
+2026-09-13T18:40:21.187999+00:00 accepted telemetry and canonical mapping unit gates passed; RAMS ledger lease acquired after home idle gate; real all-tier TensorRT canonical-label preflight running
+2026-09-13T18:42:52.561234+00:00 real TensorRT canonical-label preflight PASSED all 3 tiers; complete dataset content hashes recorded; accuracy-only scoring implementation prepared, focused scoring tests running
+2026-09-13T18:43:51.557713+00:00 focused scoring tests 6/6 passed; bounded 12-evaluation driver launched on soren (PID 68657), TensorRT first; restores home GPU service before CPU-only ONNX leg
+2026-09-13T18:46:39.186727+00:00 soren: 2026-09-13T18:43:38.944485+00:00 START tensorrt/kitti/NANO
+2026-09-13T18:46:39.187159+00:00 soren: 2026-09-13T18:44:18.469650+00:00 PASSED tensorrt/kitti/NANO map50=0.159050 map50_95=0.078535 vru_recall=0.230263 elapsed_s=35.0
+2026-09-13T18:46:39.187165+00:00 soren: 2026-09-13T18:44:18.470060+00:00 START tensorrt/coco/NANO
+2026-09-13T18:46:39.187169+00:00 soren: 2026-09-13T18:45:30.252088+00:00 PASSED tensorrt/coco/NANO map50=0.314090 map50_95=0.228906 vru_recall=0.502209 elapsed_s=67.1
+2026-09-13T18:46:39.187173+00:00 soren: 2026-09-13T18:45:30.252481+00:00 START tensorrt/kitti/SMALL
+2026-09-13T18:46:39.187176+00:00 soren: 2026-09-13T18:46:12.775116+00:00 PASSED tensorrt/kitti/SMALL map50=0.240078 map50_95=0.123971 vru_recall=0.362664 elapsed_s=38.0
+2026-09-13T18:46:39.187179+00:00 soren: 2026-09-13T18:46:12.775505+00:00 START tensorrt/coco/SMALL
+2026-09-13T18:46:39.187182+00:00 soren: tensorrt-coco-SMALL.log
+2026-09-13T18:46:39.187187+00:00 soren: {"time_ns": 1789325194406877982, "event": "tensorrt/coco/SMALL 1100/5000"}
+2026-09-13T18:46:39.187191+00:00 soren: {"time_ns": 1789325195900896662, "event": "tensorrt/coco/SMALL 1200/5000"}
+2026-09-13T18:46:39.187193+00:00 soren: {"time_ns": 1789325197439488477, "event": "tensorrt/coco/SMALL 1300/5000"}
+2026-09-13T18:48:18.531650+00:00 soren: 2026-09-13T18:47:35.869159+00:00 PASSED tensorrt/coco/SMALL map50=0.465527 map50_95=0.348303 vru_recall=0.650978 elapsed_s=78.4
+2026-09-13T18:48:18.532016+00:00 soren: 2026-09-13T18:47:35.869544+00:00 START tensorrt/kitti/MEDIUM
+2026-09-13T18:48:18.532023+00:00 soren: tensorrt-kitti-MEDIUM.log: {"time_ns": 1789325297861876144, "event": "tensorrt/kitti/MEDIUM 1200/1500"}
+2026-09-13T18:49:46.875404+00:00 soren: 2026-09-13T18:48:28.769446+00:00 PASSED tensorrt/kitti/MEDIUM map50=0.354988 map50_95=0.191215 vru_recall=0.499178 elapsed_s=48.3
+2026-09-13T18:49:46.875763+00:00 soren: 2026-09-13T18:48:28.769852+00:00 START tensorrt/coco/MEDIUM
+2026-09-13T18:49:46.875769+00:00 soren: tensorrt-coco-MEDIUM.log: {"time_ns": 1789325385481481319, "event": "tensorrt/coco/MEDIUM 3600/5000"}
+2026-09-13T18:51:04.058497+00:00 soren: 2026-09-13T18:50:15.455720+00:00 PASSED tensorrt/coco/MEDIUM map50=0.580645 map50_95=0.445635 vru_recall=0.772248 elapsed_s=102.1
+2026-09-13T18:51:04.058803+00:00 soren: tensorrt-coco-MEDIUM.log: {"time_ns": 1789325414068638550, "event": "PASSED tensorrt/coco/MEDIUM: mAP50=0.580645 mAP50-95=0.445635 VRU=0.772248"}
+2026-09-13T18:51:04.058808+00:00 soren: restoration: [18:50:15Z] live stack = unknown -> switching to nemotron
+2026-09-13T18:51:04.058812+00:00 soren: [18:50:18Z] RAM available: 46.5 GiB (need >= 12)
+2026-09-13T18:51:04.058815+00:00 soren: [18:50:18Z] starting nemotron-omni (cold start ~3-5 min after a comfyui swap) ...
+2026-09-13T18:52:16.586930+00:00 monitoring: home-service cold start ongoing; no new evaluation started
+2026-09-13T18:53:30.755428+00:00 monitoring: home-service startup still in progress
+2026-09-13T18:54:31.140198+00:00 monitoring: home-service startup still in progress
+2026-09-13T18:55:34.687743+00:00 monitoring: home-service startup still in progress
+2026-09-13T18:56:37.079623+00:00 monitoring: home-service CUDA-graph startup still in progress
+2026-09-13T18:57:49.694430+00:00 soren: 2026-09-13T18:56:40.637336+00:00 Home Nemotron service restored; health and models endpoints passed
+2026-09-13T18:57:49.694695+00:00 soren: 2026-09-13T18:56:40.638172+00:00 START onnx/kitti/NANO
+2026-09-13T18:57:49.694701+00:00 soren: onnx-kitti-NANO.log: {"time_ns": 1789325867111842426, "event": "onnx/kitti/NANO 1300/1500"}
+2026-09-13T18:57:49.694704+00:00 soren: [18:56:40Z] nemotron healthy on :8099
+2026-09-13T18:57:49.694707+00:00 soren: released | back on home stack nemotron | queue empty
+2026-09-13T18:59:10.927009+00:00 soren: 2026-09-13T18:57:57.940149+00:00 PASSED onnx/kitti/NANO map50=0.159214 map50_95=0.078347 vru_recall=0.229441 elapsed_s=72.9
+2026-09-13T18:59:10.927322+00:00 soren: 2026-09-13T18:57:57.940496+00:00 START onnx/coco/NANO
+2026-09-13T18:59:10.927328+00:00 soren: onnx-coco-NANO.log: {"time_ns": 1789325947098168762, "event": "onnx/coco/NANO 1700/5000"}
+2026-09-13T19:00:34.651347+00:00 soren: onnx-coco-NANO.log: {"time_ns": 1789326033180319248, "event": "onnx/coco/NANO 3900/5000"}
+2026-09-13T19:01:30.460998+00:00 soren: 2026-09-13T19:01:17.552685+00:00 PASSED onnx/coco/NANO map50=0.314529 map50_95=0.229166 vru_recall=0.502209 elapsed_s=195.8
+2026-09-13T19:01:30.461286+00:00 soren: 2026-09-13T19:01:17.552944+00:00 START onnx/kitti/SMALL
+2026-09-13T19:01:30.461291+00:00 soren: onnx-kitti-SMALL.log: 19:01:20  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+2026-09-13T19:02:21.975108+00:00 soren: onnx-kitti-SMALL.log: {"time_ns": 1789326137914947050, "event": "onnx/kitti/SMALL 400/1500"}
+2026-09-13T19:03:17.640141+00:00 soren: onnx-kitti-SMALL.log: {"time_ns": 1789326195542805006, "event": "onnx/kitti/SMALL 800/1500"}
+2026-09-13T19:04:16.135149+00:00 soren: onnx-kitti-SMALL.log: {"time_ns": 1789326253094845455, "event": "onnx/kitti/SMALL 1200/1500"}
+2026-09-13T19:05:13.036761+00:00 soren: 2026-09-13T19:04:57.399595+00:00 PASSED onnx/kitti/SMALL map50=0.240013 map50_95=0.123590 vru_recall=0.362664 elapsed_s=216.1
+2026-09-13T19:05:13.037092+00:00 soren: 2026-09-13T19:04:57.399861+00:00 START onnx/coco/SMALL
+2026-09-13T19:05:13.037097+00:00 soren: onnx-coco-SMALL.log: 19:05:00  INFO     [RAMS] YOLOv8-small ready — ONNX (imgsz=416).
+2026-09-13T19:06:17.573158+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326368369757953, "event": "onnx/coco/SMALL 500/5000"}
+2026-09-13T19:07:08.148570+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326422981856041, "event": "onnx/coco/SMALL 900/5000"}
+2026-09-13T19:08:04.398296+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326477381368929, "event": "onnx/coco/SMALL 1300/5000"}
+2026-09-13T19:08:55.272338+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326531827271460, "event": "onnx/coco/SMALL 1700/5000"}
+2026-09-13T19:09:45.855043+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326572623067054, "event": "onnx/coco/SMALL 2000/5000"}
+2026-09-13T19:10:37.369741+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326627080341815, "event": "onnx/coco/SMALL 2400/5000"}
+2026-09-13T19:11:32.472719+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326681497298254, "event": "onnx/coco/SMALL 2800/5000"}
+2026-09-13T19:12:43.009685+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326749477105346, "event": "onnx/coco/SMALL 3300/5000"}
+2026-09-13T19:13:34.748282+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326803794271668, "event": "onnx/coco/SMALL 3700/5000"}
+2026-09-13T19:14:27.021136+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326858222368034, "event": "onnx/coco/SMALL 4100/5000"}
+2026-09-13T19:15:17.396295+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326912651985610, "event": "onnx/coco/SMALL 4500/5000"}
+2026-09-13T19:16:08.983674+00:00 soren: onnx-coco-SMALL.log: {"time_ns": 1789326967080681255, "event": "onnx/coco/SMALL 4900/5000"}
+2026-09-13T19:17:01.752269+00:00 soren: 2026-09-13T19:16:22.238751+00:00 PASSED onnx/coco/SMALL map50=0.465155 map50_95=0.348162 vru_recall=0.651429 elapsed_s=681.0
+2026-09-13T19:17:01.752541+00:00 soren: 2026-09-13T19:16:22.239274+00:00 START onnx/kitti/MEDIUM
+2026-09-13T19:17:01.752546+00:00 soren: onnx-kitti-MEDIUM.log: 19:16:25  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+2026-09-13T19:17:55.327552+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327058943633864, "event": "onnx/kitti/MEDIUM 100/1500"}
+2026-09-13T19:19:11.524832+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327132230533888, "event": "onnx/kitti/MEDIUM 200/1500"}
+2026-09-13T19:20:19.014836+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327205434200734, "event": "onnx/kitti/MEDIUM 300/1500"}
+2026-09-13T19:22:15.338190+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327278639950122, "event": "onnx/kitti/MEDIUM 400/1500"}
+2026-09-13T19:23:05.887143+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327351920019057, "event": "onnx/kitti/MEDIUM 500/1500"}
+2026-09-13T19:23:56.498065+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327425209503058, "event": "onnx/kitti/MEDIUM 600/1500"}
+2026-09-13T19:24:58.909174+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327498485095190, "event": "onnx/kitti/MEDIUM 700/1500"}
+2026-09-13T19:26:40.628223+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327571586804051, "event": "onnx/kitti/MEDIUM 800/1500"}
+2026-09-13T19:27:31.919127+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327644737419406, "event": "onnx/kitti/MEDIUM 900/1500"}
+2026-09-13T19:29:13.454023+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327717761125484, "event": "onnx/kitti/MEDIUM 1000/1500"}
+2026-09-13T19:30:04.090275+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327790943400871, "event": "onnx/kitti/MEDIUM 1100/1500"}
+2026-09-13T19:31:57.947651+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327864113346048, "event": "onnx/kitti/MEDIUM 1200/1500"}
+2026-09-13T19:32:51.482340+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789327937346807046, "event": "onnx/kitti/MEDIUM 1300/1500"}
+2026-09-13T19:33:41.325732+00:00 soren: onnx-kitti-MEDIUM.log: {"time_ns": 1789328010561513983, "event": "onnx/kitti/MEDIUM 1400/1500"}
+2026-09-13T19:35:25.682774+00:00 soren: 2026-09-13T19:34:44.985554+00:00 PASSED onnx/kitti/MEDIUM map50=0.354493 map50_95=0.191119 vru_recall=0.498355 elapsed_s=1099.0
+2026-09-13T19:35:25.682993+00:00 soren: 2026-09-13T19:34:44.985871+00:00 START onnx/coco/MEDIUM
+2026-09-13T19:35:25.682998+00:00 soren: onnx-coco-MEDIUM.log: 19:34:48  INFO     [RAMS] YOLOv8-medium ready — ONNX (imgsz=640).
+2026-09-13T19:36:26.744513+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328160573920344, "event": "onnx/coco/MEDIUM 100/5000"}
+2026-09-13T19:38:17.978128+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328232685264331, "event": "onnx/coco/MEDIUM 200/5000"}
+2026-09-13T19:39:14.505638+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328304959738255, "event": "onnx/coco/MEDIUM 300/5000"}
+2026-09-13T19:40:16.006516+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328377002169864, "event": "onnx/coco/MEDIUM 400/5000"}
+2026-09-13T19:41:13.752647+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328449074409625, "event": "onnx/coco/MEDIUM 500/5000"}
+2026-09-13T19:42:11.749927+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328521389485445, "event": "onnx/coco/MEDIUM 600/5000"}
+2026-09-13T19:43:14.301086+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328593501412972, "event": "onnx/coco/MEDIUM 700/5000"}
+2026-09-13T19:44:57.953373+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328665819269071, "event": "onnx/coco/MEDIUM 800/5000"}
+2026-09-13T19:45:51.903102+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328738114132381, "event": "onnx/coco/MEDIUM 900/5000"}
+2026-09-13T19:47:36.714919+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328810072264944, "event": "onnx/coco/MEDIUM 1000/5000"}
+2026-09-13T19:48:31.140744+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328882169979714, "event": "onnx/coco/MEDIUM 1100/5000"}
+2026-09-13T19:49:22.171446+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789328954162360266, "event": "onnx/coco/MEDIUM 1200/5000"}
+2026-09-13T19:51:04.492266+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329026244121627, "event": "onnx/coco/MEDIUM 1300/5000"}
+2026-09-13T19:52:01.189289+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329098312693148, "event": "onnx/coco/MEDIUM 1400/5000"}
+2026-09-13T19:52:53.498679+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329170352964589, "event": "onnx/coco/MEDIUM 1500/5000"}
+2026-09-13T19:54:36.415524+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329242453751125, "event": "onnx/coco/MEDIUM 1600/5000"}
+2026-09-13T19:55:26.440669+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329314513978452, "event": "onnx/coco/MEDIUM 1700/5000"}
+2026-09-13T19:57:26.212448+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329386553544677, "event": "onnx/coco/MEDIUM 1800/5000"}
+2026-09-13T19:58:22.017492+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329458726152534, "event": "onnx/coco/MEDIUM 1900/5000"}
+2026-09-13T19:59:14.020660+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329530781223316, "event": "onnx/coco/MEDIUM 2000/5000"}
+2026-09-13T20:00:04.479884+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329602918860952, "event": "onnx/coco/MEDIUM 2100/5000"}
+2026-09-13T20:01:59.686902+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329675084533611, "event": "onnx/coco/MEDIUM 2200/5000"}
+2026-09-13T20:02:55.905521+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329747167100949, "event": "onnx/coco/MEDIUM 2300/5000"}
+2026-09-13T20:04:05.912639+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329819274237779, "event": "onnx/coco/MEDIUM 2400/5000"}
+2026-09-13T20:05:03.394681+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329891400529680, "event": "onnx/coco/MEDIUM 2500/5000"}
+2026-09-13T20:06:50.667769+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789329963545683536, "event": "onnx/coco/MEDIUM 2600/5000"}
+2026-09-13T20:07:49.375235+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330035654182702, "event": "onnx/coco/MEDIUM 2700/5000"}
+2026-09-13T20:08:47.530191+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330107745795012, "event": "onnx/coco/MEDIUM 2800/5000"}
+2026-09-13T20:10:32.664304+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330179779556415, "event": "onnx/coco/MEDIUM 2900/5000"}
+2026-09-13T20:11:28.935597+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330251952227425, "event": "onnx/coco/MEDIUM 3000/5000"}
+2026-09-13T20:12:21.827278+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330324001270587, "event": "onnx/coco/MEDIUM 3100/5000"}
+2026-09-13T20:13:28.116093+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330396166458361, "event": "onnx/coco/MEDIUM 3200/5000"}
+2026-09-13T20:15:20.307699+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330468300893767, "event": "onnx/coco/MEDIUM 3300/5000"}
+2026-09-13T20:16:11.641080+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330540418061998, "event": "onnx/coco/MEDIUM 3400/5000"}
+2026-09-13T20:17:06.201753+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330612540992151, "event": "onnx/coco/MEDIUM 3500/5000"}
+2026-09-13T20:18:51.253530+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330684682166897, "event": "onnx/coco/MEDIUM 3600/5000"}
+2026-09-13T20:19:58.005170+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330756733006269, "event": "onnx/coco/MEDIUM 3700/5000"}
+2026-09-13T20:20:50.429278+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330828999806775, "event": "onnx/coco/MEDIUM 3800/5000"}
+2026-09-13T20:22:37.957350+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330901015692700, "event": "onnx/coco/MEDIUM 3900/5000"}
+2026-09-13T20:23:34.499586+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789330973142406917, "event": "onnx/coco/MEDIUM 4000/5000"}
+2026-09-13T20:24:25.362070+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331045385673012, "event": "onnx/coco/MEDIUM 4100/5000"}
+2026-09-13T20:25:29.063818+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331117429754123, "event": "onnx/coco/MEDIUM 4200/5000"}
+2026-09-13T20:27:10.516859+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331189524026814, "event": "onnx/coco/MEDIUM 4300/5000"}
+2026-09-13T20:28:14.321089+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331261635256821, "event": "onnx/coco/MEDIUM 4400/5000"}
+2026-09-13T20:29:07.565059+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331333766677104, "event": "onnx/coco/MEDIUM 4500/5000"}
+2026-09-13T20:30:18.680469+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331405865086096, "event": "onnx/coco/MEDIUM 4600/5000"}
+2026-09-13T20:32:13.446636+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331477944268192, "event": "onnx/coco/MEDIUM 4700/5000"}
+2026-09-13T20:33:15.664292+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331549939254720, "event": "onnx/coco/MEDIUM 4800/5000"}
+2026-09-13T20:34:18.053088+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331622054582095, "event": "onnx/coco/MEDIUM 4900/5000"}
+2026-09-13T20:35:34.023225+00:00 soren: 2026-09-13T20:34:55.837832+00:00 PASSED onnx/coco/MEDIUM map50=0.580577 map50_95=0.445668 vru_recall=0.772067 elapsed_s=3607.0
+2026-09-13T20:35:34.023503+00:00 soren: onnx-coco-MEDIUM.log: {"time_ns": 1789331694996554162, "event": "PASSED onnx/coco/MEDIUM: mAP50=0.580577 mAP50-95=0.445668 VRU=0.772067"}
+2026-09-13T20:35:34.023509+00:00 soren: COMPUTE-DONE.json: {
+2026-09-13T20:35:34.023512+00:00 soren:   "status": "passed",
+2026-09-13T20:35:34.023514+00:00 soren:   "simulated": false,
+2026-09-13T20:35:34.023516+00:00 soren:   "evaluations": 12,
+2026-09-13T20:35:34.023519+00:00 soren:   "finished_at_ns": 1789331695837915685,
+2026-09-13T20:35:34.023521+00:00 soren:   "remaining": "figures, independent artifact verification, preservation hash check, completion sentinel"
+2026-09-13T20:35:34.023524+00:00 soren: driver-exit.json: {
+2026-09-13T20:35:34.023526+00:00 soren:   "returncode": 0,
+2026-09-13T20:35:34.023528+00:00 soren:   "finished_at_ns": 1789331695838235198
+2026-09-13T20:36:40.024453+00:00 all 12 evaluations / 39000 image evaluations passed; figures and evidence map generated; artifact verification passed; 836 prior result files byte-identical; zero placeholder label leaks; figure visual QA passed; home service healthy and ledger free; measured NANO KITTI cyclist-recall zeros retained; writing final checksum sentinels next

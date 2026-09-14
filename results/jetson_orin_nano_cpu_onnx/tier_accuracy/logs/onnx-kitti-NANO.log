@@ -1,0 +1,18 @@
+[0;93m2026-09-13 18:56:43.969231595 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+18:56:44  INFO     [RAMS] YOLOv8-nano ready — ONNX (imgsz=320).
+{"time_ns": 1789325808926265382, "event": "onnx/kitti/NANO 100/1500"}
+{"time_ns": 1789325813788504735, "event": "onnx/kitti/NANO 200/1500"}
+{"time_ns": 1789325818618044005, "event": "onnx/kitti/NANO 300/1500"}
+{"time_ns": 1789325823463101600, "event": "onnx/kitti/NANO 400/1500"}
+{"time_ns": 1789325828337661501, "event": "onnx/kitti/NANO 500/1500"}
+{"time_ns": 1789325833219405082, "event": "onnx/kitti/NANO 600/1500"}
+{"time_ns": 1789325838072926443, "event": "onnx/kitti/NANO 700/1500"}
+{"time_ns": 1789325842909084552, "event": "onnx/kitti/NANO 800/1500"}
+{"time_ns": 1789325847746481210, "event": "onnx/kitti/NANO 900/1500"}
+{"time_ns": 1789325852610657559, "event": "onnx/kitti/NANO 1000/1500"}
+{"time_ns": 1789325857434642330, "event": "onnx/kitti/NANO 1100/1500"}
+{"time_ns": 1789325862274220848, "event": "onnx/kitti/NANO 1200/1500"}
+{"time_ns": 1789325867111842426, "event": "onnx/kitti/NANO 1300/1500"}
+{"time_ns": 1789325871935483885, "event": "onnx/kitti/NANO 1400/1500"}
+{"time_ns": 1789325876775160356, "event": "onnx/kitti/NANO 1500/1500"}
+{"time_ns": 1789325877122277609, "event": "PASSED onnx/kitti/NANO: mAP50=0.159214 mAP50-95=0.078347 VRU=0.229441"}
