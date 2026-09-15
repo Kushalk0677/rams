@@ -418,6 +418,24 @@ class TestSafetyVruOverride:
             tier2 = policy.select_tier(0.93, Tier.SMALL)
             assert tier2 == Tier.NANO  # Back to threshold-based selection
 
+    def test_injected_clock_controls_expiry(self) -> None:
+        """Offline replays may advance retention by camera rather than wall time."""
+        from rams.policy import SafetyPolicy
+
+        now = [100.0]
+        policy = SafetyPolicy(
+            lo_thresh=0.45,
+            hi_thresh=0.72,
+            hysteresis_window=1,
+            proximity_window_s=0.5,
+            clock=lambda: now[0],
+        )
+        vru = [{"class": "person", "conf": 0.9}]
+        assert policy.select_tier(0.93, Tier.MEDIUM, recent_detections=vru) == Tier.SMALL
+
+        now[0] = 100.6
+        assert policy.select_tier(0.93, Tier.SMALL) == Tier.NANO
+
     def test_expiry_with_zero_window(self, make_safety_policy: Any) -> None:
         """With proximity_window_s=0 the override expires immediately."""
         policy = make_safety_policy(hysteresis_window=1, proximity_window_s=0.0)

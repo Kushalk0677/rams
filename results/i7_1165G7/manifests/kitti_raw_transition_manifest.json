@@ -1,0 +1,6556 @@
+{
+  "raw_root": "D:\\data\\kitti_raw",
+  "tracklet_root": "D:\\data\\kitti_raw_tracklets",
+  "sequences": [
+    {
+      "sequence": "2011_09_26_drive_0001_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0001_sync\\image_02\\data",
+      "n_images": 108,
+      "n_timestamps": 108,
+      "fps": 9.696131,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0001_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 2
+    },
+    {
+      "sequence": "2011_09_26_drive_0002_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0002_sync\\image_02\\data",
+      "n_images": 77,
+      "n_timestamps": 77,
+      "fps": 9.695414,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0002_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 2
+    },
+    {
+      "sequence": "2011_09_26_drive_0005_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0005_sync\\image_02\\data",
+      "n_images": 154,
+      "n_timestamps": 154,
+      "fps": 9.684579,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0005_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 3
+    },
+    {
+      "sequence": "2011_09_26_drive_0014_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0014_sync\\image_02\\data",
+      "n_images": 314,
+      "n_timestamps": 314,
+      "fps": 9.660066,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0014_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 9
+    },
+    {
+      "sequence": "2011_09_26_drive_0019_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0019_sync\\image_02\\data",
+      "n_images": 481,
+      "n_timestamps": 481,
+      "fps": 9.65083,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0019_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 10
+    },
+    {
+      "sequence": "2011_09_26_drive_0020_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0020_sync\\image_02\\data",
+      "n_images": 86,
+      "n_timestamps": 86,
+      "fps": 9.64962,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0020_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 2
+    },
+    {
+      "sequence": "2011_09_26_drive_0027_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0027_sync\\image_02\\data",
+      "n_images": 188,
+      "n_timestamps": 188,
+      "fps": 9.660244,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0027_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 0
+    },
+    {
+      "sequence": "2011_09_26_drive_0035_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0035_sync\\image_02\\data",
+      "n_images": 131,
+      "n_timestamps": 131,
+      "fps": 9.661267,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0035_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 3
+    },
+    {
+      "sequence": "2011_09_26_drive_0039_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0039_sync\\image_02\\data",
+      "n_images": 395,
+      "n_timestamps": 395,
+      "fps": 9.684758,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0039_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 3
+    },
+    {
+      "sequence": "2011_09_26_drive_0051_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0051_sync\\image_02\\data",
+      "n_images": 438,
+      "n_timestamps": 438,
+      "fps": 9.671002,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0051_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 5
+    },
+    {
+      "sequence": "2011_09_26_drive_0056_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0056_sync\\image_02\\data",
+      "n_images": 294,
+      "n_timestamps": 294,
+      "fps": 9.673054,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0056_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 3
+    },
+    {
+      "sequence": "2011_09_26_drive_0070_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0070_sync\\image_02\\data",
+      "n_images": 420,
+      "n_timestamps": 420,
+      "fps": 9.673166,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0070_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 4
+    },
+    {
+      "sequence": "2011_09_26_drive_0084_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0084_sync\\image_02\\data",
+      "n_images": 383,
+      "n_timestamps": 383,
+      "fps": 9.649676,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0084_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 4
+    },
+    {
+      "sequence": "2011_09_26_drive_0091_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0091_sync\\image_02\\data",
+      "n_images": 340,
+      "n_timestamps": 340,
+      "fps": 9.6608,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0091_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 50
+    },
+    {
+      "sequence": "2011_09_26_drive_0093_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_26\\2011_09_26_drive_0093_sync\\image_02\\data",
+      "n_images": 433,
+      "n_timestamps": 433,
+      "fps": 9.661089,
+      "tracklet_path": "D:\\data\\kitti_raw_tracklets\\2011_09_26\\2011_09_26_drive_0093_sync\\tracklet_labels.xml",
+      "n_vru_tracklets": 6
+    },
+    {
+      "sequence": "2011_09_30_drive_0028_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_30\\2011_09_30_drive_0028_sync\\image_02\\data",
+      "n_images": 5177,
+      "n_timestamps": 5177,
+      "fps": 9.626852,
+      "tracklet_path": null,
+      "n_vru_tracklets": null
+    },
+    {
+      "sequence": "2011_09_30_drive_0033_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_09_30\\2011_09_30_drive_0033_sync\\image_02\\data",
+      "n_images": 1594,
+      "n_timestamps": 1594,
+      "fps": 9.638555,
+      "tracklet_path": null,
+      "n_vru_tracklets": null
+    },
+    {
+      "sequence": "2011_10_03_drive_0027_sync",
+      "image_dir": "D:\\data\\kitti_raw\\2011_10_03\\2011_10_03_drive_0027_sync\\image_02\\data",
+      "n_images": 4544,
+      "n_timestamps": 4544,
+      "fps": 9.650908,
+      "tracklet_path": null,
+      "n_vru_tracklets": null
+    }
+  ],
+  "n_sequences": 18,
+  "n_images": 15557,
+  "n_missing_tracklet_labels": 3,
+  "missing_tracklet_label_sequences": [
+    "2011_09_30_drive_0028_sync",
+    "2011_09_30_drive_0033_sync",
+    "2011_10_03_drive_0027_sync"
+  ],
+  "labelled_only": true,
+  "n_selected_sequences": 15,
+  "selected_sequences": [
+    "2011_09_26_drive_0001_sync",
+    "2011_09_26_drive_0002_sync",
+    "2011_09_26_drive_0005_sync",
+    "2011_09_26_drive_0014_sync",
+    "2011_09_26_drive_0019_sync",
+    "2011_09_26_drive_0020_sync",
+    "2011_09_26_drive_0027_sync",
+    "2011_09_26_drive_0035_sync",
+    "2011_09_26_drive_0039_sync",
+    "2011_09_26_drive_0051_sync",
+    "2011_09_26_drive_0056_sync",
+    "2011_09_26_drive_0070_sync",
+    "2011_09_26_drive_0084_sync",
+    "2011_09_26_drive_0091_sync",
+    "2011_09_26_drive_0093_sync"
+  ],
+  "excluded_unlabelled_sequences": [
+    "2011_09_30_drive_0028_sync",
+    "2011_09_30_drive_0033_sync",
+    "2011_10_03_drive_0027_sync"
+  ],
+  "status": "complete_labelled_subset",
+  "next_step": "Run with --prepare to create the fixed transition manifest.",
+  "transition_manifest": {
+    "analysis": "KITTI raw pre-entry elevation",
+    "interpretation": "reactive carry-over only; not VRU anticipation",
+    "window_seconds": 0.5,
+    "vru_tracklet_types": [
+      "cyclist",
+      "pedestrian"
+    ],
+    "eligible_transition_events": [
+      {
+        "sequence": "2011_09_26_drive_0001_sync",
+        "entry_frame": 33,
+        "track_last_frame": 107,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          28,
+          29,
+          30,
+          31,
+          32
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "entry_frame": 104,
+        "track_last_frame": 118,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          99,
+          100,
+          101,
+          102,
+          103
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "entry_frame": 184,
+        "track_last_frame": 206,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          179,
+          180,
+          181,
+          182,
+          183
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "entry_frame": 220,
+        "track_last_frame": 230,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          215,
+          216,
+          217,
+          218,
+          219
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "entry_frame": 295,
+        "track_last_frame": 305,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          290,
+          291,
+          292,
+          293,
+          294
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "entry_frame": 85,
+        "track_last_frame": 101,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "entry_frame": 289,
+        "track_last_frame": 309,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          284,
+          285,
+          286,
+          287,
+          288
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "entry_frame": 315,
+        "track_last_frame": 333,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          310,
+          311,
+          312,
+          313,
+          314
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "entry_frame": 465,
+        "track_last_frame": 480,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          460,
+          461,
+          462,
+          463,
+          464
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "entry_frame": 117,
+        "track_last_frame": 130,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          112,
+          113,
+          114,
+          115,
+          116
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "entry_frame": 153,
+        "track_last_frame": 177,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          148,
+          149,
+          150,
+          151,
+          152
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "entry_frame": 253,
+        "track_last_frame": 319,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          248,
+          249,
+          250,
+          251,
+          252
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "entry_frame": 23,
+        "track_last_frame": 52,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "entry_frame": 66,
+        "track_last_frame": 71,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          61,
+          62,
+          63,
+          64,
+          65
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "entry_frame": 130,
+        "track_last_frame": 152,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "entry_frame": 69,
+        "track_last_frame": 83,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          64,
+          65,
+          66,
+          67,
+          68
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "entry_frame": 159,
+        "track_last_frame": 170,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          154,
+          155,
+          156,
+          157,
+          158
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "entry_frame": 201,
+        "track_last_frame": 219,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          196,
+          197,
+          198,
+          199,
+          200
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "entry_frame": 225,
+        "track_last_frame": 246,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          220,
+          221,
+          222,
+          223,
+          224
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "entry_frame": 335,
+        "track_last_frame": 359,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          330,
+          331,
+          332,
+          333,
+          334
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "entry_frame": 396,
+        "track_last_frame": 406,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          391,
+          392,
+          393,
+          394,
+          395
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "entry_frame": 5,
+        "track_last_frame": 83,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "entry_frame": 203,
+        "track_last_frame": 248,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          198,
+          199,
+          200,
+          201,
+          202
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "entry_frame": 257,
+        "track_last_frame": 285,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          252,
+          253,
+          254,
+          255,
+          256
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "entry_frame": 5,
+        "track_last_frame": 30,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "entry_frame": 5,
+        "track_last_frame": 30,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "entry_frame": 207,
+        "track_last_frame": 237,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          202,
+          203,
+          204,
+          205,
+          206
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "entry_frame": 15,
+        "track_last_frame": 37,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "entry_frame": 125,
+        "track_last_frame": 161,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "entry_frame": 191,
+        "track_last_frame": 230,
+        "object_type": "pedestrian",
+        "window_frames": 5,
+        "pre_frames": [
+          186,
+          187,
+          188,
+          189,
+          190
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "entry_frame": 342,
+        "track_last_frame": 409,
+        "object_type": "cyclist",
+        "window_frames": 5,
+        "pre_frames": [
+          337,
+          338,
+          339,
+          340,
+          341
+        ]
+      }
+    ],
+    "matched_control_candidates": [
+      {
+        "sequence": "2011_09_26_drive_0001_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0001_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0001_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0001_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0001_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0002_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 150,
+        "window_frames": 5,
+        "pre_frames": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 155,
+        "window_frames": 5,
+        "pre_frames": [
+          150,
+          151,
+          152,
+          153,
+          154
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 160,
+        "window_frames": 5,
+        "pre_frames": [
+          155,
+          156,
+          157,
+          158,
+          159
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 165,
+        "window_frames": 5,
+        "pre_frames": [
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 215,
+        "window_frames": 5,
+        "pre_frames": [
+          210,
+          211,
+          212,
+          213,
+          214
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 240,
+        "window_frames": 5,
+        "pre_frames": [
+          235,
+          236,
+          237,
+          238,
+          239
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 245,
+        "window_frames": 5,
+        "pre_frames": [
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 250,
+        "window_frames": 5,
+        "pre_frames": [
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 255,
+        "window_frames": 5,
+        "pre_frames": [
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 260,
+        "window_frames": 5,
+        "pre_frames": [
+          255,
+          256,
+          257,
+          258,
+          259
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 265,
+        "window_frames": 5,
+        "pre_frames": [
+          260,
+          261,
+          262,
+          263,
+          264
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 270,
+        "window_frames": 5,
+        "pre_frames": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 275,
+        "window_frames": 5,
+        "pre_frames": [
+          270,
+          271,
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 280,
+        "window_frames": 5,
+        "pre_frames": [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 285,
+        "window_frames": 5,
+        "pre_frames": [
+          280,
+          281,
+          282,
+          283,
+          284
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0014_sync",
+        "control_frame": 290,
+        "window_frames": 5,
+        "pre_frames": [
+          285,
+          286,
+          287,
+          288,
+          289
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 150,
+        "window_frames": 5,
+        "pre_frames": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 155,
+        "window_frames": 5,
+        "pre_frames": [
+          150,
+          151,
+          152,
+          153,
+          154
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 160,
+        "window_frames": 5,
+        "pre_frames": [
+          155,
+          156,
+          157,
+          158,
+          159
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 165,
+        "window_frames": 5,
+        "pre_frames": [
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 200,
+        "window_frames": 5,
+        "pre_frames": [
+          195,
+          196,
+          197,
+          198,
+          199
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 205,
+        "window_frames": 5,
+        "pre_frames": [
+          200,
+          201,
+          202,
+          203,
+          204
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 210,
+        "window_frames": 5,
+        "pre_frames": [
+          205,
+          206,
+          207,
+          208,
+          209
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 215,
+        "window_frames": 5,
+        "pre_frames": [
+          210,
+          211,
+          212,
+          213,
+          214
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 220,
+        "window_frames": 5,
+        "pre_frames": [
+          215,
+          216,
+          217,
+          218,
+          219
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 225,
+        "window_frames": 5,
+        "pre_frames": [
+          220,
+          221,
+          222,
+          223,
+          224
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 230,
+        "window_frames": 5,
+        "pre_frames": [
+          225,
+          226,
+          227,
+          228,
+          229
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 235,
+        "window_frames": 5,
+        "pre_frames": [
+          230,
+          231,
+          232,
+          233,
+          234
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 240,
+        "window_frames": 5,
+        "pre_frames": [
+          235,
+          236,
+          237,
+          238,
+          239
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 245,
+        "window_frames": 5,
+        "pre_frames": [
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 250,
+        "window_frames": 5,
+        "pre_frames": [
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 255,
+        "window_frames": 5,
+        "pre_frames": [
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 260,
+        "window_frames": 5,
+        "pre_frames": [
+          255,
+          256,
+          257,
+          258,
+          259
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 265,
+        "window_frames": 5,
+        "pre_frames": [
+          260,
+          261,
+          262,
+          263,
+          264
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 270,
+        "window_frames": 5,
+        "pre_frames": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 275,
+        "window_frames": 5,
+        "pre_frames": [
+          270,
+          271,
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 280,
+        "window_frames": 5,
+        "pre_frames": [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 385,
+        "window_frames": 5,
+        "pre_frames": [
+          380,
+          381,
+          382,
+          383,
+          384
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 390,
+        "window_frames": 5,
+        "pre_frames": [
+          385,
+          386,
+          387,
+          388,
+          389
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 395,
+        "window_frames": 5,
+        "pre_frames": [
+          390,
+          391,
+          392,
+          393,
+          394
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 400,
+        "window_frames": 5,
+        "pre_frames": [
+          395,
+          396,
+          397,
+          398,
+          399
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 405,
+        "window_frames": 5,
+        "pre_frames": [
+          400,
+          401,
+          402,
+          403,
+          404
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 410,
+        "window_frames": 5,
+        "pre_frames": [
+          405,
+          406,
+          407,
+          408,
+          409
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 415,
+        "window_frames": 5,
+        "pre_frames": [
+          410,
+          411,
+          412,
+          413,
+          414
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 420,
+        "window_frames": 5,
+        "pre_frames": [
+          415,
+          416,
+          417,
+          418,
+          419
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 425,
+        "window_frames": 5,
+        "pre_frames": [
+          420,
+          421,
+          422,
+          423,
+          424
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 430,
+        "window_frames": 5,
+        "pre_frames": [
+          425,
+          426,
+          427,
+          428,
+          429
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 435,
+        "window_frames": 5,
+        "pre_frames": [
+          430,
+          431,
+          432,
+          433,
+          434
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 440,
+        "window_frames": 5,
+        "pre_frames": [
+          435,
+          436,
+          437,
+          438,
+          439
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 445,
+        "window_frames": 5,
+        "pre_frames": [
+          440,
+          441,
+          442,
+          443,
+          444
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 450,
+        "window_frames": 5,
+        "pre_frames": [
+          445,
+          446,
+          447,
+          448,
+          449
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 455,
+        "window_frames": 5,
+        "pre_frames": [
+          450,
+          451,
+          452,
+          453,
+          454
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0019_sync",
+        "control_frame": 460,
+        "window_frames": 5,
+        "pre_frames": [
+          455,
+          456,
+          457,
+          458,
+          459
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 150,
+        "window_frames": 5,
+        "pre_frames": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 155,
+        "window_frames": 5,
+        "pre_frames": [
+          150,
+          151,
+          152,
+          153,
+          154
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 160,
+        "window_frames": 5,
+        "pre_frames": [
+          155,
+          156,
+          157,
+          158,
+          159
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 165,
+        "window_frames": 5,
+        "pre_frames": [
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0027_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0035_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 200,
+        "window_frames": 5,
+        "pre_frames": [
+          195,
+          196,
+          197,
+          198,
+          199
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 205,
+        "window_frames": 5,
+        "pre_frames": [
+          200,
+          201,
+          202,
+          203,
+          204
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 210,
+        "window_frames": 5,
+        "pre_frames": [
+          205,
+          206,
+          207,
+          208,
+          209
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 215,
+        "window_frames": 5,
+        "pre_frames": [
+          210,
+          211,
+          212,
+          213,
+          214
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 220,
+        "window_frames": 5,
+        "pre_frames": [
+          215,
+          216,
+          217,
+          218,
+          219
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 225,
+        "window_frames": 5,
+        "pre_frames": [
+          220,
+          221,
+          222,
+          223,
+          224
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 230,
+        "window_frames": 5,
+        "pre_frames": [
+          225,
+          226,
+          227,
+          228,
+          229
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 235,
+        "window_frames": 5,
+        "pre_frames": [
+          230,
+          231,
+          232,
+          233,
+          234
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 240,
+        "window_frames": 5,
+        "pre_frames": [
+          235,
+          236,
+          237,
+          238,
+          239
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 245,
+        "window_frames": 5,
+        "pre_frames": [
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 340,
+        "window_frames": 5,
+        "pre_frames": [
+          335,
+          336,
+          337,
+          338,
+          339
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 345,
+        "window_frames": 5,
+        "pre_frames": [
+          340,
+          341,
+          342,
+          343,
+          344
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 350,
+        "window_frames": 5,
+        "pre_frames": [
+          345,
+          346,
+          347,
+          348,
+          349
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 355,
+        "window_frames": 5,
+        "pre_frames": [
+          350,
+          351,
+          352,
+          353,
+          354
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 360,
+        "window_frames": 5,
+        "pre_frames": [
+          355,
+          356,
+          357,
+          358,
+          359
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 365,
+        "window_frames": 5,
+        "pre_frames": [
+          360,
+          361,
+          362,
+          363,
+          364
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 370,
+        "window_frames": 5,
+        "pre_frames": [
+          365,
+          366,
+          367,
+          368,
+          369
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 375,
+        "window_frames": 5,
+        "pre_frames": [
+          370,
+          371,
+          372,
+          373,
+          374
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 380,
+        "window_frames": 5,
+        "pre_frames": [
+          375,
+          376,
+          377,
+          378,
+          379
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0039_sync",
+        "control_frame": 385,
+        "window_frames": 5,
+        "pre_frames": [
+          380,
+          381,
+          382,
+          383,
+          384
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 160,
+        "window_frames": 5,
+        "pre_frames": [
+          155,
+          156,
+          157,
+          158,
+          159
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 165,
+        "window_frames": 5,
+        "pre_frames": [
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 200,
+        "window_frames": 5,
+        "pre_frames": [
+          195,
+          196,
+          197,
+          198,
+          199
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 205,
+        "window_frames": 5,
+        "pre_frames": [
+          200,
+          201,
+          202,
+          203,
+          204
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 210,
+        "window_frames": 5,
+        "pre_frames": [
+          205,
+          206,
+          207,
+          208,
+          209
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 215,
+        "window_frames": 5,
+        "pre_frames": [
+          210,
+          211,
+          212,
+          213,
+          214
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 220,
+        "window_frames": 5,
+        "pre_frames": [
+          215,
+          216,
+          217,
+          218,
+          219
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 225,
+        "window_frames": 5,
+        "pre_frames": [
+          220,
+          221,
+          222,
+          223,
+          224
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 230,
+        "window_frames": 5,
+        "pre_frames": [
+          225,
+          226,
+          227,
+          228,
+          229
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 235,
+        "window_frames": 5,
+        "pre_frames": [
+          230,
+          231,
+          232,
+          233,
+          234
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 240,
+        "window_frames": 5,
+        "pre_frames": [
+          235,
+          236,
+          237,
+          238,
+          239
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 245,
+        "window_frames": 5,
+        "pre_frames": [
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 250,
+        "window_frames": 5,
+        "pre_frames": [
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 255,
+        "window_frames": 5,
+        "pre_frames": [
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 260,
+        "window_frames": 5,
+        "pre_frames": [
+          255,
+          256,
+          257,
+          258,
+          259
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 265,
+        "window_frames": 5,
+        "pre_frames": [
+          260,
+          261,
+          262,
+          263,
+          264
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 270,
+        "window_frames": 5,
+        "pre_frames": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 275,
+        "window_frames": 5,
+        "pre_frames": [
+          270,
+          271,
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 280,
+        "window_frames": 5,
+        "pre_frames": [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 285,
+        "window_frames": 5,
+        "pre_frames": [
+          280,
+          281,
+          282,
+          283,
+          284
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 290,
+        "window_frames": 5,
+        "pre_frames": [
+          285,
+          286,
+          287,
+          288,
+          289
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 295,
+        "window_frames": 5,
+        "pre_frames": [
+          290,
+          291,
+          292,
+          293,
+          294
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 300,
+        "window_frames": 5,
+        "pre_frames": [
+          295,
+          296,
+          297,
+          298,
+          299
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 305,
+        "window_frames": 5,
+        "pre_frames": [
+          300,
+          301,
+          302,
+          303,
+          304
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 310,
+        "window_frames": 5,
+        "pre_frames": [
+          305,
+          306,
+          307,
+          308,
+          309
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 315,
+        "window_frames": 5,
+        "pre_frames": [
+          310,
+          311,
+          312,
+          313,
+          314
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 320,
+        "window_frames": 5,
+        "pre_frames": [
+          315,
+          316,
+          317,
+          318,
+          319
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 325,
+        "window_frames": 5,
+        "pre_frames": [
+          320,
+          321,
+          322,
+          323,
+          324
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 330,
+        "window_frames": 5,
+        "pre_frames": [
+          325,
+          326,
+          327,
+          328,
+          329
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 335,
+        "window_frames": 5,
+        "pre_frames": [
+          330,
+          331,
+          332,
+          333,
+          334
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 340,
+        "window_frames": 5,
+        "pre_frames": [
+          335,
+          336,
+          337,
+          338,
+          339
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 345,
+        "window_frames": 5,
+        "pre_frames": [
+          340,
+          341,
+          342,
+          343,
+          344
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 350,
+        "window_frames": 5,
+        "pre_frames": [
+          345,
+          346,
+          347,
+          348,
+          349
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 355,
+        "window_frames": 5,
+        "pre_frames": [
+          350,
+          351,
+          352,
+          353,
+          354
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 360,
+        "window_frames": 5,
+        "pre_frames": [
+          355,
+          356,
+          357,
+          358,
+          359
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 365,
+        "window_frames": 5,
+        "pre_frames": [
+          360,
+          361,
+          362,
+          363,
+          364
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 370,
+        "window_frames": 5,
+        "pre_frames": [
+          365,
+          366,
+          367,
+          368,
+          369
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 375,
+        "window_frames": 5,
+        "pre_frames": [
+          370,
+          371,
+          372,
+          373,
+          374
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 380,
+        "window_frames": 5,
+        "pre_frames": [
+          375,
+          376,
+          377,
+          378,
+          379
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 385,
+        "window_frames": 5,
+        "pre_frames": [
+          380,
+          381,
+          382,
+          383,
+          384
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 390,
+        "window_frames": 5,
+        "pre_frames": [
+          385,
+          386,
+          387,
+          388,
+          389
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 395,
+        "window_frames": 5,
+        "pre_frames": [
+          390,
+          391,
+          392,
+          393,
+          394
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 400,
+        "window_frames": 5,
+        "pre_frames": [
+          395,
+          396,
+          397,
+          398,
+          399
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 405,
+        "window_frames": 5,
+        "pre_frames": [
+          400,
+          401,
+          402,
+          403,
+          404
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 410,
+        "window_frames": 5,
+        "pre_frames": [
+          405,
+          406,
+          407,
+          408,
+          409
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 415,
+        "window_frames": 5,
+        "pre_frames": [
+          410,
+          411,
+          412,
+          413,
+          414
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 420,
+        "window_frames": 5,
+        "pre_frames": [
+          415,
+          416,
+          417,
+          418,
+          419
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 425,
+        "window_frames": 5,
+        "pre_frames": [
+          420,
+          421,
+          422,
+          423,
+          424
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0051_sync",
+        "control_frame": 430,
+        "window_frames": 5,
+        "pre_frames": [
+          425,
+          426,
+          427,
+          428,
+          429
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 150,
+        "window_frames": 5,
+        "pre_frames": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 225,
+        "window_frames": 5,
+        "pre_frames": [
+          220,
+          221,
+          222,
+          223,
+          224
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 230,
+        "window_frames": 5,
+        "pre_frames": [
+          225,
+          226,
+          227,
+          228,
+          229
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 235,
+        "window_frames": 5,
+        "pre_frames": [
+          230,
+          231,
+          232,
+          233,
+          234
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 240,
+        "window_frames": 5,
+        "pre_frames": [
+          235,
+          236,
+          237,
+          238,
+          239
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 245,
+        "window_frames": 5,
+        "pre_frames": [
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 250,
+        "window_frames": 5,
+        "pre_frames": [
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 255,
+        "window_frames": 5,
+        "pre_frames": [
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 260,
+        "window_frames": 5,
+        "pre_frames": [
+          255,
+          256,
+          257,
+          258,
+          259
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 265,
+        "window_frames": 5,
+        "pre_frames": [
+          260,
+          261,
+          262,
+          263,
+          264
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 270,
+        "window_frames": 5,
+        "pre_frames": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 275,
+        "window_frames": 5,
+        "pre_frames": [
+          270,
+          271,
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 280,
+        "window_frames": 5,
+        "pre_frames": [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0056_sync",
+        "control_frame": 285,
+        "window_frames": 5,
+        "pre_frames": [
+          280,
+          281,
+          282,
+          283,
+          284
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 15,
+        "window_frames": 5,
+        "pre_frames": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 20,
+        "window_frames": 5,
+        "pre_frames": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 25,
+        "window_frames": 5,
+        "pre_frames": [
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 30,
+        "window_frames": 5,
+        "pre_frames": [
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 35,
+        "window_frames": 5,
+        "pre_frames": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 40,
+        "window_frames": 5,
+        "pre_frames": [
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 150,
+        "window_frames": 5,
+        "pre_frames": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 155,
+        "window_frames": 5,
+        "pre_frames": [
+          150,
+          151,
+          152,
+          153,
+          154
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 160,
+        "window_frames": 5,
+        "pre_frames": [
+          155,
+          156,
+          157,
+          158,
+          159
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 165,
+        "window_frames": 5,
+        "pre_frames": [
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 200,
+        "window_frames": 5,
+        "pre_frames": [
+          195,
+          196,
+          197,
+          198,
+          199
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 205,
+        "window_frames": 5,
+        "pre_frames": [
+          200,
+          201,
+          202,
+          203,
+          204
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 210,
+        "window_frames": 5,
+        "pre_frames": [
+          205,
+          206,
+          207,
+          208,
+          209
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 215,
+        "window_frames": 5,
+        "pre_frames": [
+          210,
+          211,
+          212,
+          213,
+          214
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 220,
+        "window_frames": 5,
+        "pre_frames": [
+          215,
+          216,
+          217,
+          218,
+          219
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 255,
+        "window_frames": 5,
+        "pre_frames": [
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 260,
+        "window_frames": 5,
+        "pre_frames": [
+          255,
+          256,
+          257,
+          258,
+          259
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 265,
+        "window_frames": 5,
+        "pre_frames": [
+          260,
+          261,
+          262,
+          263,
+          264
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 270,
+        "window_frames": 5,
+        "pre_frames": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 275,
+        "window_frames": 5,
+        "pre_frames": [
+          270,
+          271,
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 280,
+        "window_frames": 5,
+        "pre_frames": [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 285,
+        "window_frames": 5,
+        "pre_frames": [
+          280,
+          281,
+          282,
+          283,
+          284
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 290,
+        "window_frames": 5,
+        "pre_frames": [
+          285,
+          286,
+          287,
+          288,
+          289
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 295,
+        "window_frames": 5,
+        "pre_frames": [
+          290,
+          291,
+          292,
+          293,
+          294
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 300,
+        "window_frames": 5,
+        "pre_frames": [
+          295,
+          296,
+          297,
+          298,
+          299
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 305,
+        "window_frames": 5,
+        "pre_frames": [
+          300,
+          301,
+          302,
+          303,
+          304
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 310,
+        "window_frames": 5,
+        "pre_frames": [
+          305,
+          306,
+          307,
+          308,
+          309
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 315,
+        "window_frames": 5,
+        "pre_frames": [
+          310,
+          311,
+          312,
+          313,
+          314
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 320,
+        "window_frames": 5,
+        "pre_frames": [
+          315,
+          316,
+          317,
+          318,
+          319
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 325,
+        "window_frames": 5,
+        "pre_frames": [
+          320,
+          321,
+          322,
+          323,
+          324
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 330,
+        "window_frames": 5,
+        "pre_frames": [
+          325,
+          326,
+          327,
+          328,
+          329
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 365,
+        "window_frames": 5,
+        "pre_frames": [
+          360,
+          361,
+          362,
+          363,
+          364
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 370,
+        "window_frames": 5,
+        "pre_frames": [
+          365,
+          366,
+          367,
+          368,
+          369
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 375,
+        "window_frames": 5,
+        "pre_frames": [
+          370,
+          371,
+          372,
+          373,
+          374
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 380,
+        "window_frames": 5,
+        "pre_frames": [
+          375,
+          376,
+          377,
+          378,
+          379
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 385,
+        "window_frames": 5,
+        "pre_frames": [
+          380,
+          381,
+          382,
+          383,
+          384
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0070_sync",
+        "control_frame": 390,
+        "window_frames": 5,
+        "pre_frames": [
+          385,
+          386,
+          387,
+          388,
+          389
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 125,
+        "window_frames": 5,
+        "pre_frames": [
+          120,
+          121,
+          122,
+          123,
+          124
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 130,
+        "window_frames": 5,
+        "pre_frames": [
+          125,
+          126,
+          127,
+          128,
+          129
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 135,
+        "window_frames": 5,
+        "pre_frames": [
+          130,
+          131,
+          132,
+          133,
+          134
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 140,
+        "window_frames": 5,
+        "pre_frames": [
+          135,
+          136,
+          137,
+          138,
+          139
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 145,
+        "window_frames": 5,
+        "pre_frames": [
+          140,
+          141,
+          142,
+          143,
+          144
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 150,
+        "window_frames": 5,
+        "pre_frames": [
+          145,
+          146,
+          147,
+          148,
+          149
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 155,
+        "window_frames": 5,
+        "pre_frames": [
+          150,
+          151,
+          152,
+          153,
+          154
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 160,
+        "window_frames": 5,
+        "pre_frames": [
+          155,
+          156,
+          157,
+          158,
+          159
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 165,
+        "window_frames": 5,
+        "pre_frames": [
+          160,
+          161,
+          162,
+          163,
+          164
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 295,
+        "window_frames": 5,
+        "pre_frames": [
+          290,
+          291,
+          292,
+          293,
+          294
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 300,
+        "window_frames": 5,
+        "pre_frames": [
+          295,
+          296,
+          297,
+          298,
+          299
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 305,
+        "window_frames": 5,
+        "pre_frames": [
+          300,
+          301,
+          302,
+          303,
+          304
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 310,
+        "window_frames": 5,
+        "pre_frames": [
+          305,
+          306,
+          307,
+          308,
+          309
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 315,
+        "window_frames": 5,
+        "pre_frames": [
+          310,
+          311,
+          312,
+          313,
+          314
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 320,
+        "window_frames": 5,
+        "pre_frames": [
+          315,
+          316,
+          317,
+          318,
+          319
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 325,
+        "window_frames": 5,
+        "pre_frames": [
+          320,
+          321,
+          322,
+          323,
+          324
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 330,
+        "window_frames": 5,
+        "pre_frames": [
+          325,
+          326,
+          327,
+          328,
+          329
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 335,
+        "window_frames": 5,
+        "pre_frames": [
+          330,
+          331,
+          332,
+          333,
+          334
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 340,
+        "window_frames": 5,
+        "pre_frames": [
+          335,
+          336,
+          337,
+          338,
+          339
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 345,
+        "window_frames": 5,
+        "pre_frames": [
+          340,
+          341,
+          342,
+          343,
+          344
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 350,
+        "window_frames": 5,
+        "pre_frames": [
+          345,
+          346,
+          347,
+          348,
+          349
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 355,
+        "window_frames": 5,
+        "pre_frames": [
+          350,
+          351,
+          352,
+          353,
+          354
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 360,
+        "window_frames": 5,
+        "pre_frames": [
+          355,
+          356,
+          357,
+          358,
+          359
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 365,
+        "window_frames": 5,
+        "pre_frames": [
+          360,
+          361,
+          362,
+          363,
+          364
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 370,
+        "window_frames": 5,
+        "pre_frames": [
+          365,
+          366,
+          367,
+          368,
+          369
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0084_sync",
+        "control_frame": 375,
+        "window_frames": 5,
+        "pre_frames": [
+          370,
+          371,
+          372,
+          373,
+          374
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "control_frame": 190,
+        "window_frames": 5,
+        "pre_frames": [
+          185,
+          186,
+          187,
+          188,
+          189
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "control_frame": 195,
+        "window_frames": 5,
+        "pre_frames": [
+          190,
+          191,
+          192,
+          193,
+          194
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0091_sync",
+        "control_frame": 200,
+        "window_frames": 5,
+        "pre_frames": [
+          195,
+          196,
+          197,
+          198,
+          199
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 5,
+        "window_frames": 5,
+        "pre_frames": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 10,
+        "window_frames": 5,
+        "pre_frames": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 45,
+        "window_frames": 5,
+        "pre_frames": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 50,
+        "window_frames": 5,
+        "pre_frames": [
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 55,
+        "window_frames": 5,
+        "pre_frames": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 60,
+        "window_frames": 5,
+        "pre_frames": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 65,
+        "window_frames": 5,
+        "pre_frames": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 70,
+        "window_frames": 5,
+        "pre_frames": [
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 75,
+        "window_frames": 5,
+        "pre_frames": [
+          70,
+          71,
+          72,
+          73,
+          74
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 80,
+        "window_frames": 5,
+        "pre_frames": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 85,
+        "window_frames": 5,
+        "pre_frames": [
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 90,
+        "window_frames": 5,
+        "pre_frames": [
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 95,
+        "window_frames": 5,
+        "pre_frames": [
+          90,
+          91,
+          92,
+          93,
+          94
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 100,
+        "window_frames": 5,
+        "pre_frames": [
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 105,
+        "window_frames": 5,
+        "pre_frames": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 110,
+        "window_frames": 5,
+        "pre_frames": [
+          105,
+          106,
+          107,
+          108,
+          109
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 115,
+        "window_frames": 5,
+        "pre_frames": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 120,
+        "window_frames": 5,
+        "pre_frames": [
+          115,
+          116,
+          117,
+          118,
+          119
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 170,
+        "window_frames": 5,
+        "pre_frames": [
+          165,
+          166,
+          167,
+          168,
+          169
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 175,
+        "window_frames": 5,
+        "pre_frames": [
+          170,
+          171,
+          172,
+          173,
+          174
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 180,
+        "window_frames": 5,
+        "pre_frames": [
+          175,
+          176,
+          177,
+          178,
+          179
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 185,
+        "window_frames": 5,
+        "pre_frames": [
+          180,
+          181,
+          182,
+          183,
+          184
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 245,
+        "window_frames": 5,
+        "pre_frames": [
+          240,
+          241,
+          242,
+          243,
+          244
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 250,
+        "window_frames": 5,
+        "pre_frames": [
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 255,
+        "window_frames": 5,
+        "pre_frames": [
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 260,
+        "window_frames": 5,
+        "pre_frames": [
+          255,
+          256,
+          257,
+          258,
+          259
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 265,
+        "window_frames": 5,
+        "pre_frames": [
+          260,
+          261,
+          262,
+          263,
+          264
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 270,
+        "window_frames": 5,
+        "pre_frames": [
+          265,
+          266,
+          267,
+          268,
+          269
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 275,
+        "window_frames": 5,
+        "pre_frames": [
+          270,
+          271,
+          272,
+          273,
+          274
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 280,
+        "window_frames": 5,
+        "pre_frames": [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 285,
+        "window_frames": 5,
+        "pre_frames": [
+          280,
+          281,
+          282,
+          283,
+          284
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 290,
+        "window_frames": 5,
+        "pre_frames": [
+          285,
+          286,
+          287,
+          288,
+          289
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 295,
+        "window_frames": 5,
+        "pre_frames": [
+          290,
+          291,
+          292,
+          293,
+          294
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 300,
+        "window_frames": 5,
+        "pre_frames": [
+          295,
+          296,
+          297,
+          298,
+          299
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 305,
+        "window_frames": 5,
+        "pre_frames": [
+          300,
+          301,
+          302,
+          303,
+          304
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 310,
+        "window_frames": 5,
+        "pre_frames": [
+          305,
+          306,
+          307,
+          308,
+          309
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 315,
+        "window_frames": 5,
+        "pre_frames": [
+          310,
+          311,
+          312,
+          313,
+          314
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 320,
+        "window_frames": 5,
+        "pre_frames": [
+          315,
+          316,
+          317,
+          318,
+          319
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 325,
+        "window_frames": 5,
+        "pre_frames": [
+          320,
+          321,
+          322,
+          323,
+          324
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 330,
+        "window_frames": 5,
+        "pre_frames": [
+          325,
+          326,
+          327,
+          328,
+          329
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 335,
+        "window_frames": 5,
+        "pre_frames": [
+          330,
+          331,
+          332,
+          333,
+          334
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 415,
+        "window_frames": 5,
+        "pre_frames": [
+          410,
+          411,
+          412,
+          413,
+          414
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 420,
+        "window_frames": 5,
+        "pre_frames": [
+          415,
+          416,
+          417,
+          418,
+          419
+        ]
+      },
+      {
+        "sequence": "2011_09_26_drive_0093_sync",
+        "control_frame": 425,
+        "window_frames": 5,
+        "pre_frames": [
+          420,
+          421,
+          422,
+          423,
+          424
+        ]
+      }
+    ],
+    "n_transition_events": 31,
+    "minimum_events": 30,
+    "status": "ready"
+  }
+}
