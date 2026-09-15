@@ -73,8 +73,8 @@ benchmark/                    The common frame-aware evaluation harness.
                               Every fixed-tier and adaptive comparison uses this same path.
 
 experiments/                  Named analyses used to build paper tables and figures.
-  exp1...exp12                Policy comparison, load sweep, hysteresis, Pareto, accuracy,
-                              retention, and related focused experiments.
+  exp1...exp14                Policy comparison, load sweep, hysteresis, Pareto, accuracy,
+                              retention, and KITTI Raw temporal carry-over experiments.
   complete_runall*.py         Legacy-compatible entry points for complete Windows and Jetson runs.
 
 scripts/                      Operator-facing commands for a reproducible device run.
@@ -254,7 +254,7 @@ Current revised-protocol evidence is organized by processor family:
 | Directory | Device and backend | Scope |
 |---|---|---|
 | [`results/m4_air`](results/m4_air) | Apple M4 MacBook Air, 16 GB unified memory, CPU ONNX | Real KITTI replay, calibration, raw records, figures, and provenance. |
-| [`results/i7_1165G7`](results/i7_1165G7) | Intel Core i7-1165G7, Windows CPU ONNX | Complete revised-protocol suite: calibration, runtime, Pareto, fresh COCO tier evaluation, policy-level KITTI metrics, and retention sensitivity. |
+| [`results/i7_1165G7`](results/i7_1165G7) | Intel Core i7-1165G7, Windows CPU ONNX | Complete revised-protocol suite: calibration, runtime, Pareto, fresh COCO tier evaluation, policy-level KITTI metrics, retention sensitivity, and a separate KITTI Raw temporal carry-over analysis. |
 | [`results/jetson_agx_orin_64gb_cpu_onnx`](results/jetson_agx_orin_64gb_cpu_onnx) | NVIDIA Jetson AGX Orin 64GB, CPU ONNXRuntime | Corrected on-device runtime, policy-accuracy, retention, calibration, per-rail energy records, and fresh mapped KITTI and COCO tier accuracy. |
 | [`results/jetson_agx_orin_64gb_pytorch`](results/jetson_agx_orin_64gb_pytorch) | NVIDIA Jetson AGX Orin 64GB, PyTorch | Corrected on-device runtime, policy-accuracy, retention, calibration, per-rail energy records, and COCO tier-accuracy context. |
 | [`results/jetson_agx_orin_64gb_tensorrt`](results/jetson_agx_orin_64gb_tensorrt) | NVIDIA Jetson AGX Orin 64GB, TensorRT | Corrected on-device runtime, policy-accuracy, retention, calibration, per-rail energy records, canonical COCO-label verification, and fresh mapped KITTI and COCO tier accuracy. |

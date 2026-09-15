@@ -15,7 +15,7 @@ from __future__ import annotations
 import time
 import logging
 from collections import deque
-from typing import Optional
+from typing import Callable, Optional
 
 from rams.models import Tier
 
@@ -243,11 +243,17 @@ class SafetyPolicy(BasePolicy):
         hysteresis_window: int    = 3,
         proximity_window_s: float = 0.5,
         min_conf: float           = 0.25,   # lowered for mixed-resolution robustness
+        clock: Callable[[], float] | None = None,
     ):
         self._base              = ThresholdPolicy(lo_thresh, hi_thresh, hysteresis_window)
         self.proximity_window_s = proximity_window_s
         self.min_conf           = min_conf
+        self._clock             = clock
         self._last_vru_time: Optional[float] = None
+
+    def _now(self) -> float:
+        """Use an injected replay clock when supplied, else the live clock."""
+        return time.monotonic() if self._clock is None else self._clock()
 
     def _update_vru(self, detections: Optional[list[dict]]):
         if not detections:
@@ -256,13 +262,13 @@ class SafetyPolicy(BasePolicy):
             cls  = str(det.get("class", "")).lower()
             conf = float(det.get("conf", 0.0))
             if cls in VULNERABLE_CLASSES and conf >= self.min_conf:
-                self._last_vru_time = time.monotonic()
+                self._last_vru_time = self._now()
                 return
 
     def _vru_active(self) -> bool:
         if self._last_vru_time is None:
             return False
-        return (time.monotonic() - self._last_vru_time) <= self.proximity_window_s
+        return (self._now() - self._last_vru_time) <= self.proximity_window_s
 
     def observe(self, detections: Optional[list[dict]] = None):
         self._update_vru(detections)
@@ -400,6 +406,7 @@ class SafetyTwoLevelPolicy(BasePolicy):
         min_conf: float           = 0.25,   # lowered for mixed-resolution robustness
         near_area_fraction: float = 0.02,
         near_area_thresh: Optional[float] = 8_000.0,
+        clock: Callable[[], float] | None = None,
     ):
         self._base              = ThresholdPolicy(lo_thresh, hi_thresh, hysteresis_window)
         self.proximity_window_s = proximity_window_s
@@ -408,9 +415,14 @@ class SafetyTwoLevelPolicy(BasePolicy):
         # Raw pixels only preserve compatibility for detections without the
         # source-image metadata required by the revised coordinate contract.
         self.near_area_thresh   = near_area_thresh
+        self._clock             = clock
         self._last_vru_time: Optional[float] = None
         self._last_vru_area: float           = 0.0
         self._last_vru_area_is_normalized = False
+
+    def _now(self) -> float:
+        """Use an injected replay clock when supplied, else the live clock."""
+        return time.monotonic() if self._clock is None else self._clock()
 
     def _update_vru(self, detections: Optional[list[dict]]):
         """Update VRU presence state from a detection list.
@@ -429,8 +441,8 @@ class SafetyTwoLevelPolicy(BasePolicy):
                 area = normalized if normalized is not None else _bbox_area(det)
                 if (self._last_vru_time is None
                         or area >= self._last_vru_area
-                        or (time.monotonic() - self._last_vru_time) > self.proximity_window_s):
-                    self._last_vru_time = time.monotonic()
+                        or (self._now() - self._last_vru_time) > self.proximity_window_s):
+                    self._last_vru_time = self._now()
                     self._last_vru_area = area
                     self._last_vru_area_is_normalized = normalized is not None
 
@@ -444,7 +456,7 @@ class SafetyTwoLevelPolicy(BasePolicy):
         """
         if self._last_vru_time is None:
             return None
-        if (time.monotonic() - self._last_vru_time) > self.proximity_window_s:
+        if (self._now() - self._last_vru_time) > self.proximity_window_s:
             return None
         threshold = (self.near_area_fraction if self._last_vru_area_is_normalized
                      else self.near_area_thresh)

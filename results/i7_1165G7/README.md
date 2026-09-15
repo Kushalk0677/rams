@@ -16,12 +16,26 @@ successful entry in `manifests/paper_all_20260913_234154_i7_1165G7_cpu_onnx_proc
 Calibration applied `lo_thresh = 0.458` and `hi_thresh = 0.761`. Its report
 and before/after configuration snapshots are in `calibration/`.
 
+## KITTI Raw temporal analysis
+
+`records/exp14_temporal_lead_time_20260915_232916.{csv,json}` and
+`manifests/kitti_raw_transition_manifest.json` record a separate 15 September
+2026 temporal analysis. It used 30 unique pedestrian/cyclist first-entry
+events from 11 tracklet-labelled KITTI Raw drives, with five timestamp-derived
+pre-entry frames and one deterministic same-sequence control window per event.
+The replay used the same saved calibration above and fixed pressure 0.862 for
+both policies. Two-level VRU retention was elevated relative to threshold on
+26.7% of event-window frames and 12.0% of control-window frames, a paired
+difference of 14.7 percentage points (95% block-bootstrap CI: 2.0 to 28.7).
+This is a route-specific reactive carry-over result, not evidence of VRU
+anticipation, recall recovery, energy behavior, or vehicle safety.
+
 ## Directory layout
 
 - `calibration/`: replay calibration report and configuration snapshots.
 - `manifests/`: full-suite, runtime-block, and policy-accuracy manifests.
 - `records/`: raw runtime records and summary JSON/CSV files for Pareto, tier,
-  policy, and retention evaluations.
+  policy, retention, and temporal carry-over evaluations.
 - `figures/`: the generated Pareto and tier-accuracy figures.
 - `provenance/`: model checksums and the device-specific TDP profile.
 
