@@ -1,0 +1,302 @@
+{
+  "analysis": "KITTI raw pre-entry elevation; reactive carry-over only, not VRU anticipation",
+  "smoke": false,
+  "raw_root": "D:\\data\\kitti_raw",
+  "manifest": "C:\\rams\\rams_v2\\runs\\temporal_raw\\kitti_raw_transition_manifest.json",
+  "calibration": "C:\\rams\\paper_runs\\i7_1165G7_cpu_onnx_process_v3_20260913\\calibration_20260913_181322_replay.json",
+  "thresholds": {
+    "lo": 0.458,
+    "hi": 0.761,
+    "hysteresis_window": 3
+  },
+  "fixed_pressure": 0.862,
+  "pressure_source": "saved heavy-profile median from the specified calibration",
+  "window_seconds": 0.5,
+  "min_conf": 0.25,
+  "unique_entry_events_available": 30,
+  "pairs": [
+    {
+      "pair_id": 0,
+      "event_sequence": "2011_09_26_drive_0001_sync",
+      "event_anchor_frame": 33,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0001_sync",
+      "control_anchor_frame": 5,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 1,
+      "event_sequence": "2011_09_26_drive_0014_sync",
+      "event_anchor_frame": 104,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0014_sync",
+      "control_anchor_frame": 10,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 2,
+      "event_sequence": "2011_09_26_drive_0014_sync",
+      "event_anchor_frame": 184,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0014_sync",
+      "control_anchor_frame": 20,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 3,
+      "event_sequence": "2011_09_26_drive_0014_sync",
+      "event_anchor_frame": 220,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0014_sync",
+      "control_anchor_frame": 30,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 4,
+      "event_sequence": "2011_09_26_drive_0014_sync",
+      "event_anchor_frame": 295,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0014_sync",
+      "control_anchor_frame": 40,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 5,
+      "event_sequence": "2011_09_26_drive_0019_sync",
+      "event_anchor_frame": 85,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0019_sync",
+      "control_anchor_frame": 30,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 6,
+      "event_sequence": "2011_09_26_drive_0019_sync",
+      "event_anchor_frame": 289,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0019_sync",
+      "control_anchor_frame": 40,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 7,
+      "event_sequence": "2011_09_26_drive_0019_sync",
+      "event_anchor_frame": 315,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0019_sync",
+      "control_anchor_frame": 50,
+      "control_rate": 0.2
+    },
+    {
+      "pair_id": 8,
+      "event_sequence": "2011_09_26_drive_0019_sync",
+      "event_anchor_frame": 465,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0019_sync",
+      "control_anchor_frame": 60,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 9,
+      "event_sequence": "2011_09_26_drive_0035_sync",
+      "event_anchor_frame": 117,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0035_sync",
+      "control_anchor_frame": 55,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 10,
+      "event_sequence": "2011_09_26_drive_0039_sync",
+      "event_anchor_frame": 153,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0039_sync",
+      "control_anchor_frame": 55,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 11,
+      "event_sequence": "2011_09_26_drive_0039_sync",
+      "event_anchor_frame": 253,
+      "event_rate": 0.8,
+      "control_sequence": "2011_09_26_drive_0039_sync",
+      "control_anchor_frame": 65,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 12,
+      "event_sequence": "2011_09_26_drive_0051_sync",
+      "event_anchor_frame": 23,
+      "event_rate": 1.0,
+      "control_sequence": "2011_09_26_drive_0051_sync",
+      "control_anchor_frame": 165,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 13,
+      "event_sequence": "2011_09_26_drive_0051_sync",
+      "event_anchor_frame": 66,
+      "event_rate": 1.0,
+      "control_sequence": "2011_09_26_drive_0051_sync",
+      "control_anchor_frame": 175,
+      "control_rate": 0.8
+    },
+    {
+      "pair_id": 14,
+      "event_sequence": "2011_09_26_drive_0051_sync",
+      "event_anchor_frame": 130,
+      "event_rate": 1.0,
+      "control_sequence": "2011_09_26_drive_0051_sync",
+      "control_anchor_frame": 185,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 15,
+      "event_sequence": "2011_09_26_drive_0056_sync",
+      "event_anchor_frame": 69,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0056_sync",
+      "control_anchor_frame": 105,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 16,
+      "event_sequence": "2011_09_26_drive_0056_sync",
+      "event_anchor_frame": 159,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0056_sync",
+      "control_anchor_frame": 115,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 17,
+      "event_sequence": "2011_09_26_drive_0056_sync",
+      "event_anchor_frame": 201,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0056_sync",
+      "control_anchor_frame": 125,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 18,
+      "event_sequence": "2011_09_26_drive_0070_sync",
+      "event_anchor_frame": 225,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0070_sync",
+      "control_anchor_frame": 95,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 19,
+      "event_sequence": "2011_09_26_drive_0070_sync",
+      "event_anchor_frame": 335,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0070_sync",
+      "control_anchor_frame": 105,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 20,
+      "event_sequence": "2011_09_26_drive_0070_sync",
+      "event_anchor_frame": 396,
+      "event_rate": 0.8,
+      "control_sequence": "2011_09_26_drive_0070_sync",
+      "control_anchor_frame": 115,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 21,
+      "event_sequence": "2011_09_26_drive_0084_sync",
+      "event_anchor_frame": 5,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0084_sync",
+      "control_anchor_frame": 295,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 22,
+      "event_sequence": "2011_09_26_drive_0084_sync",
+      "event_anchor_frame": 203,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0084_sync",
+      "control_anchor_frame": 305,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 23,
+      "event_sequence": "2011_09_26_drive_0084_sync",
+      "event_anchor_frame": 257,
+      "event_rate": 0.4,
+      "control_sequence": "2011_09_26_drive_0084_sync",
+      "control_anchor_frame": 315,
+      "control_rate": 1.0
+    },
+    {
+      "pair_id": 24,
+      "event_sequence": "2011_09_26_drive_0091_sync",
+      "event_anchor_frame": 5,
+      "event_rate": 0.6,
+      "control_sequence": "2011_09_26_drive_0091_sync",
+      "control_anchor_frame": 200,
+      "control_rate": 0.6
+    },
+    {
+      "pair_id": 25,
+      "event_sequence": "2011_09_26_drive_0091_sync",
+      "event_anchor_frame": 207,
+      "event_rate": 1.0,
+      "control_sequence": "2011_09_26_drive_0091_sync",
+      "control_anchor_frame": 185,
+      "control_rate": 1.0
+    },
+    {
+      "pair_id": 26,
+      "event_sequence": "2011_09_26_drive_0093_sync",
+      "event_anchor_frame": 15,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0093_sync",
+      "control_anchor_frame": 265,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 27,
+      "event_sequence": "2011_09_26_drive_0093_sync",
+      "event_anchor_frame": 125,
+      "event_rate": 0.8,
+      "control_sequence": "2011_09_26_drive_0093_sync",
+      "control_anchor_frame": 275,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 28,
+      "event_sequence": "2011_09_26_drive_0093_sync",
+      "event_anchor_frame": 191,
+      "event_rate": 0.0,
+      "control_sequence": "2011_09_26_drive_0093_sync",
+      "control_anchor_frame": 285,
+      "control_rate": 0.0
+    },
+    {
+      "pair_id": 29,
+      "event_sequence": "2011_09_26_drive_0093_sync",
+      "event_anchor_frame": 342,
+      "event_rate": 0.6,
+      "control_sequence": "2011_09_26_drive_0093_sync",
+      "control_anchor_frame": 295,
+      "control_rate": 0.0
+    }
+  ],
+  "summary": {
+    "n_pairs": 30,
+    "n_event_pre_frames": 150,
+    "n_control_pre_frames": 150,
+    "pre_entry_elevation_rate": 0.26666666666666666,
+    "control_elevation_rate": 0.12,
+    "paired_rate_difference": 0.14666666666666667,
+    "paired_block_bootstrap_ci95": [
+      0.020000000000000007,
+      0.2866666666666667
+    ]
+  },
+  "records_csv": "C:\\rams\\paper_runs\\temporal_i7_1165g7_onnx_20260915\\exp14_temporal_lead_time_20260915_232916.csv"
+}

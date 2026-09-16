@@ -21,6 +21,12 @@ records, manifests, figures, model checksums, and the TDP-profile provenance.
 The COCO mAP fields are fresh `ultralytics_val` results; the KITTI tier mAP
 fields are cached-profile context and are not new mAP evidence.
 
+The same route also contains a separate 15 September 2026 KITTI Raw temporal
+analysis. It replays threshold and two-level VRU-retention policies under the
+same fixed calibrated pressure over 30 unique VRU-entry events and matched
+same-sequence controls. This is evidence about reactive pre-entry carry-over,
+not VRU prediction, recall, energy, or a safety guarantee.
+
 `i7_11800H/` contains the completed Intel Core i7-11800H Windows CPU-ONNX
 evidence received on 20 August 2026. It uses the revised
 `process_steady_v3` load protocol on a 16-logical-core laptop with an RTX 3050
